@@ -120,6 +120,45 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        /* Ticker Container */
+        .ticker-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: #f3dede;
+            /* light pink background */
+            /*border-top: 2px solid #d4b1b1;
+            border-bottom: 2px solid #d4b1b1;*/
+            white-space: nowrap;
+        }
+
+        /* Moving Text */
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .ticker span {
+            display: inline-block;
+            font-family: outfit;
+            padding-right: 50px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #6b4b4b;
+            letter-spacing: 1px;
+        }
+
+        /* Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
@@ -130,8 +169,15 @@
 
 <body class="bg-cream text-gray-800 antialiased overflow-x-hidden w-full">
     <!-- Top Promo Bar -->
-    <div class="bg-[#E9D3D6] py-0.5 text-center text-[#5C4522] text-xs tracking-[0.2em] border-b border-gray-100">
-        Find a new reason to shine with our Solitaires
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+        </div>
     </div>
     <!-- Header Section -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
@@ -148,7 +194,7 @@
             </div>
 
             <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
-                <div class="relative group w-[350px] mx-auto">
+                <div class="relative group w-full max-w-[350px] mx-auto">
                     <input type="text"
                         class="w-full h-[50px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm transition-all outline-none"
                         placeholder="Search for products">
@@ -167,7 +213,7 @@
                         class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">4</span>
                 </button>
                 <button class="relative hover:text-gold">
-                    <img src="assets/ic_bag.png" alt="bag" class="w-5 h-5"><span
+                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5"><span
                         class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">1</span>
                 </button>
             </div>
@@ -313,7 +359,7 @@
     <!-- Hero Section -->
     <section>
         <!-- Product Image -->
-        <div class="relative w-full h-[50vh] md:h-screen overflow-hidden">
+        <div class="relative w-full h-auto aspect-[16/9] md:aspect-auto md:h-screen overflow-hidden">
             <div id="slides" class="whitespace-nowrap transition-transform duration-500 h-full">
                 <!-- Slide 1 -->
                 <div class="inline-block w-full h-full">
@@ -330,12 +376,12 @@
             </div>
 
             <!-- Dots navigation -->
-            <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
+            <div id="dots1" class="absolute bottom-4 right-0 transform -translate-x-1/2 flex gap-2">
+                <button class="w-8 h-1 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
                     aria-label="Slide 1"></button>
-                <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
+                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 2"></button>
-                <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
+                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 3"></button>
             </div>
         </div>
@@ -344,34 +390,34 @@
 
     <!-- Premium Collecions-->
     <!-- Premium Collecions-->
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-center gap-4 md:gap-6 mb-10 w-full">
+    <section class="py-8 md:py-20 max-w-7xl mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-center gap-2 md:gap-6 mb-6 md:mb-10 w-full">
             <!-- Left Arrow -->
-            <img src="assets/Design.png" alt="Decoration" class="h-6 md:h-8 object-contain">
+            <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain">
 
             <!-- Text Group -->
-            <div class="flex flex-col items-center justify-center -space-y-2">
+            <div class="flex flex-col items-center justify-center -space-y-1 md:-space-y-2">
                 <!-- Premium -->
                 <span
-                    class="font-['Alexandria'] font-normal text-[24px] text-[#5C4522] leading-[29px] text-center z-10 relative">
+                    class="font-['Alexandria'] font-normal text-[16px] md:text-[24px] text-[#5C4522] leading-tight text-center z-10 relative">
                     Premium
                 </span>
                 <!-- Collection -->
                 <span
-                    class="font-['Outfit'] font-medium text-[42px] md:text-[54px] text-[#CBA65A] leading-tight md:leading-[68px] text-center">
+                    class="font-['Outfit'] font-medium text-[32px] md:text-[54px] text-[#CBA65A] leading-tight md:leading-[68px] text-center">
                     Collection
                 </span>
             </div>
 
             <!-- Right Arrow -->
-            <img src="assets/DesignRight.png" alt="Decoration" class="h-6 md:h-8 object-contain">
+            <img src="assets/DesignRight.png" alt="Decoration" class="h-5 md:h-8 object-contain">
         </div>
         <!-- Collection 1-->
         <div class=" items-center group/nav">
             <div id="jewellerySlider"
                 class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-4">
 
-                <div class="min-w-[260px] md:min-w-[250px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -386,12 +432,12 @@
 
                             <!-- Vertical Line (Visible initially) -->
                             <div
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
                             </div>
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-24 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-bronze group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest  group-hover:hidden transition-colors">
                                 Rings
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -400,7 +446,7 @@
                                 <button
                                     class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
                                     <img src="assets/share_icon.png" class="w-4 h-4" alt="">
-                                    <span class="text-[12px] font-bold tracking-widest uppercase">View More</span>
+                                    <span class="text-[12px] font-bold tracking-widest ">View More</span>
                                 </button>
                             </div>
                         </div>
@@ -408,7 +454,7 @@
                 </div>
 
                 <!--collection 2-->
-                <div class="min-w-[260px] md:min-w-[250px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -423,12 +469,12 @@
 
                             <!-- Vertical Line -->
                             <div
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
                             </div>
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-24 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-bronze group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
                                 Earrings
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -437,7 +483,7 @@
                                 <button
                                     class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
                                     <img src="assets/share_icon.png" class="w-4 h-4" alt="">
-                                    <span class="text-[12px] font-bold tracking-widest uppercase">View More</span>
+                                    <span class="text-[12px] font-bold tracking-widest">View More</span>
                                 </button>
                             </div>
                         </div>
@@ -445,7 +491,7 @@
                 </div>
 
                 <!-- collction 3-->
-                <div class="min-w-[260px] md:min-w-[250px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -460,12 +506,12 @@
 
                             <!-- Vertical Line -->
                             <div
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
                             </div>
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-24 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-bronze group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
                                 Necklaces
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -474,7 +520,7 @@
                                 <button
                                     class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
                                     <img src="assets/share_icon.png" class="w-4 h-4" alt="">
-                                    <span class="text-[12px] font-bold tracking-widest uppercase">View More</span>
+                                    <span class="text-[12px] font-bold tracking-widest">View More</span>
                                 </button>
                             </div>
                         </div>
@@ -482,7 +528,7 @@
                 </div>
 
                 <!-- Collection 4-->
-                <div class="min-w-[260px] md:min-w-[250px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -497,12 +543,12 @@
 
                             <!-- Vertical Line -->
                             <div
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
                             </div>
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-24 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-bronze group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
                                 Pendants
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -511,7 +557,7 @@
                                 <button
                                     class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
                                     <img src="assets/share_icon.png" class="w-4 h-4" alt="">
-                                    <span class="text-[12px] font-bold tracking-widest uppercase">View More</span>
+                                    <span class="text-[12px] font-bold tracking-widest">View More</span>
                                 </button>
                             </div>
                         </div>
@@ -519,7 +565,7 @@
                 </div>
 
                 <!--Collection 5-->
-                <div class="min-w-[260px] md:min-w-[250px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -534,12 +580,12 @@
 
                             <!-- Vertical Line -->
                             <div
-                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
                             </div>
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-24 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-bronze group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
                                 Bracelets
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -548,7 +594,7 @@
                                 <button
                                     class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
                                     <img src="assets/share_icon.png" class="w-4 h-4" alt="">
-                                    <span class="text-[12px] font-bold tracking-widest uppercase">View More</span>
+                                    <span class="text-[12px] font-bold tracking-widest">View More</span>
                                 </button>
                             </div>
                         </div>
@@ -579,18 +625,19 @@
     </section>
     <!-- Perfect shape -->
 
-    <section class="bg-white py-16 px-4">
+    <section class="bg-white py-8 md:py-16 px-4">
         <div class="max-w-7xl mx-auto">
 
-            <div class="flex items-center justify-center mb-10 gap-3 md:gap-6">
-                <img src="assets/Design.png" alt="design left" class="h-auto w-20 md:w-64 lg:w-96 object-contain">
+            <div class="flex items-center justify-center mb-6 md:mb-10 gap-2 md:gap-6">
+                <img src="assets/Design.png" alt="design left" class="h-5 md:h-8 w-auto object-contain">
                 <div class="text-center">
-                    <p class="text-xl md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Find your</p>
+                    <p class="text-[16px] md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Find your
+                    </p>
                     <h2
-                        class="font-Outfit text-4xl md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
+                        class="font-Outfit text-[32px] md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
                         Perfect Shape</h2>
                 </div>
-                <img src="assets/DesignRight.png" alt="design right" class="h-auto w-20 md:w-64 lg:w-96 object-contain">
+                <img src="assets/DesignRight.png" alt="design right" class="h-5 md:h-8 w-auto object-contain">
             </div>
             <!-- All  shape -->
             <div class="grid grid-cols-2 items-center sm:grid-cols-5 lg:grid-cols-10 gap-y-10 gap-x-4">
@@ -680,37 +727,38 @@
     <!-- Explore By Category -->
 
 
-    <section class="bg-[#FAF9F6] py-16 px-4">
+    <section class="bg-[#FAF9F6] py-8 md:py-16 px-4">
         <div class="max-w-7xl mx-auto">
 
-            <div class="flex items-center justify-center mb-8 gap-3 md:gap-6">
-                <img src="assets/Design.png" alt="design left" class="h-auto w-20 md:w-64 lg:w-96 object-contain">
+            <div class="flex items-center justify-center mb-6 md:mb-8 gap-2 md:gap-6">
+                <img src="assets/Design.png" alt="design left" class="h-5 md:h-8 w-auto object-contain">
                 <div class="text-center">
-                    <p class="text-xl md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Explore by</p>
+                    <p class="text-[16px] md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Explore by
+                    </p>
                     <h2
-                        class="font-Outfit text-4xl md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
+                        class="font-Outfit text-[32px] md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
                         Category</h2>
                 </div>
-                <img src="assets/DesignRight.png" alt="design right" class="h-auto w-20 md:w-64 lg:w-96 object-contain">
+                <img src="assets/DesignRight.png" alt="design right" class="h-5 md:h-8 w-auto object-contain">
             </div>
 
             <!-- Category Buttons: Horizontal Scroll on Mobile -->
             <div
-                class="flex flex-nowrap md:flex-wrap justify-start md:justify-center overflow-x-auto no-scrollbar gap-3 mb-12 px-2 snap-x">
+                class="flex flex-nowrap justify-start md:justify-center overflow-x-auto no-scrollbar gap-3 mb-8 w-full md:mb-12 px-4 snap-x">
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">All</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-10 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  text-xs md:text-sm tracking-widest rounded-full hover:bg-gray-800 snap-center transition-colors whitespace-nowrap">All</button>
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">Rings</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  hover:bg-black md:text-sm tracking-widest rounded-full  snap-center transition-colors whitespace-nowrap">Rings</button>
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">Earrings</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Earrings</button>
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">Braceletes</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Braceletes</button>
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">Pendants</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Pendants</button>
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">Necklaces</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Necklaces</button>
                 <button
-                    class="flex-shrink-0 px-8 py-2 font-Outfit bg-gray-100 border border-gray-300 text-black text-[11px] tracking-widest rounded-full hover:bg-black hover:text-white snap-center">Gifts</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Gifts</button>
             </div>
 
             <!---category image 1-->
@@ -850,7 +898,7 @@
 
         <div class="flex justify-center">
             <button
-                class="border border-amber-500  text-amber-500 py-3 p-2 rounded-full text-[11px] tracking-widest flex items-center gap-3 hover:bg-gray-50 transition-colors group">
+                class="border border-[#A87E3E] font-['outfit']  text-[#A87E3E] py-2 p-3 rounded-full text-[11px] tracking-widest flex items-center gap-3 hover:bg-gray-50 transition-colors group">
                 Explore All
                 <svg xmlns="http://www.w3.org/2000/svg"
                     class="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none"
@@ -885,11 +933,11 @@
 
             <!-- Dots navigation -->
             <div id="dots1" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
+                <button class="w-8 h-1 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
                     aria-label="Slide 1"></button>
-                <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
+                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 2"></button>
-                <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
+                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 3"></button>
             </div>
         </div>
@@ -897,14 +945,15 @@
 
 
     <!-- heading section-->
-    <div
-        class="bg-[#E9D3D6] py-0.5 gap-4 text-center text-[#5C4522] text-[10px] tracking-[0.2em] border-b border-gray-100">
-        Where Luxury Meets Legacy✦
-        Where Luxury Meets Legacy✦
-        Where Luxury Meets Legacy✦
-        Where Luxury Meets Legacy✦
-        Where Luxury Meets Legacy✦
-        Where Luxury Meets Legacy✦
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+        </div>
     </div>
     <!--Category Section-->
     <section class="relative bg-white overflow-hidden">
@@ -917,34 +966,38 @@
                 <div
                     class="relative w-[910px] h-[700px] flex flex-col items-start py-[120px] px-0 gap-[10px] self-stretch grow flex-none order-0">
                     -->
-                <div class="relative w-full lg:w-[50%] h-auto lg:h-[700px] flex flex-col items-start py-10 lg:py-[120px] px-4 lg:px-0 gap-[10px]
-                        self-stretch grow flex-none order-0
-                        lg:-translate-x-12">
+                <div class="relative w-full lg:w-[50%] h-auto lg:min-h-[700px] flex flex-col items-center lg:items-start py-10 lg:py-[120px] px-4 lg:px-0 gap-6 lg:gap-[10px]
+                        self-stretch grow flex-none order-0 lg:-translate-x-12">
 
                     <!-- Content Frame -->
-                    <div class="flex flex-row items-center p-0 gap-[10px] w-full md:w-[558px] h-auto md:h-[120px] mb-2">
-                        <!-- Design Frame -->
-                        <div
-                            class="flex flex-row justify-end items-center pl-[1px] gap-[4px] w-full max-w-[398px] h-[24px]">
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-4 md:gap-[10px] w-full h-auto mb-2">
+                        <!-- Design Frame (Left Line) -->
+                        <div class="hidden md:flex flex-row justify-end items-center gap-[4px] w-auto flex-1 h-[24px]">
                             <img src="assets/Design_new.png" alt="design" class="h-full object-contain">
                         </div>
 
+                        <!-- Mobile Design Line (Top) -->
+                        <div class="md:hidden w-[100px] h-[2px] bg-[#CBA65A] mb-2"></div>
+
                         <!-- Text Frame -->
-                        <div
-                            class="flex flex-col justify-center items-center px-[10px] w-auto md:w-[300px] h-auto md:h-[120px] rounded-[10px]">
+                        <div class="flex flex-col justify-center items-center px-2 w-auto h-auto">
                             <p style="font-family: 'Alexandria', sans-serif;"
-                                class="w-[127px] h-[29px]  font-normal text-[24px] leading-[29px] text-center text-[#5C4522] my-[-9px]">
+                                class="font-normal text-xl md:text-[24px] leading-tight text-center text-[#5C4522] mb-1">
                                 Explore by</p>
                             <h2 style="font-family: 'Outfit', sans-serif;"
-                                class="w-[227px] h-[68px]  font-medium text-[54px] leading-[68px] text-[#CBA65A] mb-3">
+                                class="font-medium text-4xl md:text-[54px] leading-tight text-[#CBA65A] text-center">
                                 Category</h2>
                         </div>
+
+                        <!-- Mobile Design Line (Bottom) -->
+                        <div class="md:hidden w-[100px] h-[2px] bg-[#CBA65A] mt-2"></div>
                     </div>
 
                     <!-- Description -->
-                    <div class="pl-0 lg:pl-[310px] w-full text-center lg:text-left mt-4 lg:mt-0 ">
+                    <div class="pl-0 lg:pl-[310px] w-full text-center lg:text-left mt-4 lg:mt-0">
                         <p style="font-family: 'Outfit', sans-serif;"
-                            class="font-normal text-[18px] leading-[35px] text-[#3D3D42] max-h-[105px] max-w-[485px]">
+                            class="font-normal text-base md:text-[18px] leading-relaxed md:leading-[35px] text-[#3D3D42] max-w-lg mx-auto lg:mx-0">
                             Tattsvi jewellery feels incredibly refined and comfortable to wear. The designs are
                             subtle yet elegant.
                         </p>
@@ -984,11 +1037,11 @@
     </section>
     <!-- Product Images-->
     <!---category image 1-->
-    <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-6 mb-12">
+    <div class="grid grid-cols-2 bg-[#F3E5E5] lg:grid-cols-5 gap-3 md:gap-6 mb-12">
         <!--product 1 -->
         <div class="flex flex-col gap-3">
             <div
-                class="bg-[#FDFBF7] box-border relative w-full aspect-square border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+                class="bg-[#FDFBF7] box-border relative w-full aspect-square border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden shadow-md hover:shadow-xl">
                 <span
                     class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
                     Seller</span>
@@ -1120,17 +1173,17 @@
 
     <div class="flex justify-center">
         <button
-            class="flex flex-row justify-center items-center px-[26px] gap-[10px] w-[194px] h-[60px] bg-white border-[1.8px] border-[#A87E3E] rounded-[200px] text-[#A87E3E] font-['Outfit'] font-normal text-[22px] leading-[28px] hover:bg-gray-50 transition-colors group">
+            class="flex flex-row justify-center items-center px-4 py-2 md:px-[26px] gap-2 md:gap-[10px] w-auto md:w-[194px] h-[45px] md:h-[60px] bg-white border-[1.8px] border-[#A87E3E] rounded-[200px] text-[#A87E3E] font-['Outfit'] font-normal text-[16px] md:text-[22px] leading-tight hover:bg-gray-50 transition-colors group">
             Explore All
             <img src="assets/ic_back_2.png" alt="arrow"
-                class="w-4 h-4 object-contain group-hover:translate-x-1 transition-transform">
+                class="w-3 h-3 md:w-4 md:h-4 object-contain group-hover:translate-x-1 transition-transform">
         </button>
     </div>
     </div>
     </section>
     <!--Launch Section-->
-    <section class="py-16 bg-silk/30 text-center overflow-hidden relative w-full max-w-[100vw]">
-        <div class="flex items-center justify-center mb-10 gap-3 md:gap-6">
+    <section class="py-8 md:py-16 bg-silk/30 text-center overflow-hidden relative w-full max-w-[100vw]">
+        <div class="flex items-center justify-center mb-6 md:mb-10 gap-3 md:gap-6">
             <!-- Left Design -->
             <div
                 class="hidden md:flex flex-row justify-end items-center pl-[40px] gap-[4px] w-full max-w-[398px] h-[24px]">
@@ -1158,139 +1211,213 @@
             </div>
         </div>
 
-        <div class="relative w-full max-w-7xl mx-auto px-4 md:px-8 mb-20 group-container">
+        <div class="relative w-full max-w-7xl mx-auto px-4 md:px-8 mb-0 md:mb-20 group-container">
             <!-- Background Ellipse -->
             <div
                 class="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[2416px] h-[1138px] max-w-none bg-[#FDFBF7] rounded-[50%] -z-10 blur-xl pointer-events-none">
             </div>
 
             <!-- Flex Container -->
-            <div class="flex flex-wrap justify-center gap-8 relative z-10 w-full">
+            <div
+                class="flex flex-nowrap md:flex-wrap justify-start md:justify-center overflow-x-auto md:overflow-visible no-scrollbar gap-4 md:gap-8 px-4 md:px-0 relative z-10 w-full snap-x snap-mandatory pb-[400px] md:pb-0">
                 <!-- Card 1: Rings -->
-                <div class="group cursor-pointer relative h-[380px] w-[280px] shrink-0">
+                <div class="group cursor-pointer relative w-[260px] shrink-0 flex flex-col items-center snap-center">
+                    <style>
+                        .launch-card-shadow {
+                            transform: scaleY(-1);
+                            mask-image: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 60%);
+                            -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 60%);
+                            opacity: 0.5;
+                            filter: blur(1px);
+                            pointer-events: none;
+                        }
+                    </style>
                     <div
-                        class="relative z-10 w-full h-full rounded-[30px] overflow-hidden bg-[#EAD3A2] transition-transform duration-500 group-hover:-translate-y-4 shadow-xl">
+                        class="group cursor-pointer relative w-[260px] shrink-0 flex flex-col items-center snap-center">
                         <div
-                            class="w-full h-[75%] bg-[#FFFBEF] relative flex items-center justify-center p-6 mx-auto overflow-hidden">
-                            <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-110"
-                                style="background-image: url('assets/launch_ring.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                            </div>
+                            class="relative z-20 w-full h-[360px] rounded-[40px] overflow-hidden bg-[#E8DEC8] transition-transform duration-500 group-hover:-translate-y-2 shadow-2xl flex flex-col">
+                            <div class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center">
+                                <img src="assets/launch_ring.png"
+                                    class="relative z-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                                    alt="Bracelets">
 
-                            <!-- SVG Separator -->
-                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-20">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none"
-                                    class="w-full h-full fill-[#EAD3A2]">
-                                    <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
-                                </svg>
+                                <!-- SVG Separator -->
+                                <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
+                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none"
+                                        class="w-full h-full fill-[#E8DEC8]">
+                                        <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 flex flex-col items-center justify-center bg-[#E8DEC8] pt-0 pb-4 relative z-10">
+                                <p
+                                    class="text-[10px] md:text-[12px] font-['Outfit'] font-medium text-[#6F5A3D] mb-1 opacity-90">
+                                    9KT Solid Gold</p>
+                                <h3 class="text-[24px] font-Outfit font-bold text-[#8A5A14]">Rings</h3>
                             </div>
                         </div>
-                        <div class="text-center pt-3 pb-4">
-                            <p
-                                class="text-[10px] md:text-[12px] font-['Outfit'] font-medium text-[#8B6E41] mb-1 opacity-90">
-                                9KT Solid Gold</p>
-                            <h3 class="text-[28px] md:text-[22px] font-['Outfit'] font-bold text-[#8B6E41]">Rings</h3>
+                        <!-- Reflection -->
+                        <div
+                            class="launch-card-shadow w-full h-[360px] rounded-[40px] overflow-hidden bg-[#E8DEC8] absolute -bottom-[360px] left-0 z-0">
+                            <div class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center">
+                                <img src="assets/l1.png" class="relative z-0 w-full h-full object-cover" alt="">
+                                <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
+                                    <svg viewBox="0 0 100 50" preserveAspectRatio="none"
+                                        class="w-full h-full fill-[#E8DEC8]">
+                                        <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 flex flex-col items-center justify-center bg-[#E8DEC8] pt-0 pb-4 relative z-10">
+                                <p
+                                    class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#8A5A14] tracking-widest uppercase mb-1 opacity-90">
+                                    9KT Solid Gold</p>
+                                <h3 class="text-[24px] font-Outfit font-bold text-[#8A5A14]">Rings</h3>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Reflection -->
-                    <div class="absolute top-full left-0 w-full h-full transform scale-y-[-1] origin-top opacity-30 pointer-events-none blur-[0.5px] mt-2"
-                        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); z-index: 0;">
-                        <img src="assets/launch_ring_shadow.png" class="h-[200px] w-[200px] mx-auto" alt="">
                     </div>
                 </div>
 
                 <!-- Card 2: Pendants -->
-                <div class="group cursor-pointer relative h-[380px] w-[280px] shrink-0">
+                <div class="group cursor-pointer relative w-[260px] shrink-0 flex flex-col items-center snap-center">
                     <div
-                        class="relative z-10 w-full h-full rounded-[30px] overflow-hidden bg-[#F3D8D8] transition-transform duration-500 group-hover:-translate-y-4 shadow-xl">
-                        <div
-                            class="w-full h-[75%] bg-[#FFF5F5] relative flex items-center justify-center p-6 mx-auto overflow-hidden">
-                            <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-110"
-                                style="background-image: url('assets/launch_pendant.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                            </div>
+                        class="relative z-20 w-full h-[360px] rounded-[40px] overflow-hidden bg-[#E8DEC8] transition-transform duration-500 group-hover:-translate-y-2 shadow-2xl flex flex-col">
+                        <div class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center">
+                            <img src="assets/launch_pendant.png"
+                                class="relative z-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                                alt="Pendants">
 
                             <!-- SVG Separator -->
-                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-20">
-                                <svg viewBox="0 0 100 50" preserveAspectRatio="none"
-                                    class="w-full h-full fill-[#F3D8D8]">
-                                    <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="text-center pt-3 pb-4">
-                            <p
-                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#A67C7C] tracking-[0.2em] mb-1 opacity-90">
-                                9KT Solid Gold</p>
-                            <h3 class="text-[28px] md:text-[32px] font-Outfit font-bold text-[#A67C7C]">Pendants</h3>
-                        </div>
-                    </div>
-                    <!-- Reflection -->
-                    <div class="absolute top-full left-0 w-full h-full transform scale-y-[-1] origin-top opacity-30 pointer-events-none blur-[0.5px] mt-2"
-                        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); z-index: 0;">
-                        <img src="assets/launch_pendant_shadow.png" class="h-[200px] w-[200px] mx-auto" alt="">
-                    </div>
-                </div>
-
-                <!-- Card 3: Bracelets -->
-                <div class="group cursor-pointer relative h-[380px] w-[280px] shrink-0">
-                    <div
-                        class="relative z-10 w-full h-full rounded-[30px] overflow-hidden bg-[#E8DEC8] transition-transform duration-500 group-hover:-translate-y-4 shadow-xl">
-                        <div
-                            class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center p-6 mx-auto overflow-hidden">
-                            <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-110"
-                                style="background-image: url('assets/launch_b.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                            </div>
-
-                            <!-- SVG Separator -->
-                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-20">
+                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
                                 <svg viewBox="0 0 100 50" preserveAspectRatio="none"
                                     class="w-full h-full fill-[#E8DEC8]">
                                     <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
                                 </svg>
                             </div>
                         </div>
-                        <div class="text-center pt-3 pb-4">
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center bg-[#E8DEC8] pt-0 pb-4 relative z-10">
                             <p
-                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#9C8F73] tracking-[0.2em] mb-1 opacity-90">
+                                class="text-[10px] md:text-[12px] font-['Outfit'] font-medium text-[#6F5A3D] mb-1 opacity-90">
                                 9KT Solid Gold</p>
-                            <h3 class="text-[28px] md:text-[32px] font-Outfit font-bold text-[#9C8F73]">Bracelets</h3>
+                            <h3 class="text-[24px] font-Outfit font-bold  text-[#8A5A14]">Pendants</h3>
                         </div>
                     </div>
                     <!-- Reflection -->
-                    <div class="absolute top-full left-0 w-full h-full transform scale-y-[-1] origin-top opacity-30 pointer-events-none blur-[0.5px] mt-2"
-                        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); z-index: 0;">
-                        <img src="assets/launch_ring_shadow.png" class="h-[200px] w-[200px] mx-auto" alt="">
+                    <div
+                        class="launch-card-shadow w-full h-[360px] rounded-[40px] overflow-hidden bg-[#E8DEC8] absolute -bottom-[360px] left-0 z-0">
+                        <div class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center">
+                            <img src="assets/launch_b.png" class="relative z-0 w-full h-full object-cover" alt="">
+                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
+                                <svg viewBox="0 0 100 50" preserveAspectRatio="none"
+                                    class="w-full h-full fill-[#E8DEC8]">
+                                    <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center bg-[#E8DEC8] pt-0 pb-4 relative z-10">
+                            <p
+                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#9C8F73] tracking-widest uppercase mb-1 opacity-90">
+                                9KT Solid Gold</p>
+                            <h3 class="text-[24px] font-Outfit font-bold text-[#9C8F73]">Pendants</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bracelets -->
+                <div class="group cursor-pointer relative w-[260px] shrink-0 flex flex-col items-center snap-center">
+                    <div
+                        class="relative z-20 w-full h-[360px] rounded-[40px] overflow-hidden bg-[#E8DEC8] transition-transform duration-500 group-hover:-translate-y-2 shadow-2xl flex flex-col">
+                        <div class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center">
+                            <img src="assets/launch_bracelet.png"
+                                class="relative z-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                                alt="Bracelets">
+
+                            <!-- SVG Separator -->
+                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
+                                <svg viewBox="0 0 100 50" preserveAspectRatio="none"
+                                    class="w-full h-full fill-[#E8DEC8]">
+                                    <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center bg-[#E8DEC8] pt-0 pb-4 relative z-10">
+                            <p
+                                class="text-[10px] md:text-[12px] font-['Outfit'] font-medium text-[#6F5A3D] mb-1 opacity-90">
+                                9KT Solid Gold</p>
+                            <h3 class="text-[24px] font-Outfit font-bold  text-[#8A5A14]">Bracelets</h3>
+                        </div>
+                    </div>
+                    <!-- Reflection -->
+                    <div
+                        class="launch-card-shadow w-full h-[360px] rounded-[40px] overflow-hidden bg-[#E8DEC8] absolute -bottom-[360px] left-0 z-0">
+                        <div class="w-full h-[75%] bg-[#F9F9F9] relative flex items-center justify-center">
+                            <img src="assets/launch_b.png" class="relative z-0 w-full h-full object-cover" alt="">
+                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
+                                <svg viewBox="0 0 100 50" preserveAspectRatio="none"
+                                    class="w-full h-full fill-[#E8DEC8]">
+                                    <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center bg-[#E8DEC8] pt-0 pb-4 relative z-10">
+                            <p
+                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#9C8F73] tracking-widest uppercase mb-1 opacity-90">
+                                9KT Solid Gold</p>
+                            <h3 class="text-[24px] font-Outfit font-bold text-[#8A5A14]">Bracelets</h3>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Card 4: Earrings -->
-                <div class="group cursor-pointer relative h-[380px] w-[280px] shrink-0">
+                <div class="group cursor-pointer relative w-[260px] shrink-0 flex flex-col items-center snap-center">
                     <div
-                        class="relative z-10 w-full h-full rounded-[30px] overflow-hidden bg-[#F0D5BE] transition-transform duration-500 group-hover:-translate-y-4 shadow-xl">
-                        <div
-                            class="w-full h-[75%] bg-[#FFF9F3] relative flex items-center justify-center p-6 mx-auto overflow-hidden">
-                            <div class="w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-110"
-                                style="background-image: url('assets/l4.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-                            </div>
+                        class="relative z-20 w-full h-[360px] rounded-[40px] overflow-hidden bg-[#F0D5BE] transition-transform duration-500 group-hover:-translate-y-2 shadow-2xl flex flex-col">
+                        <div class="w-full h-[75%] bg-[#FFF9F3] relative flex items-center justify-center">
+                            <img src="assets/launch_earring.png"
+                                class="relative z-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                                alt="Earrings">
 
                             <!-- SVG Separator -->
-                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-20">
+                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
                                 <svg viewBox="0 0 100 50" preserveAspectRatio="none"
                                     class="w-full h-full fill-[#F0D5BE]">
                                     <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
                                 </svg>
                             </div>
                         </div>
-                        <div class="text-center pt-3 pb-4">
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center bg-[#F0D5BE] pt-0 pb-4 relative z-10">
                             <p
-                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#A88C76] tracking-[0.2em] mb-1 opacity-90">
+                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#6F5A3D] mb-1 opacity-90">
                                 9KT Solid Gold</p>
-                            <h3 class="text-[28px] md:text-[32px] font-Outfit font-bold text-[#A88C76]">Earrings</h3>
+                            <h3 class="text-[24px] font-Outfit font-bold text-[#8A5A14]">Earrings</h3>
                         </div>
                     </div>
                     <!-- Reflection -->
-                    <div class="absolute top-full left-0 w-full h-full transform scale-y-[-1] origin-top opacity-30 pointer-events-none blur-[0.5px] mt-2"
-                        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%); z-index: 0;">
-                        <img src="assets/launch_ring_shadow.png" class="h-[200px] w-[200px] mx-auto" alt="">
+                    <div
+                        class="launch-card-shadow w-full h-[360px] rounded-[40px] overflow-hidden bg-[#F0D5BE] absolute -bottom-[360px] left-0 z-0">
+                        <div class="w-full h-[75%] bg-[#FFF9F3] relative flex items-center justify-center">
+                            <img src="assets/launch_earring.png" class="relative z-0 w-full h-full object-cover" alt="">
+                            <div class="absolute bottom-0 left-0 w-full h-[50px] z-10">
+                                <svg viewBox="0 0 100 50" preserveAspectRatio="none"
+                                    class="w-full h-full fill-[#F0D5BE]">
+                                    <path d="M0,50 L0,0 Q50,100 100,0 L100,50 Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col items-center justify-center bg-[#F0D5BE] pt-0 pb-4 relative z-10">
+                            <p
+                                class="text-[10px] md:text-[12px] font-Outfit font-medium text-[#A88C76] tracking-widest uppercase mb-1 opacity-90">
+                                9KT Solid Gold</p>
+                            <h3 class="text-[24px] font-Outfit font-bold text-[#8A5A14]">Earrings</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1298,9 +1425,9 @@
     </section>
 
     <!-- Unique Style Section -->
-    <section class="bg-white py-16 overflow-hidden relative w-full max-w-[100vw]">
+    <section class="bg-white pt-0 pb-8 md:pt-16 md:pb-0 overflow-hidden relative w-full max-w-[100vw]">
         <!-- Title -->
-        <div class="text-center mb-4 relative z-30">
+        <div class="text-center mb-0 relative z-30">
             <div class="flex items-center justify-center gap-4 mb-2">
                 <img src="assets/Design_new.png" class="h-5 w-auto object-contain" alt="decoration">
                 <span style="font-family: 'Alexandria', sans-serif;"
@@ -1315,7 +1442,7 @@
         </div>
 
         <!-- Lens Grid Wrapper -->
-        <div class="relative w-full h-[500px] md:h-[750px] lg:h-[900px] z-10">
+        <div class="relative w-full h-[500px] md:h-[750px] lg:h-[900px] z-10 -mt-12 md:-mt-24">
             <!-- Top Curve Mask (White) -->
             <div
                 class="absolute -top-[100px] md:-top-[698px] left-1/2 -translate-x-1/2 w-[120%] md:w-[2416px] h-[150px] md:h-[918px] max-w-none bg-white rounded-b-[100%] md:rounded-b-[50%] z-20 pointer-events-none">
@@ -1402,7 +1529,7 @@
         </div>
     </section>
     <!--Best Seller Section -->
-    <section class="py-16 px-4 md:px-8 bg-white">
+    <section class="pt-0 pb-16 px-4 md:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
             <div
                 class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-[#FFFBF2] rounded-[48px] p-8 md:p-20 border border-[#F5F0E6] shadow-sm">
@@ -1410,7 +1537,7 @@
                 <!-- Left Image -->
                 <div class="relative flex justify-center order-first">
                     <img src="assets/Product Photo.png"
-                        class="relative z-10 w-[400px] h-[550px] max-w-xl drop-shadow-2xl transition-transform hover:scale-105 duration-500"
+                        class="relative z-10 w-full max-w-[400px] h-auto object-contain drop-shadow-2xl transition-transform hover:scale-105 duration-500"
                         alt="Bestseller Spotlight">
                 </div>
 
@@ -1614,9 +1741,9 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-white px-4 md:px-8 w-full max-w-[100vw] overflow-hidden">
+    <section class="py-8 md:py-20 bg-white px-4 md:px-8 w-full max-w-[100vw] overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
+            <div class="text-center mb-6 md:mb-12">
                 <p style="font-family: 'Alexandria', sans-serif;"
                     class="font-Alexandria text-[16px] md:text-[20px] font-normal text-[#5C4522] leading-[29px] text-center my-[-5px] mb-2">
                     Here From
@@ -1757,7 +1884,8 @@
 
                 </div>
 
-                <div class="flex justify-center md:justify-end space-x-4 mt-8 md:absolute md:-bottom-16 md:right-0">
+                <div
+                    class="flex justify-center md:justify-end space-x-4 mt-4 md:mt-8 md:absolute md:-bottom-16 md:right-0">
                     <button onclick="scrollSlider('left')"
                         class="w-12 h-12 rounded-full border border-amber-200 flex items-center justify-center text-amber-800 hover:bg-amber-800 hover:text-white transition-all duration-300 shadow-sm active:scale-90">
                         <i class="fa-solid fa-arrow-left"></i>
@@ -1773,7 +1901,7 @@
 
     <!--Download The App Noww -->
 
-    <section class="py-12 px-4 md:px-8">
+    <section class="py-6 md:py-12 px-4 md:px-8">
         <div
             class="max-w-[1440px] mx-auto bg-[#FDF2F4] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center justify-between px-6 py-10 md:px-20 md:py-16 relative">
             <!-- Left Side: Text and Buttons -->
@@ -1825,7 +1953,7 @@
                     <!-- About Us -->
                     <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
                         <h4 style="font-family: 'Outfit', sans-serif;"
-                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg">About us</h4>
+                            class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg">About us</h4>
                         <ul class="flex flex-col gap-[16px]">
                             <li><a href="#"
                                     class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
@@ -1895,7 +2023,7 @@
                 <!-- Right: Sign Up -->
                 <div class="flex flex-col items-start gap-4 lg:w-[400px]">
                     <h4 style="font-family: 'Outfit', sans-serif;"
-                        class="font-['Outfit'] font-bold text-[#0D0D0E] text-[32px] leading-[1.2]">
+                        class="font-['Outfit'] font-bold text-[#0D0D0E] text-[28px] leading-[1.2]">
                         Sign up <br>for Exclusive Offers
                     </h4>
                     <p class="font-['Outfit'] text-base text-[#6E6E6E] leading-relaxed max-w-[350px]">
@@ -1913,16 +2041,16 @@
             </div>
 
             <!-- Bottom Section -->
-            <!-- Bottom Section -->
             <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col gap-8 relative z-10">
                 <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
                     <!-- Left: QR and Apps -->
                     <div class="flex items-center gap-6">
-                        <img src="assets/MobileQrNew.png" alt="QR Code" class="w-20 h-20 object-contain">
+                        <img src="assets/MobileQrNew.png" alt="QR Code" class="w-40 h-40 object-contain">
                         <div class="flex flex-col gap-2">
-                            <a href="#"><img src="assets/ioslogo.png" alt="App Store" class="h-[30px] w-auto"></a>
+                            <a href="#"><img src="assets/ioslogo.png" alt="App Store"
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
                             <a href="#"><img src="assets/Androidelogo.png" alt="Google Play"
-                                    class="h-[30px] w-auto"></a>
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
                         </div>
                     </div>
 
@@ -1931,19 +2059,19 @@
                         <!-- Socials -->
                         <div class="flex gap-5">
                             <a href="#"
-                                class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             <a href="#"
-                                class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="#"
-                                class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
                                 <i class="fab fa-youtube"></i>
                             </a>
                             <a href="#"
-                                class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
                                 <i class="fab fa-x-twitter"></i>
                             </a>
                         </div>
@@ -1951,7 +2079,7 @@
                         <!-- Rights & Payments Group (Left Aligned) -->
                         <div class="flex flex-col items-start gap-3">
                             <!-- Rights Text -->
-                            <p class="font-Outfit text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
+                            <p class="font-['Outfit'] text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
 
                             <!-- Payments -->
                             <div class="flex items-center gap-3">
