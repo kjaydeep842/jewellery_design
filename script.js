@@ -12,13 +12,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateDots() {
+    const isExpanding = document.getElementById('dots').classList.contains('dots-expanding');
+
     dots.forEach((dot, i) => {
-      if (i === index) {
-        dot.classList.add('bg-opacity-100');
-        dot.classList.remove('bg-opacity-75');
+      if (isExpanding) {
+        if (i === index) {
+          // Active state for expanding dots
+          dot.classList.remove('w-3', 'bg-[#E8E1D5]');
+          dot.classList.add('w-8', 'bg-[#CBA65A]');
+        } else {
+          // Inactive state for expanding dots
+          dot.classList.remove('w-8', 'bg-[#CBA65A]');
+          dot.classList.add('w-3', 'bg-[#E8E1D5]');
+        }
+        // Remove strictly opacity based classes if they exist from previous logic
+        dot.classList.remove('bg-black', 'bg-opacity-75', 'bg-opacity-100');
       } else {
-        dot.classList.add('bg-opacity-75');
-        dot.classList.remove('bg-opacity-100');
+        // Default behavior for other sliders (index.html)
+        if (i === index) {
+          dot.classList.add('bg-opacity-100');
+          dot.classList.remove('bg-opacity-75');
+        } else {
+          dot.classList.add('bg-opacity-75');
+          dot.classList.remove('bg-opacity-100');
+        }
       }
     });
   }

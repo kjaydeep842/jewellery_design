@@ -49,6 +49,46 @@
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
       background-color: #D4AF37;
     }
+
+    /* Ticker Container */
+    .ticker-wrapper {
+      width: 100%;
+      overflow: hidden;
+      background: #f3dede;
+      /* light pink background */
+      /*border-top: 2px solid #d4b1b1;
+            border-bottom: 2px solid #d4b1b1;*/
+      white-space: nowrap;
+    }
+
+    /* Moving Text */
+    .ticker {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    .ticker span {
+      display: inline-block;
+      font-family: outfit;
+      padding-right: 50px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #6b4b4b;
+      letter-spacing: 1px;
+    }
+
+    /* Animation */
+    @keyframes scroll-left {
+
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
@@ -56,905 +96,1184 @@
 
 <body class="bg-white text-gray-800">
   <!-- Top Promo Bar -->
-  <div class="bg-[#E9D3D6] py-0.5 text-center text-[#5C4522] text-[10px] tracking-[0.2em] border-b border-gray-100">
-    Find a new reason to shine with our Solitaires
+  <div class="ticker-wrapper">
+    <div class="ticker">
+      <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+      <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+      <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+      <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+      <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+      <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+    </div>
   </div>
   <!-- Header Section -->
   <header class="bg-white sticky top-0 z-50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <div class="h-8 w-8 flex items-center justify-center">
+    <div
+      class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+      <div class="flex items-center gap-2 order-1">
+        <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+        <div class="w-11 h-8  flex items-center justify-center border-2 shadow-md shadow-black">
           <img src="assets/logo.png" alt="logo">
         </div>
-        <span class="serif text-2xl tracking-tighter">TATTSVI</span>
+        <span class="font-['Clash Display'] text-2xl tracking-tighter">TATTSVI</span>
       </div>
 
-      <div class="flex-grow max-w-xl w-1/2">
-        <div class="relative group">
+      <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
+        <div class="relative group w-full max-w-[350px] mx-auto">
           <input type="text"
-            class="w-full bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 px-5 pl-12 text-sm transition-all outline-none"
-            placeholder="Search for products"
-            class="w-full bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 px-5 pl-12 text-sm transition-all outline-none">
-          <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
+            class="w-full h-[50px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm transition-all outline-none"
+            placeholder="Search for products">
+          <div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
+            <img src="assets/ic_search.png" alt="search" class="w-5 h-5">
           </div>
         </div>
       </div>
 
-      <div class="flex items-center space-x-5 text-gray-600">
+      <div class="flex items-center space-x-5 text-gray-600 order-2 lg:order-3">
 
-        <button class="hover:text-gold"><i class="fa-regular fa-user"></i></button>
+        <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user" class="w-5 h-5"></button>
         <button class="relative hover:text-gold">
-          <i class="fa-regular fa-heart"></i> <span
+          <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5"> <span
             class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">4</span>
         </button>
         <button class="relative hover:text-gold">
-          <i class="fa-regular fa-bag-shopping"></i><span
+          <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5"><span
             class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">1</span>
         </button>
       </div>
     </div>
-    <!-- image section-->
-
-    <main class="max-w-7xl mx-auto px-4 py-10 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-        <div class="space-y-4">
-          <div
-            class=" w-[600px] h-[1050px] bg-gray-50 border-gray-200  border-1 overflow-hidden flex justify-center items-center p-10">
-            <img src="assets/Product Photo.png" alt="Diamond Band" class="w-full h-auto mix-blend-multiply">
-          </div>
-          <div class="grid grid-cols-5 gap-3">
-            <div
-              class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
-              <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
-            </div>
-            <div
-              class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
-              <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
-            </div>
-            <div
-              class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
-              <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
-            </div>
-            <div
-              class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
-              <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
-            </div>
-            <div
-              class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
-              <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-6">
-          <div>
-            <div
-              class="flex items-center justify-center box-border px-[10px] py-[4px] gap-[6px] w-[151.67px] h-[23px] bg-white border border-[#D7D7DA] rounded-[4px]">
-              <span class="font-['Outfit'] font-bold text-[#1A1A1A]">4.5</span>
-              <img src="assets/1star.png" class="h-3 w-3" alt="">
-              <span class="font-['Outfit'] text-[#8B8B8B] text-sm font-normal">| 4.2k Ratings</span>
-            </div>
-            <h1 class="mt-2 w-full max-w-[577px] font-['Outfit'] font-medium text-[26px] leading-[40px] text-[#0D0D0E]">
-              Gracious Oval <br>Solitaire Diamond Band for Engagement</h1>
-            <div class="mt-4">
-              <span class="font-['Outfit'] font-semibold text-[32px] leading-[40px] text-[#0D0D0E]">₹32,657</span>
-              <p class="font-['Outfit'] text-[12px] leading-[18px] text-[#808080] mt-1">(MRP inclusive of all taxes)</p>
-            </div>
-
-            <div class="flex items-center space-x-2 font-['Outfit'] mt-2">
-              <img src="assets/true_sign.png" class="h-5 w-5" alt="">
-              <span class="text-[14px] leading-[20px] text-[#3D3D42] font-medium">In stock - ready to ship</span>
-            </div>
-          </div>
-
-          <div
-            class="grid grid-cols-3 w-[577px] h-[150px] bg-[rgba(219,179,88,0.1)] rounded-[10px] overflow-hidden font-['Outfit'] border border-[rgba(219,179,88,0.2)]">
-            <!-- Row 1 -->
-            <div class="flex flex-col items-center justify-center border-r-2 border-b-2 border-[#DBB358]/20 p-4">
-              <p class="text-[#3D3D42] text-sm mb-1">Diamond Shape</p>
-              <p class="font-bold text-[#1A1A1A] text-base">Round</p>
-            </div>
-            <div class="flex flex-col items-center justify-center border-r-2 border-b-2 border-[#DBB358]/20 p-4">
-              <p class="text-[#3D3D42] text-sm mb-1">Diamond Quality</p>
-              <p class="font-bold text-[#1A1A1A] text-base">FG/VVSVS</p>
-            </div>
-            <div class="flex flex-col items-center justify-center border-b-2 border-[#DBB358]/20 p-4">
-              <p class="text-[#3D3D42] text-sm mb-1">Diamond Carat</p>
-              <p class="font-bold text-[#1A1A1A] text-base">12 Carat</p>
-            </div>
-
-            <!-- Row 2 -->
-            <div class="flex flex-col items-center justify-center border-r-2 border-[#DBB358]/20 p-4">
-              <p class="text-[#3D3D42] text-sm mb-1">Metal Color</p>
-              <p class="font-bold text-[#1A1A1A] text-base">Rose</p>
-            </div>
-            <div class="flex flex-col items-center justify-center border-r-2 border-[#DBB358]/20 p-4">
-              <p class="text-[#3D3D42] text-sm mb-1">Size</p>
-              <p class="font-bold text-[#1A1A1A] text-base">20</p>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4">
-              <p class="text-[#3D3D42] text-sm mb-1">Metal</p>
-              <p class="font-bold text-[#1A1A1A] text-base">14KT</p>
-            </div>
-          </div>
-          <p class="font-['Outfit'] mt-6 text-[#1A1A1A] text-lg font-medium mb-2">Offers For You</p>
-          <div class="w-[577px] bg-[#F2F4F7] p-3 rounded-lg flex items-center justify-between cursor-pointer">
-            <div class="flex items-center gap-3">
-              <img src="assets/5off.png" class="h-10 w-10" alt="offer">
-              <div class="font-['Outfit'] text-[#3D3D42] text-sm">
-                EXTRA 10% OFF on Silver Jewellery above ₹999
-              </div>
-              <i class="fa-solid fa-angle-down text-[#3D3D42]"></i>
-            </div>
-
-          </div>
+    <!-- Navigation Bar -->
 
 
-          <!-- size Section-->
-          <div class="mt-8">
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-sm  text-gray-900  font-['Outfit']">Select Size</h3>
+    <nav class="hidden lg:flex items-center justify-center space-x-8 text-[15px] font-medium uppercase tracking-wider">
 
-            </div>
-            <div id="size-container" class="flex font-['Outfit'] flex-wrap gap-2">
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                5
-              </button>
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                6
-              </button>
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                7
-              </button>
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                8
-              </button>
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                9
-              </button>
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                10
-              </button>
-              <button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                11
-              </button><button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                12
-              </button><button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                13
-              </button><button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                14
-              </button><button onclick="selectSize(this)"
-                class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
-                15
-              </button>
-              <button class="text-xs font-Outfit text-gray-400 underline hover:text-amber-800 transition-colors">
-                View More
-              </button>
-            </div>
-          </div>
-          <!--Metal Color -->
-          <div class="mt-8">
-            <h3 class="text-[11px] font-['Outfit'] tracking-widest mb-5">Metal Color</h3>
+      <div class="relative group text-center">
+        <button class="flex items-center gap-1 hover:text-gold py-4 focus:outline-none">
+          New Arrivals <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
 
-            <div class="flex space-x-5 font-['Outfit']">
-              <label class="flex flex-col items-center group cursor-pointer">
-                <input type="radio" name="metal" class="hidden peer">
-                <img src="assets/yellow.png" class="h-12 w-35">
-              </label>
-
-              <label class="flex flex-col items-center group cursor-pointer">
-                <input type="radio" name="metal" class="hidden peer">
-                <img src="assets/silver.png" class="h-12 w-35">
-              </label>
-
-              <label class="flex flex-col items-center group cursor-pointer">
-                <input type="radio" name="metal" class="hidden peer" checked>
-                <img src="assets/rose.png" class="h-12 w-35">
-              </label>
-            </div>
-          </div>
-          <div class="mt-8 flex w-[577px] items-center gap-[20px]">
-            <button
-              class="flex-1 h-[60px] bg-[#CD9C56] hover:bg-[#B38940] rounded-full text-white py-4 px-4 flex items-center justify-center gap-3 transition-colors shadow-sm group">
-              <img src="assets/ic_bag.png" class="h-[24px] w-[24px]" alt="bag">
-              <span class="text-[18px] font-medium font-['Outfit']">Add to Cart</span>
-            </button>
-
-            <button
-              class="w-[60px] h-[60px] flex items-center justify-center border border-[#826230] rounded-full hover:bg-gray-50 transition-colors group">
-              <img src="assets/ic_wishlist.png" class="h-[24px] w-[24px]" alt="wishlist">
-            </button>
-
-            <button
-              class="w-[60px] h-[60px] flex items-center justify-center border border-[#826230] rounded-full hover:bg-gray-50 transition-colors group">
-              <img src="assets/export (1).png" class="h-[24px] w-[24px]" alt="share">
-            </button>
-          </div>
-
-          <div class="w-[577px] h-[100px]  mt-8 bg-[#FAF5F5] rounded-xl p-8 flex items-center justify-between">
-
-            <div class="flex flex-col items-center text-center gap-1">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <!-- Using existing icon or placeholder since strictly matching image icons requires new assets -->
-                <img src="assets/IC -.png" class="h-8 w-auto" alt="">
-              </div>
-              <p class="text-[14px] font-medium font-['Outfit'] text-[#5C4522]">
-                30 Day returnable
-              </p>
-            </div>
-
-            <div class="flex flex-col items-center text-center gap-1">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <img src="assets/IC -.png" class="h-8 w-auto" alt="">
-              </div>
-              <p class="text-[14px] font-medium font-['Outfit'] text-[#5C4522]">
-                Lifetime Exchange &<br>Buy-Back
-              </p>
-            </div>
-
-            <div class="flex flex-col items-center text-center gap-1">
-              <div class="w-8 h-8 flex items-center justify-center">
-                <img src="assets/IC -.png" class="h-8 w-auto" alt="">
-              </div>
-              <p class="text-[14px] font-medium font-['Outfit'] text-[#5C4522]">
-                Certified Jewellery
-              </p>
-            </div>
-
-          </div>
-
-          <div class="mt-8 pt-4">
-            <div class="flex items-center justify-between mb-3">
-              <h4 class="text-sm font-['Outfit'] font-medium flex items-center gap-2">
-                Estimated Delivery Date
-              </h4>
-              <button class="text-xs text-[#5C4522] flex items-center gap-1 hover:underline">
-                <i class="fas fa-map-marker-alt"></i>
-                Locate Me
-              </button>
-            </div>
-
-            <div class="relative flex items-center">
-              <input type="text" placeholder="Enter Pincode" maxlength="6"
-                class="w-full border border-gray-300 rounded-md py-3 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-yellow-600 focus:border-yellow-600">
-              <button
-                class="absolute right-2 font-Outfit px-4 py-1.5 bg-white text-gray-400 font-bold text-xs border-l border-gray-200 uppercase hover:text-yellow-700 transition-colors">
-                Confirm
-              </button>
-            </div>
-
-            <p class="mt-2 text-[11px] font-['Outfit']">
-              Enter Pincode to get expected delivery date
-            </p>
-
-            <p class="mt-4  text-center text-[#3D3D42] font-['Outfit']">
-              Any Questions? Please feel free to reach us at
-              <span class="font-['Outfit']">18001230006</span>
-            </p>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+          <div class="py-2">
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Diamond
+              Rings</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Gold
+              Necklaces</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Wedding
+              Collection</a>
+            <div class="border-t border-gray-50 my-1"></div>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">View
+              All New</a>
           </div>
         </div>
       </div>
-      <!--Product details-->
 
-      <div class="bg-white py-12 px-4 md:px-15 font-sans text-[#4A4A4A]">
-        <div class="flex items-center justify-center gap-6 mb-8 w-full">
-          <img src="assets/Design.png" class="h-auto flex-1 object-cover max-w-[400px]" alt="">
-          <div class="text-center flex flex-col items-center">
-            <p style="font-family: 'Alexandria', sans-serif;"
-              class="text-[12px] tracking-[0.2em] text-[#5C4522] font-bold font-['Alexandria'] mb-[-5px]">Product</p>
-            <h2 class="font-['Outfit'] font-medium text-[40px] leading-[68px] text-[#CBA65A]">
-              Details</h2>
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-gold py-4">
+          Best Seller <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <div class="py-2">
+            <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+              Rated</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+              Gifted</a>
           </div>
-          <img src="assets/Design (1).png" class="h-auto flex-1 object-cover max-w-[400px]" alt="">
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-gold py-4">
+          Ready To Stock <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <div class="py-2">
+            <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+              Rated</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+              Gifted</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-gold py-4">
+          Buy It Again <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <div class="py-2">
+            <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+              Rated</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+              Gifted</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-gold py-4">
+          Contact Us <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <div class="py-2">
+            <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+              Rated</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+              Gifted</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-gold py-4">
+          Exhibition <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <div class="py-2">
+            <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+              Rated</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+              Gifted</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-gold py-4">
+          About Us <span class="text-[8px] transition-transform group-hover:rotate-180"><i
+              class="fa-solid fa-chevron-down"></i></span>
+        </button>
+        <div
+          class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <div class="py-2">
+            <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+              Rated</a>
+            <a href="#"
+              class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+              Gifted</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- image section-->
+
+  <main class="max-w-7xl mx-auto px-4 py-10 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <div class="space-y-4">
+        <div
+          class="w-full max-w-[600px] h-[500px] lg:h-[1110px] aspect-[4/5] lg:aspect-[3/5] bg-gray-50 border-gray-200 border-1 overflow-hidden flex justify-center items-center p-4 lg:p-10">
+          <img src="assets/Product Photo.png" alt="Diamond Band"
+            class="w-full h-full object-contain mix-blend-multiply">
+        </div>
+        <div class="grid grid-cols-5 gap-3">
+          <div
+            class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
+            <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
+          </div>
+          <div
+            class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
+            <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
+          </div>
+          <div
+            class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
+            <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
+          </div>
+          <div
+            class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
+            <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
+          </div>
+          <div
+            class="cursor-pointer border border-gray-200 hover:border-amber-400 rounded-md p-1 bg-white overflow-hidden aspect-square flex items-center justify-center">
+            <img onclick="changeImage(this.src)" src="assets/Product Photo.png" class="object-contain h-full w-full">
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <div
+            class="flex items-center justify-center box-border px-[10px] py-[4px] gap-[6px] w-[151.67px] h-[23px] bg-white border border-[#D7D7DA] rounded-[4px]">
+            <span class="font-['Outfit'] font-bold text-[#1A1A1A]">4.5</span>
+            <img src="assets/1star.png" class="h-3 w-3" alt="">
+            <span class="font-['Outfit'] text-[#8B8B8B] text-sm font-normal">| 4.2k Ratings</span>
+          </div>
+          <h1 class="mt-2 w-full max-w-[577px] font-['Outfit'] font-medium text-[26px] leading-[40px] text-[#0D0D0E]">
+            Gracious Oval <br>Solitaire Diamond Band for Engagement</h1>
+          <div class="mt-4">
+            <span class="font-['Outfit'] font-semibold text-[32px] leading-[40px] text-[#0D0D0E]">₹32,657</span>
+            <p class="font-['Outfit'] text-[12px] leading-[18px] text-[#808080] mt-1">(MRP inclusive of all taxes)</p>
+          </div>
+
+          <div class="flex items-center space-x-2 font-['Outfit'] mt-2">
+            <img src="assets/true_sign.png" class="h-5 w-5" alt="">
+            <span class="text-[14px] leading-[20px] text-[#3D3D42] font-medium">In stock - ready to ship</span>
+          </div>
         </div>
 
-        <div class="flex justify-center gap-2 mb-10 font-Outfit">
+        <div
+          class="grid grid-cols-3 w-full max-w-[577px] h-auto bg-[rgba(219,179,88,0.1)] rounded-[10px] overflow-hidden font-['Outfit'] border border-[rgba(219,179,88,0.2)]">
+          <!-- Row 1 -->
+          <div class="flex flex-col items-center justify-center border-r-2 border-b-2 border-[#DBB358]/20 p-4">
+            <p class="text-[#3D3D42] text-sm mb-1">Diamond Shape</p>
+            <p class="font-bold text-[#1A1A1A] text-base">Round</p>
+          </div>
+          <div class="flex flex-col items-center justify-center border-r-2 border-b-2 border-[#DBB358]/20 p-4">
+            <p class="text-[#3D3D42] text-sm mb-1">Diamond Quality</p>
+            <p class="font-bold text-[#1A1A1A] text-base">FG/VVSVS</p>
+          </div>
+          <div class="flex flex-col items-center justify-center border-b-2 border-[#DBB358]/20 p-4">
+            <p class="text-[#3D3D42] text-sm mb-1">Diamond Carat</p>
+            <p class="font-bold text-[#1A1A1A] text-base">12 Carat</p>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="flex flex-col items-center justify-center border-r-2 border-[#DBB358]/20 p-4">
+            <p class="text-[#3D3D42] text-sm mb-1">Metal Color</p>
+            <p class="font-bold text-[#1A1A1A] text-base">Rose</p>
+          </div>
+          <div class="flex flex-col items-center justify-center border-r-2 border-[#DBB358]/20 p-4">
+            <p class="text-[#3D3D42] text-sm mb-1">Size</p>
+            <p class="font-bold text-[#1A1A1A] text-base">20</p>
+          </div>
+          <div class="flex flex-col items-center justify-center p-4">
+            <p class="text-[#3D3D42] text-sm mb-1">Metal</p>
+            <p class="font-bold text-[#1A1A1A] text-base">14KT</p>
+          </div>
+        </div>
+        <p class="font-['Outfit'] mt-6 text-[#1A1A1A] text-lg font-medium mb-2">Offers For You</p>
+        <div class="w-full max-w-[577px] bg-[#F2F4F7] p-3 rounded-lg flex items-center justify-between cursor-pointer">
+          <div class="flex items-center gap-3">
+            <img src="assets/5off.png" class="h-10 w-10" alt="offer">
+            <div class="font-['Outfit'] text-[#3D3D42] text-sm">
+              EXTRA 10% OFF on Silver Jewellery above ₹999
+            </div>
+            <i class="fa-solid fa-angle-down text-[#3D3D42]"></i>
+          </div>
+
+        </div>
+
+
+        <!-- size Section-->
+        <div class="mt-8">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-sm  text-gray-900  font-['Outfit']">Select Size</h3>
+
+          </div>
+          <div id="size-container" class="flex font-['Outfit'] flex-wrap gap-2">
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              5
+            </button>
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              6
+            </button>
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              7
+            </button>
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              8
+            </button>
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              9
+            </button>
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              10
+            </button>
+            <button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              11
+            </button><button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              12
+            </button><button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              13
+            </button><button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              14
+            </button><button onclick="selectSize(this)"
+              class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              15
+            </button>
+            <button class="text-xs font-Outfit text-gray-400 underline hover:text-amber-800 transition-colors">
+              View More
+            </button>
+          </div>
+        </div>
+        <!--Metal Color -->
+        <div class="mt-8">
+          <h3 class="text-[11px] font-['Outfit'] tracking-widest mb-5">Metal Color</h3>
+
+          <div class="flex space-x-5 font-['Outfit']">
+            <label class="flex flex-col items-center group cursor-pointer">
+              <input type="radio" name="metal" class="hidden peer">
+              <img src="assets/yellow.png" class="h-12 w-35">
+            </label>
+
+            <label class="flex flex-col items-center group cursor-pointer">
+              <input type="radio" name="metal" class="hidden peer">
+              <img src="assets/silver.png" class="h-12 w-35">
+            </label>
+
+            <label class="flex flex-col items-center group cursor-pointer">
+              <input type="radio" name="metal" class="hidden peer" checked>
+              <img src="assets/rose.png" class="h-12 w-35">
+            </label>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-wrap w-full max-w-[577px] items-center gap-[10px] md:gap-[20px]">
           <button
-            class="px-8 py-2  border border-[#E8E1D5] text-xs rounded-full font-medium transition duration-300 hover:bg-black hover:text-white">
-            About
+            class="flex-1 h-[60px] bg-[#CD9C56] hover:bg-[#B38940] rounded-full text-white py-4 px-4 flex items-center justify-center gap-3 transition-colors shadow-sm group">
+            <img src="assets/ic_bag.png" class="h-[24px] w-[24px]" alt="bag">
+            <span class="text-[18px] font-medium font-['Outfit']">Add to Cart</span>
           </button>
+
           <button
-            class="px-8 py-2 border border-[#E8E1D5] text-xs rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
-            Diamond & Metal Details
+            class="w-[60px] h-[60px] flex items-center justify-center border border-[#826230] rounded-full hover:bg-gray-50 transition-colors group">
+            <img src="assets/ic_wishlist.png" class="h-[24px] w-[24px]" alt="wishlist">
           </button>
+
           <button
-            class="px-8 py-2  border border-[#E8E1D5] text-gray-700 text-xs rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
-            Price Breakup
+            class="w-[60px] h-[60px] flex items-center justify-center border border-[#826230] rounded-full hover:bg-gray-50 transition-colors group">
+            <img src="assets/share_icon.png" class="h-[24px] w-[24px]" alt="share">
           </button>
         </div>
 
         <div
-          class="w-[1120px] h-[357px] mx-auto bg-[#FAF5F5] border-t-2 border-b-2  p-0 flex items-center justify-between overflow-hidden">
+          class="w-full max-w-[577px] h-auto mt-8 bg-[#FAF5F5] rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
 
-          <div class="flex-1 pl-[60px] flex flex-col justify-center h-full">
-            <span class="text-[14px] leading-[20px] font-['Outfit'] text-[#3D3D42] mb-3">About Your</span>
-            <h3 class="text-[28px] leading-[36px] font-medium font-['Outfit'] text-[#1A1A1A] mb-4">
-              Gracious Oval <br> Solitaire Diamond Band for Engagement
-            </h3>
-            <p class="text-[14px] leading-[22px] font-['Outfit'] text-[#808080] mb-8 max-w-[500px]">
-              A criss-cross Lab Grown Diamond ring band representing connection and balance,
-              ideal for daily elegance and gifting. A criss-cross Lab Grown Diamond ring band
-              representing connection and balance.
-            </p>
-
-            <div class="w-[580px] h-[52px] bg-white rounded-[8px] flex justify-between items-center px-6 shadow-sm">
-              <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">Weight</span>
-              <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">2.079 gram</span>
+          <div class="flex flex-col items-center text-center gap-1">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <!-- Using existing icon or placeholder since strictly matching image icons requires new assets -->
+              <img src="assets/IC -.png" class="h-8 w-auto" alt="">
             </div>
+            <p class="text-[14px] font-medium font-['Outfit'] text-[#5C4522]">
+              30 Day returnable
+            </p>
           </div>
 
-          <div
-            class="w-[335px] h-[317px] bg-[#FFFFFF] rounded-[12px] border border-[#F2F4F7] flex items-center justify-center mr-[20px] relative">
-            <img src="assets/Product Photo.png" alt="Gracious Oval Band" class="w-[200px] h-[200px] object-contain">
+          <div class="flex flex-col items-center text-center gap-1">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <img src="assets/IC -.png" class="h-8 w-auto" alt="">
+            </div>
+            <p class="text-[14px] font-medium font-['Outfit'] text-[#5C4522]">
+              Lifetime Exchange &<br>Buy-Back
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center gap-1">
+            <div class="w-8 h-8 flex items-center justify-center">
+              <img src="assets/IC -.png" class="h-8 w-auto" alt="">
+            </div>
+            <p class="text-[14px] font-medium font-['Outfit'] text-[#5C4522]">
+              Certified Jewellery
+            </p>
           </div>
 
         </div>
-      </div>
-      <!--Ratings and reviews-->
-      <section class="max-w-7xl mx-auto px-4 lg:px-8 py-16 font-sans">
-        <div class="flex flex-col lg:flex-row items-center gap-2">
-          <img src="assets/Design.png" class="h-3 w-11 relative z-10 bg-white px-2" alt="">
 
-          <!-- Left Side: Summary -->
-          <div class="w-full lg:w-1/3 flex flex-col items-center justify-center gap-2">
-            <div>
-              <div class="text-center">
-
-                <span class="text-[12px] font-bold text-[#5C4522] block mb-0 font-['Outfit'] tracking-widest">Ratings
-                  &</span>
-                <h2 class="text-[44px] font-medium text-[#D4AF37] font-['Outfit'] leading-tight">Reviews</h2>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <div class="flex items-center gap-1 text-[#F5B800]">
-                <i class="fas fa-star text-lg"></i>
-                <i class="fas fa-star text-lg"></i>
-                <i class="fas fa-star text-lg"></i>
-                <i class="fas fa-star text-lg"></i>
-                <i class="fas fa-star-half-alt text-lg"></i>
-              </div>
-              <span class="font-['Outfit'] font-bold text-[32px] text-[#1A1A1A]">4.5</span>
-            </div>
-
-            <button
-              class="mt-4 px-12 py-3 border border-[#CBA65A] text-[#CBA65A] text-[16px] rounded-full hover:bg-[#CBA65A] hover:text-white transition-all font-['Outfit'] tracking-wide uppercase">
-              Write Review
+        <div class="mt-8 pt-4">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-sm font-['Outfit'] font-medium flex items-center gap-2">
+              Estimated Delivery Date
+            </h4>
+            <button class="text-xs text-[#5C4522] flex items-center gap-1 hover:underline">
+              <i class="fas fa-map-marker-alt"></i>
+              Locate Me
             </button>
           </div>
 
-          <!-- Right Side: Reviews Card -->
-          <div class="w-full lg:w-2/3">
-            <div class="bg-white rounded-2xl border border-[#F2F4F7] overflow-hidden shadow-sm">
-              <!-- Card Header -->
-              <div class="bg-white border-b border-[#F2F4F7] px-8 py-5">
-                <h3 class="text-[#5C4522] font-bold font-['Outfit'] text-xl">Customers Review</h3>
-              </div>
-
-              <!-- Card Body (Reviews List) -->
-              <div class="bg-[#FAF8F1] px-8 py-6 h-[350px] overflow-y-auto space-y-6 custom-scrollbar">
-                <!-- Review Item 1 -->
-                <div class="border-b border-[#E8E1D5] pb-6 last:border-0 last:pb-0">
-                  <p class="text-[#3D3D42] text-[15px] leading-relaxed mb-4 font-['Outfit'] italic">
-                    "Boasting a 0.54 carat diamond, these earthiss are finely set to ensure superior clarity and shine."
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <span class="text-[#1A1A1A] font-['Outfit'] text-sm">Siddharth Rana</span>
-                      <div class="border border-[#D7D7DA] rounded px-2 py-0.5 bg-white text-xs flex items-center gap-1">
-                        <span class="font-bold">4.5</span>
-                        <img src="assets/1star.png" class="h-3 w-3" alt="">
-                        <span class="text-[#808080]  border-l-2 font-['Outfit']">23 Oct 2025</span>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Review Item 2 -->
-                <div class="border-b border-[#E8E1D5] pb-6 last:border-0 last:pb-0">
-                  <p class="text-[#3D3D42] text-[15px] leading-relaxed mb-4 font-['Outfit'] italic">
-                    "Boasting a 0.54 carat diamond, these earthiss are finely set to ensure superior clarity and shine."
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <span class="text-[#1A1A1A] font-['Outfit'] text-sm">Siddharth Rana</span>
-                      <div class="border border-[#D7D7DA] rounded px-2 py-0.5 bg-white text-xs flex items-center gap-1">
-                        <span class="font-bold">4.5</span>
-                        <img src="assets/1star.png" class="h-3 w-3" alt="">
-                        <span class="text-[#808080] border-l-2 text-xs font-['Outfit']">23 Oct 2025</span>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Review Item 3 -->
-                <div class="border-b border-[#E8E1D5] pb-6 last:border-0 last:pb-0">
-                  <p class="text-[#3D3D42] text-[15px] leading-relaxed mb-4 font-['Outfit'] italic">
-                    "Boasting a 0.54 carat diamond, these earthiss are finely set to ensure superior clarity and shine."
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <span class="text-[#1A1A1A] font-['Outfit'] text-sm">Siddharth Rana</span>
-                      <div class="border border-[#D7D7DA] rounded px-2 py-0.5 bg-white text-xs flex items-center gap-1">
-                        <span class="font-bold">4.5</span>
-                        <img src="assets/1star.png" class="h-3 w-3" alt="">
-                        <span class="text-[#808080] border-l-2 text-xs font-['Outfit']">23 Oct 2025</span>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-            <!-- Card Footer (Pagination) -->
-            <div class="py-4 px-8 flex justify-end items-center gap-3">
-              <button
-                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#E8E1D5] text-[#5C4522] transition-colors">
-                <i class="fa-solid fa-chevron-left text-xs"></i>
-              </button>
-              <button
-                class="w-8 h-8 flex items-center justify-center rounded-full border border-[#CBA65A] text-[#CBA65A] font-medium bg-white shadow-sm text-sm">
-                1
-              </button>
-              <button
-                class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#E8E1D5] text-[#5C4522] transition-colors">
-                <i class="fa-solid fa-chevron-right text-xs"></i>
-              </button>
-            </div>
+          <div class="relative flex items-center">
+            <input type="text" placeholder="Enter Pincode" maxlength="6"
+              class="w-full border border-gray-300 text-black rounded-md py-3 px-4 text-sm focus:outline-none focus:ring-1 focus:ring-yellow-600 focus:border-yellow-600">
+            <button
+              class="absolute right-2 font-Outfit px-4 py-1.5 bg-white text-gray-400 font-bold text-xs border-l border-gray-200 uppercase hover:text-yellow-700 transition-colors">
+              Confirm
+            </button>
           </div>
 
+          <p class="mt-2 text-[11px] text[#3D3D42] font-['Outfit']">
+            Enter Pincode to get expected delivery date
+          </p>
+
+          <p class="mt-4  text-center text-[#3D3D42] font-['Outfit']">
+            Any Questions? Please feel free to reach us at
+            <span class="font-['Outfit']">18001230006</span>
+          </p>
         </div>
-      </section>
-      <!-- image slider-->
-      <section class="max-w-6xl mx-auto p-4 flex flex-col md:flex-row gap-8">
-        <div class="relative w-full h-[50vh] md:h-screen overflow-hidden">
-          <div id="slides" class="whitespace-nowrap transition-transform duration-500 h-full">
-            <!-- Slide 1 -->
-            <div class="inline-block w-full h-full">
-              <img src="assets/Top Banner Section.png" class="w-full h-full object-cover" alt="Slide 1">
-            </div>
-            <!-- Slide 2 -->
-            <div class="inline-block w-full h-full">
-              <img src="assets/banner.png" class="w-full h-full object-cover" alt="Slide 2">
-            </div>
-            <!-- Slide 3 -->
-            <div class="inline-block w-full h-full">
-              <img src="assets/Top Banner Section.png" class="w-full h-full object-cover" alt="Slide 3">
-            </div>
-          </div>
+      </div>
+    </div>
+    <!--Product details-->
 
-          <!-- Dots navigation -->
-          <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-            <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
-              aria-label="Slide 1"></button>
-            <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
-              aria-label="Slide 2"></button>
-            <button class="w-3 h-3 rounded-full bg-black bg-opacity-75 hover:bg-opacity-100"
-              aria-label="Slide 3"></button>
-          </div>
+    <div class="bg-white py-12 px-4 md:px-15 font-sans text-[#4A4A4A]">
+      <div class="flex items-center justify-center gap-2 md:gap-6 mb-8 w-full">
+        <img src="assets/Design.png" class="h-auto w-[60px] md:w-auto md:flex-1 object-cover md:max-w-[400px]" alt="">
+        <div class="text-center flex flex-col items-center">
+          <p style="font-family: 'Alexandria', sans-serif;"
+            class="text-[12px] tracking-[0.2em] text-[#5C4522] font-bold font-['Alexandria'] mb-[-5px]">Product</p>
+          <h2
+            class="font-['Outfit'] font-medium text-[28px] md:text-[40px] leading-tight md:leading-[68px] text-[#CBA65A]">
+            Details</h2>
         </div>
-      </section>
-      <!-- Similar Jewellery Product Section -->
-      <section class="max-w-[1380px] mx-auto px-4 py-12 font-Outfit">
-        <div class="flex items-center justify-center gap-6 mb-8 w-full">
-          <img src="assets/Design.png" class="h-auto flex-1 object-cover max-w-[400px]" alt="">
-          <div class="text-center flex flex-col items-center">
-            <p style="font-family: 'Alexandria', sans-serif;"
-              class="text-[15px]  text-[#5C4522] font-bold font-['Alexandria'] mb-[-19px]">Similar</p>
-            <h2 class="font-['Outfit'] font-medium text-[40px] leading-[68px] text-[#CBA65A]">
-              Jewellery Product</h2>
-          </div>
-          <img src="assets/Design (1).png" class="h-auto flex-1 object-cover max-w-[400px]" alt="">
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-5">
-          <!-- Left Banner Card -->
+        <img src="assets/Design (1).png" class="h-auto w-[60px] md:w-auto md:flex-1 object-cover md:max-w-[400px]"
+          alt="">
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-2 mb-10 font-Outfit">
+        <button
+          class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-xs rounded-full font-medium transition duration-300 hover:bg-black hover:text-white">
+          About
+        </button>
+        <button
+          class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-xs rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
+          Diamond & Metal Details
+        </button>
+        <button
+          class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-gray-700 text-xs rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
+          Price Breakup
+        </button>
+      </div>
+
+      <div
+        class="w-full max-w-[1120px] h-auto mx-auto bg-[#FAF5F5] border-t-2 border-b-2 p-8 lg:p-0 flex flex-col lg:flex-row items-center justify-between overflow-hidden gap-8 lg:gap-0">
+
+        <div class="flex-1 px-4 lg:pl-[60px] flex flex-col justify-center h-full text-center lg:text-left">
+          <span class="text-[14px] leading-[20px] font-['Outfit'] text-[#3D3D42] mb-3">About Your</span>
+          <h3 class="text-[28px] leading-[36px] font-medium font-['Outfit'] text-[#1A1A1A] mb-4">
+            Gracious Oval <br> Solitaire Diamond Band for Engagement
+          </h3>
+          <p
+            class="text-[14px] leading-[22px] font-['Outfit'] text-[#808080] mb-8 w-full max-w-[500px] mx-auto lg:mx-0">
+            A criss-cross Lab Grown Diamond ring band representing connection and balance,
+            ideal for daily elegance and gifting. A criss-cross Lab Grown Diamond ring band
+            representing connection and balance.
+          </p>
+
           <div
-            class="lg:col-span-1 bg-[#111111] h-auto w-full rounded-2xl p-2 flex flex-col items-center justify-between text-center relative overflow-hidden">
-            <img src="assets/neckless.png" alt="Necklace"
-              class="w-full h-full object-contain object-bottom transform scale-125">
-
-
-          </div>
-
-          <!-- Right Grid -->
-          <div class="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-5 content-start">
-            <!-- Product Card 1 -->
-            <div class="flex flex-col gap-3  h-[260px] w-[220px]">
-              <div
-                class=" box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-gray-150 rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[9px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-2 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 2 -->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-2 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 3 -->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-3 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 4 -->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-3 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 5 -->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-3 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 6 -->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-3 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class="text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 7 -->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-3 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm  text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
-            <!--product card 8-->
-            <div class="flex flex-col gap-3">
-              <div
-                class="bg-[#FDFBF7] box-border flex flex-col items-center p-0 w-full max-w-[330px] h-[230px] border border-[#D7D7DA] rounded-[14px] relative group transition-all">
-                <span
-                  class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] rounded-r-none flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
-                  Seller</span>
-                <button
-                  class="absolute flex bottom-3 bg-white h-[26px] w-[26px] items-center justify-center  rounded-full left-2 text-gray-400 hover:text-red-500 transition-colors z-20">
-                  <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
-                </button>
-                <div class="aspect-square flex items-center justify-center mb-1 w-full h-full">
-                  <img src="assets/ring.png" alt="Ring"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform duration-500 ease-in-out  group-hover:opacity-0">
-                  <img src="assets/roundshape1.png"
-                    class="w-full h-full object-contain mix-blend-multiply  transition-transform object-cover absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
-                </div>
-              </div>
-              <div class="text-center font-['Outfit']">
-                <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                <div class="flex items-center justify-center gap-2 text-xs">
-                  <span class=" font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
-                  <span class="text-[#999999] line-through">₹ 949.00</span>
-                </div>
-              </div>
-            </div>
+            class="w-full max-w-[580px] h-[52px] bg-white rounded-[8px] flex justify-between items-center px-6 shadow-sm mx-auto lg:mx-0">
+            <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">Weight</span>
+            <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">2.079 gram</span>
           </div>
         </div>
-      </section>
-      <!--Footer section-->
-      <footer
-        class="bg-white pt-16 pb-8 px-6 md:px-20 border-t border-pink-100 relative overflow-hidden w-full max-w-[100vw]">
-        <div class="max-w-[1440px] mx-auto">
 
-          <!-- Logo Row -->
-          <div class="flex items-center gap-2 mb-10">
-            <img src="assets/logo.png" alt="Logo" class="w-8 h-auto">
-            <span class="font-Outfit font-bold text-2xl tracking-[0.2em] text-[#0D0D0E]">TATTSVI</span>
-          </div>
+        <div
+          class="w-full max-w-[335px] h-auto aspect-square bg-[#FFFFFF] rounded-[12px] border border-[#F2F4F7] flex items-center justify-center lg:mr-[20px] relative p-4">
+          <img src="assets/Product Photo.png" alt="Gracious Oval Band" class="w-full h-full object-contain">
+        </div>
 
-          <!-- Columns Row -->
-          <!-- Columns Row -->
-          <div class="flex flex-col lg:flex-row justify-between items-start mt-12 w-full gap-10 relative z-10">
-
-            <!-- Left: Link Columns Group -->
-            <div class="flex flex-wrap gap-x-12 md:gap-x-[88px] gap-y-10">
-              <!-- About Us -->
-              <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
-                <h4 style="font-family: 'Outfit', sans-serif;" class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
-                  About us</h4>
-                <ul class="flex flex-col gap-[16px]">
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
-                      Story</a></li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
-                      Us</a></li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
-                      & Services</a></li>
-                </ul>
-              </div>
-
-              <!-- Categories -->
-              <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
-                <h4 style="font-family: 'Outfit', sans-serif;" class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
-                  Categories</h4>
-                <ul class="flex flex-col gap-[16px]">
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Customer Service -->
-              <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
-                <h4 style="font-family: 'Outfit', sans-serif;" class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
-                  Customer Service</h4>
-                <ul class="flex flex-col gap-[16px]">
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
-                      Us</a></li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
-                  </li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
-                      Care</a></li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
-                      Warranty</a></li>
-                  <li><a href="#"
-                      class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
-                      an Appointment</a></li>
-                </ul>
-              </div>
+      </div>
+    </div>
+    <!--Ratings and reviews-->
+    <section class=" h-full w-full mx-auto px-4 lg:px-8 py-16 font-sans">
+      <div class="flex flex-col lg:flex-row items-center gap-2">
+        <!-- Left Side: Summary -->
+        <div class="w-full lg:w-1/3 flex flex-col items-center justify-center gap-2">
+          <div class="flex items-center gap-2 md:gap-4 mb-2">
+            <div class="hidden md:flex flex-row justify-end items-center gap-[4px] w-auto flex-1 h-[24px]">
+              <img src="assets/Design_new.png" alt="design" class="h-full lg:items-start object-contain">
             </div>
-
-            <!-- Right: Sign Up -->
-            <div class="flex flex-col items-start gap-4 lg:w-[400px]">
-              <h4 style="font-family: 'Outfit', sans-serif;"
-                class="font-['Outfit'] font-bold text-[#0D0D0E] text-[32px] leading-[1.2]">
-                Sign up <br>for Exclusive Offers
-              </h4>
-              <p class="font-['Outfit'] text-base text-[#6E6E6E] leading-relaxed max-w-[350px]">
-                Be the first to know about new collections, exclusive deals & more!
-              </p>
-              <div class="flex flex-row gap-3 mt-4 w-full">
-                <input type="email" placeholder="Email Address"
-                  class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] flex-grow">
-                <button
-                  class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] shadow-sm">
-                  Submit
-                </button>
-              </div>
+            <div class="text-left flex flex-col">
+              <span class="text-[12px] text-[#5C4522] block font-['Alexandria'] tracking-widest leading-none">Ratings
+                &</span>
+              <h2 class="text-[28px] md:text-[32px] text-[#CBA65A] font-medium font-['Outfit'] leading-tight">
+                Reviews
+              </h2>
             </div>
           </div>
 
-          <!-- Bottom Section -->
-          <!-- Bottom Section -->
-          <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col gap-8 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
-              <!-- Left: QR and Apps -->
-              <div class="flex items-center gap-6">
-                <img src="assets/MobileQrNew.png" alt="QR Code" class="w-20 h-20 object-contain">
-                <div class="flex flex-col gap-2">
-                  <a href="#"><img src="assets/ioslogo.png" alt="App Store" class="h-[30px] w-auto"></a>
-                  <a href="#"><img src="assets/Androidelogo.png" alt="Google Play" class="h-[30px] w-auto"></a>
-                </div>
-              </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-1 text-[#F5B800]">
+              <i class="fas fa-star text-lg"></i>
+              <i class="fas fa-star text-lg"></i>
+              <i class="fas fa-star text-lg"></i>
+              <i class="fas fa-star text-lg"></i>
+              <i class="fas fa-star-half-alt text-lg"></i>
+            </div>
+            <span class="font-['Outfit'] font-bold text-[32px] text-[#1A1A1A]">4.5</span>
+          </div>
 
-              <!-- Right Group: Socials, Rights, Payments -->
-              <div class="flex flex-col items-center md:items-start gap-6">
-                <!-- Socials -->
-                <div class="flex gap-5">
-                  <a href="#"
-                    class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="#"
-                    class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#"
-                    class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                  <a href="#"
-                    class="w-[60px] h-[60px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
-                    <i class="fab fa-x-twitter"></i>
-                  </a>
-                </div>
+          <button
+            class="mt-4 px-12 py-3 border border-[#CBA65A] text-[#CBA65A] text-[16px] rounded-full hover:bg-[#CBA65A] hover:text-white transition-all font-['Outfit'] tracking-wide uppercase">
+            Write Review
+          </button>
+        </div>
 
-                <!-- Rights & Payments Group (Left Aligned) -->
-                <div class="flex flex-col items-start gap-3">
-                  <!-- Rights Text -->
-                  <p class="font-Outfit text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
+        <!-- Right Side: Reviews Card -->
+        <div class="w-full lg:w-2/3">
+          <div class="bg-white rounded-2xl border border-[#F2F4F7] overflow-hidden shadow-sm">
+            <!-- Card Header -->
+            <div class="bg-white border-b border-[#F2F4F7] px-8 py-5">
+              <h3 class="text-[#5C4522] font-bold font-['Outfit'] text-xl">Customers Review</h3>
+            </div>
 
-                  <!-- Payments -->
+            <!-- Card Body (Reviews List) -->
+            <div class="bg-[#FAF8F1] px-8 py-6 h-[350px] overflow-y-auto space-y-6 custom-scrollbar">
+              <!-- Review Item 1 -->
+              <div class="border-b border-[#E8E1D5] pb-6 last:border-0 last:pb-0">
+                <p class="text-[#3D3D42] text-[15px] leading-relaxed mb-4 font-['Outfit'] italic">
+                  "Boasting a 0.54 carat diamond, these earthiss are finely set to ensure superior clarity and shine."
+                </p>
+                <div class="flex items-center justify-between">
                   <div class="flex items-center gap-3">
-                    <img src="assets/google_pay.png" alt="GPay" class="h-6">
-                    <img src="assets/visa.png" alt="Visa" class="h-4">
-                    <img src="assets/paypal.png" alt="PayPal" class="h-6">
-                    <img src="assets/master-card.png" alt="Mastercard" class="h-8">
+                    <span class="text-[#1A1A1A] font-['Outfit'] text-sm">Siddharth Rana</span>
+                    <div class="border border-[#D7D7DA] rounded px-2 py-0.5 bg-white text-xs flex items-center gap-1">
+                      <span class="font-bold">4.5</span>
+                      <img src="assets/1star.png" class="h-3 w-3" alt="">
+                      <span class="text-[#808080]  border-l-2 font-['Outfit']">23 Oct 2025</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review Item 2 -->
+              <div class="border-b border-[#E8E1D5] pb-6 last:border-0 last:pb-0">
+                <p class="text-[#3D3D42] text-[15px] leading-relaxed mb-4 font-['Outfit'] italic">
+                  "Boasting a 0.54 carat diamond, these earthiss are finely set to ensure superior clarity and shine."
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-[#1A1A1A] font-['Outfit'] text-sm">Siddharth Rana</span>
+                    <div class="border border-[#D7D7DA] rounded px-2 py-0.5 bg-white text-xs flex items-center gap-1">
+                      <span class="font-bold">4.5</span>
+                      <img src="assets/1star.png" class="h-3 w-3" alt="">
+                      <span class="text-[#808080] border-l-2 text-xs font-['Outfit']">23 Oct 2025</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review Item 3 -->
+              <div class="border-b border-[#E8E1D5] pb-6 last:border-0 last:pb-0">
+                <p class="text-[#3D3D42] text-[15px] leading-relaxed mb-4 font-['Outfit'] italic">
+                  "Boasting a 0.54 carat diamond, these earthiss are finely set to ensure superior clarity and shine."
+                </p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-[#1A1A1A] font-['Outfit'] text-sm">Siddharth Rana</span>
+                    <div class="border border-[#D7D7DA] rounded px-2 py-0.5 bg-white text-xs flex items-center gap-1">
+                      <span class="font-bold">4.5</span>
+                      <img src="assets/1star.png" class="h-3 w-3" alt="">
+                      <span class="text-[#808080] border-l-2 text-xs font-['Outfit']">23 Oct 2025</span>
+
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Bottom Copyright -->
-            <div class="text-center mt-4">
-              <p class="font-Outfit text-[14px] text-[#0D0D0E]">Copyright © Tattsvi 2026. All Right Reserved</p>
+
+          </div>
+          <!-- Card Footer (Pagination) -->
+          <div class="py-4 px-8 flex justify-end items-center gap-3">
+            <button
+              class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#E8E1D5] text-[#5C4522] transition-colors">
+              <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+            <button
+              class="w-8 h-8 flex items-center justify-center rounded-full border border-[#CBA65A] text-[#CBA65A] font-medium bg-white shadow-sm text-sm">
+              1
+            </button>
+            <button
+              class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#E8E1D5] text-[#5C4522] transition-colors">
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- image slider-->
+    <div class="relative w-full h-full mx-auto overflow-hidden">
+      <div id="slides" class="whitespace-nowrap transition-transform duration-500">
+        <!-- Slide 1 -->
+        <div class="inline-block w-full">
+          <img src="assets/banner.png" class="w-full h-[250px] md:h-[600px] object-cover" alt="Slide 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="inline-block w-full">
+          <img src="assets/banner.png" class="w-full h-[250px] md:h-[600px] object-cover" alt="Slide 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="inline-block w-full">
+          <img src="assets/Top Banner Section.png" class="w-full h-[250px] md:h-[600px] object-cover" alt="Slide 3">
+        </div>
+      </div>
+
+      <!-- Dots navigation -->
+      <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 dots-expanding">
+        <button class="h-3 rounded-full transition-all duration-300 w-8 bg-[#CBA65A]" aria-label="Slide 1"></button>
+        <button class="h-3 rounded-full transition-all duration-300 w-3 bg-[#E8E1D5]" aria-label="Slide 2"></button>
+        <button class="h-3 rounded-full transition-all duration-300 w-3 bg-[#E8E1D5]" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+
+
+    <!-- Similar Jewellery Product Section -->
+    <section class="max-w-[1380px] mx-auto px-4 py-12 font-Outfit">
+      <div class="flex items-center justify-center gap-2 md:gap-6 mb-8 w-full">
+        <img src="assets/Design.png" class="h-auto w-[60px] md:w-auto md:flex-1 object-cover md:max-w-[400px]" alt="">
+        <div class="text-center flex flex-col items-center">
+          <p style="font-family: 'Alexandria', sans-serif;"
+            class="text-[15px]  text-[#5C4522] font-bold font-['Alexandria'] mb-[-5px]">Similar</p>
+          <h2
+            class="font-['Outfit'] font-medium text-[28px] md:text-[40px] leading-tight md:leading-[50px] text-[#CBA65A]">
+            Jewellery Product</h2>
+        </div>
+        <img src="assets/Design (1).png" class="h-auto w-[60px] md:w-auto md:flex-1 object-cover md:max-w-[400px]"
+          alt="">
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-5">
+        <!-- Left Banner Card -->
+        <div
+          class="lg:col-span-1 bg-[#111111] h-full w-full rounded-2xl p-2 flex flex-col items-center justify-between text-center relative overflow-hidden">
+          <img src="assets/neckless.png" alt="Necklace" class="w-full h-full object-contain object-center">
+
+
+        </div>
+
+        <!-- Right Grid -->
+        <div class="lg:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-5 content-start">
+          <!-- Product Card 1 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 7 -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+          <!--product card 8-->
+          <div class="flex flex-col gap-3">
+            <div
+              class="bg-[#FDFBF7] box-border relative w-full aspect-square max-w-[300px] border border-[#D7D7DA] rounded-[14px] group transition-all overflow-hidden">
+              <span
+                class="absolute font-['Alexandria'] font-light top-2 right-0 w-[65px] h-[20px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-center text-white text-[10px] z-10 tracking-wide shadow-sm">Best
+                Seller</span>
+              <button
+                class="absolute flex bottom-3 left-2 bg-white h-[27px] w-[27px] items-center justify-center rounded-full text-gray-400 hover:text-red-500 transition-colors z-20 shadow-sm">
+                <img src="assets/ic_wishlist1.png" class="w-4 h-4" alt="">
+              </button>
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="assets/ring.png" alt="Ring"
+                  class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                <img src="assets/hover_image_p.png"
+                  class="w-full h-full object-contain mix-blend-multiply absolute inset-0 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:scale-110">
+              </div>
+            </div>
+            <div class="text-center font-['Outfit']">
+              <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
+              <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                <span class="text-[#999999] line-through">₹ 949.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="w-full py-3 bg-[#EADCDC] flex items-center justify-center">
+      <span class="font-['Outfit'] font-medium text-[#1A1A1A]">Know More About Tattsvi</span>
+    </div>
+    <!--Footer section-->
+    <footer
+      class="bg-white pt-16 pb-8 px-6 md:px-20 border-t border-pink-100 relative overflow-hidden w-full max-w-[100vw]">
+      <div class="max-w-[1440px] mx-auto">
+
+        <!-- Logo Row -->
+        <div class="flex items-center gap-2 mb-10">
+          <img src="assets/logo.png" alt="Logo" class="w-8 h-auto">
+          <span class="font-Outfit font-bold text-2xl tracking-[0.2em] text-[#0D0D0E]">TATTSVI</span>
+        </div>
+
+        <!-- Columns Row -->
+        <!-- Columns Row -->
+        <div class="flex flex-col lg:flex-row justify-between items-start mt-12 w-full gap-10 relative z-10">
+
+          <!-- Left: Link Columns Group -->
+          <div class="flex flex-wrap gap-x-12 md:gap-x-[88px] gap-y-10">
+            <!-- About Us -->
+            <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
+              <h4 style="font-family: 'Outfit', sans-serif;"
+                class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg">About us</h4>
+              <ul class="flex flex-col gap-[16px]">
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
+                    Story</a></li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                    Us</a></li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
+                    & Services</a></li>
+              </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
+              <h4 style="font-family: 'Outfit', sans-serif;" class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
+                Categories</h4>
+              <ul class="flex flex-col gap-[16px]">
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
+              <h4 style="font-family: 'Outfit', sans-serif;" class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
+                Customer Service</h4>
+              <ul class="flex flex-col gap-[16px]">
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                    Us</a></li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
+                </li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
+                    Care</a></li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
+                    Warranty</a></li>
+                <li><a href="#"
+                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
+                    an Appointment</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: Sign Up -->
+          <div class="flex flex-col items-start gap-4 lg:w-[400px]">
+            <h4 style="font-family: 'Outfit', sans-serif;"
+              class="font-['Outfit'] font-bold text-[#0D0D0E] text-[28px] leading-[1.2]">
+              Sign up <br>for Exclusive Offers
+            </h4>
+            <p class="font-['Outfit'] text-base text-[#6E6E6E] leading-relaxed max-w-[350px]">
+              Be the first to know about new collections, exclusive deals & more!
+            </p>
+            <div class="flex flex-row gap-3 mt-4 w-full">
+              <input type="email" placeholder="Email Address"
+                class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] flex-grow">
+              <button
+                class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] shadow-sm">
+                Submit
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- Watermark -->
-        <div class="w-full flex justify-center pointer-events-none mt-10">
-          <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
-            style="background: linear-gradient(180deg, rgba(151, 102, 0, 0.07) 0%, rgba(219, 179, 88, 0.021) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
-            TATTSVI
-          </h1>
+        <!-- Bottom Section -->
+        <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col gap-8 relative z-10">
+          <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
+            <!-- Left: QR and Apps -->
+            <div class="flex items-center gap-6">
+              <img src="assets/MobileQrNew.png" alt="QR Code" class="w-40 h-40 object-contain">
+              <div class="flex flex-col gap-2">
+                <a href="#"><img src="assets/ioslogo.png" alt="App Store" class="h-[45px] md:h-[65px] w-auto"></a>
+                <a href="#"><img src="assets/Androidelogo.png" alt="Google Play"
+                    class="h-[45px] md:h-[65px] w-auto"></a>
+              </div>
+            </div>
+
+            <!-- Right Group: Socials, Rights, Payments -->
+            <div class="flex flex-col items-center md:items-start gap-6">
+              <!-- Socials -->
+              <div class="flex gap-5">
+                <a href="#"
+                  class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#"
+                  class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                  class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#"
+                  class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+              </div>
+
+              <!-- Rights & Payments Group (Left Aligned) -->
+              <div class="flex flex-col items-start gap-3">
+                <!-- Rights Text -->
+                <p class="font-['Outfit'] text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
+
+                <!-- Payments -->
+                <div class="flex items-center gap-3">
+                  <img src="assets/google_pay.png" alt="GPay" class="h-6">
+                  <img src="assets/visa.png" alt="Visa" class="h-4">
+                  <img src="assets/paypal.png" alt="PayPal" class="h-6">
+                  <img src="assets/master-card.png" alt="Mastercard" class="h-8">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Copyright -->
+          <div class="text-center mt-4">
+            <p class="font-Outfit text-[14px] text-[#0D0D0E]">Copyright © Tattsvi 2026. All Right Reserved</p>
+          </div>
         </div>
-      </footer>
-      <script src="script_p.js"></script>
+      </div>
+
+      <!-- Watermark -->
+      <div class="w-full flex justify-center pointer-events-none mt-10">
+        <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
+          style="background: linear-gradient(180deg, rgba(151, 102, 0, 0.07) 0%, rgba(219, 179, 88, 0.021) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
+          TATTSVI
+        </h1>
+      </div>
+    </footer>
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0"></div>
+    <div id="mobile-menu-sidebar"
+      class="fixed top-0 left-0 w-[85%] max-w-[320px] h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+      <!-- Header -->
+      <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-cream">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <img src="assets/logo.png" alt="logo">
+          </div>
+          <span class="serif text-xl tracking-tighter">TATTSVI</span>
+        </div>
+        <button id="close-menu-btn"
+          class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-500 hover:text-red-500 shadow-sm transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <!-- Links -->
+      <div class="flex-1 overflow-y-auto p-5 space-y-6">
+        <!-- New Arrivals -->
+        <div class="mobile-dropdown group">
+          <button
+            class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+            onclick="toggleMobileDropdown('menu-new-arrivals', this)">
+            New Arrivals <i
+              class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+          </button>
+          <div id="menu-new-arrivals" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Diamond Rings</a>
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Gold Necklaces</a>
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Wedding Collection</a>
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] font-medium py-1">View All
+              New</a>
+          </div>
+        </div>
+
+        <!-- Best Seller -->
+        <div class="mobile-dropdown">
+          <button
+            class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+            onclick="toggleMobileDropdown('menu-best-seller', this)">
+            Best Seller <i class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+          </button>
+          <div id="menu-best-seller" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Top Rated</a>
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Most Gifted</a>
+          </div>
+        </div>
+
+        <!-- Ready To Stock -->
+        <div class="mobile-dropdown">
+          <button
+            class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+            onclick="toggleMobileDropdown('menu-ready-stock', this)">
+            Ready To Stock <i
+              class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+          </button>
+          <div id="menu-ready-stock" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Necklaces</a>
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Earrings</a>
+          </div>
+        </div>
+
+        <!-- Buy It Again -->
+        <div class="mobile-dropdown">
+          <button
+            class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+            onclick="toggleMobileDropdown('menu-buy-again', this)">
+            Buy It Again <i
+              class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+          </button>
+          <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+          </div>
+        </div>
+        <!--conact us-->
+        <div class="mobile-dropdown">
+          <button
+            class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+            onclick="toggleMobileDropdown('menu-buy-again', this)">
+            Contact Us <i class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+          </button>
+          <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+          </div>
+        </div>
+        <!--exibition -->
+        <div class="mobile-dropdown">
+          <button
+            class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+            onclick="toggleMobileDropdown('menu-buy-again', this)">
+            Exhibition <i class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+          </button>
+          <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+            <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+          </div>
+          <!--about us-->
+          <div class="mobile-dropdown">
+            <button
+              class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+              onclick="toggleMobileDropdown('menu-buy-again', this)">
+              About Us <i class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+              <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Info -->
+      <div class="bg-gray-50 p-5 border-t border-gray-100">
+        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+          <span><i class="fa-solid fa-flag-usa mr-2"></i> USA (USD)</span>
+        </div>
+        <a href="#"
+          class="block w-full bg-black text-white text-center py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#5C4522] transition-colors">Sign
+          In / Register</a>
+      </div>
+    </div>
+
+    <script src="script_p.js"></script>
 </body>
 
 </html>

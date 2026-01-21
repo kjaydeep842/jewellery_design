@@ -159,6 +159,10 @@
                 transform: translateX(-100%);
             }
         }
+
+        .reflection-img {
+            -webkit-box-reflect: below -45px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.15));
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
@@ -167,7 +171,7 @@
     <script src="script_p.js" defer></script>
 </head>
 
-<body class="bg-cream text-gray-800 antialiased overflow-x-hidden w-full">
+<body class="bg-[#FDFBF7]  antialiased overflow-x-hidden w-full">
     <!-- Top Promo Bar -->
     <div class="ticker-wrapper">
         <div class="ticker">
@@ -187,10 +191,10 @@
                 <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <div class="w-11 h-8  flex items-center justify-center border-2 shadow-md shadow-black">
-                    <img src="assets/logo.png" alt="logo">
+                <div class="w-[130px] h-[30px]  flex items-center justify-center">
+                    <img src="assets/logo_black.png" alt="logo">
                 </div>
-                <span class="font-['Clash Display'] text-2xl tracking-tighter">TATTSVI</span>
+
             </div>
 
             <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
@@ -388,10 +392,8 @@
         </div>
     </section>
 
-
     <!-- Premium Collecions-->
-    <!-- Premium Collecions-->
-    <section class="py-8 md:py-20 max-w-7xl mx-auto px-4 md:px-6">
+    <section class="pt-8 pb-2 md:pt-20 md:pb-4 max-w-7xl mx-auto">
         <div class="flex items-center justify-center gap-2 md:gap-6 mb-6 md:mb-10 w-full">
             <!-- Left Arrow -->
             <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain">
@@ -413,11 +415,11 @@
             <!-- Right Arrow -->
             <img src="assets/DesignRight.png" alt="Decoration" class="h-5 md:h-8 object-contain">
         </div>
-        <!-- Collection 1-->
+
         <div class=" items-center group/nav">
             <div id="jewellerySlider"
-                class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-4">
-
+                class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
+                <!-- Collection 1-->
                 <div class="min-w-[200px] md:min-w-[210px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
@@ -576,7 +578,43 @@
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
-                            <img src="assets/premium_c5.png"
+                            <img src="assets/premium_c1.png"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            <!-- Vertical Line (Visible initially) -->
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                            </div>
+
+                            <!-- "Rings" Pill (Visible initially) -->
+                            <div
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest  group-hover:hidden transition-colors">
+                                Rings
+                            </div>
+                            <!-- Hover Overlay & Button -->
+                            <div
+                                class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <button
+                                    class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
+                                    <img src="assets/share_icon.png" class="w-4 h-4" alt="">
+                                    <span class="text-[12px] font-bold tracking-widest ">View More</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--collection 2-->
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                    <div
+                        class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
+                        <!-- Star Icon -->
+                        <div
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            ✦
+                        </div>
+
+                        <div class="w-full h-full rounded-[999px] overflow-hidden relative">
+                            <img src="assets/premium_c2.png"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
 
                             <!-- Vertical Line -->
@@ -587,7 +625,80 @@
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
                                 class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
-                                Bracelets
+                                Earrings
+                            </div>
+                            <!-- Hover Overlay & Button -->
+                            <div
+                                class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <button
+                                    class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
+                                    <img src="assets/share_icon.png" class="w-4 h-4" alt="">
+                                    <span class="text-[12px] font-bold tracking-widest">View More</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- collction 3-->
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                    <div
+                        class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
+                        <!-- Star Icon -->
+                        <div
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            ✦
+                        </div>
+
+                        <div class="w-full h-full rounded-[999px] overflow-hidden relative">
+                            <img src="assets/premium_c3.png"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            <!-- Vertical Line -->
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                            </div>
+                            <!-- "Rings" Pill (Visible initially) -->
+                            <div
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
+                                Necklaces
+                            </div>
+                            <!-- Hover Overlay & Button -->
+                            <div
+                                class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <button
+                                    class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
+                                    <img src="assets/share_icon.png" class="w-4 h-4" alt="">
+                                    <span class="text-[12px] font-bold tracking-widest">View More</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection 4-->
+                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                    <div
+                        class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
+                        <!-- Star Icon -->
+                        <div
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            ✦
+                        </div>
+
+                        <div class="w-full h-full rounded-[999px] overflow-hidden relative">
+                            <img src="assets/premium_c4.png"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                            <!-- Vertical Line -->
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-white/70 z-10 group-hover:opacity-0 transition-opacity">
+                            </div>
+
+                            <!-- "Rings" Pill (Visible initially) -->
+                            <div
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
+                                Pendants
                             </div>
                             <!-- Hover Overlay & Button -->
                             <div
@@ -604,7 +715,7 @@
 
             </div>
 
-            <div class="flex items-center justify-between mt-12 px-4">
+            <div class="flex items-center justify-between mt-4">
                 <div class="flex items-center gap-3">
                     <span id="slideIndex" class="text-sm font-bold text-gray-900 transition-all">01</span>
                     <span class="h-[1px] w-12 bg-gray-300"></span>
@@ -626,7 +737,7 @@
     </section>
     <!-- Perfect shape -->
 
-    <section class="bg-white py-8 md:py-16 px-4">
+    <section class="bg-white pt-4 pb-8 md:pt-4 md:pb-16 px-14">
         <div class="max-w-7xl mx-auto">
 
             <div class="flex items-center justify-center mb-6 md:mb-10 gap-2 md:gap-6">
@@ -642,84 +753,96 @@
             </div>
             <!-- All  shape -->
             <div class="grid grid-cols-2 items-center sm:grid-cols-5 lg:grid-cols-10 gap-y-10 gap-x-4">
-                <!-- Round shape shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s1.png" alt="Round" class="w-full h-full object-contain grayscale">
+                <!-- Round shape -->
+                <!-- Round shape -->
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/round_shape.png" alt="Round"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit  tracking-widest group-hover:text-black transition-colors">Round</span>
+                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Round</span>
                 </div>
                 <!-- Oval shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s2.png" alt="Oval" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-15 h-15 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/oval_shape.png" alt="Oval"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors">Oval</span>
+                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Oval</span>
                 </div>
                 <!-- Princess shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s3.png" alt="Princess" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/princess_shape.png" alt="Princess"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors">Princess</span>
+                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Princess</span>
                 </div>
                 <!-- Emerald shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s4.png" alt="Emerald" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/embral.png" alt="Emerald"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors">Emerald</span>
+                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Emerald</span>
                 </div>
                 <!-- Radiant shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s5.png" alt="Radiant" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/radiant.png" alt="Radiant"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px]  font-Outfit tracking-widest group-hover:text-black transition-colors">Radiant</span>
+                        class="text-[10px]  font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Radiant</span>
                 </div>
                 <!-- Heart shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s6.png" alt="Heart" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/heart.png" alt="Heart"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors">Heart</span>
+                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Heart</span>
                 </div>
                 <!-- Cushion shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s7.png" alt="Cushion" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/cushion.png" alt="Cushion"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
-                    <span class="text-[10px]  font-Outfit group-hover:text-black transition-colors">Cushion</span>
+                    <span
+                        class="text-[10px]  font-Outfit group-hover:text-black transition-colors group-hover:order-first">Cushion</span>
                 </div>
                 <!-- Pear shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s8.png" alt="Pear" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/pear.png" alt="Pear"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors">Pear</span>
+                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Pear</span>
                 </div>
                 <!-- Marquise shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s9.png" alt="Marquise" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/marquies.png" alt="Marquise"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors">Marquise</span>
+                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Marquise</span>
                 </div>
                 <!-- Asscher shape -->
-                <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-30 h-30 mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <img src="assets/s10.png" alt="Asscher" class="w-full h-full object-contain grayscale">
+                <div class="flex flex-col items-center group cursor-pointer gap-4">
+                    <div class="w-30 h-30 transition-transform duration-300 group-hover:scale-110">
+                        <img src="assets/asscher.png" alt="Asscher"
+                            class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors">Asscher</span>
+                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Asscher</span>
                 </div>
 
             </div>
@@ -728,7 +851,7 @@
     <!-- Explore By Category -->
 
 
-    <section class="bg-[#FAF9F6] py-8 md:py-16 px-4">
+    <section class="bg-[#FAF9F6] pt-12 pb-8 md:pt-28 md:pb-16 px-14">
         <div class="max-w-7xl mx-auto">
 
             <div class="flex items-center justify-center mb-6 md:mb-8 gap-2 md:gap-6">
@@ -744,10 +867,9 @@
             </div>
 
             <!-- Category Buttons: Horizontal Scroll on Mobile -->
-            <div
-                class="flex flex-nowrap justify-start md:justify-center overflow-x-auto no-scrollbar gap-3 mb-8 w-full md:mb-12 px-4 snap-x">
+            <div class="flex flex-nowrap justify-start overflow-x-auto no-scrollbar gap-3 mb-8 w-full md:mb-12 snap-x">
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-10 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  text-xs md:text-sm tracking-widest rounded-full hover:bg-gray-800 snap-center transition-colors whitespace-nowrap">All</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-10 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">All</button>
                 <button
                     class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  hover:bg-black md:text-sm tracking-widest rounded-full  snap-center transition-colors whitespace-nowrap">Rings</button>
                 <button
@@ -1206,7 +1328,7 @@
             <!-- Right Design -->
             <div
                 class="hidden md:flex flex-row justify-start items-center pr-[40px] gap-[4px] w-full max-w-[398px] h-[24px]">
-                <img src="assets/Design (1).png" alt="design right"
+                <img src="assets/DesignRight.png" alt="design right"
                     class="h-full object-contain transform scale-x-[-1]">
             </div>
         </div>
@@ -1442,7 +1564,7 @@
         </div>
 
         <!-- Lens Grid Wrapper -->
-        <div class="relative w-full h-[500px] md:h-[750px] lg:h-[900px] z-10 -mt-4 md:-mt-24">
+        <div class="relative w-full h-[350px] md:h-[500px] lg:h-[850px] z-10 -mt-8 md:-mt-48">
             <!-- Top Curve Mask (White) -->
             <div
                 class="absolute -top-[100px] md:-top-[698px] left-1/2 -translate-x-1/2 w-[120%] md:w-[2416px] h-[150px] md:h-[918px] max-w-none bg-white rounded-b-[100%] md:rounded-b-[50%] z-20 pointer-events-none">
@@ -1529,15 +1651,15 @@
         </div>
     </section>
     <!--Best Seller Section -->
-    <section class="pt-0 pb-16 px-4 md:px-8 bg-white">
+    <section class="pt-0 pb-16  md:px-8">
         <div class="max-w-7xl mx-auto">
             <div
-                class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-[#FFFBF2] rounded-[48px] p-8 md:p-20 border border-[#F5F0E6] shadow-sm">
+                class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-[#FFFBF2]  p-8 md:p-20 border-t-2 border-b-2 border-[#F5F0E6] shadow-sm">
 
                 <!-- Left Image -->
                 <div class="relative flex justify-center order-first">
                     <img src="assets/Product Photo.png"
-                        class="relative z-10 w-full max-w-[400px] h-auto object-contain drop-shadow-2xl transition-transform hover:scale-105 duration-500"
+                        class="relative z-10 w-full max-w-[600px] h-auto object-contain  transition-transform hover:scale-105 duration-500"
                         alt="Bestseller Spotlight">
                 </div>
 
@@ -1556,9 +1678,9 @@
                     <div class="space-y-5 max-w-lg mx-auto lg:mx-0 xl:mx-auto">
                         <!-- Feature 1 -->
                         <div
-                            class="flex items-center gap-3 md:gap-5 p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                            <img src="assets/cer1.png" class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 object-contain"
-                                alt="icon">
+                            class="flex items-center  gap-3 md:gap-5 p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            <img src="assets/cer1.png"
+                                class="bg-white flex-shrink-0 w-10 h-10 md:w-12 md:h-12 object-contain" alt="icon">
                             <div class="text-left">
                                 <h4 style="font-family: 'Outfit', sans-serif;"
                                     class="font-Outfit text-[10px] md:text-[20px] font-medium text-[#0D0D0E] leading-tight">
@@ -1573,7 +1695,7 @@
 
                         <!-- Feature 2 -->
                         <div
-                            class="flex items-center gap-3 md:gap-5 p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            class="flex items-center  gap-3 md:gap-5 p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                             <img src="assets/cer1.png" class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 object-contain"
                                 alt="icon">
                             <div class="text-left">
@@ -1590,7 +1712,7 @@
 
                         <!-- Feature 3 -->
                         <div
-                            class="flex items-center gap-3 md:gap-5 p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                            class="flex items-center  gap-3 md:gap-5 p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                             <img src="assets/cer1.png" class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 object-contain"
                                 alt="icon">
                             <div class="text-left">
@@ -1758,13 +1880,14 @@
                 </div>
             </div>
 
-            <div class="relative group max-w-5xl mx-auto">
+            <div class="relative group w-full max-w-[1440px] mx-auto">
                 <!-- Added w-full and corrected snap behavior -->
                 <div id="testimonialSlider"
-                    class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-4 w-full">
+                    class="flex gap-4  h-[350px] md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-4 w-full px-[7.5%] md:px-[15%] lg:px-[20%]">
 
                     <!-- Review 1 -->
-                    <div class="w-full flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-12 rounded-[20px] relative">
+                    <div
+                        class="w-[90%] md:w-[1142px] h-[405px] flex-shrink-0 snap-center bg-[linear-gradient(90deg,rgba(219,179,88,0.042)_0%,rgba(151,102,0,0.14)_100%)] border border-[#D7D7DA] p-6 md:p-12 rounded-[20px] relative transition-transform duration-300 hover:scale-[1.02] shadow-sm flex flex-col justify-center items-start">
                         <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                             <!-- Quote Icon -->
                             <img src="assets/ReviewQuote.png" class="w-8 h-8 md:w-16 md:h-14 object-contain opacity-50"
@@ -1772,12 +1895,10 @@
 
                             <div class="flex-1 w-full">
                                 <p style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit text-[16px] md:text-[24px] font-normal text-[#0D0D0E] leading-relaxed md:leading-[35px] mb-6 md:mb-8 text-left break-words">
+                                    class="font-Outfit text-[16px] md:text-[20px] font-normal text-[#0D0D0E] leading-relaxed md:leading-[35px] mb-6 md:mb-8 text-left break-words">
                                     Tattsvi jewellery feels incredibly refined and comfortable to wear. The designs
-                                    are
-                                    subtle yet elegant,<br> making them perfect for everyday styling. You can genuinely
-                                    feel
-                                    the attention to detail in every piece.
+                                    are subtle yet elegant, making them perfect for everyday styling. You can
+                                    genuinely feel the attention to detail in every piece.
                                 </p>
 
                                 <div class="flex items-center gap-4">
@@ -1790,12 +1911,17 @@
                                             class="font-Outfit text-[18px] md:text-[24px] font-medium text-[#0D0D0E] mb-1">
                                             Ananya R.
                                         </h4>
-                                        <div class="flex text-amber-400 text-xs mt-1">
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
+                                        <div class="flex gap-1 mt-1">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
                                         </div>
                                     </div>
                                 </div>
@@ -1804,7 +1930,8 @@
                     </div>
 
                     <!-- Review 2 -->
-                    <div class="w-full flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-12 rounded-[20px] relative">
+                    <div
+                        class="w-[90%] md:w-[1142px] h-[405px] flex-shrink-0 snap-center bg-[linear-gradient(90deg,rgba(219,179,88,0.042)_0%,rgba(151,102,0,0.14)_100%)] border border-[#D7D7DA] p-6 md:p-12 rounded-[20px] relative transition-transform duration-300 hover:scale-[1.02] shadow-sm flex flex-col justify-center items-start">
                         <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                             <img src="assets/ReviewQuote.png" class="w-8 h-8 md:w-16 md:h-14 object-contain opacity-50"
                                 alt="quote">
@@ -1830,12 +1957,17 @@
                                             class="font-Outfit text-[18px] md:text-[24px] font-medium text-[#0D0D0E] mb-1">
                                             Ananya R.
                                         </h4>
-                                        <div class="flex text-amber-400 text-xs mt-1">
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
+                                        <div class="flex gap-1 mt-1">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
                                         </div>
                                     </div>
                                 </div>
@@ -1844,7 +1976,8 @@
                     </div>
 
                     <!-- Review 3 -->
-                    <div class="w-full flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-12 rounded-[20px] relative">
+                    <div
+                        class="w-[90%] md:w-[1142px] h-[405px] flex-shrink-0 snap-center bg-[linear-gradient(90deg,rgba(219,179,88,0.042)_0%,rgba(151,102,0,0.14)_100%)] border border-[#D7D7DA] p-6 md:p-12 rounded-[20px] relative transition-transform duration-300 hover:scale-[1.02] shadow-sm flex flex-col justify-center items-start">
                         <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                             <img src="assets/ReviewQuote.png" class="w-8 h-8 md:w-16 md:h-14 object-contain opacity-50"
                                 alt="quote">
@@ -1869,12 +2002,17 @@
                                             class="font-Outfit text-[18px] md:text-[24px] font-medium text-[#0D0D0E] mb-1">
                                             Ananya R.
                                         </h4>
-                                        <div class="flex text-amber-400 text-xs mt-1">
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
-                                            <i class="fas fa-star text-xs md:text-sm"></i>
+                                        <div class="flex gap-1 mt-1">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
+                                            <img src="assets/StarReview.png"
+                                                class="w-[20px] h-[20px] flex-none order-0 flex-grow-0" alt="star">
                                         </div>
                                     </div>
                                 </div>
