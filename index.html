@@ -1328,7 +1328,7 @@
             <!-- Right Design -->
             <div
                 class="hidden md:flex flex-row justify-start items-center pr-[40px] gap-[4px] w-full max-w-[398px] h-[24px]">
-                <img src="assets/DesignRight.png" alt="design right"
+                <img src="assets/Design_new.png" alt="design right"
                     class="h-full object-contain transform scale-x-[-1]">
             </div>
         </div>
@@ -1340,31 +1340,19 @@
             </div>
 
             <!-- Product Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 group-hover:scale-110">
+                <!--launch section product 1-->
                 <div class="flex flex-col gap-0 group cursor-pointer px-4">
                     <!-- Main Card -->
-                    <div class="relative w-full aspect-[0.6] px-6 rounded-t-[60px] overflow-hidden">
+                    <div class="relative w-full aspect-[0.6]  px-6 rounded-t-[60px]">
                         <img src="assets/launch_ring.png"
-                            class="relative z-0 w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                            class="relative z-0 w-full h-full object-contain object-bottom transition-transform duration-500 drop-shadow-lg"
                             alt="Rings">
 
                         <!-- SVG Shape -->
-                        <div class="absolute bottom-0 left-0  w-full h-auto z-10 pointer-events-none">
-                            <!-- Left Shape -->
-                            <svg width="29" height="20" viewBox="0 0 29 20" fill="none" class="absolute top-0 left-0">
-                                <path
-                                    d="M4.5 19.8389L0 0.838867L4.36339 0.317865C12.4683 -0.649886 20.6838 0.605068 28.1302 3.94834L29 4.33887L4.5 19.8389Z"
-                                    fill="#F0D194" />
-                            </svg>
-                            <!-- Right Shape -->
-                            <svg width="29" height="20" viewBox="0 0 29 20" fill="none" class="absolute top-0 right-0">
-                                <path
-                                    d="M24.5 19.8389L29 0.838867L24.6366 0.317865C16.5317 -0.649886 8.31619 0.605068 0.869804 3.94834L0 4.33887L24.5 19.8389Z"
-                                    fill="#F0D194" />
-                            </svg>
+                        <div class="absolute bottom-0 left-0 overflow-hidden  w-full h-auto z-10 pointer-events-none">
                             <svg viewBox="0 0 351 219" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                class="w-full h-auto">
+                                class="w-full overflow-hidden h-auto">
                                 <path
                                     d="M0 20C110 75 241 75 351 20V189C351 205.569 337.569 219 321 219H30C13.4315 219 0 205.569 0 189V20Z"
                                     fill="url(#paint_ring_launch)" />
@@ -1379,12 +1367,24 @@
                                     </linearGradient>
                                 </defs>
                             </svg>
+                            <!-- Left Shape -->
+                            <svg width="21" height="15" viewBox="0 0 29 20" fill="none" class="absolute top-2 left-0">
+                                <path
+                                    d="M4.5 19.8389L0 0.838867L4.36339 0.317865C12.4683 -0.649886 20.6838 0.605068 28.1302 3.94834L29 4.33887L4.5 19.8389Z"
+                                    fill="#F0D194" />
+                            </svg>
+                            <!-- Right Shape -->
+                            <svg width="21" height="15" viewBox="0 0 29 20" fill="none" class="absolute top-2 right-0">
+                                <path
+                                    d="M24.5 19.8389L29 0.838867L24.6366 0.317865C16.5317 -0.649886 8.31619 0.605068 0.869804 3.94834L0 4.33887L24.5 19.8389Z"
+                                    fill="#F0D194" />
+                            </svg>
                         </div>
 
                         <!-- Text -->
                         <div class="absolute bottom-5 w-full text-center z-20">
-                            <p class="font-['outfit'] text-sm text-[#5C4522] mb-1">9KT Solid Gold</p>
-                            <h3 class="font-['outfit'] text-xl font-medium text-[#5C4522]">Rings</h3>
+                            <p class="font-Outfit text-sm text-[#5C4522] mb-1">9KT Solid Gold</p>
+                            <h3 class="font-Outfit text-xl font-medium text-[#5C4522]">Rings</h3>
                         </div>
                     </div>
                     <!-- Reflection -->
@@ -1421,7 +1421,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!--launch section product 2-->
                 <div class="flex flex-col gap-0 group cursor-pointer px-4">
                     <div class="relative w-full aspect-[0.6] rounded-t-[40px] overflow-hidden">
                         <img src="assets/launch_pendant.png"
@@ -1561,7 +1561,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!--launch section product 3-->
                 <div class="flex flex-col gap-0 group cursor-pointer px-4">
                     <div class="relative w-full aspect-[0.6] rounded-t-[40px] overflow-hidden">
                         <img src="assets/launch_earring.png"
@@ -1631,7 +1631,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!--launch section product 3-->
             </div>
 
 
@@ -2117,10 +2117,11 @@
         <div class="max-w-[1440px] mx-auto">
 
             <!-- Logo Row -->
-            <div class="flex items-center gap-2 mb-10">
-                <img src="assets/logo.png" alt="Logo" class="w-8 h-auto">
-                <span class="font-Outfit font-bold text-2xl tracking-[0.2em] text-[#0D0D0E]">TATTSVI</span>
+
+            <div class="w-[130px] h-[30px]  flex items-center justify-center mb-10 gap-2">
+                <img src="assets/logo_black.png" alt="logo">
             </div>
+
 
             <!-- Columns Row -->
             <!-- Columns Row -->
