@@ -15,10 +15,10 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'Outfit': ['Outfit', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
-                        'Alexandria': ['Alexandria', 'sans-serif'],
+                        'Outfit': ['Outfit'],
+                        'serif': ['Playfair Display'],
+                        'sans': ['Inter'],
+                        'Alexandria': ['Alexandria'],
                     }
                 }
             }
@@ -26,7 +26,7 @@
     </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            /* font-family: 'Inter'; */
             overflow-x: hidden;
             width: 100%;
         }
@@ -186,12 +186,12 @@
     <!-- Header Section -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <div
-            class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+            class="max-w-7xl min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
             <div class="flex items-center gap-2 order-1">
                 <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <div class="w-[130px] h-[30px]  flex items-center justify-center">
+                <div class="w-[212px] h-[46.8px]  flex items-center justify-center">
                     <img src="assets/logo_black.png" alt="logo">
                 </div>
 
@@ -393,39 +393,39 @@
     </section>
 
     <!-- Premium Collecions-->
-    <section class="pt-8 pb-2 md:pt-20 md:pb-4 max-w-7xl mx-auto">
-        <div class="flex items-center justify-center gap-2 md:gap-6 mb-6 md:mb-10 w-full">
+    <section class="pt-8 pb-2 md:pt-20 md:pb-4 max-w-7xl min-[2000px]:max-w-[2400px] mx-auto">
+        <div class="flex items-center justify-center min-[2000px]:justify-start gap-2 md:gap-6 mb-6 md:mb-10 w-full">
             <!-- Left Arrow -->
-            <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain">
+            <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain min-[2000px]:hidden">
 
             <!-- Text Group -->
-            <div class="flex flex-col items-center justify-center -space-y-1 md:-space-y-2">
+            <div class="flex flex-col items-center justify-center min-[2000px]:items-start -space-y-1 md:-space-y-2">
                 <!-- Premium -->
                 <span
-                    class="font-['Alexandria'] font-normal text-[16px] md:text-[24px] text-[#5C4522] leading-tight text-center z-10 relative">
+                    class="font-['Alexandria'] font-normal text-[16px] md:text-[24px] text-[#5C4522] leading-tight text-center min-[2000px]:text-left z-10 relative">
                     Premium
                 </span>
                 <!-- Collection -->
                 <span
-                    class="font-['Outfit'] font-medium text-[32px] md:text-[54px] text-[#CBA65A] leading-tight md:leading-[68px] text-center">
+                    class="font-['Outfit'] font-medium text-[32px] md:text-[54px] min-[2000px]:text-[72px] text-[#CBA65A] leading-tight md:leading-[68px] text-center min-[2000px]:text-left">
                     Collection
                 </span>
             </div>
 
             <!-- Right Arrow -->
-            <img src="assets/DesignRight.png" alt="Decoration" class="h-5 md:h-8 object-contain">
+            <img src="assets/DesignRight.png" alt="Decoration" class="h-5 md:h-8 object-contain min-[2000px]:hidden">
         </div>
 
         <div class=" items-center group/nav">
             <div id="jewellerySlider"
                 class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
                 <!-- Collection 1-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
                         <div
-                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
                             ✦
                         </div>
 
@@ -457,12 +457,12 @@
                 </div>
 
                 <!--collection 2-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
                         <div
-                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
                             ✦
                         </div>
 
@@ -494,12 +494,12 @@
                 </div>
 
                 <!-- collction 3-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
                         <div
-                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
                             ✦
                         </div>
 
@@ -531,12 +531,12 @@
                 </div>
 
                 <!-- Collection 4-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
                         <div
-                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
+                            class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
                             ✦
                         </div>
 
@@ -568,7 +568,7 @@
                 </div>
 
                 <!--Collection 5-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -604,7 +604,7 @@
                     </div>
                 </div>
                 <!--collection 2-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -641,7 +641,7 @@
                 </div>
 
                 <!-- collction 3-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -677,7 +677,7 @@
                 </div>
 
                 <!-- Collection 4-->
-                <div class="min-w-[200px] md:min-w-[210px] snap-start group">
+                <div class="min-w-[200px] md:min-w-[210px] min-[2000px]:min-w-[400px] snap-start group">
                     <div
                         class="relative w-full aspect-[2/3] rounded-[999px] border border-[#C19757] p-2 md:p-3 overflow-visible">
                         <!-- Star Icon -->
@@ -738,18 +738,20 @@
     <!-- Perfect shape -->
 
     <section class="bg-white pt-4 pb-8 md:pt-4 md:pb-16 px-14">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl min-[2000px]:max-w-[2400px] mx-auto">
 
-            <div class="flex items-center justify-center mb-6 md:mb-10 gap-2 md:gap-6">
-                <img src="assets/Design.png" alt="design left" class="h-5 md:h-8 w-auto object-contain">
-                <div class="text-center">
+            <div class="flex items-center justify-center min-[2000px]:justify-start mb-6 md:mb-10 gap-2 md:gap-6">
+                <img src="assets/Design.png" alt="design left"
+                    class="h-5 md:h-8 w-auto object-contain min-[2000px]:hidden">
+                <div class="text-center min-[2000px]:text-left">
                     <p class="text-[16px] md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Find your
                     </p>
                     <h2
                         class="font-Outfit text-[32px] md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
                         Perfect Shape</h2>
                 </div>
-                <img src="assets/DesignRight.png" alt="design right" class="h-5 md:h-8 w-auto object-contain">
+                <img src="assets/DesignRight.png" alt="design right"
+                    class="h-5 md:h-8 w-auto object-contain min-[2000px]:hidden">
             </div>
             <!-- All  shape -->
             <div class="grid grid-cols-2 items-center sm:grid-cols-5 lg:grid-cols-10 gap-y-10 gap-x-4">
