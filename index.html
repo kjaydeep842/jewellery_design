@@ -143,7 +143,7 @@
             display: inline-block;
             font-family: outfit;
             padding-right: 50px;
-            font-size: 14px;
+            /* font-size: 14px; Removed to allow Tailwind classes to work */
             font-weight: 300;
             color: #6b4b4b;
             letter-spacing: 1px;
@@ -173,26 +173,27 @@
 
 <body class="bg-[#FDFBF7]  antialiased overflow-x-hidden w-full">
     <!-- Top Promo Bar -->
-    <div class="ticker-wrapper">
+    <div class="ticker-wrapper ">
         <div class="ticker">
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
         </div>
     </div>
     <!-- Header Section -->
-    <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <header class="bg-white sticky top-0 z-50 shadow-sm ">
         <div
             class="max-w-7xl min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
             <div class="flex items-center gap-2 order-1">
                 <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <div class="w-[212px] h-[46.8px]  flex items-center justify-center">
-                    <img src="assets/logo_black.png" alt="logo">
+                <div
+                    class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
+                    <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
                 </div>
 
             </div>
@@ -200,25 +201,27 @@
             <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
                 <div class="relative group w-full max-w-[350px] mx-auto">
                     <input type="text"
-                        class="w-full h-[50px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm transition-all outline-none"
+                        class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
                         placeholder="Search for products">
                     <div
                         class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
-                        <img src="assets/ic_search.png" alt="search" class="w-5 h-5">
+                        <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-5 text-gray-600 order-2 lg:order-3">
+            <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
 
-                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user" class="w-5 h-5"></button>
+                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
+                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
                 <button class="relative hover:text-gold">
-                    <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5"> <span
-                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">4</span>
+                    <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    <span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">4</span>
                 </button>
                 <button class="relative hover:text-gold">
-                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5"><span
-                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">1</span>
+                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"><span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">1</span>
                 </button>
             </div>
         </div>
@@ -226,7 +229,7 @@
 
 
         <nav
-            class="hidden lg:flex items-center justify-center space-x-8 text-[15px] font-medium uppercase tracking-wider">
+            class="hidden lg:flex items-center justify-center space-x-8 min-[2000px]:space-x-16 text-[15px] min-[2000px]:text-2xl font-medium uppercase tracking-wider">
 
             <div class="relative group text-center">
                 <button class="flex items-center gap-1 hover:text-gold py-4 focus:outline-none">
@@ -381,39 +384,42 @@
             </div>
 
             <!-- Dots navigation -->
-            <div id="dots" class="absolute bottom-4 right-0 transform -translate-x-1/2 flex gap-2">
-                <button class="w-8 h-1 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
+            <div id="dots" class="absolute bottom-4 right-0 transform -translate-x-1/2 flex gap-2 min-[2000px]:gap-4">
+                <button
+                    class="w-8 h-1 min-[2000px]:w-16 min-[2000px]:h-2 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
                     aria-label="Slide 1"></button>
-                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
+                <button
+                    class="w-8 h-1 min-[2000px]:w-16 min-[2000px]:h-2 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 2"></button>
-                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
+                <button
+                    class="w-8 h-1 min-[2000px]:w-16 min-[2000px]:h-2 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 3"></button>
             </div>
         </div>
     </section>
 
     <!-- Premium Collecions-->
-    <section class="pt-8 pb-2 md:pt-20 md:pb-4 max-w-7xl min-[2000px]:max-w-[2400px] mx-auto">
-        <div class="flex items-center justify-center min-[2000px]:justify-start gap-2 md:gap-6 mb-6 md:mb-10 w-full">
+    <section class="pt-8 pb-2 md:pt-20 md:pb-4 max-w-7xl min-[2000px]:max-w-full mx-auto px-4 md:px-14">
+        <div class="flex items-center justify-center gap-2 md:gap-6 mb-6 md:mb-10 w-full">
             <!-- Left Arrow -->
-            <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain min-[2000px]:hidden">
+            <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain">
 
             <!-- Text Group -->
-            <div class="flex flex-col items-center justify-center min-[2000px]:items-start -space-y-1 md:-space-y-2">
+            <div class="flex flex-col items-center justify-center -space-y-1 md:-space-y-2">
                 <!-- Premium -->
                 <span
-                    class="font-['Alexandria'] font-normal text-[16px] md:text-[24px] text-[#5C4522] leading-tight text-center min-[2000px]:text-left z-10 relative">
+                    class="font-['Alexandria'] font-normal text-[16px] md:text-[24px] min-[2000px]:text-[40px] text-[#5C4522] leading-tight text-center z-10 relative">
                     Premium
                 </span>
                 <!-- Collection -->
                 <span
-                    class="font-['Outfit'] font-medium text-[32px] md:text-[54px] min-[2000px]:text-[72px] text-[#CBA65A] leading-tight md:leading-[68px] text-center min-[2000px]:text-left">
+                    class="font-['Outfit'] font-medium text-[32px] md:text-[54px] min-[2000px]:text-[72px] text-[#CBA65A] leading-tight md:leading-[68px] text-center">
                     Collection
                 </span>
             </div>
 
             <!-- Right Arrow -->
-            <img src="assets/DesignRight.png" alt="Decoration" class="h-5 md:h-8 object-contain min-[2000px]:hidden">
+            <img src="assets/DesignRight.png" alt="Decoration" class="h-5 md:h-8 object-contain">
         </div>
 
         <div class=" items-center group/nav">
@@ -440,16 +446,18 @@
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest  group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 min-[2000px]:px-10 min-[2000px]:py-3 rounded-full text-[14px] min-[2000px]:text-2xl font-bold tracking-widest  group-hover:hidden transition-colors">
                                 Rings
                             </div>
                             <!-- Hover Overlay & Button -->
                             <div
                                 class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                                 <button
-                                    class="flex bg-white items-center gap-2 px-6 py-2 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
-                                    <img src="assets/share_icon.png" class="w-4 h-4" alt="">
-                                    <span class="text-[12px] font-bold tracking-widest ">View More</span>
+                                    class="flex bg-white items-center gap-2 px-6 py-2 min-[2000px]:px-10 min-[2000px]:py-4 border border-[#5C4522] rounded-full text-[#5C4522]  transition-all duration-300 group">
+                                    <img src="assets/share_icon.png" class="w-4 h-4 min-[2000px]:w-6 min-[2000px]:h-6"
+                                        alt="">
+                                    <span class="text-[12px] min-[2000px]:text-xl font-bold tracking-widest ">View
+                                        More</span>
                                 </button>
                             </div>
                         </div>
@@ -477,7 +485,7 @@
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 min-[2000px]:px-10 min-[2000px]:py-3 rounded-full text-[14px] min-[2000px]:text-2xl font-bold tracking-widest group-hover:hidden transition-colors">
                                 Earrings
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -514,7 +522,7 @@
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 min-[2000px]:px-10 min-[2000px]:py-3 rounded-full text-[14px] min-[2000px]:text-2xl font-bold tracking-widest group-hover:hidden transition-colors">
                                 Necklaces
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -551,7 +559,7 @@
 
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 min-[2000px]:px-10 min-[2000px]:py-3 rounded-full text-[14px] min-[2000px]:text-2xl font-bold tracking-widest group-hover:hidden transition-colors">
                                 Pendants
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -660,7 +668,7 @@
                             </div>
                             <!-- "Rings" Pill (Visible initially) -->
                             <div
-                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 rounded-full text-[14px] font-bold tracking-widest group-hover:hidden transition-colors">
+                                class="absolute bottom-20 left-1/2 -translate-x-1/2 font-['Outfit'] bg-white/90 px-6 py-1.5 min-[2000px]:px-10 min-[2000px]:py-3 rounded-full text-[14px] min-[2000px]:text-2xl font-bold tracking-widest group-hover:hidden transition-colors">
                                 Necklaces
                             </div>
                             <!-- Hover Overlay & Button -->
@@ -738,20 +746,20 @@
     <!-- Perfect shape -->
 
     <section class="bg-white pt-4 pb-8 md:pt-4 md:pb-16 px-14">
-        <div class="max-w-7xl min-[2000px]:max-w-[2400px] mx-auto">
+        <div class="max-w-7xl min-[2000px]:max-w-full mx-auto">
 
-            <div class="flex items-center justify-center min-[2000px]:justify-start mb-6 md:mb-10 gap-2 md:gap-6">
-                <img src="assets/Design.png" alt="design left"
-                    class="h-5 md:h-8 w-auto object-contain min-[2000px]:hidden">
-                <div class="text-center min-[2000px]:text-left">
-                    <p class="text-[16px] md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Find your
+            <div class="flex items-center justify-center mb-6 md:mb-10 gap-2 md:gap-6">
+                <img src="assets/Design.png" alt="design left" class="h-5 md:h-8 w-auto object-contain">
+                <div class="text-center">
+                    <p
+                        class="text-[16px] md:text-2xl min-[2000px]:text-4xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">
+                        Find your
                     </p>
                     <h2
-                        class="font-Outfit text-[32px] md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
+                        class="font-Outfit text-[32px] md:text-[54px] min-[2000px]:text-[80px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
                         Perfect Shape</h2>
                 </div>
-                <img src="assets/DesignRight.png" alt="design right"
-                    class="h-5 md:h-8 w-auto object-contain min-[2000px]:hidden">
+                <img src="assets/DesignRight.png" alt="design right" class="h-5 md:h-8 w-auto object-contain">
             </div>
             <!-- All  shape -->
             <div class="grid grid-cols-2 items-center sm:grid-cols-5 lg:grid-cols-10 gap-y-10 gap-x-4">
@@ -763,7 +771,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Round</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Round</span>
                 </div>
                 <!-- Oval shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -772,7 +780,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Oval</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Oval</span>
                 </div>
                 <!-- Princess shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -781,7 +789,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Princess</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Princess</span>
                 </div>
                 <!-- Emerald shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -790,7 +798,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Emerald</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Emerald</span>
                 </div>
                 <!-- Radiant shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -799,7 +807,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px]  font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Radiant</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Radiant</span>
                 </div>
                 <!-- Heart shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -808,7 +816,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Heart</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest group-hover:text-black transition-colors group-hover:order-first">Heart</span>
                 </div>
                 <!-- Cushion shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -817,7 +825,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px]  font-Outfit group-hover:text-black transition-colors group-hover:order-first">Cushion</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit group-hover:text-black transition-colors group-hover:order-first">Cushion</span>
                 </div>
                 <!-- Pear shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -826,7 +834,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Pear</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Pear</span>
                 </div>
                 <!-- Marquise shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -835,7 +843,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Marquise</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Marquise</span>
                 </div>
                 <!-- Asscher shape -->
                 <div class="flex flex-col items-center group cursor-pointer gap-4">
@@ -844,7 +852,7 @@
                             class="w-full h-full object-contain grayscale reflection-img">
                     </div>
                     <span
-                        class="text-[10px] font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Asscher</span>
+                        class="text-[10px] min-[2000px]:text-xl font-Outfit tracking-widest  group-hover:text-black transition-colors group-hover:order-first">Asscher</span>
                 </div>
 
             </div>
@@ -854,15 +862,17 @@
 
 
     <section class="bg-[#FAF9F6] pt-12 pb-8 md:pt-28 md:pb-16 px-4 md:px-14">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl min-[2000px]:max-w-full mx-auto">
 
             <div class="flex items-center justify-center mb-6 md:mb-8 gap-2 md:gap-6">
                 <img src="assets/Design.png" alt="design left" class="h-5 md:h-8 w-auto object-contain">
                 <div class="text-center">
-                    <p class="text-[16px] md:text-2xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">Explore by
+                    <p
+                        class="text-[16px] md:text-2xl min-[2000px]:text-4xl font-Alexandria tracking-[0.1em] text-[#5C4522] mb-1">
+                        Explore by
                     </p>
                     <h2
-                        class="font-Outfit text-[32px] md:text-[54px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
+                        class="font-Outfit text-[32px] md:text-[54px] min-[2000px]:text-[80px] font-medium text-[#CBA65A] whitespace-nowrap leading-tight">
                         Category</h2>
                 </div>
                 <img src="assets/DesignRight.png" alt="design right" class="h-5 md:h-8 w-auto object-contain">
@@ -871,19 +881,19 @@
             <!-- Category Buttons: Horizontal Scroll on Mobile -->
             <div class="flex flex-nowrap justify-start overflow-x-auto no-scrollbar gap-3 mb-8 w-full md:mb-12 snap-x">
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-10 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">All</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-10 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white  text-xs md:text-sm min-[2000px]:text-xl tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">All</button>
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm hover:bg-black md:text-sm tracking-widest rounded-full  snap-center transition-colors whitespace-nowrap">Rings</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm min-[2000px]:text-xl hover:bg-black md:text-sm tracking-widest rounded-full  snap-center transition-colors whitespace-nowrap">Rings</button>
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Earrings</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm min-[2000px]:text-xl tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Earrings</button>
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Braceletes</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm min-[2000px]:text-xl tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Braceletes</button>
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Pendants</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm min-[2000px]:text-xl tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Pendants</button>
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Necklaces</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm min-[2000px]:text-xl tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Necklaces</button>
                 <button
-                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Gifts</button>
+                    class="flex-shrink-0 px-6 py-2 md:px-8 md:py-2 min-[2000px]:px-12 min-[2000px]:py-4 font-['Outfit'] md:gap-0 bg-gray-100 border border-gray-200 hover:text-white text-xs md:text-sm min-[2000px]:text-xl tracking-widest rounded-full hover:bg-black snap-center transition-colors whitespace-nowrap">Gifts</button>
             </div>
 
             <!---category image 1-->
@@ -907,8 +917,9 @@
                         </div>
                     </div>
                     <div class="text-center font-['Outfit']">
-                        <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                        <div class="flex items-center justify-center gap-2 text-xs">
+                        <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
+                            Ring</h3>
+                        <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
                             <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
                             <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
@@ -933,8 +944,9 @@
                         </div>
                     </div>
                     <div class="text-center font-['Outfit']">
-                        <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                        <div class="flex items-center justify-center gap-2 text-xs">
+                        <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
+                            Ring</h3>
+                        <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
                             <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
                             <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
@@ -959,8 +971,9 @@
                         </div>
                     </div>
                     <div class="text-center font-['Outfit']">
-                        <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                        <div class="flex items-center justify-center gap-2 text-xs">
+                        <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
+                            Ring</h3>
+                        <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
                             <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
                             <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
@@ -985,8 +998,9 @@
                         </div>
                     </div>
                     <div class="text-center font-['Outfit']">
-                        <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                        <div class="flex items-center justify-center gap-2 text-xs">
+                        <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
+                            Ring</h3>
+                        <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
                             <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
                             <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
@@ -1011,8 +1025,9 @@
                         </div>
                     </div>
                     <div class="text-center font-['Outfit']">
-                        <h3 class="text-sm font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage Ring</h3>
-                        <div class="flex items-center justify-center gap-2 text-xs">
+                        <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
+                            Ring</h3>
+                        <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
                             <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
                             <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
@@ -1107,10 +1122,10 @@
                         <!-- Text Frame -->
                         <div class="flex flex-col justify-center items-center px-2 w-auto h-auto">
                             <p style="font-family: 'Alexandria', sans-serif;"
-                                class="font-normal text-xl md:text-[24px] leading-tight text-center text-[#5C4522] mb-1">
+                                class="font-normal text-xl md:text-[24px] min-[2000px]:text-4xl leading-tight text-center text-[#5C4522] mb-1">
                                 Explore by</p>
                             <h2 style="font-family: 'Outfit', sans-serif;"
-                                class="font-medium text-4xl md:text-[54px] leading-tight text-[#CBA65A] text-center">
+                                class="font-medium text-4xl md:text-[54px] min-[2000px]:text-[80px] leading-tight text-[#CBA65A] text-center">
                                 Category</h2>
                         </div>
 
@@ -1121,7 +1136,7 @@
                     <!-- Description -->
                     <div class="pl-0 lg:pl-[310px] w-full text-center lg:text-left mt-4 lg:mt-0">
                         <p style="font-family: 'Outfit', sans-serif;"
-                            class="font-normal text-base md:text-[18px] leading-relaxed md:leading-[35px] text-[#3D3D42] max-w-lg mx-auto lg:mx-0">
+                            class="font-normal text-base md:text-[18px] min-[2000px]:text-2xl leading-relaxed md:leading-[35px] text-[#3D3D42] max-w-lg mx-auto lg:mx-0">
                             Tattsvi jewellery feels incredibly refined and comfortable to wear. The designs are
                             subtle yet elegant.
                         </p>
@@ -1144,7 +1159,7 @@
 
                             <div class="absolute bottom-16 left-0 w-full text-center">
                                 <span id="mainCatTitle"
-                                    class="bg-white/90 backdrop-blur-md px-8 py-2.5 rounded-full text-amber-900 font-serif italic shadow-sm border border-amber-50 tracking-wide">Rings</span>
+                                    class="bg-white/90 backdrop-blur-md px-8 py-2.5 min-[2000px]:px-12 min-[2000px]:py-4 rounded-full text-amber-900 font-serif italic min-[2000px]:text-4xl shadow-sm border border-amber-50 tracking-wide">Rings</span>
                             </div>
                         </div>
 
@@ -1320,11 +1335,11 @@
             <div
                 class="flex flex-col justify-center items-center px-[10px] w-auto md:w-[431px] h-auto md:h-[120px] rounded-[10px]">
                 <span
-                    class="bg-[#C34A37] text-white text-base md:text-[24px] px-6 py-2 rounded-full font-Alexandria font-normal mb-2">
+                    class="bg-[#C34A37] text-white text-base md:text-[24px] min-[2000px]:text-4xl px-6 py-2 rounded-full font-Alexandria font-normal mb-2">
                     This Is New
                 </span>
                 <h2 style="font-family: 'Outfit', sans-serif;"
-                    class="font-medium text-3xl md:text-[54px] leading-tight text-[#CBA65A] text-center whitespace-nowrap">
+                    class="font-medium text-3xl md:text-[54px] min-[2000px]:text-[80px] leading-tight text-[#CBA65A] text-center whitespace-nowrap">
                     Launch Jewellery
                 </h2>
             </div>
@@ -1337,7 +1352,8 @@
             </div>
         </div>
 
-        <div class="relative w-full max-w-7xl mx-auto px-4 md:px-8 mb-0 md:mb-0 group-container">
+        <div
+            class="relative w-full max-w-7xl min-[2000px]:max-w-full mx-auto px-4 md:px-8 mb-0 md:mb-0 group-container">
             <!-- Background Ellipse -->
             <div
                 class="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1800px] h-[10px] max-w-none bg-[#FDFBF7] rounded-[50%] -z-10 blur-xl pointer-events-none">
@@ -1382,8 +1398,10 @@
 
                             <!-- Text Content -->
                             <div class="absolute bottom-[20%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522]">Rings</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">9KT Solid Gold
+                                </p>
+                                <h3 class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">Rings
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -1407,8 +1425,11 @@
                                     fill="url(#paint_ring_launch_ref)" />
                             </svg>
                             <div class="absolute bottom-[35%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Rings</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Rings</h3>
                             </div>
                         </div>
                     </div>
@@ -1446,8 +1467,11 @@
                                 class="absolute top-0 right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
 
                             <div class="absolute bottom-[20%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Pendants</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Pendants</h3>
                             </div>
                         </div>
                     </div>
@@ -1468,8 +1492,11 @@
                                     fill="url(#paint_pendant_launch_ref)" />
                             </svg>
                             <div class="absolute bottom-[35%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Pendants</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Pendants</h3>
                             </div>
                         </div>
                     </div>
@@ -1507,8 +1534,11 @@
                                 class="absolute top-0 right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
 
                             <div class="absolute bottom-[20%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Bracelets</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Bracelets</h3>
                             </div>
                         </div>
                     </div>
@@ -1529,8 +1559,11 @@
                                     fill="url(#paint_bracelet_launch_ref)" />
                             </svg>
                             <div class="absolute bottom-[35%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Bracelets</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Bracelets</h3>
                             </div>
                         </div>
                     </div>
@@ -1569,8 +1602,11 @@
                                 class="absolute top-0 right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
 
                             <div class="absolute bottom-[20%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Earrings</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Earrings</h3>
                             </div>
                         </div>
                     </div>
@@ -1591,8 +1627,11 @@
                                     fill="url(#paint_earring_launch_ref)" />
                             </svg>
                             <div class="absolute bottom-[35%] w-full text-center z-30">
-                                <p class="font-Outfit text-sm text-[#5C4522] mb-1 drop-shadow-md">9KT Solid Gold</p>
-                                <h3 class="font-Outfit text-xl font-medium text-[#5C4522] drop-shadow-md">Earrings</h3>
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1 drop-shadow-md">
+                                    9KT Solid Gold</p>
+                                <h3
+                                    class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522] drop-shadow-md">
+                                    Earrings</h3>
                             </div>
                         </div>
                     </div>
@@ -1611,13 +1650,14 @@
             <div class="flex items-center justify-center gap-1 md:gap-4 mb-2">
                 <img src="assets/Design_new.png" class="h-3 md:h-5 w-auto object-contain" alt="decoration">
                 <span style="font-family: 'Alexandria', sans-serif;"
-                    class="font-Alexandria text-[#5C4522] text-sm md:text-2xl tracking-normal font-normal whitespace-nowrap">Express
+                    class="font-Alexandria text-[#5C4522] text-sm md:text-2xl min-[2000px]:text-4xl tracking-normal font-normal whitespace-nowrap">Express
                     Your Identity with</span>
                 <img src="assets/Design_new.png" class="h-3 md:h-5 w-auto object-contain transform scale-x-[-1]"
                     alt="decoration">
             </div>
             <h2 style="font-family: 'Outfit', sans-serif;"
-                class="font-Outfit text-[#CBA65A] text-3xl md:text-[54px] font-medium leading-tight">Our Unique Style
+                class="font-Outfit text-[#CBA65A] text-3xl md:text-[54px] min-[2000px]:text-[80px] font-medium leading-tight">
+                Our Unique Style
             </h2>
         </div>
 
@@ -1625,7 +1665,7 @@
         <div class="relative w-full h-[350px] md:h-[500px] lg:h-[850px] z-10 -mt-8 md:-mt-48">
             <!-- Top Curve Mask (White) -->
             <div
-                class="absolute -top-[100px] md:-top-[698px] left-1/2 -translate-x-1/2 w-[120%] md:w-[2416px] h-[150px] md:h-[918px] max-w-none bg-white rounded-b-[100%] md:rounded-b-[50%] z-20 pointer-events-none">
+                class="absolute -top-[100px] md:-top-[698px] left-1/2 -translate-x-1/2 w-[120%] md:w-[2416px] min-[2000px]:w-[150%] h-[150px] md:h-[918px] max-w-none bg-white rounded-b-[100%] md:rounded-b-[50%] z-20 pointer-events-none">
             </div>
 
             <!-- Grid -->
@@ -1689,17 +1729,18 @@
 
             <!-- Bottom Curve Mask (White) -->
             <div
-                class="absolute -bottom-[100px] md:-bottom-[698px] left-1/2 -translate-x-1/2 w-[120%] md:w-[2416px] h-[150px] md:h-[918px] max-w-none bg-white rounded-t-[100%] md:rounded-t-[50%] z-20 pointer-events-none">
+                class="absolute -bottom-[100px] md:-bottom-[698px] left-1/2 -translate-x-1/2 w-[120%] md:w-[2416px] min-[2000px]:w-[150%] h-[150px] md:h-[918px] max-w-none bg-white rounded-t-[100%] md:rounded-t-[50%] z-20 pointer-events-none">
             </div>
         </div>
 
         <!-- Button -->
         <div class="absolute bottom-4 md:bottom-[60px] left-1/2 -translate-x-1/2 z-30">
             <button
-                class="w-[150px] h-[45px] md:w-[195px] md:h-[60px] bg-[#0D0D0E] text-white hover:bg-gray-800 rounded-[200px] font-Outfit tracking-widest text-xs md:text-sm transition-all flex items-center justify-center gap-[10px] group shadow-lg px-[26px]">
+                class="w-[150px] h-[45px] md:w-[195px] md:h-[60px] min-[2000px]:w-[300px] min-[2000px]:h-[80px] bg-[#0D0D0E] text-white hover:bg-gray-800 rounded-[200px] font-Outfit tracking-widest text-xs md:text-sm min-[2000px]:text-2xl transition-all flex items-center justify-center gap-[10px] group shadow-lg px-[26px]">
                 View More
                 <img src="assets/ic_back_2_white.png"
-                    class="h-3 md:h-4 w-auto transform group-hover:translate-x-1 transition-transform" alt="arrow">
+                    class="h-3 md:h-4 min-[2000px]:h-6 w-auto transform group-hover:translate-x-1 transition-transform"
+                    alt="arrow">
             </button>
         </div>
 
@@ -1718,7 +1759,7 @@
             style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: radial-gradient(50% 50% at 50% 50%, #F3EAD8 0%, #FDFBF7 100%); pointer-events: none; z-index: 0;">
         </div>
 
-        <div class="relative z-20 max-w-[1440px]  w-full mx-auto">
+        <div class="relative z-20 max-w-[1440px] min-[2000px]:max-w-full w-full mx-auto">
             <div class="flex flex-col lg:flex-row items-center justify-center gap-[60px] w-full h-auto py-0">
 
                 <!-- Left Image -->
@@ -1733,10 +1774,10 @@
                 <div class="flex-1 flex flex-col  justify-center space-y-8 lg:pl-10">
                     <div class="text-center lg:text-left xl:text-center">
                         <h2
-                            class="font-['Alexandria'] text-[#0D0D0E] text-4xl md:text-[44px] font-normal leading-tight mb-2">
+                            class="font-['Alexandria'] text-[#0D0D0E] text-4xl md:text-[44px] min-[2000px]:text-[70px] font-normal leading-tight mb-2">
                             Tattsvi Bestseller</h2>
                         <p
-                            class="font-['Outfit'] text-[#0D0D0E] text-xl md:text-[24px] font-normal tracking-normal leading-tight">
+                            class="font-['Outfit'] text-[#0D0D0E] text-xl md:text-[24px] min-[2000px]:text-4xl font-normal tracking-normal leading-tight">
                             Jewellery that defines choice, elegance and trust</p>
                     </div>
 
@@ -1744,15 +1785,17 @@
                         <!-- Feature 1 -->
                         <div class="flex items-center gap-5">
                             <div
-                                class="w-[60px] h-[60px] md:w-[60px] md:h-[60px] flex-shrink-0 bg-white rounded-[16px] flex items-center justify-center shadow-sm border border-[#F5F5F5]">
-                                <img src="assets/cer1.png" class="w-8 h-8 md:w-10 md:h-10 object-contain" alt="icon">
+                                class="w-[60px] h-[60px] md:w-[60px] md:h-[60px] min-[2000px]:w-[80px] min-[2000px]:h-[80px] flex-shrink-0 bg-white rounded-[16px] flex items-center justify-center shadow-sm border border-[#F5F5F5]">
+                                <img src="assets/cer1.png"
+                                    class="w-8 h-8 md:w-10 md:h-10 min-[2000px]:w-14 min-[2000px]:h-14 object-contain"
+                                    alt="icon">
                             </div>
                             <div class="text-left">
                                 <h4 style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit text-[18px] md:text-[20px] font-semibold text-[#0D0D0E] leading-tight mb-1">
+                                    class="font-Outfit text-[18px] md:text-[20px] min-[2000px]:text-3xl font-semibold text-[#0D0D0E] leading-tight mb-1">
                                     Interwoven Gold Ring</h4>
                                 <p style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit font-light text-[14px] md:text-[15px] text-[#5C5C5C] leading-snug">
+                                    class="font-Outfit font-light text-[14px] md:text-[15px] min-[2000px]:text-xl text-[#5C5C5C] leading-snug">
                                     A Signature Design Crafted For Everyday Elegance</p>
                             </div>
                         </div>
@@ -1760,15 +1803,17 @@
                         <!-- Feature 2 -->
                         <div class="flex items-center gap-5">
                             <div
-                                class="w-[60px] h-[60px] md:w-[60px] md:h-[60px] flex-shrink-0 bg-white rounded-[16px] flex items-center justify-center shadow-sm border border-[#F5F5F5]">
-                                <img src="assets/cer1.png" class="w-8 h-8 md:w-10 md:h-10 object-contain" alt="icon">
+                                class="w-[60px] h-[60px] md:w-[60px] md:h-[60px] min-[2000px]:w-[80px] min-[2000px]:h-[80px] flex-shrink-0 bg-white rounded-[16px] flex items-center justify-center shadow-sm border border-[#F5F5F5]">
+                                <img src="assets/cer1.png"
+                                    class="w-8 h-8 md:w-10 md:h-10 min-[2000px]:w-14 min-[2000px]:h-14 object-contain"
+                                    alt="icon">
                             </div>
                             <div class="text-left">
                                 <h4 style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit text-[18px] md:text-[20px] font-semibold text-[#0D0D0E] leading-tight mb-1">
+                                    class="font-Outfit text-[18px] md:text-[20px] min-[2000px]:text-3xl font-semibold text-[#0D0D0E] leading-tight mb-1">
                                     Transparent & Fair Pricing</h4>
                                 <p style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit font-light text-[14px] md:text-[15px] text-[#5C5C5C] leading-snug">
+                                    class="font-Outfit font-light text-[14px] md:text-[15px] min-[2000px]:text-xl text-[#5C5C5C] leading-snug">
                                     Value That Reflect Purity, Craftsmanship And Trust</p>
                             </div>
                         </div>
@@ -1776,15 +1821,17 @@
                         <!-- Feature 3 -->
                         <div class="flex items-center gap-5">
                             <div
-                                class="w-[60px] h-[60px] md:w-[60px] md:h-[60px] flex-shrink-0 bg-white rounded-[16px] flex items-center justify-center shadow-sm border border-[#F5F5F5]">
-                                <img src="assets/cer1.png" class="w-8 h-8 md:w-10 md:h-10 object-contain" alt="icon">
+                                class="w-[60px] h-[60px] md:w-[60px] md:h-[60px] min-[2000px]:w-[80px] min-[2000px]:h-[80px] flex-shrink-0 bg-white rounded-[16px] flex items-center justify-center shadow-sm border border-[#F5F5F5]">
+                                <img src="assets/cer1.png"
+                                    class="w-8 h-8 md:w-10 md:h-10 min-[2000px]:w-14 min-[2000px]:h-14 object-contain"
+                                    alt="icon">
                             </div>
                             <div class="text-left">
                                 <h4 style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit text-[18px] md:text-[20px] font-semibold text-[#0D0D0E] leading-tight mb-1">
+                                    class="font-Outfit text-[18px] md:text-[20px] min-[2000px]:text-3xl font-semibold text-[#0D0D0E] leading-tight mb-1">
                                     Certified Pure Gold</h4>
                                 <p style="font-family: 'Outfit', sans-serif;"
-                                    class="font-Outfit font-light text-[14px] md:text-[15px] text-[#5C5C5C] leading-snug">
+                                    class="font-Outfit font-light text-[14px] md:text-[15px] min-[2000px]:text-xl text-[#5C5C5C] leading-snug">
                                     Hallmarked Jewellery You Can Wear With Confidence</p>
                             </div>
                         </div>
@@ -1792,10 +1839,10 @@
 
                     <div class="pt-10 text-center w-full flex flex-col items-center">
                         <p style="font-family: 'Outfit', sans-serif;"
-                            class="font-Outfit font-medium text-[16px] md:text-[18px] text-[#3D3D3D] mb-6 text-center">
+                            class="font-Outfit font-medium text-[16px] md:text-[18px] min-[2000px]:text-2xl text-[#3D3D3D] mb-6 text-center">
                             Loved Beyond Trends Jewellery that continues to be chosen.</p>
                         <button style="background: #CD9C56;"
-                            class="inline-flex items-center justify-center w-auto h-[50px] px-8 rounded-full text-white font-Outfit font-medium text-[16px] shadow-sm hover:bg-[#b38f45] transition-colors leading-tight">
+                            class="inline-flex items-center justify-center w-auto h-[50px] min-[2000px]:h-[70px] px-8 min-[2000px]:px-12 rounded-full text-white font-Outfit font-medium text-[16px] min-[2000px]:text-2xl shadow-sm hover:bg-[#b38f45] transition-colors leading-tight">
                             View All Bestsellers
                         </button>
                     </div>
@@ -1806,16 +1853,16 @@
 
 
     <!-- Flexible solutions-->
-    <section class="bg-gradient-to-r from-[#FCE4EC] to-[#FFF5F6] py-8 px-4">
-        <div class="max-w-[1440px] mx-auto text-center">
+    <section class="bg-gradient-to-r from-[#FCE4EC] to-[#FFF5F6] py-8 px-4 md:px-14">
+        <div class="max-w-[1440px] min-[2000px]:max-w-full mx-auto text-center">
             <p style="font-family: 'Alexandria', sans-serif;"
-                class="font-Alexandria text-[20px] md:text-[24px] font-normal text-[#5C4522] leading-[29px] text-center my-[-9px] mb-4">
+                class="font-Alexandria text-[20px] md:text-[24px] min-[2000px]:text-4xl font-normal text-[#5C4522] leading-[29px] text-center my-[-9px] mb-4">
                 Upgrade Your Sparkle, Stress-Free</p>
 
             <div class="flex items-center justify-center gap-3 md:gap-4 mb-8">
                 <img src="assets/Design_pink_left.png" class="h-4 md:h-5 w-auto object-contain" alt="decoration">
                 <h2
-                    class="font-Outfit text-[#B76E79] text-2xl md:text-[36px] font-medium leading-tight whitespace-normal md:whitespace-nowrap">
+                    class="font-Outfit text-[#B76E79] text-2xl md:text-[36px] min-[2000px]:text-[60px] font-medium leading-tight whitespace-normal md:whitespace-nowrap">
                     Flexible
                     solutions
                     for your jewellery</h2>
@@ -1829,15 +1876,16 @@
                 <!-- Item 1 -->
                 <div class="flex flex-col items-center group w-full">
                     <div
-                        class="w-28 h-28 md:w-[140px] md:h-[140px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
-                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
+                        class="w-28 h-28 md:w-[140px] md:h-[140px] min-[2000px]:w-[200px] min-[2000px]:h-[200px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
+                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] min-[2000px]:w-[180px] min-[2000px]:h-[180px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
                             style="background-image: url('assets/Cat 1.png');">
-                            <img src="assets/Frame1.png" class="h-8 w-8 md:h-12 md:w-12 object-contain"
+                            <img src="assets/Frame1.png"
+                                class="h-8 w-8 md:h-12 md:w-12 min-[2000px]:h-20 min-[2000px]:w-20 object-contain"
                                 alt="Easy 15 Day Exchange">
                         </div>
                     </div>
                     <span
-                        class="text-xs md:text-[15px] font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
+                        class="text-xs md:text-[15px] min-[2000px]:text-2xl font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
                         Easy 15 Day Exchange
                     </span>
                 </div>
@@ -1845,15 +1893,16 @@
                 <!-- Item 2 -->
                 <div class="flex flex-col items-center group w-full">
                     <div
-                        class="w-28 h-28 md:w-[140px] md:h-[140px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
-                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
+                        class="w-28 h-28 md:w-[140px] md:h-[140px] min-[2000px]:w-[200px] min-[2000px]:h-[200px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
+                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] min-[2000px]:w-[180px] min-[2000px]:h-[180px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
                             style="background-image: url('assets/Cat 1.png');">
-                            <img src="assets/Group.png" class="h-8 w-8 md:h-12 md:w-12 object-contain"
+                            <img src="assets/Group.png"
+                                class="h-8 w-8 md:h-12 md:w-12 min-[2000px]:h-20 min-[2000px]:w-20 object-contain"
                                 alt="Guaranteed Purity">
                         </div>
                     </div>
                     <span
-                        class="text-xs md:text-[15px] font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
+                        class="text-xs md:text-[15px] min-[2000px]:text-2xl font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
                         Guaranteed Purity
                     </span>
                 </div>
@@ -1861,15 +1910,16 @@
                 <!-- Item 3 -->
                 <div class="flex flex-col items-center group w-full">
                     <div
-                        class="w-28 h-28 md:w-[140px] md:h-[140px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
-                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
+                        class="w-28 h-28 md:w-[140px] md:h-[140px] min-[2000px]:w-[200px] min-[2000px]:h-[200px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
+                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] min-[2000px]:w-[180px] min-[2000px]:h-[180px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
                             style="background-image: url('assets/Cat 1.png');">
-                            <img src="assets/tr.png" class="h-8 w-8 md:h-12 md:w-12 object-contain"
+                            <img src="assets/tr.png"
+                                class="h-8 w-8 md:h-12 md:w-12 min-[2000px]:h-20 min-[2000px]:w-20 object-contain"
                                 alt="Fast & Secure Shipping">
                         </div>
                     </div>
                     <span
-                        class="text-xs md:text-[15px] font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
+                        class="text-xs md:text-[15px] min-[2000px]:text-2xl font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
                         Fast & Secure Shipping
                     </span>
                 </div>
@@ -1877,15 +1927,16 @@
                 <!-- Item 4 -->
                 <div class="flex flex-col items-center group w-full">
                     <div
-                        class="w-28 h-28 md:w-[140px] md:h-[140px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
-                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
+                        class="w-28 h-28 md:w-[140px] md:h-[140px] min-[2000px]:w-[200px] min-[2000px]:h-[200px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
+                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] min-[2000px]:w-[180px] min-[2000px]:h-[180px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
                             style="background-image: url('assets/Cat 1.png');">
-                            <img src="assets/cj.png" class="h-8 w-8 md:h-12 md:w-12 object-contain"
+                            <img src="assets/cj.png"
+                                class="h-8 w-8 md:h-12 md:w-12 min-[2000px]:h-20 min-[2000px]:w-20 object-contain"
                                 alt="Certified Jewellery">
                         </div>
                     </div>
                     <span
-                        class="text-xs md:text-[15px] font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
+                        class="text-xs md:text-[15px] min-[2000px]:text-2xl font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
                         Certified Jewellery
                     </span>
                 </div>
@@ -1893,15 +1944,16 @@
                 <!-- Item 5 -->
                 <div class="flex flex-col items-center group w-full">
                     <div
-                        class="w-28 h-28 md:w-[140px] md:h-[140px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
-                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
+                        class="w-28 h-28 md:w-[140px] md:h-[140px] min-[2000px]:w-[200px] min-[2000px]:h-[200px] bg-white rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
+                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] min-[2000px]:w-[180px] min-[2000px]:h-[180px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
                             style="background-image: url('assets/Cat 1.png');">
-                            <img src="assets/pc.png" class="h-8 w-8 md:h-12 md:w-12 object-contain"
+                            <img src="assets/pc.png"
+                                class="h-8 w-8 md:h-12 md:w-12 min-[2000px]:h-20 min-[2000px]:w-20 object-contain"
                                 alt="Premium Craftsmanship">
                         </div>
                     </div>
                     <span
-                        class="text-xs md:text-[15px] font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
+                        class="text-xs md:text-[15px] min-[2000px]:text-2xl font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
                         Premium Craftsmanship
                     </span>
                 </div>
@@ -1909,15 +1961,16 @@
                 <!-- Item 6 -->
                 <div class="flex flex-col items-center group w-full">
                     <div
-                        class="w-28 h-28 md:w-[140px] md:h-[140px] bg-white  rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
-                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
+                        class="w-28 h-28 md:w-[140px] md:h-[140px] min-[2000px]:w-[200px] min-[2000px]:h-[200px] bg-white  rounded-full flex items-center justify-center mb-2 shadow-md transition-transform group-hover:scale-110 duration-300">
+                        <div class="w-20 h-20 md:w-[140px] md:h-[140px] min-[2000px]:w-[180px] min-[2000px]:h-[180px] flex items-center justify-center bg-no-repeat bg-center bg-contain"
                             style="background-image: url('assets/Cat 1.png');">
-                            <img src="assets/ee.png" class="h-8 w-8 md:h-12 md:w-12 object-contain"
+                            <img src="assets/ee.png"
+                                class="h-8 w-8 md:h-12 md:w-12 min-[2000px]:h-20 min-[2000px]:w-20 object-contain"
                                 alt="Ethical & Eco-Conscious">
                         </div>
                     </div>
                     <span
-                        class="text-xs md:text-[15px] font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
+                        class="text-xs md:text-[15px] min-[2000px]:text-2xl font-['outfit'] tracking-tight text-center px-2 leading-tight text-rose-950">
                         Ethical & Eco-Conscious
                     </span>
                 </div>
@@ -1926,35 +1979,37 @@
         </div>
     </section>
     <section class="py-8 md:py-20 bg-white px-4 md:px-8 w-full max-w-[100vw] overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl min-[2000px]:max-w-full mx-auto">
             <!-- Header -->
             <div class="text-center mb-12">
                 <p style="font-family: 'Alexandria', sans-serif;"
-                    class="font-Alexandria text-[16px] md:text-[20px] font-normal text-[#5C4522] leading-[29px] text-center my-[-5px] mb-2">
+                    class="font-Alexandria text-[16px] md:text-[20px] min-[2000px]:text-4xl font-normal text-[#5C4522] leading-[29px] text-center my-[-5px] mb-2">
                     Here From
                 </p>
                 <div class="flex items-center justify-center gap-3 md:gap-4">
                     <img src="assets/Design.png" class="h-4 md:h-5 w-auto object-contain" alt="decoration">
                     <h2 style="font-family: 'Outfit', sans-serif;"
-                        class="font-Outfit text-[#CBA65A] text-2xl md:text-[36px] font-medium leading-tight md:leading-[48px] whitespace-nowrap">
+                        class="font-Outfit text-[#CBA65A] text-2xl md:text-[36px] min-[2000px]:text-[80px] font-medium leading-tight md:leading-[48px] whitespace-nowrap">
                         Our Customers
                     </h2>
                     <img src="assets/DesignRight.png" class="h-4 md:h-5 w-auto object-contain" alt="decoration">
                 </div>
             </div>
 
-            <div class="relative group w-full max-w-[1440px] mx-auto">
+            <div class="relative group w-full max-w-[1440px] min-[2000px]:max-w-full mx-auto">
                 <!-- Slider -->
                 <div id="testimonialSlider"
                     class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-8 px-4 w-full">
 
                     <!-- Review 1 -->
                     <div
-                        class="w-full md:w-full lg:w-[800px] flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-8 lg:p-10 rounded-[24px] relative flex flex-col h-auto min-h-[320px] justify-between group transition-all hover:shadow-md">
+                        class="w-full md:w-full lg:w-[800px] min-[2000px]:w-[1200px] flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-8 lg:p-10 min-[2000px]:p-16 rounded-[24px] relative flex flex-col h-auto min-h-[320px] min-[2000px]:min-h-[500px] justify-between group transition-all hover:shadow-md">
                         <div class="flex items-start gap-4">
                             <img src="assets/ReviewQuote.png"
-                                class="w-10 h-8 md:w-12 md:h-10 object-contain opacity-40 md:opacity-100" alt="quote">
-                            <p class="font-['Outfit'] text-[#0D0D0E] text-base md:text-lg leading-relaxed mt-2">
+                                class="w-10 h-8 md:w-12 md:h-10 min-[2000px]:w-20 min-[2000px]:h-16 object-contain opacity-40 md:opacity-100"
+                                alt="quote">
+                            <p
+                                class="font-['Outfit'] text-[#0D0D0E] text-base md:text-lg min-[2000px]:text-3xl leading-relaxed mt-2">
                                 Tattsvi jewellery feels incredibly refined and comfortable to wear. The designs are
                                 subtle yet elegant, making them perfect for everyday styling. You can genuinely feel the
                                 attention to detail in every piece."
@@ -1962,10 +2017,13 @@
                         </div>
 
                         <div class="flex items-center gap-4 mt-6 pl-0 md:pl-6 lg:pl-16">
-                            <img src="assets/client1.png" class="w-12 h-12 rounded-[10px] object-cover" alt="User">
+                            <img src="assets/client1.png"
+                                class="w-12 h-12 min-[2000px]:w-20 min-[2000px]:h-20 rounded-[10px] object-cover"
+                                alt="User">
                             <div>
-                                <h4 class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg">Ananya R.</h4>
-                                <div class="flex gap-1 text-[#CBA65A] text-xs">
+                                <h4 class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">
+                                    Ananya R.</h4>
+                                <div class="flex gap-1 text-[#CBA65A] text-xs min-[2000px]:text-xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                         class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
@@ -1975,11 +2033,13 @@
 
                     <!-- Review 2 -->
                     <div
-                        class="w-full md:w-full lg:w-[800px] flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-8 lg:p-10 rounded-[24px] relative flex flex-col h-auto min-h-[320px] justify-between group transition-all hover:shadow-md">
+                        class="w-full md:w-full lg:w-[800px] min-[2000px]:w-[1200px] flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-8 lg:p-10 min-[2000px]:p-16 rounded-[24px] relative flex flex-col h-auto min-h-[320px] min-[2000px]:min-h-[500px] justify-between group transition-all hover:shadow-md">
                         <div class="flex items-start gap-4">
                             <img src="assets/ReviewQuote.png"
-                                class="w-10 h-8 md:w-12 md:h-10 object-contain opacity-40 md:opacity-100" alt="quote">
-                            <p class="font-['Outfit'] text-[#0D0D0E] text-base md:text-lg leading-relaxed mt-2">
+                                class="w-10 h-8 md:w-12 md:h-10 min-[2000px]:w-20 min-[2000px]:h-16 object-contain opacity-40 md:opacity-100"
+                                alt="quote">
+                            <p
+                                class="font-['Outfit'] text-[#0D0D0E] text-base md:text-lg min-[2000px]:text-3xl leading-relaxed mt-2">
                                 "The craftsmanship is outstanding. I bought a ring for my engagement and it looks
                                 absolutely stunning. The packaging was premium and delivery was super fast. Highly
                                 recommended!"
@@ -1987,10 +2047,13 @@
                         </div>
 
                         <div class="flex items-center gap-4 mt-6 pl-0 md:pl-6 lg:pl-16">
-                            <img src="assets/client1.png" class="w-12 h-12 rounded-[10px] object-cover" alt="User">
+                            <img src="assets/client1.png"
+                                class="w-12 h-12 min-[2000px]:w-20 min-[2000px]:h-20 rounded-[10px] object-cover"
+                                alt="User">
                             <div>
-                                <h4 class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg"> Ananya R.</h4>
-                                <div class="flex gap-1 text-[#CBA65A] text-xs">
+                                <h4 class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">
+                                    Ananya R.</h4>
+                                <div class="flex gap-1 text-[#CBA65A] text-xs min-[2000px]:text-xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                         class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
@@ -2000,21 +2063,26 @@
 
                     <!-- Review 3 -->
                     <div
-                        class="w-full md:w-full lg:w-[800px] flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-8 lg:p-10 rounded-[24px] relative flex flex-col h-auto min-h-[320px] justify-between group transition-all hover:shadow-md">
+                        class="w-full md:w-full lg:w-[800px] min-[2000px]:w-[1200px] flex-shrink-0 snap-center bg-[#F9F4E8] p-6 md:p-8 lg:p-10 min-[2000px]:p-16 rounded-[24px] relative flex flex-col h-auto min-h-[320px] min-[2000px]:min-h-[500px] justify-between group transition-all hover:shadow-md">
                         <div class="flex items-start gap-4">
                             <img src="assets/ReviewQuote.png"
-                                class="w-10 h-8 md:w-12 md:h-10 object-contain opacity-40 md:opacity-100" alt="quote">
-                            <p class="font-['Outfit'] text-[#0D0D0E] text-base md:text-lg leading-relaxed mt-2">
+                                class="w-10 h-8 md:w-12 md:h-10 min-[2000px]:w-20 min-[2000px]:h-16 object-contain opacity-40 md:opacity-100"
+                                alt="quote">
+                            <p
+                                class="font-['Outfit'] text-[#0D0D0E] text-base md:text-lg min-[2000px]:text-3xl leading-relaxed mt-2">
                                 "I love how unique the collections are. It's rare to find such modern yet traditional
                                 designs. Will definitely shop again!"
                             </p>
                         </div>
 
                         <div class="flex items-center gap-4 mt-6 pl-0 md:pl-6 lg:pl-16">
-                            <img src="assets/client1.png" class="w-12 h-12 rounded-[10px] object-cover" alt="User">
+                            <img src="assets/client1.png"
+                                class="w-12 h-12 min-[2000px]:w-20 min-[2000px]:h-20 rounded-[10px] object-cover"
+                                alt="User">
                             <div>
-                                <h4 class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg"> Ananya R.</h4>
-                                <div class="flex gap-1 text-[#CBA65A] text-xs">
+                                <h4 class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">
+                                    Ananya R.</h4>
+                                <div class="flex gap-1 text-[#CBA65A] text-xs min-[2000px]:text-xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                         class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
@@ -2042,23 +2110,23 @@
 
     <section class="py-4 md:py-8 px-4 md:px-8">
         <div
-            class="max-w-[1440px] mx-auto border-[#F2D7D3] border-[4px] bg-[#FDF2F4] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center justify-between px-6 py-6 md:px-16 md:py-10 relative">
+            class="max-w-[1440px] min-[2000px]:max-w-full mx-auto border-[#F2D7D3] border-[4px] bg-[#FDF2F4] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center justify-between px-6 py-6 md:px-16 md:py-10 min-[2000px]:px-24 min-[2000px]:py-20 relative">
             <!-- Left Side: Text and Buttons -->
             <div class="w-full md:w-1/2 flex flex-col items-start gap-6 z-10">
                 <h2 style="font-family: 'Outfit', sans-serif;"
-                    class="font-Outfit text-3xl md:text-[54px] font-bold text-[#0D0D0E] leading-tight">
+                    class="font-Outfit text-3xl md:text-[54px] min-[2000px]:text-[90px] font-bold text-[#0D0D0E] leading-tight">
                     Download the app now!
                 </h2>
                 <p style="font-family: 'Outfit', sans-serif;"
-                    class="font-Outfit text-base md:text-[22px] font-normal text-[#5C5C5C] max-w-md">
+                    class="font-Outfit text-base md:text-[22px] min-[2000px]:text-4xl font-normal text-[#5C5C5C] max-w-md min-[2000px]:max-w-3xl">
                     Experience seamless online ordering only on the Tattsvi App
                 </p>
                 <div class="flex flex-wrap gap-4 mt-2">
                     <img src="assets/ioslogo.png"
-                        class="h-[45px] md:h-[55px] w-auto object-contain cursor-pointer transition-transform hover:scale-105"
+                        class="h-[45px] md:h-[55px] min-[2000px]:h-[100px] w-auto object-contain cursor-pointer transition-transform hover:scale-105"
                         alt="Download on App Store">
                     <img src="assets/Androidelogo.png"
-                        class="h-[45px] md:h-[55px] w-auto object-contain cursor-pointer transition-transform hover:scale-105"
+                        class="h-[45px] md:h-[55px] min-[2000px]:h-[100px] w-auto object-contain cursor-pointer transition-transform hover:scale-105"
                         alt="Get it on Google Play">
                 </div>
             </div>
@@ -2080,7 +2148,7 @@
     <!-- Footer section-->
     <footer
         class="bg-white pt-16 pb-8 px-6 md:px-20 border-t border-pink-100 relative overflow-hidden w-full max-w-[100vw]">
-        <div class="max-w-[1440px] mx-auto">
+        <div class="max-w-[1440px] min-[2000px]:max-w-full mx-auto">
 
             <!-- Logo Row -->
 
@@ -2098,22 +2166,23 @@
                     <!-- About Us -->
                     <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
                         <h4 style="font-family: 'Outfit', sans-serif;"
-                            class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg">About us</h4>
+                            class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">About us
+                        </h4>
                         <ul class="flex flex-col gap-[16px]">
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
                                     Story</a></li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
                                     Us</a></li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
                                     & Services</a></li>
                         </ul>
                     </div>
@@ -2121,22 +2190,23 @@
                     <!-- Categories -->
                     <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
                         <h4 style="font-family: 'Outfit', sans-serif;"
-                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg">Categories</h4>
+                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">Categories
+                        </h4>
                         <ul class="flex flex-col gap-[16px]">
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
                             </li>
                         </ul>
                     </div>
@@ -2144,22 +2214,23 @@
                     <!-- Customer Service -->
                     <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
                         <h4 style="font-family: 'Outfit', sans-serif;"
-                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg">Customer Service</h4>
+                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">Customer
+                            Service</h4>
                         <ul class="flex flex-col gap-[16px]">
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
                                     Us</a></li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
                             </li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
                                     Care</a></li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
                                     Warranty</a></li>
                             <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
                                     an Appointment</a></li>
                         </ul>
                     </div>
@@ -2168,17 +2239,18 @@
                 <!-- Right: Sign Up -->
                 <div class="flex flex-col items-start gap-4 lg:w-[400px]">
                     <h4 style="font-family: 'Outfit', sans-serif;"
-                        class="font-['Outfit'] font-bold text-[#0D0D0E] text-[28px] leading-[1.2]">
+                        class="font-['Outfit'] font-bold text-[#0D0D0E] text-[28px] min-[2000px]:text-5xl leading-[1.2]">
                         Sign up <br>for Exclusive Offers
                     </h4>
-                    <p class="font-['Outfit'] text-base text-[#6E6E6E] leading-relaxed max-w-[350px]">
+                    <p
+                        class="font-['Outfit'] text-base min-[2000px]:text-xl text-[#6E6E6E] leading-relaxed max-w-[350px]">
                         Be the first to know about new collections, exclusive deals & more!
                     </p>
                     <div class="flex flex-row gap-3 mt-4 w-full">
                         <input type="email" placeholder="Email Address"
-                            class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] flex-grow">
+                            class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base min-[2000px]:text-xl w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] min-[2000px]:h-[70px] flex-grow">
                         <button
-                            class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] shadow-sm">
+                            class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base min-[2000px]:text-xl font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] min-[2000px]:h-[70px] shadow-sm">
                             Submit
                         </button>
                     </div>
@@ -2239,7 +2311,8 @@
 
                 <!-- Bottom Copyright -->
                 <div class="text-center mt-4">
-                    <p class="font-Outfit text-[14px] text-[#0D0D0E]">Copyright © Tattsvi 2026. All Right Reserved</p>
+                    <p class="font-Outfit text-[14px] min-[2000px]:text-lg text-[#0D0D0E]">Copyright © Tattsvi 2026. All
+                        Right Reserved</p>
                 </div>
             </div>
         </div>
