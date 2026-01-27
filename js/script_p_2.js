@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function selectSize(btn) {
   // Remove selected style from all buttons
-  document.querySelectorAll('.size-btn').forEach(b => {
-    b.classList.remove('border-amber-400', 'text-amber-600');
-    b.classList.add('border-gray-200', 'text-gray-600');
+  document.querySelectorAll('#size-container button').forEach(b => {
+    b.classList.remove('border-amber-400', 'text-amber-600', 'border-amber-600', 'text-amber-700', 'bg-amber-50', 'font-bold');
+    b.classList.add('border-gray-200', 'text-gray-600', 'font-medium', 'bg-white');
   });
 
   // Add selected style to the clicked button
-  btn.classList.remove('border-gray-200', 'text-gray-600');
-  btn.classList.add('border-amber-400', 'text-amber-600');
+  btn.classList.remove('border-gray-200', 'text-gray-600', 'bg-white');
+  btn.classList.add('border-amber-400', 'text-amber-600', 'bg-amber-50');
 }
 
 function toggleSizes() {
