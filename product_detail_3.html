@@ -90,8 +90,8 @@
       }
     }
   </style>
-  <script src="js/script.js" defer></script>
   <script src="js/script_p.js" defer></script>
+  <script src="js/script_p_3.js" defer></script>
 </head>
 
 
@@ -108,15 +108,15 @@
     </div>
   </div>
   <!-- Header Section -->
-  <header class="bg-white sticky top-0 z-50 shadow-sm ">
+  <header class="bg-white sticky top-0 z-50 shadow-sm">
     <div
-      class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+      class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
       <div class="flex items-center gap-2 order-1">
         <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
           <i class="fa-solid fa-bars text-xl"></i>
         </button>
-        <div class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
-          <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
+        <div class="w-[130px] h-[30px]  flex items-center justify-center">
+          <img src="assets/logo_black.png" alt="logo">
         </div>
 
       </div>
@@ -124,34 +124,31 @@
       <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
         <div class="relative group w-full max-w-[350px] mx-auto">
           <input type="text"
-            class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
+            class="w-full h-[50px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm transition-all outline-none"
             placeholder="Search for products">
           <div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
-            <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+            <img src="assets/ic_search.png" alt="search" class="w-5 h-5">
           </div>
         </div>
       </div>
 
-      <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
+      <div class="flex items-center space-x-5 text-gray-600 order-2 lg:order-3">
 
-        <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
-            class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
+        <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user" class="w-5 h-5"></button>
         <button class="relative hover:text-gold">
-          <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-          <span
-            class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">4</span>
+          <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5"> <span
+            class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">4</span>
         </button>
         <button class="relative hover:text-gold">
-          <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"><span
-            class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">1</span>
+          <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5"><span
+            class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">1</span>
         </button>
       </div>
     </div>
     <!-- Navigation Bar -->
 
 
-    <nav
-      class="hidden lg:flex items-center justify-center space-x-8 min-[2000px]:space-x-16 text-[15px] min-[2000px]:text-2xl font-medium uppercase tracking-wider">
+    <nav class="hidden lg:flex items-center justify-center space-x-8 text-[15px] font-medium uppercase tracking-wider">
 
       <div class="relative group text-center">
         <button class="flex items-center gap-1 hover:text-gold py-4 focus:outline-none">
@@ -424,7 +421,60 @@
               class="px-6 py-2 text-xs  tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
               15
             </button>
-            <button class="text-xs font-Outfit text-gray-400 underline hover:text-amber-800 transition-colors">
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              16
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              17
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              18
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              19
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              20
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              21
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              22
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              23
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              24
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              25
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              26
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              27
+            </button>
+            <button onclick="selectSize(this)"
+              class="extra-size hidden px-6 py-2 text-xs tracking-wider rounded-full border-2 border-gray-200 bg-white hover:border-amber-400">
+              28
+            </button>
+            <button id="view-more-btn" onclick="toggleSizes()"
+              class="text-xs font-Outfit text-gray-400 underline hover:text-amber-800 transition-colors">
               View More
             </button>
           </div>
@@ -534,7 +584,7 @@
   </main>
   <!--Product details-->
 
-  <div class="bg-white py-12 px-4 md:px-15 font-sans text-[#4A4A4A]">
+  <div class="bg-[#FDFBF7] py-12 px-4 md:px-15 font-sans text-[#4A4A4A]">
     <div class="flex items-center justify-center gap-2 md:gap-6 mb-8 w-full">
       <img src="assets/Design.png" class="h-auto w-[60px] md:w-auto md:flex-1 object-cover md:max-w-[400px]" alt="">
       <div class="text-center flex flex-col items-center">
@@ -548,44 +598,126 @@
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 mb-10 font-['Outfit']">
-      <button
-        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-sm rounded-full font-medium transition duration-300 hover:bg-black hover:text-white">
+      <button onclick="switchTab('about', this)"
+        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-sm rounded-full font-medium transition duration-300 hover:bg-black hover:text-white text-gray-600">
         About
       </button>
-      <button
-        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-sm rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
+      <button onclick="switchTab('details', this)"
+        class="px-4 md:px-8 py-2 border border-black bg-black text-white text-sm rounded-full font-medium transition duration-300 shadow-md">
         Diamond & Metal Details
       </button>
-      <button
-        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-gray-700 text-sm rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
+      <button onclick="switchTab('price', this)"
+        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-gray-600 text-sm rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
         Price Breakup
       </button>
     </div>
 
-    <div
-      class="w-full max-w-[1120px] h-auto mx-auto bg-[#FAF5F5] border-t-2 border-b-2 p-8 lg:p-0 flex flex-col lg:flex-row items-center justify-between overflow-hidden gap-8 lg:gap-0">
-
-      <div class="flex-1 px-4 lg:pl-[60px] flex flex-col justify-center h-full text-center lg:text-left">
-        <span class="text-[20px] leading-[20px] font-['Outfit'] text-gray mb-3">About Your</span>
-        <h3 class="text-[28px] leading-[36px] font-medium font-['Outfit'] text-[#1A1A1A] mb-4">
-          Gracious Oval <br> Solitaire Diamond Band for Engagement
-        </h3>
-        <p class="text-[14px] leading-[22px] font-['Outfit'] text-[#808080] mb-8 w-full max-w-[500px] mx-auto lg:mx-0">
-          A criss-cross Lab Grown Diamond ring band representing connection and balance,
-          ideal for daily elegance and gifting. A criss-cross Lab Grown Diamond ring band
-          representing connection and balance.
-        </p>
-
+    <!-- About Content (Hidden by default) -->
+    <div id="content-about" class="w-full max-w-[1120px] mx-auto hidden transition-opacity duration-300">
+      <div
+        class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 bg-white p-8 rounded-xl border border-[#F2F4F7]">
+        <div class="flex-1 px-4 lg:pl-[20px] flex flex-col justify-center h-full text-center lg:text-left">
+          <span class="text-[20px] leading-[20px] font-['Outfit'] text-gray-500 mb-3">About Your</span>
+          <h3 class="text-[28px] leading-[36px] font-medium font-['Outfit'] text-[#1A1A1A] mb-4">
+            Gracious Oval <br> Solitaire Diamond Band for Engagement
+          </h3>
+          <p
+            class="text-[14px] leading-[22px] font-['Outfit'] text-[#808080] mb-8 w-full max-w-[500px] mx-auto lg:mx-0">
+            A criss-cross Lab Grown Diamond ring band representing connection and balance,
+            ideal for daily elegance and gifting. A criss-cross Lab Grown Diamond ring band
+            representing connection and balance.
+          </p>
+          <div
+            class="w-full max-w-[580px] h-[52px] bg-[#FAF5F5] rounded-[8px] flex justify-between items-center px-6 shadow-sm mx-auto lg:mx-0">
+            <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">Weight</span>
+            <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">2.079 gram</span>
+          </div>
+        </div>
         <div
-          class="w-full max-w-[580px] h-[52px] bg-white rounded-[8px] flex justify-between items-center px-6 shadow-sm mx-auto lg:mx-0">
-          <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">Weight</span>
-          <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A]">2.079 gram</span>
+          class="w-full max-w-[300px] aspect-square rounded-[12px] border border-[#F2F4F7] flex items-center justify-center p-4">
+          <img src="assets/ring.png" alt="Gracious Oval Band" class="w-full h-full object-contain mix-blend-multiply">
+        </div>
+      </div>
+    </div>
+
+    <!-- Price Breakup Content (Hidden by default) -->
+    <div id="content-price" class="w-full max-w-[1120px] mx-auto hidden transition-opacity duration-300">
+      <div class="bg-white p-8 rounded-xl border border-[#F2F4F7] text-center">
+        <h3 class="text-xl font-['Outfit'] font-bold text-[#5C4522] mb-4">Price Breakup</h3>
+        <p class="text-gray-500">Detailed price breakdown goes here.</p>
+        <!-- Add actual table/content if user provides it -->
+      </div>
+    </div>
+
+    <!-- Accordion Container -->
+    <div id="content-details" class="w-full max-w-[1120px] mx-auto font-['Outfit'] space-y-4">
+
+      <!-- Diamond Details Accordion (Active/Open) -->
+      <div class="border border-[#F2F4F7] rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleAccordion(this)"
+          class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors cursor-pointer text-left">
+          <span class="text-[#5C4522] font-bold text-lg">Diamond Details</span>
+          <div class="accordion-icon w-8 h-8 rounded-full bg-[#FAF6F0] flex items-center justify-center">
+            <i class="fa-solid fa-minus text-[#CBA65A]"></i>
+          </div>
+        </button>
+        <div class="px-6 pb-6 transition-all duration-300 ease-in-out" style="max-height: 1000px;">
+          <!-- Default Open -->
+          <div class="space-y-0 text-sm">
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Total Weight</span>
+              <span class="text-[#1A1A1A] font-medium">0.282</span>
+            </div>
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Clarity</span>
+              <span class="text-[#1A1A1A] font-medium">VVSVS</span>
+            </div>
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Color</span>
+              <span class="text-[#1A1A1A] font-medium">FG</span>
+            </div>
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Count</span>
+              <span class="text-[#1A1A1A] font-medium">1</span>
+            </div>
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Shape</span>
+              <span class="text-[#1A1A1A] font-medium">Round</span>
+            </div>
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Setting Type</span>
+              <span class="text-[#1A1A1A] font-medium">-</span>
+            </div>
+            <div class="flex justify-between py-4">
+              <span class="text-[#808080]">Weight</span>
+              <span class="text-[#1A1A1A] font-medium">0.282</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div
-        class="w-full max-w-[335px] h-auto aspect-square  rounded-[12px] border border-[#F2F4F7] flex items-center justify-center lg:mr-[20px] relative  p-4">
-        <img src="assets/ring.png" alt="Gracious Oval Band" class="w-full h-full object-contain">
+      <!-- Metal Details Accordion (Collapsed) -->
+      <div class="border border-[#F2F4F7] rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleAccordion(this)"
+          class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors cursor-pointer text-left">
+          <span class="text-[#5C4522] font-bold text-lg">Metal Details</span>
+          <div class="accordion-icon w-8 h-8 rounded-full bg-[#FAF6F0] flex items-center justify-center">
+            <i class="fa-solid fa-plus text-[#CBA65A]"></i>
+          </div>
+        </button>
+        <div class="px-6 opacity-0 transition-all duration-300 ease-in-out overflow-hidden" style="max-height: 0px;">
+          <!-- Placeholder content for Metal Details -->
+          <div class="space-y-0 text-sm pb-6">
+            <div class="flex justify-between py-4 border-b border-[#F2F4F7]">
+              <span class="text-[#808080]">Metal Type</span>
+              <span class="text-[#1A1A1A] font-medium">14KT Rose Gold</span>
+            </div>
+            <div class="flex justify-between py-4">
+              <span class="text-[#808080]">Weight</span>
+              <span class="text-[#1A1A1A] font-medium">2.54 g</span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -745,7 +877,7 @@
 
 
   <!-- Similar Jewellery Product Section -->
-  <section class="max-w-[1600px] mx-auto px-4 py-12 font-Outfit">
+  <section class="max-w-[1380px] mx-auto px-4 py-12 font-Outfit">
     <div class="flex items-center justify-center gap-2 md:gap-6 mb-8 w-full">
       <img src="assets/Design.png" class="h-auto w-[70px] md:w-auto md:flex-1 object-cover md:max-w-[400px]" alt="">
       <div class="text-center flex flex-col items-center">
@@ -1159,6 +1291,8 @@
       </h1>
     </div>
   </footer>
+
+  <!--Mobile Menu-->
   <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0"></div>
   <div id="mobile-menu-sidebar"
     class="fixed top-0 left-0 w-[85%] max-w-[320px] h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
@@ -1276,7 +1410,7 @@
     </div>
   </div>
 
-  <script src="script_p.js"></script>
+  <script src="js/script_p_2.js"></script>
 </body>
 
 </html>

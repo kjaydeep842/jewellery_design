@@ -66,3 +66,4 @@ function toggleSizes() {
     viewMoreBtn.innerText = 'View Less';
   }
 }
+
