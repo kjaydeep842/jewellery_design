@@ -284,7 +284,8 @@
     <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10">
 
       <div class="space-y-2">
-        <div class="w-full h-[990px] aspect-[4/5] lg:aspect-[3/5] overflow-hidden flex justify-center items-center">
+        <div
+          class="w-full h-auto aspect-[4/5] lg:h-[990px] lg:aspect-[3/5] overflow-hidden flex justify-center items-center">
           <img src="assets/ring.png" alt="Diamond Band" class="w-full h-full object-contain-cover mix-blend-multiply">
         </div>
         <div class="grid grid-cols-5 gap-2">
@@ -593,16 +594,21 @@
     <div class="flex flex-col lg:flex-row items-center gap-2">
       <!-- Left Side: Summary -->
       <div class="w-full lg:w-1/3 flex flex-col  py-8 gap-[20px]">
-        <div class="flex items-center gap-2 justify-start items-center md:gap-4 mb-2">
-          <div class="hidden md:flex flex-row justify-end gap-[9px] w-[200px] h-[25px]">
+        <div class="flex items-center gap-2 justify-center lg:justify-start items-center md:gap-4 mb-2">
+          <div class="flex md:flex flex-row justify-center md:justify-end gap-[9px] w-auto md:w-[200px] h-[25px]">
             <img src="assets/Design_new.png" alt="design" class="h-full object-contain">
           </div>
-          <div class="text-left flex flex-col justify-center">
-            <span class="text-[17px] text-[#5C4522] block font-['Alexandria']  leading-none">Ratings
+          <div class="text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
+            <span
+              class="text-[14px] md:text-[17px] min-[2000px]:text-3xl text-[#5C4522] block font-['Alexandria'] leading-none">Ratings
               &</span>
-            <h2 class="text-[28px] md:text-[32px] text-[#CBA65A] font-medium font-['Outfit'] leading-tight">
+            <h2
+              class="text-[24px] md:text-[32px] min-[2000px]:text-5xl text-[#CBA65A] font-medium font-['Outfit'] leading-tight">
               Reviews
             </h2>
+          </div>
+          <div class="flex md:hidden flex-row justify-center md:justify-start gap-[9px] w-auto md:w-[200px] h-[25px]">
+            <img src="assets/Design_new.png" alt="design" class="h-full object-contain" style="transform: scaleX(-1);">
           </div>
         </div>
 
