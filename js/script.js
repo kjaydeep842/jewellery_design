@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Unique Style Slider Logic
-// Unique Style Slider Logic
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById('uniqueStyleSlider');
   if (!slider) return;
