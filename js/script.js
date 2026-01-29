@@ -135,6 +135,11 @@ const initShutterSlider = (sliderId, dotsId, interval = 5000) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   initShutterSlider('slides', 'dots', 5000);
+
+  initAutoScroll('jewellerySlider', 2000);
+  initAutoScroll('productScroll1', 2000);
+  initAutoScroll('productScroll2', 2000);
+
 });
 //Premium Collectin....
 const slider = document.getElementById('jewellerySlider');
@@ -183,7 +188,9 @@ function changeSlide(dir) {
 function scrollSlider(direction) {
   const slider = document.getElementById('testimonialSlider');
   // Determine scroll amount based on card width
-  const scrollAmount = 600 + 24; // Card width + gap
+  const item = slider.firstElementChild;
+  const gap = 24; // tailwind gap-6
+  const scrollAmount = item ? item.offsetWidth + gap : 624;
 
   if (direction === 'left') {
     slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
@@ -223,11 +230,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const width = item.getBoundingClientRect().width;
       const step = width + gap;
 
-      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
-        slider.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        slider.scrollBy({ left: step, behavior: 'smooth' });
+      // Seamless Infinite Scroll Logic
+      // Assuming 4 items duplicated -> 8 items total.
+      // Loop point is after 4th item.
+      const loopThreshold = 4 * step;
+
+      // If we have scrolled past the first set (4 items)
+      if (slider.scrollLeft >= loopThreshold) {
+        // Instantly jump back to start of first set (which looks identical)
+        slider.scrollLeft -= loopThreshold;
       }
+
+      // Now scroll forward
+      slider.scrollBy({ left: step, behavior: 'smooth' });
     }, interval);
   };
 
@@ -302,3 +317,63 @@ window.toggleMobileDropdown = function (menuId, btn) {
     }
   }
 };
+
+/**
+ * Automatically scrolls a horizontal container.
+ * @param {string} containerId - ID of the scroll container.
+ * @param {number} interval - Scrolling speed in ms.
+ */
+function initAutoScroll(containerId, interval = 2000) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // Clone items to create an infinite loop effect
+  const originalChildren = Array.from(container.children);
+  originalChildren.forEach(item => {
+    const clone = item.cloneNode(true);
+    container.appendChild(clone);
+  });
+
+  let isPaused = false;
+
+  const scroll = () => {
+    if (isPaused) return;
+
+    const firstItem = container.firstElementChild;
+    if (!firstItem) return;
+
+    const scrollAmount = firstItem.offsetWidth + parseFloat(getComputedStyle(container).gap || 0);
+
+    // If we've scrolled past the original set, reset instantly to start
+    if (container.scrollLeft >= container.scrollWidth / 2) {
+      container.scrollLeft = 0;
+    }
+
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
+
+  let scrollInterval = setInterval(scroll, interval);
+
+  const pause = () => {
+    isPaused = true;
+    clearInterval(scrollInterval);
+  };
+  const resume = () => {
+    isPaused = false;
+    scrollInterval = setInterval(scroll, interval);
+  };
+
+  container.addEventListener('mouseenter', pause);
+  container.addEventListener('mouseleave', resume);
+  container.addEventListener('touchstart', pause, { passive: true });
+  container.addEventListener('touchend', resume, { passive: true });
+
+  // Safety: reset position if user scrolls manually past halfway
+  container.addEventListener('scroll', () => {
+    if (container.scrollLeft >= (container.scrollWidth / 2) + 10) {
+      // Only reset instantly if not currently animating or to keep flow
+      // But usually instant reset is better
+      // container.scrollLeft = 0; // This can be jarring if done during manual scroll
+    }
+  });
+}
