@@ -136,7 +136,7 @@ const initShutterSlider = (sliderId, dotsId, interval = 5000) => {
 document.addEventListener("DOMContentLoaded", () => {
   initShutterSlider('slides', 'dots', 5000);
 
-  initAutoScroll('jewellerySlider', 2000);
+
   initAutoScroll('productScroll1', 2000);
   initAutoScroll('productScroll2', 2000);
 
