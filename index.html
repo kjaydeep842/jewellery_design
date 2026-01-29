@@ -369,41 +369,30 @@
         <div class="relative w-full h-full mx-auto overflow-hidden">
             <div id="slides" class="grid w-full h-full overflow-hidden">
                 <!-- Slide 1 -->
-                <div class="col-start-1 row-start-1 w-full transition-transform duration-[1500ms] ease-out">
-                    <img src="assets/Top Banner Section.png"
-                        class="w-full h-auto md:h-[450px] lg:h-[600px] min-[2000px]:h-[1000px] object-cover object-center md:object-left lg:object-center"
-                        alt="Slide 1">
+                <div class="col-start-1 row-start-1 w-full relative transition-transform duration-[1500ms] ease-out">
+                    <img src="assets/Top Banner Section.png" class="w-full h-auto block" alt="Slide 1">
                 </div>
                 <!-- Slide 2 -->
-                <div class="col-start-1 row-start-1 w-full transition-transform duration-[1500ms] ease-out">
-                    <img src="assets/banner.png"
-                        class="w-full h-auto md:h-[450px] lg:h-[900px] min-[2000px]:h-[1000px] object-cover object-center md:object-left lg:object-center"
-                        alt="Slide 2">
+                <div class="absolute top-0 left-0 w-full h-full transition-transform duration-[1500ms] ease-out">
+                    <img src="assets/banner.png" class="w-full h-full object-cover block" alt="Slide 2">
                 </div>
                 <!-- Slide 3 -->
-                <div class="col-start-1 row-start-1 w-full transition-transform duration-[1500ms] ease-out">
-                    <img src="assets/Top Banner Section.png"
-                        class="w-full h-auto md:h-[450px] lg:h-[600px] min-[2000px]:h-[1000px] object-cover object-center md:object-left lg:object-center"
-                        alt="Slide 3">
+                <div class="absolute top-0 left-0 w-full h-full transition-transform duration-[1500ms] ease-out">
+                    <img src="assets/Top Banner Section.png" class="w-full h-full object-cover block" alt="Slide 3">
                 </div>
                 <!-- Slide 4 -->
-                <div class="col-start-1 row-start-1 w-full transition-transform duration-[1500ms] ease-out">
-                    <img src="assets/banner.png"
-                        class="w-full h-auto md:h-[450px] lg:h-[600px] min-[2000px]:h-[1000px] object-cover object-center md:object-left lg:object-center"
-                        alt="Slide 4">
+                <div class="absolute top-0 left-0 w-full h-full transition-transform duration-[1500ms] ease-out">
+                    <img src="assets/banner.png" class="w-full h-full object-cover block" alt="Slide 4">
                 </div>
             </div>
 
             <!-- Dots navigation -->
-            <div id="dots" class="absolute bottom-4 right-0 transform -translate-x-1/2 flex gap-2 min-[2000px]:gap-4">
-                <button
-                    class="w-8 h-1 min-[2000px]:w-16 min-[2000px]:h-2 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
+            <div id="dots" class="absolute bottom-4 transform -translate-x-1/2 flex gap-2">
+                <button class="w-8 h-1 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
                     aria-label="Slide 1"></button>
-                <button
-                    class="w-8 h-1 min-[2000px]:w-16 min-[2000px]:h-2 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
+                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 2"></button>
-                <button
-                    class="w-8 h-1 min-[2000px]:w-16 min-[2000px]:h-2 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
+                <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
                     aria-label="Slide 3"></button>
             </div>
         </div>
@@ -1236,23 +1225,23 @@
         <div class="absolute bottom-0 left-0 w-full h-[35%] bg-[#F3E5E5] pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-full h-[40%] bg-[#F3E5E5]"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex flex-col md:flex-row items-start justify-between">
                 <!-- 
                 <div
                     class="relative w-[910px] h-[700px] flex flex-col items-start py-[120px] px-0 gap-[10px] self-stretch grow flex-none order-0">
                     -->
                 <div
-                    class="relative w-full md:w-1/2 lg:w-[50%] flex flex-col items-center lg:items-start py-8 md:py-16 lg:py-[120px] gap-6 lg:gap-4 order-0">
+                    class="relative w-full md:w-1/2 lg:w-[50%] flex flex-col items-center lg:items-start py-8 md:py-12 lg:py-16 gap-6 lg:gap-4 order-0">
 
                     <!-- Heading Group -->
                     <div class="flex items-center justify-center lg:justify-start gap-4 w-full">
                         <!-- Decorative Line (Responsive) -->
-                        <div class="flex-none hidden sm:flex items-center">
-                            <img src="assets/Design_new.png" alt="" class="h-6 md:h-8 lg:h-10 object-contain">
+                        <div class="flex-none hidden sm:flex items-center w-[100px] md:w-[180px] lg:w-[280px]">
+                            <img src="assets/Design_new.png" alt="" class="w-full h-auto object-contain">
                         </div>
 
                         <!-- Main Title -->
-                        <div class="flex flex-col items-start">
+                        <div class="top-5 flex flex-col items-center min-w-max">
                             <p style="font-family: 'Alexandria'"
                                 class="font-normal text-lg md:text-xl lg:text-2xl text-[#5C4522] leading-tight mb-1">
                                 Explore by</p>
@@ -1268,7 +1257,7 @@
                     </div>
 
                     <!-- Description -->
-                    <div class="pl-0 lg:pl-[310px] w-full text-center lg:text-left mt-4 lg:mt-0">
+                    <div class="pl-0 lg:pl-[310px] w-full text-center lg:text-left mt-2 lg:mt-0">
                         <p style="font-family: 'Outfit'"
                             class="font-normal text-base md:text-[18px] min-[2000px]:text-2xl leading-relaxed md:leading-[35px] text-[#3D3D42] max-w-lg mx-auto lg:mx-0">
                             Tattsvi jewellery feels incredibly refined and comfortable to wear. The designs are
