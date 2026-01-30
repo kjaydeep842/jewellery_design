@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initAutoScroll('productScroll1', 2000);
   initAutoScroll('productScroll2', 2000);
+  initAutoScroll('launchScroll', 2000);
 
 });
 //Premium Collectin....
