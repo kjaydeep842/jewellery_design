@@ -926,7 +926,8 @@
             </div>
 
             <!---category image 1-->
-            <div id="productScroll2" class=" flex overflow-x-auto no-scrollbar gap-4 mb-12 snap-x snap-mandatory">
+            <div id="productScroll2"
+                class=" flex overflow-x-auto no-scrollbar gap-4 mb-10 pr-4 -mr-4 md:pr-14 md:-mr-14">
                 <!--product 1 -->
                 <div
                     class="flex flex-col gap-3 w-[calc(50%-8px)] md:w-[calc(25%-12px)] lg:w-[calc(20%-12.8px)] flex-shrink-0 snap-start">
@@ -1263,7 +1264,7 @@
                 </div>
 
                 <div
-                    class="relative w-full md:w-1/2 lg:w-[50%] h-auto lg:h-[700px] flex flex-col justify-start items-center lg:items-end pt-10 lg:pt-0 px-0 lg:pl-[20px] gap-[1px] grow flex-none order-1">
+                    class="relative w-full md:w-1/2 lg:w-[50%] h-auto lg:h-[600px] flex flex-col justify-start items-center lg:items-end pt-10 lg:pt-0 px-0 lg:pl-[20px] gap-[1px] grow flex-none order-1">
                     <div class="relative group translate-x-0 lg:translate-x-0">
 
                         <button onclick="changeSlide('prev')"
@@ -1295,7 +1296,7 @@
     </section>
     <!-- Product Images-->
     <!---category image 1-->
-    <div id="productScroll1" class="flex overflow-x-auto no-scrollbar gap-4 mb-12">
+    <div id="productScroll1" class="flex overflow-x-auto no-scrollbar gap-4 mb-20">
         <!--product 1 -->
         <div class="flex flex-col gap-3 w-[calc(50%-2px)] md:w-[calc(25%-3px)] lg:w-[calc(20%-4px)] flex-shrink-0">
             <div
@@ -1560,11 +1561,11 @@
             </div>
 
             <!-- Product Cards Grid -->
-            <div
-                class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 px-6 -mx-6 lg:grid lg:grid-cols-4 md:px-0 md:mx-0 relative z-10">
+            <div id="launchScroll"
+                class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 relative z-10 w-screen ml-[calc(50%-50vw)] pl-[calc(50vw-50%+1rem)] md:pl-[calc(50vw-50%+2rem)] pr-0">
                 <!--launch section product 1: Rings-->
                 <div
-                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-0 snap-center">
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
                     <div class="relative w-full aspect-[0.6] rounded-[40px] overflow-hidden gap-2">
                         <img src="assets/launch_ring.png"
                             class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[75%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
@@ -1620,7 +1621,7 @@
                     </div>
                     <!-- Reflection -->
                     <div
-                        class="relative w-full aspect-[0.6] rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none mask-image-b-to-t">
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none mask-image-b-to-t">
 
                         <div class="absolute bottom-0 left-0 w-full z-10">
 
@@ -1649,7 +1650,7 @@
 
                 <!--launch section product 2: Pendants-->
                 <div
-                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-0 snap-center">
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
                     <div class="relative w-full aspect-[0.6] rounded-t-[60px] overflow-hidden">
                         <img src="assets/launch_pendant.png"
                             class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[75%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
@@ -1700,7 +1701,7 @@
                         </div>
                     </div>
                     <div
-                        class="relative w-full aspect-[0.6] rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
                         <div class="absolute bottom-0 left-0 w-full z-10">
                             <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="w-full h-auto block">
@@ -1727,7 +1728,7 @@
 
                 <!--launch section product 3: Bracelets-->
                 <div
-                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-0 snap-center">
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
                     <div class="relative w-full aspect-[0.6] rounded-t-[60px] overflow-hidden">
                         <img src="assets/launch_bracelet.png"
                             class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[95%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
@@ -1778,7 +1779,7 @@
                         </div>
                     </div>
                     <div
-                        class="relative w-full aspect-[0.6] rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
                         <div class="absolute bottom-0 left-0 w-full z-10">
                             <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="w-full h-auto block">
@@ -1805,7 +1806,7 @@
 
                 <!--launch section product 4: Earrings-->
                 <div
-                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-0 snap-center">
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
                     <div class="relative w-full aspect-[0.6] rounded-t-[60px] overflow-hidden">
                         <img src="assets/launch_earring.png"
                             class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[85%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
@@ -1857,7 +1858,326 @@
                         </div>
                     </div>
                     <div
-                        class="relative w-full aspect-[0.6] rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block">
+                                <defs>
+                                    <linearGradient id="paint_earring_launch_ref" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFF1E8" />
+                                        <stop offset="1" stop-color="#F3C6A8" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_earring_launch_ref)" />
+                            </svg>
+                            <div class="absolute bottom-[35%] w-full text-center z-30">
+                                <p class="font-['Outfit'] text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-['Outfit'] text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Earrings</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--launch section product 1: Rings-->
+                <div
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
+                    <div class="relative w-full aspect-[0.6] rounded-[40px] overflow-hidden gap-2">
+                        <img src="assets/launch_ring.png"
+                            class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[75%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
+                            alt="Rings">
+
+                        <!-- Hover Stars Effect -->
+                        <div
+                            class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <span
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#C19757] text-2xl animate-pulse">✦</span>
+                            <span
+                                class="absolute top-[35%] left-[10%] text-[#C19757] text-3xl animate-pulse delay-75">✦</span>
+                            <span
+                                class="absolute bottom-[25%] right-[12%] text-[#C19757] text-2xl animate-pulse delay-150">✦</span>
+                        </div>
+
+                        <!-- Bottom Content Wrapper -->
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <!-- SVG Background -->
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block relative z-10">
+                                <defs>
+                                    <linearGradient id="paint_ring_launch" x1="190.5" y1="0" x2="180.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFF6E3" />
+                                        <stop offset="1" stop-color="#E8C889" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C150 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_ring_launch)" />
+                                <path
+                                    d="M350.5 230C350.5 246.292 337.292 259.5 321 259.5H30C13.7076 259.5 0.5 246.292 0.5 230V20.826172C110 75.8557 241 75.8557 350.5 20.818359V230Z"
+                                    stroke="#D8B1B6" stroke-opacity="0.2" />
+                            </svg>
+
+                            <!-- Corner Images -->
+                            <img src="assets/launchcategorycurv1.png" style="width: 9%;"
+                                class="absolute top-[6%] left-0 h-auto z-20" alt="curve left">
+                            <img src="assets/launchcategorycurv1.png" style="width: 9%;"
+                                class="absolute top-[6%] right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
+
+                            <!-- Text Content -->
+                            <div class="absolute bottom-[20%] w-full text-center z-30">
+                                <p class="font-['Outfit'] text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">9KT Solid
+                                    Gold
+                                </p>
+                                <h3 class="font-['Outfit'] text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Rings
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reflection -->
+                    <div
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none mask-image-b-to-t">
+
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block">
+                                <defs>
+                                    <linearGradient id="paint_ring_launch_ref" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFF6E3" />
+                                        <stop offset="1" stop-color="#E8C889" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_ring_launch_ref)" />
+                            </svg>
+                            <div class="absolute bottom-[35%] w-full text-center z-30">
+                                <p class="font-['Outfit'] text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-['Outfit'] text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Rings</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--launch section product 2: Pendants-->
+                <div
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
+                    <div class="relative w-full aspect-[0.6] rounded-t-[60px] overflow-hidden">
+                        <img src="assets/launch_pendant.png"
+                            class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[75%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
+                            alt="Pendants">
+
+                        <!-- Hover Stars Effect -->
+                        <div
+                            class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <span
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#CBA65A] text-2xl animate-pulse">✦</span>
+                            <span
+                                class="absolute top-[35%] left-[10%] text-[#CBA65A] text-3xl animate-pulse delay-75">✦</span>
+                            <span
+                                class="absolute bottom-[25%] right-[12%] text-[#CBA65A] text-2xl animate-pulse delay-150">✦</span>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block relative z-10">
+                                <defs>
+                                    <linearGradient id="paint_pendant_launch" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FCECEC" />
+                                        <stop offset="1" stop-color="#E7B6A7" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_pendant_launch)" />
+                                <path
+                                    d="M350.5 230C350.5 246.292 337.292 259.5 321 259.5H30C13.7076 259.5 0.5 246.292 0.5 230V20.826172C110 75.8557 241 75.8557 350.5 20.818359V230Z"
+                                    stroke="#D8B1B6" stroke-opacity="0.2" />
+                            </svg>
+
+                            <img src="assets/launchcategorycurv1.png"
+                                style="width: 9%; filter: brightness(0) saturate(100%) invert(86%) sepia(20%) saturate(713%) hue-rotate(323deg) brightness(97%) contrast(93%);"
+                                class="absolute top-[6%] left-0 h-auto z-20" alt="curve left">
+                            <img src="assets/launchcategorycurv1.png"
+                                style="width: 9%; filter: brightness(0) saturate(100%) invert(86%) sepia(20%) saturate(713%) hue-rotate(323deg) brightness(97%) contrast(93%);"
+                                class="absolute top-[6%] right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
+
+                            <div class="absolute bottom-[20%] w-full text-center z-30">
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Pendants</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block">
+                                <defs>
+                                    <linearGradient id="paint_pendant_launch_ref" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FCECEC" />
+                                        <stop offset="1" stop-color="#E7B6A7" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_pendant_launch_ref)" />
+                            </svg>
+                            <div class="absolute bottom-[35%] w-full text-center z-30">
+                                <p class="font-['Outfit'] text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-['Outfit'] text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Pendants</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--launch section product 3: Bracelets-->
+                <div
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
+                    <div class="relative w-full aspect-[0.6] rounded-t-[60px] overflow-hidden">
+                        <img src="assets/launch_bracelet.png"
+                            class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[95%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
+                            alt="Bracelets">
+
+                        <!-- Hover Stars Effect -->
+                        <div
+                            class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <span
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#D6C3A5] text-2xl animate-pulse">✦</span>
+                            <span
+                                class="absolute top-[35%] left-[10%] text-[#D6C3A5] text-3xl animate-pulse delay-75">✦</span>
+                            <span
+                                class="absolute bottom-[25%] right-[12%] text-[#D6C3A5] text-2xl animate-pulse delay-150">✦</span>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block relative z-10">
+                                <defs>
+                                    <linearGradient id="paint_bracelet_launch" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F4F1EC" />
+                                        <stop offset="1" stop-color="#D6C3A5" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_bracelet_launch)" />
+                                <path
+                                    d="M350.5 230C350.5 246.292 337.292 259.5 321 259.5H30C13.7076 259.5 0.5 246.292 0.5 230V20.826172C110 75.8557 241 75.8557 350.5 20.818359V230Z"
+                                    stroke="#D8B1B6" stroke-opacity="0.2" />
+                            </svg>
+
+                            <img src="assets/launchcategorycurv1.png"
+                                style="width: 9%; filter: brightness(0) saturate(100%) invert(84%) sepia(8%) saturate(928%) hue-rotate(352deg) brightness(97%) contrast(93%);"
+                                class="absolute top-[6%] left-0 h-auto z-20" alt="curve left">
+                            <img src="assets/launchcategorycurv1.png"
+                                style="width: 9%; filter: brightness(0) saturate(100%) invert(84%) sepia(8%) saturate(928%) hue-rotate(352deg) brightness(97%) contrast(93%);"
+                                class="absolute top-[6%] right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
+
+                            <div class="absolute bottom-[20%] w-full text-center z-30">
+                                <p class="font-Outfit text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-Outfit text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Bracelets</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block">
+                                <defs>
+                                    <linearGradient id="paint_bracelet_launch_ref" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F4F1EC" />
+                                        <stop offset="1" stop-color="#D6C3A5" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_bracelet_launch_ref)" />
+                            </svg>
+                            <div class="absolute bottom-[35%] w-full text-center z-30">
+                                <p class="font-['Outfit'] text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-['Outfit'] text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Bracelets</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--launch section product 4: Earrings-->
+                <div
+                    class="flex flex-col gap-0 group cursor-pointer px-0 md:px-4 min-w-[75%] sm:min-w-[45%] lg:min-w-[25%] snap-center">
+                    <div class="relative w-full aspect-[0.6] rounded-t-[60px] overflow-hidden">
+                        <img src="assets/launch_earring.png"
+                            class="absolute left-1/2 -translate-x-1/2 w-[82%] h-[85%] object-cover object-bottom transition-transform duration-500 drop-shadow-lg"
+                            alt="Earrings">
+
+                        <!-- Hover Stars Effect -->
+                        <div
+                            class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <span
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#F3C6A8] text-2xl animate-pulse">✦</span>
+                            <span
+                                class="absolute top-[35%] left-[10%] text-[#F3C6A8] text-3xl animate-pulse delay-75">✦</span>
+                            <span
+                                class="absolute bottom-[25%] right-[12%] text-[#F3C6A8] text-2xl animate-pulse delay-150">✦</span>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 w-full z-10">
+                            <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-auto block relative z-10">
+                                <defs>
+                                    <linearGradient id="paint_earring_launch" x1="175.5" y1="0" x2="175.5" y2="260"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFF1E8" />
+                                        <stop offset="1" stop-color="#F3C6A8" />
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 20C110 75 241 75 351 20V230C351 246.569 337.569 260 321 260H30C13.4315 260 0 246.569 0 230V20Z"
+                                    fill="url(#paint_earring_launch)" />
+                                <path
+                                    d="M350.5 230C350.5 246.292 337.292 259.5 321 259.5H30C13.7076 259.5 0.5 246.292 0.5 230V20.826172C110 75.8557 241 75.8557 350.5 20.818359V230Z"
+                                    stroke="#D8B1B6" stroke-opacity="0.2" />
+                            </svg>
+
+                            <!-- Corner Images -->
+                            <img src="assets/launchcategorycurv1.png"
+                                style="width: 9%; filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(1043%) hue-rotate(320deg) brightness(101%) contrast(91%);"
+                                class="absolute top-[6%] left-0 h-auto z-20" alt="curve left">
+                            <img src="assets/launchcategorycurv1.png"
+                                style="width: 9%; filter: brightness(0) saturate(100%) invert(87%) sepia(17%) saturate(1043%) hue-rotate(320deg) brightness(101%) contrast(91%);"
+                                class="absolute top-[6%] right-0 h-auto transform scale-x-[-1] z-20" alt="curve right">
+
+                            <div class="absolute bottom-[20%] w-full text-center z-30">
+                                <p class="font-['Outfit'] text-sm min-[2000px]:text-xl text-[#5C4522] mb-1">
+                                    9KT Solid Gold</p>
+                                <h3 class="font-['Outfit'] text-xl min-[2000px]:text-3xl font-medium text-[#5C4522]">
+                                    Earrings</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full h-40 md:h-56 rounded-[40px] overflow-hidden transform scale-y-[-1] opacity-20 -mt-20 md:-mt-24 pointer-events-none">
                         <div class="absolute bottom-0 left-0 w-full z-10">
                             <svg viewBox="0 0 351 260" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="w-full h-auto block">
@@ -2009,10 +2329,9 @@
             <div class="flex flex-col lg:flex-row items-center justify-center gap-[60px] w-full h-auto py-0">
 
                 <!-- Left Image -->
-                <div
-                    class="flex-1 flex justify-center items-center relative w-full h-full order-first lg:order-none lg:-translate-x-12">
+                <div class="flex-1 flex justify-center items-center relative w-full h-full order-first lg:order-none">
                     <img src="assets/Product Photo.png"
-                        class="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[420px] h-auto object-contain hover:scale-105 transition-transform duration-500"
+                        class="w-full max-w-[300px] md:max-w-[450px] lg:max-w-[600px] min-[2000px]:max-w-[1000px] h-auto object-contain hover:scale-105 transition-transform duration-500"
                         alt="Bestseller Spotlight">
                 </div>
 
@@ -2225,7 +2544,7 @@
         </div>
     </section>
     <section class="py-8 md:py-20 bg-white px-4 md:px-8 w-full max-w-[100vw] overflow-hidden">
-        <div class="max-w-7xl min-[2000px]:max-w-full mx-auto">
+        <div class="w-full mx-auto">
             <!-- Header -->
             <div class="text-center mb-12">
                 <p style="font-family: 'Alexandria'"
@@ -2242,10 +2561,10 @@
                 </div>
             </div>
 
-            <div class="relative group w-full max-w-[1440px] min-[2000px]:max-w-full mx-auto">
+            <div class="relative group w-full mx-auto">
                 <!-- Slider -->
                 <div id="testimonialSlider"
-                    class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-8 px-4 w-full">
+                    class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-2 px-2 w-full">
 
                     <!-- Review 1 -->
                     <div
