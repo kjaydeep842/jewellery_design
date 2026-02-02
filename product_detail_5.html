@@ -92,7 +92,7 @@
   </style>
   <script src="js/script.js" defer></script>
   <script src="js/script_p.js" defer></script>
-  <script src="js/script_p_3.js" defer></script>
+  <script src="js/script_p_5.js" defer></script>
 </head>
 
 
@@ -614,19 +614,19 @@
         About
       </button>
       <button onclick="switchTab('details', this)"
-        class="px-4 md:px-8 py-2 border border-black bg-black text-white text-sm rounded-full font-medium transition duration-300 shadow-md">
+        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-gray-600 text-sm rounded-full font-medium transition duration-300 hover:bg-black hover:text-white">
         Diamond & Metal Details
       </button>
       <button onclick="switchTab('price', this)"
-        class="px-4 md:px-8 py-2 border border-[#E8E1D5] text-gray-600 text-sm rounded-full font-medium hover:bg-black hover:text-white transition duration-300">
+        class="px-4 md:px-8 py-2 border border-black bg-black text-white text-sm rounded-full font-medium shadow-md transition duration-300">
         Price Breakup
       </button>
     </div>
 
     <!-- About Content (Hidden by default) -->
-    <div id="content-about" class="w-full max-w-[1120px] mx-auto hidden transition-opacity duration-300">
+    <div id="content-about" class="bg-[#FAF8F1] w-full max-w-[1120px] mx-auto hidden transition-opacity duration-300">
       <div
-        class="bg-[#FAF8F1] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 p-8 rounded-xl border border-[#F2F4F7]">
+        class="bg-[#FAF8F1] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 bg-white p-8 rounded-xl border border-[#F2F4F7]">
         <div class="bg-[#FAF8F1] flex-1 px-4 lg:pl-[20px] flex flex-col justify-center h-full text-center lg:text-left">
           <span class="text-[20px] leading-[20px] font-['Outfit'] text-gray-500 mb-3 min-[2000px]:text-2xl">About
             Your</span>
@@ -641,7 +641,7 @@
             representing connection and balance.
           </p>
           <div
-            class="bg-white w-full max-w-[580px] h-[52px] rounded-[8px] flex justify-between items-center px-6 shadow-sm mx-auto lg:mx-0">
+            class="w-full max-w-[580px] h-[52px] bg-[#FAF5F5] rounded-[8px] flex justify-between items-center px-6 shadow-sm mx-auto lg:mx-0">
             <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A] min-[2000px]:text-lg">Weight</span>
             <span class="text-[14px] font-medium font-['Outfit'] text-[#1A1A1A] min-[2000px]:text-lg">2.079 gram</span>
           </div>
@@ -653,30 +653,120 @@
       </div>
     </div>
 
-    <!-- Price Breakup Content (Hidden by default) -->
-    <div id="content-price" class="w-full max-w-[1374px] mx-auto hidden transition-opacity duration-300">
-      <div class="bg-white p-8 rounded-xl border border-[#F2F4F7] text-center">
-        <h3 class="text-xl font-['Outfit'] font-bold text-[#5C4522] mb-4">Price Breakup</h3>
-        <p class="text-gray-500">Detailed price breakdown goes here.</p>
-        <!-- Add actual table/content if user provides it -->
+    <!-- Price Breakup Content (Visible by default) -->
+    <div id="content-price"
+      class="w-full max-w-[1374px] mx-auto transition-opacity duration-300 font-['Outfit'] flex flex-row items-center gap-[20px] h-[573px]">
+      <div class="bg-[#FAF8F1] w-full rounded-2xl border border-[#F2F4F7] overflow-hidden">
+        <div class="bg-white p-6 border-b border-[#E8E1D5]">
+          <h3 class="text-[#5C4522] text-xl font-bold">Price Breakup</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-[#FAF8F1] text-[#5C4522] text-sm md:text-base border-b border-[#E8E1D5]">
+                <th class="py-4 px-6 font-bold">Component</th>
+                <th class="py-4 px-6 font-bold text-center">Rate</th>
+                <th class="py-4 px-6 font-bold text-center">Weight</th>
+                <th class="py-4 px-6 font-bold text-center">Discount</th>
+                <th class="py-4 px-6 font-bold text-right">Final Value</th>
+              </tr>
+            </thead>
+            <tbody class="text-[#1A1A1A] text-sm md:text-base">
+              <!-- Row 1 -->
+              <tr class="bg-white border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">14K Gold</td>
+                <td class="py-4 px-6 text-center">₹8,631</td>
+                <td class="py-4 px-6 text-center">2.023 gram</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹17,461</td>
+              </tr>
+              <!-- Row 2 -->
+              <tr class="bg-[#FAF6F0] border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">Total Gold Value</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹17,461</td>
+              </tr>
+              <!-- Row 3 -->
+              <tr class="bg-white border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">Diamonds</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">0.282 ct</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹9,870</td>
+              </tr>
+              <!-- Row 4 -->
+              <tr class="bg-[#FAF6F0] border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">Total Diamond Value</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹9,870</td>
+              </tr>
+              <!-- Row 5 -->
+              <tr class="bg-white border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">Making Charges</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹4,046</td>
+              </tr>
+              <!-- Row 6 -->
+              <tr class="bg-[#FAF6F0] border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">Discount on Selling Price</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">-</td>
+              </tr>
+              <!-- Row 7 -->
+              <tr class="bg-white border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">Sub Total</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹31,377</td>
+              </tr>
+              <!-- Row 8 -->
+              <tr class="bg-[#FAF6F0] border-b border-[#E8E1D5]">
+                <td class="py-4 px-6">GST</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-medium">₹941</td>
+              </tr>
+              <!-- Row 9 -->
+              <tr class="bg-white">
+                <td class="py-4 px-6 font-bold">Grand Total</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-center">-</td>
+                <td class="py-4 px-6 text-right font-bold text-lg">₹32,318</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
     <!-- Accordion Container -->
-    <div id="content-details" class="w-full max-w-[1374px] mx-auto font-['Outfit'] space-y-4">
+    <div id="content-details"
+      class="w-full max-w-[1374px] mx-auto font-['Outfit'] flex flex-col items-center gap-[20px] hidden">
 
-      <!-- Diamond Details Accordion (Active/Open) -->
-      <div class="border-2 border-[#F2F4F7] rounded-xl overflow-hidden bg-white shadow-sm">
+      <!-- Diamond Details Accordion (Collapsed) -->
+      <div class="w-full border-2 border-[#F2F4F7] rounded-xl overflow-hidden bg-white shadow-sm">
         <button onclick="toggleAccordion(this)"
-          class="w-full border-2 flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors cursor-pointer text-left">
-          <span class="text-[#5C4522] font-bold text-lg min-[2000px]:text-2xl">Diamond Details</span>
+          class="w-full h-[70px] px-8 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors cursor-pointer text-left focus:outline-none">
+          <span class="text-[#5C4522] font-bold text-lg min-[2000px]:text-2xl font-['Outfit']">Diamond Details</span>
           <div class="accordion-icon w-8 h-8 rounded-full bg-[#FAF6F0] flex items-center justify-center">
-            <i class="fa-solid fa-minus text-[#CBA65A]"></i>
+            <i class="fa-solid fa-plus text-[#CBA65A]"></i>
           </div>
         </button>
-        <div class="px-0 pb-6 transition-all duration-300 ease-in-out" style="max-height: 1000px;">
-          <!-- Default Open -->
-          <div class="space-y-0 text-sm min-[2000px]:text-xl">
+        <div class="px-0 pb-6 transition-all duration-300 ease-in-out opacity-0 overflow-hidden"
+          style="max-height: 0px;">
+          <!-- Content -->
+          <div class="space-y-0 text-sm min-[2000px]:text-xl font-['Outfit']">
             <div class="flex justify-between py-4 border-b border-[#F2F4F7] px-4">
               <span class="text-[#808080]">Total Weight</span>
               <span class="text-[#1A1A1A] font-medium">0.282</span>
@@ -709,16 +799,29 @@
         </div>
       </div>
 
-      <!-- Metal Details Accordion (Collapsed) -->
-      <div class="border border-[#F2F4F7] rounded-xl overflow-hidden bg-white shadow-sm">
+      <!-- Metal Details Accordion (Active/Open) -->
+      <div
+        class="w-full border border-[#F2F4F7] rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-300">
         <button onclick="toggleAccordion(this)"
-          class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors cursor-pointer text-left">
-          <span class="text-[#5C4522] font-bold text-lg min-[2000px]:text-2xl">Metal Details</span>
+          class="w-full h-[70px] px-8 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors cursor-pointer text-left focus:outline-none">
+          <span class="text-[#5C4522] font-bold text-lg min-[2000px]:text-2xl font-['Outfit']">Metal Details</span>
           <div class="accordion-icon w-8 h-8 rounded-full bg-[#FAF6F0] flex items-center justify-center">
-            <i class="fa-solid fa-plus text-[#CBA65A]"></i>
+            <i class="fa-solid fa-minus text-[#CBA65A]"></i>
           </div>
         </button>
-
+        <div class="px-0 transition-all duration-300 ease-in-out mt-4" style="max-height: 1000px;">
+          <!-- Metal Details Content -->
+          <div class="space-y-0 text-sm min-[2000px]:text-xl pb-6 font-['Outfit']">
+            <div class="bg-[#FBF9F3] flex justify-between py-4 border-b border-[#F2F4F7] px-4">
+              <span class="text-[#808080]"> Type</span>
+              <span class="text-[#1A1A1A] font-medium">14K Gold</span>
+            </div>
+            <div class="flex justify-between py-4 px-4">
+              <span class="text-[#808080]">Weight</span>
+              <span class="text-[#1A1A1A] font-medium">2.023 gram</span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
