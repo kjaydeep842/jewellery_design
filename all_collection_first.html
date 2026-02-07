@@ -1,0 +1,2006 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattsvi - Discover our Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ticker-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: #f3dede;
+            white-space: nowrap;
+        }
+
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .ticker span {
+            display: inline-block;
+            font-family: outfit;
+            padding-right: 50px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #6b4b4b;
+            letter-spacing: 1px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <script src="js/all_c_1.js" defer></script>
+</head>
+
+<body class="bg-[#FDFBF7] text-gray-800">
+    <!-- Top Promo Bar -->
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div
+            class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+            <div class="flex items-center gap-2 order-1">
+                <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+                <div class="w-[130px] h-[30px]  flex items-center justify-center">
+                    <img src="assets/logo_black.png" alt="logo">
+                </div>
+
+            </div>
+
+            <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
+                <div class="relative group w-full max-w-[350px] mx-auto">
+                    <input type="text"
+                        class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
+                        placeholder="Search for products">
+                    <div
+                        class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
+                        <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
+
+                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
+                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
+                <button class="relative hover:text-gold">
+                    <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    <span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">4</span>
+                </button>
+                <button class="relative hover:text-gold">
+                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"><span
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">1</span>
+                </button>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <nav
+            class="hidden lg:flex items-center justify-center space-x-8 min-[2000px]:space-x-16 text-[15px] min-[2000px]:text-2xl font-medium uppercase tracking-wider">
+
+            <div class="relative group text-center">
+                <button class="flex items-center gap-1 hover:text-gold py-4 focus:outline-none">
+                    New Arrivals <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Best Seller <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Ready To Stock <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Buy It Again <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Contact Us <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Exhibition <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    About Us <span class="text-[8px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content : All Collection -->
+    <main class="w-full max-w-[1920px] mx-auto px-4 lg:px-10 py-6 font-['Outfit']"
+        style="display: flex; flex-direction: column; align-items: center; padding: 0px 0px 60px; gap: 10px;">
+
+        <!-- Breadcrumb & Title -->
+        <div class="w-full flex flex-col gap-1 self-start">
+            <div class="text-sm text-gray-500">
+                <span class="hover:text-amber-600 cursor-pointer">Home</span> / <span
+                    class="text-gray-800 font-medium">Discover our Collection</span>
+            </div>
+            <div class="text-sm text-gray-500 mt-2">
+                Showing : 120 Products
+            </div>
+        </div>
+
+        <!-- Layout: Sidebar + Grid -->
+        <div class="w-full flex flex-col lg:flex-row gap-8 mt-4">
+
+            <!-- Filters Sidebar -->
+            <aside class="w-full lg:w-[280px] flex-shrink-0 space-y-6">
+                <!-- Filter Header -->
+                <div class="flex items-center gap-2 mb-4 font-medium text-lg">
+                    <i class="fa-solid fa-sliders text-gray-600"></i> Filters
+                </div>
+
+                <!-- Filter Item: Gender -->
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex justify-between items-center cursor-pointer group">
+                        <span class="font-medium text-gray-700">Gender</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600"></i>
+                    </div>
+                </div>
+
+                <!-- Filter Item: Metal Color -->
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex justify-between items-center cursor-pointer group">
+                        <span class="font-medium text-gray-700">Metal Color</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600"></i>
+                    </div>
+                </div>
+
+                <!-- Filter Item: Metal Purity -->
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex justify-between items-center cursor-pointer group">
+                        <span class="font-medium text-gray-700">Metal Purity</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600"></i>
+                    </div>
+                </div>
+
+                <!-- Filter Item: Size -->
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex justify-between items-center cursor-pointer group">
+                        <span class="font-medium text-gray-700">Size</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600"></i>
+                    </div>
+                </div>
+
+                <!-- Filter Item: Weight Ranges -->
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex justify-between items-center cursor-pointer group">
+                        <span class="font-medium text-gray-700">Weight Ranges</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600"></i>
+                    </div>
+                </div>
+
+                <!-- Filter Item: Price -->
+                <div class="border-b border-gray-200 pb-4">
+                    <div class="flex justify-between items-center cursor-pointer group">
+                        <span class="font-medium text-gray-700">Price</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600"></i>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="flex-grow">
+                <!-- Sort By -->
+                <div class="flex justify-end mb-6">
+                    <div class="flex items-center gap-2 border border-gray-300 rounded px-3 py-1.5 bg-white text-sm">
+                        <span class="text-gray-500">Sort by:</span>
+                        <span class="text-gray-800 font-medium">What's New</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-gray-500 ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Grid Container -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 13 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 14 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 15 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 16 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 17 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 18 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 19 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 20 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 21 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 22 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 23 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 24 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 25 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 26 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 27 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 28 -->
+                    <div
+                        class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                        <div
+                            class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+                            <div
+                                class="absolute top-2 right-0 z-10 bg-[#BC511B] text-white text-[11px] pl-3 pr-2 py-1 rounded-l-full font-medium font-['Alexandria']">
+                                Best Seller
+                            </div>
+                            <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                                class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                            <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                                class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div
+                                class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-1 w-full h-[55px] bg-white rounded-t-[16px] px-3 py-2.5">
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button
+                                    class="bg-[#CBA65A] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-md hover:bg-[#b39359] transition-colors font-['Outfit'] flex-grow">Add
+                                    to Cart</button>
+                                <button
+                                    class="w-8 h-8 bg-[#FAF8F1] rounded-full flex items-center justify-center text-[#CBA65A] hover:bg-[#EDE5D3] shadow-sm"><i
+                                        class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div
+                                class="absolute bottom-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/ic_wishlist1.png" alt="wishlist" class="w-4 h-4 object-contain">
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow cursor-pointer lg:group-hover:opacity-0 transition-opacity">
+                                <img src="assets/maximize.png" alt="expand" class="w-4 h-4 object-contain">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                                Solitaire Engagement Ring</p>
+                            <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">&#8377;16,747.23</p>
+                            <div class="flex items-center gap-2 mt-2">
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E5C365] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#D4D4D4] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                                <div
+                                    class="w-4 h-4 rounded-full bg-[#E0A499] border border-gray-300 cursor-pointer hover:ring-1 hover:ring-offset-1 hover:ring-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination or Load More -->
+                <div class="mt-12 flex justify-center">
+                    <!-- Placeholder for pagination -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- Know More Section -->
+    <div class="flex flex-row justify-center items-center py-[14px] px-[8px] gap-[10px] w-full h-[56px] bg-[#E9D3D6]">
+        <span class="font-['Outfit'] text-[16px] text-[#0D0D0E] font-medium">Know More About Tattsvi</span>
+    </div>
+    <!-- Footer section-->
+    <footer
+        class="bg-white pt-16 pb-8 px-6 md:px-20 border-t border-pink-100 relative overflow-hidden w-full max-w-[100vw]">
+        <div class="max-w-[1440px] min-[2000px]:max-w-full mx-auto">
+
+            <!-- Logo Row -->
+
+            <div class="w-[130px] h-[30px]  flex items-center justify-center mb-10 gap-2">
+                <img src="assets/logo_black.png" alt="logo">
+            </div>
+
+
+            <!-- Columns Row -->
+            <!-- Columns Row -->
+            <div class="flex flex-col lg:flex-row justify-between items-start mt-12 w-full gap-10 relative z-10">
+
+                <!-- Left: Link Columns Group -->
+                <div class="flex flex-wrap gap-x-12 md:gap-x-[88px] gap-y-10">
+                    <!-- About Us -->
+                    <div class="flex flex-col items-start gap-[22px] w-full md:w-auto">
+                        <h4 style="font-family: 'Outfit'"
+                            class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">About us
+                        </h4>
+                        <ul class="flex flex-col gap-[16px]">
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
+                                    Story</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
+                                    & Services</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="flex flex-col items-start gap-[22px] w-full md:w-auto">
+                        <h4 style="font-family: 'Outfit'"
+                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">Categories
+                        </h4>
+                        <ul class="flex flex-col gap-[16px]">
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Service -->
+                    <div class="flex flex-col items-start gap-[22px] w-full md:w-auto">
+                        <h4 style="font-family: 'Outfit'"
+                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">Customer
+                            Service</h4>
+                        <ul class="flex flex-col gap-[16px]">
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
+                                    Care</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
+                                    Warranty</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
+                                    an Appointment</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Sign Up -->
+                <div class="flex flex-col items-start gap-4 lg:w-[400px]">
+                    <h4 style="font-family: 'Outfit'"
+                        class="font-['Outfit'] font-bold text-[#0D0D0E] text-[28px] min-[2000px]:text-5xl leading-[1.2]">
+                        Sign up <br>for Exclusive Offers
+                    </h4>
+                    <p
+                        class="font-['Outfit'] text-base min-[2000px]:text-xl text-[#6E6E6E] leading-relaxed max-w-[350px]">
+                        Be the first to know about new collections, exclusive deals & more!
+                    </p>
+                    <div class="flex flex-row gap-3 mt-4 w-full">
+                        <input type="email" placeholder="Email Address"
+                            class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base min-[2000px]:text-xl w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] min-[2000px]:h-[70px] flex-grow">
+                        <button
+                            class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base min-[2000px]:text-xl font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] min-[2000px]:h-[70px] shadow-sm">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col gap-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
+                    <!-- Left: QR and Apps -->
+                    <div class="flex items-center gap-6">
+                        <img src="assets/MobileQrNew.png" alt="QR Code" class="w-40 h-40 object-contain">
+                        <div class="flex flex-col gap-2">
+                            <a href="#"><img src="assets/ioslogo.png" alt="App Store"
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
+                            <a href="#"><img src="assets/Androidelogo.png" alt="Google Play"
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
+                        </div>
+                    </div>
+
+                    <!-- Right Group: Socials, Rights, Payments -->
+                    <div class="flex flex-col items-center md:items-start gap-6">
+                        <!-- Socials -->
+                        <div class="flex gap-5">
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </div>
+
+                        <!-- Rights & Payments Group (Left Aligned) -->
+                        <div class="flex flex-col items-start gap-3">
+                            <!-- Rights Text -->
+                            <p class="font-['Outfit'] text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
+
+                            <!-- Payments -->
+                            <div class="flex items-center gap-3">
+                                <img src="assets/google_pay.png" alt="GPay" class="h-6">
+                                <img src="assets/visa.png" alt="Visa" class="h-4">
+                                <img src="assets/paypal.png" alt="PayPal" class="h-6">
+                                <img src="assets/master-card.png" alt="Mastercard" class="h-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Copyright -->
+                <div class="text-center mt-4">
+                    <p class="font-Outfit text-[14px] min-[2000px]:text-lg text-[#0D0D0E]">Copyright © Tattsvi 2026. All
+                        Right Reserved</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark -->
+        <div class="w-full flex justify-center pointer-events-none mt-10">
+            <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
+                style="background: linear-gradient(180deg, rgba(151, 102, 0, 0.07) 0%, rgba(219, 179, 88, 0.021) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
+                TATTSVI
+            </h1>
+        </div>
+    </footer>
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0"></div>
+    <div id="mobile-menu-sidebar"
+        class="fixed top-0 left-0 w-[85%] max-w-[320px] h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <!-- Header -->
+        <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-cream">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <img src="assets/logo.png" alt="logo">
+                </div>
+                <span class="serif text-xl tracking-tighter">TATTSVI</span>
+            </div>
+            <button id="close-menu-btn"
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-500 hover:text-red-500 shadow-sm transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <!-- Links -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-6">
+            <!-- New Arrivals -->
+            <div class="mobile-dropdown group">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-new-arrivals', this)">
+                    New Arrivals <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-new-arrivals" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Diamond Rings</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Gold Necklaces</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Wedding Collection</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] font-medium py-1">View All
+                        New</a>
+                </div>
+            </div>
+
+            <!-- Best Seller -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-best-seller', this)">
+                    Best Seller <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-best-seller" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Top Rated</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Most Gifted</a>
+                </div>
+            </div>
+
+            <!-- Ready To Stock -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-ready-stock', this)">
+                    Ready To Stock <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-ready-stock" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Necklaces</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Earrings</a>
+                </div>
+            </div>
+
+            <!-- Buy It Again -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-buy-again', this)">
+                    Buy It Again <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                </div>
+            </div>
+            <!--conact us-->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-buy-again', this)">
+                    Contact Us <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                </div>
+            </div>
+            <!--exibition -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-buy-again', this)">
+                    Exhibition <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                </div>
+                <!--about us-->
+                <div class="mobile-dropdown">
+                    <button
+                        class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                        onclick="toggleMobileDropdown('menu-buy-again', this)">
+                        About Us <i
+                            class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                        <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Info -->
+        <div class="bg-gray-50 p-5 border-t border-gray-100">
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span><i class="fa-solid fa-flag-usa mr-2"></i> USA (USD)</span>
+            </div>
+            <a href="#"
+                class="block w-full bg-black text-white text-center py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#5C4522] transition-colors">Sign
+                In / Register</a>
+        </div>
+    </div>
+</body>
+
+</html>

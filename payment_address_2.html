@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattsvi - Select Address</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/payment_address_2.js" defer></script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .ticker-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: #f3dede;
+            white-space: nowrap;
+        }
+
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .ticker span {
+            display: inline-block;
+            font-family: outfit;
+            padding-right: 50px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #6b4b4b;
+            letter-spacing: 1px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#FDFBF7] text-gray-800">
+
+    <!-- Top Promo Bar -->
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+        <div class="max-w-[1920px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-4">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-800 hover:text-[#CBA65A] transition-colors">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+                <div class="w-[120px]">
+                    <img src="assets/logo_black.png" alt="Tattsvi" class="w-full h-auto">
+                </div>
+            </div>
+
+            <!-- Stepper -->
+            <div class="hidden md:flex items-center gap-4 text-sm font-medium tracking-wide">
+                <a href="#" class="text-gray-400 hover:text-[#CBA65A] transition-colors">BAG</a>
+                <div class="text-gray-300">----------</div>
+                <div class="text-[#CBA65A] border-b-2 border-[#CBA65A] pb-1 font-bold">ADDRESS</div>
+                <div class="text-gray-300">----------</div>
+                <div class="text-gray-400">PAYMENT</div>
+            </div>
+
+            <!-- Secure Badge -->
+            <div class="flex items-center gap-2 text-green-600 font-medium text-sm">
+                <img src="assets/L- Brand Logo.png" alt="Secure" class="h-6 w-auto object-contain"> 100% SECURE
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="bg-[#CBA65A] text-white py-3 hidden lg:block">
+            <nav
+                class="max-w-[1920px] mx-auto px-6 flex justify-center space-x-8 xl:space-x-10 text-sm font-medium tracking-wide relative">
+
+                <!-- New Arrivals -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        New Arrivals <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Diamond
+                                Rings</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Gold
+                                Necklaces</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Earrings</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Bracelets</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Seller -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        Best Seller <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Top
+                                Rated</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Trending
+                                Now</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Gift
+                                Guide</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ready To Stock -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        Ready To Stock <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Ships
+                                in 24 hrs</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Express
+                                Delivery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buy It Again -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        Buy It Again <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Previous
+                                Orders</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Your
+                                Favorites</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        Contact Us <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Email
+                                Support</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Call
+                                Us</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exhibition -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        Exhibition <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Upcoming
+                                Events</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Past
+                                Exhibitions</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1 hover:text-black transition-colors py-2">
+                        About Us <i
+                            class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div
+                            class="bg-white rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 py-2 overflow-hidden">
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Our
+                                Story</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Our
+                                Values</a>
+                            <a href="#"
+                                class="block px-4 py-2.5 text-gray-600 hover:text-[#CBA65A] hover:bg-[#FDFBF7] transition-colors">Team</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#CBA65A] text-white border-t border-[#B8944E]">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    New Arrivals <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    Best Seller <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    Ready To Stock <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    Buy It Again <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    Contact Us <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    Exhibition <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <a href="#"
+                    class="block py-2 px-4 hover:bg-[#B8944E] rounded transition-colors flex justify-between items-center">
+                    About Us <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main
+        class="w-full max-w-[1920px] mx-auto flex flex-col xl:flex-row justify-center items-start gap-12 xl:gap-5 px-4 py-8 lg:px-20 xl:px-[100px] xl:pt-[40px] xl:pb-[120px]">
+        <!-- Left Column: Address Selection -->
+        <div class="w-full flex-1 flex flex-col gap-6">
+
+            <!-- Header Row -->
+            <div class="flex justify-between items-center">
+                <h2 class="font-medium text-[#1A1A1A] text-lg">Select Delivery Address</h2>
+                <button
+                    class="px-6 py-2 border border-[#CBA65A] text-[#CBA65A] text-sm font-medium rounded-[5px] hover:bg-[#FDFBF7] transition-colors">
+                    Add New Address
+                </button>
+            </div>
+
+            <!-- Default Address Label -->
+            <div class="text-sm text-gray-500 mt-2">Default Address</div>
+
+            <!-- Address Card -->
+            <div class="border border-gray-200 rounded-[8px] p-6 shadow-sm relative">
+
+                <!-- Edit Button -->
+                <button
+                    class="absolute top-6 right-6 flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-[4px] text-xs font-medium text-gray-600 hover:border-[#CBA65A] hover:text-[#CBA65A] transition-colors">
+                    <i class="fa-regular fa-pen-to-square"></i> Edit
+                </button>
+
+                <!-- Content -->
+                <div class="flex flex-col gap-2 pr-20"> <!-- Added padding-right to avoid overlap with Edit button -->
+                    <h3 class="font-bold text-[#1A1A1A] text-base">Jemish Vasantbhai Kachhadiya</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        216-Bajrang Row House, Near Ayodhya Puram Soc.,<br>
+                        Surat, Gujarat - 395006
+                    </p>
+                    <p class="text-gray-900 text-sm font-medium mt-1">
+                        Mobile: <span class="font-bold">87654 23456</span>
+                    </p>
+                </div>
+
+                <!-- Remove Button -->
+                <button
+                    class="flex items-center gap-2 mt-6 px-4 py-2 border border-blue-50 bg-gray-100 rounded-[4px] text-sm font-medium text-gray-600 hover:border-red-500 hover:text-red-500 transition-colors">
+                    <i class="fa-regular fa-trash-can"></i> Remove Address
+                </button>
+            </div>
+
+            <!-- Payment Icons -->
+            <div class="flex flex-row justify-between items-center gap-2 w-full h-[70.74px] mt-3">
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/google_pay.png" alt="GPay" class="w-full h-full object-contain-cover">
+                </div>
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/visa.png" alt="Visa" class="w-full h-full object-contain-cover">
+                </div>
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/paypal.png" alt="PayPal" class="w-full h-full object-contain-cover">
+                </div>
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/master-card.png" alt="MasterCard" class="w-full h-full object-contain-cover">
+                </div>
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/google_pay.png" alt="GPay" class="w-full h-full object-contain-cover">
+                </div>
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/visa.png" alt="Visa" class="w-full h-full object-contain-cover">
+                </div>
+                <div
+                    class="h-full flex-1 min-w-[80px] rounded-[4px] flex items-center justify-center shadow-sm hover:border-[#CBA65A] transition-colors cursor-pointer">
+                    <img src="assets/paypal.png" alt="PayPal" class="w-full h-full object-contain-cover">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Price Details -->
+        <div class="w-full xl:w-[400px] flex-shrink-0">
+            <div class="sticky top-28 bg-[#FDFBF7]">
+                <h3 class="font-bold text-gray-900 text-lg mb-6">Price Details (1 Item)</h3>
+
+                <div class="space-y-4 pb-6 border-b border-gray-200 text-sm font-medium">
+                    <div class="flex justify-between text-gray-900">
+                        <span>Total MRP</span>
+                        <span>₹12,000</span>
+                    </div>
+                    <div class="flex justify-between text-gray-900">
+                        <span>Discount on MRP</span>
+                        <span>₹2,000</span>
+                    </div>
+                    <div class="flex justify-between text-gray-900">
+                        <span>Platform Fee</span>
+                        <span>₹20</span>
+                    </div>
+                </div>
+
+                <div class="pt-4 mb-8">
+                    <div class="flex justify-between items-center font-bold text-gray-900 text-lg">
+                        <span>Total Amount</span>
+                        <span>₹10,080</span>
+                    </div>
+                </div>
+
+                <button
+                    class="w-full py-3.5 rounded-full bg-[linear-gradient(90deg,#D9BE87_0%,#BE933C_100%)] text-white text-xl font-medium shadow-md hover:opacity-90 transition-opacity mb-4">
+                    Place Order
+                </button>
+
+                <div class="text-center">
+                    <a href="#" class="text-sm text-gray-500 hover:text-[#CBA65A] transition-colors">Need Help? Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

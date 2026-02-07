@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattsvi - Wishlist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Outfit:wght@500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold-bg {
+            background-color: #D4AF37;
+        }
+
+        .gold-text {
+            color: #A67C00;
+        }
+
+        .light-gold {
+            background-color: #FAF6F0;
+        }
+
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FAF8F1;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E8E1D5;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background-color: #D4AF37;
+        }
+
+        /* Ticker Container */
+        .ticker-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: #f3dede;
+            /* light pink background */
+            white-space: nowrap;
+        }
+
+        /* Moving Text */
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 30s linear infinite;
+        }
+
+        .ticker span {
+            display: inline-block;
+            font-family: outfit;
+            padding-right: 50px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #6b4b4b;
+            letter-spacing: 1px;
+        }
+
+        /* Animation */
+        @keyframes scroll-left {
+
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+
+<body class="bg-[#FDFBF7] text-gray-800 flex flex-col min-h-screen">
+    <!-- Top Promo Bar -->
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+        </div>
+    </div>
+    <!-- Header Section -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm ">
+        <div
+            class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+            <div class="flex items-center gap-2 order-1">
+                <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+                <div
+                    class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
+                    <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
+                </div>
+
+            </div>
+
+            <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
+                <div class="relative group w-full max-w-[350px] mx-auto">
+                    <input type="text"
+                        class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
+                        placeholder="Search for products">
+                    <div
+                        class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
+                        <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
+
+                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
+                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
+                <button class="relative hover:text-gold block">
+                    <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                </button>
+                <button class="relative hover:text-gold">
+                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                </button>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+
+
+        <nav
+            class="hidden lg:flex items-center justify-center space-x-8 min-[2000px]:space-x-16 text-[15px] min-[2000px]:text-2xl font-medium uppercase tracking-wider">
+
+            <div class="relative group text-center">
+                <button class="flex items-center gap-1 hover:text-gold py-4 focus:outline-none">
+                    New Arrivals <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Diamond
+                            Rings</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Gold
+                            Necklaces</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Wedding
+                            Collection</a>
+                        <div class="border-t border-gray-50 my-1"></div>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">View
+                            All New</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Best Seller <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Ready To Stock <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Buy It Again <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Contact Us <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    Exhibition <span class="text-[10px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="flex items-center gap-1 hover:text-gold py-4">
+                    About Us <span class="text-[8px] transition-transform group-hover:rotate-180"><i
+                            class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full">
+        <!-- Breadcrumbs -->
+        <div class="max-w-[1600px] mx-auto px-6 py-4">
+            <p class="text-xs text-gray-500 font-['Outfit'] mb-2">
+                Home / <span class="text-gray-900 font-medium">Wishlist</span>
+            </p>
+            <p class="text-xs text-gray-400 font-['Outfit']">Showing : 9 Products</p>
+        </div>
+
+        <!-- Wishlist Grid Section -->
+        <div class="max-w-[1600px] mx-auto px-6 pb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+
+                <!-- Helper to create 9 cards -->
+                <!-- Card 1 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div
+                    class="bg-[#FAF8F1] border border-[#E8E1D5] hover:shadow-lg transition-shadow rounded-sm overflow-hidden p-2 relative group">
+                    <div
+                        class="w-full aspect-square flex items-center justify-center mb-3 relative rounded-sm overflow-hidden">
+
+                        <!-- Toggle Close / Best Seller -->
+                        <button
+                            class="absolute top-2 right-2 z-10 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md text-gray-400 hover:text-gray-600 transition-opacity duration-300 group-hover:opacity-0">
+                            <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+
+                        <div
+                            class="absolute top-2 right-1 z-10 w-[80px] h-[28px] bg-[#C34A37] rounded-l-[100px] flex items-center justify-end px-[8px] py-[4px] gap-[10px] text-white text-[13px] font-medium font-['Outfit'] opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm transition-delay-75">
+                            Best Seller
+                        </div>
+
+                        <img src="assets/ring.png" alt="Eterna Diamond Ring"
+                            class="w-full h-full object-contain-cover mix-blend-multiply transition-opacity duration-300 group-hover:opacity-0">
+                        <img src="assets/hover_image_p.png" alt="Eterna Diamond Ring Hover"
+                            class="absolute inset-0 w-full h-full object-contain mix-blend-multiply opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity z-20 gap-3 w-full h-[50px] bg-white rounded-t-[20px] px-4">
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-[#CBA65A] text-white text-[15px] font-medium w-full h-[32px] rounded-sm shadow-sm hover:bg-[#B39359] transition-colors font-['Outfit']">
+                                Add to Cart
+                            </button>
+                            <button
+                                class="w-9 h-9 bg-[#F3EFE6] rounded-full flex items-center justify-center text-[#8B6A45] hover:bg-[#E6DCC6] transition-colors text-sm shadow-sm">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-800 font-medium leading-tight font-['Outfit']">Eterna Diamond
+                            Solitaire Engagement Ring</p>
+                        <p class="text-base font-bold text-[#1A1A1A] font-['Outfit']">₹16,747.23</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Know More Section -->
+    <div class="w-full bg-[#E9D3D6] py-3 flex items-center justify-center">
+        <span class="text-[#0D0D0E] font-['Outfit'] text-[15px] font-medium">Know More About Tattsvi</span>
+    </div>
+
+    <!--Footer section-->
+    <footer
+        class="bg-[#FDFBF7] pt-16 pb-8 px-6 md:px-20 border-t border-pink-100 relative overflow-hidden w-full max-w-[100vw]">
+        <div class="max-w-[1440px] mx-auto">
+
+            <!-- Logo Row -->
+            <!-- Logo Row -->
+            <div class="mb-10">
+                <img src="assets/logo_black.png" alt="Tattsvi" class="w-[180px] h-auto">
+            </div>
+
+            <!-- Columns Row -->
+            <div class="flex flex-col lg:flex-row justify-between items-start mt-12 w-full gap-10 relative z-10">
+
+                <!-- Left: Link Columns Group -->
+                <div class="flex flex-wrap gap-x-12 md:gap-x-[88px] gap-y-10">
+                    <!-- About Us -->
+                    <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
+                        <h4 style="font-family: 'Outfit', sans-serif;"
+                            class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg">
+                            About us</h4>
+                        <ul class="flex flex-col gap-[16px]">
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
+                                    Story</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
+                                    & Services</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
+                        <h4 style="font-family: 'Outfit', sans-serif;"
+                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
+                            Categories</h4>
+                        <ul class="flex flex-col gap-[16px]">
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Service -->
+                    <div class="flex flex-col items-start gap-[22px] w-[160px] md:w-auto">
+                        <h4 style="font-family: 'Outfit', sans-serif;"
+                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg">
+                            Customer Service</h4>
+                        <ul class="flex flex-col gap-[16px]">
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
+                            </li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
+                                    Care</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
+                                    Warranty</a></li>
+                            <li><a href="#"
+                                    class="font-['Outfit'] font-normal text-base text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
+                                    an Appointment</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Sign Up -->
+                <div class="flex flex-col items-start gap-4 lg:w-[400px]">
+                    <h4 style="font-family: 'Outfit', sans-serif;"
+                        class="font-['Outfit'] font-bold text-[#0D0D0E] text-[28px] leading-[1.2]">
+                        Sign up <br>for Exclusive Offers
+                    </h4>
+                    <p class="font-['Outfit'] text-base text-[#6E6E6E] leading-relaxed max-w-[350px]">
+                        Be the first to know about new collections, exclusive deals & more!
+                    </p>
+                    <div class="flex flex-row gap-3 mt-4 w-full">
+                        <input type="email" placeholder="Email Address"
+                            class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] flex-grow">
+                        <button
+                            class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] shadow-sm">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col gap-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
+                    <!-- Left: QR and Apps -->
+                    <div class="flex items-center gap-6">
+                        <img src="assets/MobileQrNew.png" alt="QR Code" class="w-40 h-40 object-contain">
+                        <div class="flex flex-col gap-2">
+                            <a href="#"><img src="assets/ioslogo.png" alt="App Store"
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
+                            <a href="#"><img src="assets/Androidelogo.png" alt="Google Play"
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
+                        </div>
+                    </div>
+
+                    <!-- Right Group: Socials, Rights, Payments -->
+                    <div class="flex flex-col items-center md:items-start gap-6">
+                        <!-- Socials -->
+                        <div class="flex gap-5">
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full border border-[#5C4522] flex items-center justify-center text-[#5C4522] text-2xl hover:bg-[#5C4522] hover:text-white transition-all">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </div>
+
+                        <!-- Rights & Payments Group (Left Aligned) -->
+                        <div class="flex flex-col items-start gap-3">
+                            <!-- Rights Text -->
+                            <p class="font-['Outfit'] text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
+
+                            <!-- Payments -->
+                            <div class="flex items-center gap-3">
+                                <img src="assets/google_pay.png" alt="GPay" class="h-6">
+                                <img src="assets/visa.png" alt="Visa" class="h-4">
+                                <img src="assets/paypal.png" alt="PayPal" class="h-6">
+                                <img src="assets/master-card.png" alt="Mastercard" class="h-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Copyright -->
+                <div class="text-center mt-4">
+                    <p class="font-Outfit text-[14px] text-[#0D0D0E]">Copyright © Tattsvi 2026. All Right Reserved</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark -->
+        <div class="w-full flex justify-center pointer-events-none mt-10">
+            <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
+                style="background: linear-gradient(180deg, rgba(151, 102, 0, 0.07) 0%, rgba(219, 179, 88, 0.021) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
+                TATTSVI
+            </h1>
+        </div>
+    </footer>
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0"></div>
+    <div id="mobile-menu-sidebar"
+        class="fixed top-0 left-0 w-[85%] max-w-[320px] h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <!-- Header -->
+        <div class="p-5 flex justify-between items-center border-b border-gray-100 bg-cream">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <img src="assets/logo.png" alt="logo">
+                </div>
+                <span class="serif text-xl tracking-tighter">TATTSVI</span>
+            </div>
+            <button id="close-menu-btn"
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-gray-500 hover:text-red-500 shadow-sm transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <!-- Links -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-6">
+            <!-- New Arrivals -->
+            <div class="mobile-dropdown group">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-new-arrivals', this)">
+                    New Arrivals <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-new-arrivals" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Diamond Rings</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Gold Necklaces</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Wedding Collection</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] font-medium py-1">View All
+                        New</a>
+                </div>
+            </div>
+
+            <!-- Best Seller -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-best-seller', this)">
+                    Best Seller <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-best-seller" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Top Rated</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Most Gifted</a>
+                </div>
+            </div>
+
+            <!-- Ready To Stock -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-ready-stock', this)">
+                    Ready To Stock <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-ready-stock" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Necklaces</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Earrings</a>
+                </div>
+            </div>
+
+            <!-- Buy It Again -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-buy-again', this)">
+                    Buy It Again <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                </div>
+            </div>
+            <!--conact us-->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-buy-again', this)">
+                    Contact Us <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                </div>
+            </div>
+            <!--exibition -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-buy-again', this)">
+                    Exhibition <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                </div>
+                <!--about us-->
+                <div class="mobile-dropdown">
+                    <button
+                        class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                        onclick="toggleMobileDropdown('menu-buy-again', this)">
+                        About Us <i
+                            class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                        <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Previously Ordered</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Info -->
+        <div class="bg-gray-50 p-5 border-t border-gray-100">
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span><i class="fa-solid fa-flag-usa mr-2"></i> USA (USD)</span>
+            </div>
+            <a href="#"
+                class="block w-full bg-black text-white text-center py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#5C4522] transition-colors">Sign
+                In / Register</a>
+        </div>
+    </div>
+
+    <script src="wishlist2.js"></script>
+</body>
+
+</html>
