@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,6 +74,7 @@
         }
     </style>
     <script src="js/contact_us.js" defer></script>
+<script src="js/script.js" defer></script>
 </head>
 
 <body class="bg-[#FDFBF7] text-gray-800 flex flex-col min-h-screen no-scrollbar">
@@ -107,7 +108,7 @@
                     <!-- Search Input Container -->
                     <div id="search-container" class="relative w-full">
                         <input type="text" id="search-input"
-                            class="w-full h-[50px] min-[2000px]:h-[70px] bg-white border border-gray-200 focus:border-[#B39359] focus:ring-1 focus:ring-[#B39359] rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none font-['Outfit'] shadow-sm"
+                            class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none font-['Outfit'] shadow-sm"
                             placeholder="Search for products">
 
                         <!-- Close/Clear Icon (Hidden by default) -->
@@ -197,51 +198,107 @@
             </div>
         </div>
 
-        <nav
-            class="hidden lg:flex items-center justify-center space-x-8 min-[2000px]:space-x-16 text-[15px] min-[2000px]:text-2xl font-medium uppercase tracking-wider">
+<nav
+            class="hidden lg:flex items-center justify-center space-x-6 min-[2000px]:space-x-12 text-[15px] min-[2000px]:text-2xl font-['Outfit'] font-medium tracking-wide">
+
             <div class="relative group text-center">
                 <button class="flex items-center gap-1 hover:text-gold py-4 focus:outline-none">
-                    New Arrivals <span class="text-[10px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
+                    New Arrivals
                 </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Diamond
+                            Rings</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Gold
+                            Necklaces</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Wedding
+                            Collection</a>
+                        <div class="border-t border-gray-50 my-1"></div>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">View
+                            All New</a>
+                    </div>
+                </div>
             </div>
+
             <div class="relative group">
                 <button class="flex items-center gap-1 hover:text-gold py-4">
-                    Best Seller <span class="text-[10px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
+                    Best Seller
                 </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Top
+                            Rated</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Most
+                            Gifted</a>
+                    </div>
+                </div>
             </div>
+
+            <div class="relative group">
+                <a href="#" class="flex items-center gap-1 hover:text-gold py-4">
+                    18KT Jewellery
+                </a>
+            </div>
+
+            <div class="relative group">
+                <a href="#" class="flex items-center gap-1 hover:text-gold py-4">
+                    Tattsvi's Favourite
+                </a>
+            </div>
+
             <div class="relative group">
                 <button class="flex items-center gap-1 hover:text-gold py-4">
-                    Ready To Stock <span class="text-[10px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
+                    Exhibition
                 </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Upcoming</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Past
+                            Events</a>
+                    </div>
+                </div>
             </div>
+
             <div class="relative group">
                 <button class="flex items-center gap-1 hover:text-gold py-4">
-                    Buy It Again <span class="text-[10px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
+                    Ready To Stock
                 </button>
+                <div
+                    class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                    <div class="py-2">
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Necklaces</a>
+                        <a href="#"
+                            class="block px-6 py-2 text-gray-600 hover:bg-cream hover:text-gold normal-case font-normal">Earrings</a>
+                    </div>
+                </div>
             </div>
+
             <div class="relative group">
-                <button class="flex items-center gap-1 hover:text-gold py-4">
-                    Contact Us <span class="text-[10px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
-                </button>
+                <a href="contact_us.html" class="flex items-center gap-1 hover:text-gold py-4">
+                    Contact Us
+                </a>
             </div>
+
             <div class="relative group">
-                <button class="flex items-center gap-1 hover:text-gold py-4">
-                    Exhibition <span class="text-[10px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
-                </button>
+                <a href="our_story.html" class="flex items-center gap-1 hover:text-gold py-4">
+                    About Us
+                </a>
             </div>
-            <div class="relative group">
-                <button class="flex items-center gap-1 hover:text-gold py-4">
-                    About Us <span class="text-[8px] transition-transform group-hover:rotate-180"><i
-                            class="fa-solid fa-chevron-down"></i></span>
-                </button>
-            </div>
+
         </nav>
+
     </header>
 
     <!-- Main Content -->
@@ -253,12 +310,12 @@
         </section>
 
         <!-- Overlapping Card Section -->
-        <section class="max-w-[1240px] mx-auto px-6 -mt-[140px] md:-mt-[160px] relative z-10 mb-20">
+        <section class="max-w-[1240px] mx-auto px-4 md:px-6 -mt-[140px] md:-mt-[160px] relative z-10 mb-20">
             <div
-                class="flex flex-col lg:flex-row shadow-[0px_8px_30px_rgba(0,0,0,0.05)] rounded-[32px] overflow-hidden bg-white">
+                class="flex flex-col lg:flex-row justify-between pr-0 lg:pr-16 shadow-[0px_8px_30px_rgba(0,0,0,0.05)] rounded-[30px] md:rounded-[60px] overflow-hidden bg-white py-8 md:py-16">
 
                 <!-- Left Form Side (White) -->
-                <div class="p-8 md:px-16 md:py-14 lg:w-[65%] xl:w-[68%]">
+                <div class="p-6 md:px-16 md:py-14 lg:w-[65%] xl:w-[68%]">
                     <h2 class="font-['Outfit'] text-[28px] md:text-[32px] font-bold text-[#1A1A1A] mb-2 leading-tight">
                         Send us a message</h2>
                     <p class="font-['Outfit'] text-[15px] text-[#5C5C5C] mb-10 leading-relaxed max-w-[600px]">Do you
@@ -320,7 +377,7 @@
                         <!-- Button -->
                         <div class="flex justify-end w-full pt-6">
                             <button type="button"
-                                class="bg-[#CBA65A] text-white font-['Outfit'] text-[16px] font-semibold px-[50px] py-[16px] rounded-full hover:bg-[#B39359] transition-colors shadow-md">
+                                class="flex flex-row justify-center items-center px-[42px] py-[16px] gap-[10px] w-[266px] h-[62px] bg-gradient-to-r from-[#D9BE87] to-[#BE933C] rounded-[100px] text-white font-['Outfit'] text-[16px] font-semibold hover:shadow-lg transition-shadow">
                                 Send a messages
                             </button>
                         </div>
@@ -329,18 +386,18 @@
 
                 <!-- Right Info Side (Gold) -->
                 <div
-                    class="bg-[#CBA65A] p-8 md:px-10 md:py-14 lg:w-[35%] xl:w-[32%] text-white flex flex-col gap-8 relative overflow-hidden">
+                    class="flex flex-col justify-center items-start p-6 md:p-[32px] gap-5 md:gap-[30px] w-full lg:w-[425px] h-auto md:h-[640px] bg-gradient-to-r from-[#D9BE87] to-[#BE933C] rounded-[20px] md:rounded-[30px] text-white flex-shrink-0">
 
                     <div>
                         <h3 class="font-['Outfit'] text-[24px] md:text-[26px] font-semibold mb-2 leading-snug">Hi! We
                             are always here <br>to help you.</h3>
                     </div>
 
-                    <div class="space-y-4">
+                    <div class="space-y-4 w-full">
                         <!-- Helpline -->
                         <div
-                            class="bg-[#D8C696] bg-opacity-40 p-[20px] rounded-[16px] flex items-center gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm">
-                            <div class="w-6 h-6 flex items-center justify-center">
+                            class="bg-[#D8C696] bg-opacity-40 p-4 md:p-[20px] rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
+                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-regular fa-heart text-[#352516] text-xl"></i>
                             </div>
                             <div>
@@ -351,8 +408,8 @@
                         </div>
                         <!-- SMS/Whatsapp -->
                         <div
-                            class="bg-[#D8C696] bg-opacity-40 p-[20px] rounded-[16px] flex items-center gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm">
-                            <div class="w-6 h-6 flex items-center justify-center">
+                            class="bg-[#D8C696] bg-opacity-40 p-4 md:p-[20px] rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
+                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-regular fa-heart text-[#352516] text-xl"></i>
                             </div>
                             <div>
@@ -363,21 +420,22 @@
                         </div>
                         <!-- Email -->
                         <div
-                            class="bg-[#D8C696] bg-opacity-40 p-[20px] rounded-[16px] flex items-center gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm">
-                            <div class="w-6 h-6 flex items-center justify-center">
+                            class="bg-[#D8C696] bg-opacity-40 p-4 md:p-[20px] rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
+                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-regular fa-heart text-[#352516] text-xl"></i>
                             </div>
-                            <div>
+                            <div class="min-w-0">
                                 <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-1">Email:
                                 </p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[16px]">support@tattsvi.com
+                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[16px] break-all">
+                                    support@tattsvi.com
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-auto pt-8">
-                        <div class="flex items-center gap-4 mb-8">
+                    <div class="mt-4 pt-4 w-full">
+                        <div class="flex items-center gap-4 mb-6 w-full">
                             <div class="h-[1px] bg-white opacity-40 flex-grow"></div>
                             <span class="text-white text-2xl relative top-[-2px]">✦</span>
                             <div class="h-[1px] bg-white opacity-40 flex-grow"></div>
@@ -385,19 +443,19 @@
                         <p class="text-[16px] font-['Outfit'] mb-5 font-medium">Connect with us</p>
                         <div class="flex gap-5">
                             <a href="#"
-                                class="w-[40px] h-[40px] rounded-full bg-white text-[#CBA65A] flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
+                                class="w-[40px] h-[40px] rounded-full  text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             <a href="#"
-                                class="w-[40px] h-[40px] rounded-full bg-white text-[#CBA65A] flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
+                                class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="#"
-                                class="w-[40px] h-[40px] rounded-full bg-white text-[#CBA65A] flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
+                                class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
                                 <i class="fab fa-youtube"></i>
                             </a>
                             <a href="#"
-                                class="w-[40px] h-[40px] rounded-full bg-white text-[#CBA65A] flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
+                                class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
                                 <i class="fab fa-x-twitter"></i>
                             </a>
                         </div>
@@ -479,88 +537,54 @@
     </div>
 
     <!-- Footer section-->
-    <footer
-        class="bg-white pt-16 pb-8 px-6 md:px-20 border-t border-pink-100 relative overflow-hidden w-full max-w-[100vw]">
-        <div class="max-w-[1440px] min-[2000px]:max-w-full mx-auto">
 
-            <!-- Logo Row -->
-            <div class="w-[130px] h-[30px]  flex items-center justify-center mb-10 gap-2">
-                <img src="assets/logo_black.png" alt="logo">
+    
+
+
+        <div class="flex flex-row justify-center items-center py-[14px] px-[8px] gap-[10px] w-full h-[56px] bg-[#E9D3D6]">
+        <span class="font-['Outfit'] text-[16px] text-[#0D0D0E] font-medium">Know More About Tattsvi</span>
+    </div>
+    <footer class="bg-[#FDFBF7] relative overflow-hidden">
+        <div class="max-w-[1920px] mx-auto px-6 md:px-20 py-12 md:py-16 relative z-10">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 mb-10">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <img src="assets/logo.png" alt="logo" class="w-full h-full object-contain">
+                </div>
+                <span class="font-serif text-2xl tracking-widest text-[#0D0D0E]">TATTSVI</span>
             </div>
 
-            <!-- Columns Row -->
-            <div class="flex flex-col lg:flex-row justify-between items-start mt-12 w-full gap-10 relative z-10">
-                <!-- Left: Link Columns Group -->
-                <div class="flex flex-wrap gap-x-12 md:gap-x-[88px] gap-y-10">
-                    <!-- About Us -->
-                    <div class="flex flex-col items-start gap-[22px] w-full md:w-auto">
-                        <h4 style="font-family: 'Outfit'"
-                            class="font-['Outfit'] font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">About us
-                        </h4>
-                        <ul class="flex flex-col gap-[16px]">
-                            <li><a href="our_story.html"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Our
-                                    Story</a></li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Careers</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Blogs</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
-                                    Us</a></li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Store
-                                    & Services</a></li>
-                        </ul>
-                    </div>
-
+            <div class="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
+                <!-- Left Side: Links -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-12 md:gap-x-20">
                     <!-- Categories -->
-                    <div class="flex flex-col items-start gap-[22px] w-full md:w-auto">
-                        <h4 style="font-family: 'Outfit'"
-                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">Categories
-                        </h4>
-                        <ul class="flex flex-col gap-[16px]">
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Rings</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Earrings</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bracelets</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Necklaces</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Bangles</a>
-                            </li>
+                    <div>
+                        <h4 class="font-['Outfit'] font-bold text-[16px] mb-4 text-[#0D0D0E]">Categories</h4>
+                        <ul class="space-y-3 font-['Outfit'] text-[#6E6E6E] text-[14px]">
+                            <li><a href="#" class="hover:text-[#CBA65A] transition-colors">Rings</a></li>
+                            <li><a href="#" class="hover:text-[#CBA65A] transition-colors">Earrings</a></li>
+                            <li><a href="#" class="hover:text-[#CBA65A] transition-colors">Bracelets</a></li>
+                            <li><a href="#" class="hover:text-[#CBA65A] transition-colors">Necklaces</a></li>
+                            <li><a href="#" class="hover:text-[#CBA65A] transition-colors">Bangles</a></li>
                         </ul>
                     </div>
 
                     <!-- Customer Service -->
-                    <div class="flex flex-col items-start gap-[22px] w-full md:w-auto">
-                        <h4 style="font-family: 'Outfit'"
-                            class="font-Outfit font-semibold text-[#0D0D0E] text-lg min-[2000px]:text-3xl">Customer
-                            Service</h4>
-                        <ul class="flex flex-col gap-[16px]">
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Contact
-                                    Us</a></li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">FAQs</a>
-                            </li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Jewellery
-                                    Care</a></li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Lifetime
-                                    Warranty</a></li>
-                            <li><a href="#"
-                                    class="font-['Outfit'] font-normal text-base min-[2000px]:text-xl text-[#6E6E6E] hover:text-[#CBA65A] transition-colors">Book
-                                    an Appointment</a></li>
+                    <div>
+                        <h4 class="font-['Outfit'] font-bold text-[16px] mb-4 text-[#0D0D0E]">Customer Service</h4>
+                        <ul class="space-y-3 font-['Outfit'] text-[#6E6E6E] text-[14px]">
+                            <li><a href="faq.html" class="hover:text-[#CBA65A] transition-colors">FAQs</a></li>
+                            <li><a href="return_exchange.html" class="hover:text-[#CBA65A] transition-colors">Return & Exchange</a></li>
+                            <li><a href="contact_us.html" class="hover:text-[#CBA65A] transition-colors">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- About Us -->
+                    <div>
+                        <h4 class="font-['Outfit'] font-bold text-[16px] mb-4 text-[#0D0D0E]">About Us</h4>
+                        <ul class="space-y-3 font-['Outfit'] text-[#6E6E6E] text-[14px]">
+                            <li><a href="our_story.html" class="hover:text-[#CBA65A] transition-colors">Our Story</a></li>
+                            <li><a href="blog.html" class="hover:text-[#CBA65A] transition-colors">Blogs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -590,14 +614,13 @@
             <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col gap-8 relative z-10">
                 <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
                     <!-- Left: QR and Apps -->
-                    <div class="flex items-center gap-3 md:gap-6">
-                        <img src="assets/MobileQrNew.png" alt="QR Code"
-                            class="w-28 h-28 md:w-40 md:h-40 object-contain">
+                    <div class="flex items-center gap-6">
+                        <img src="assets/MobileQrNew.png" alt="QR Code" class="w-40 h-40 object-contain">
                         <div class="flex flex-col gap-2">
                             <a href="#"><img src="assets/ioslogo.png" alt="App Store"
-                                    class="h-[35px] md:h-[65px] w-auto"></a>
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
                             <a href="#"><img src="assets/Androidelogo.png" alt="Google Play"
-                                    class="h-[35px] md:h-[65px] w-auto"></a>
+                                    class="h-[45px] md:h-[65px] w-auto"></a>
                         </div>
                     </div>
 
@@ -626,7 +649,7 @@
                         <!-- Rights & Payments Group (Left Aligned) -->
                         <div class="flex flex-col items-start gap-3">
                             <!-- Rights Text -->
-                            <p class="font-['Outfit'] text-[14px] text-[#5C5C5C]">All Rights Reserved © Tattsvi</p>
+                            <p class="font-['Outfit'] text-[14px] text-[#5C5C5C]">All Rights Reserved &copy; Tattsvi</p>
 
                             <!-- Payments -->
                             <div class="flex items-center gap-3">
@@ -641,12 +664,12 @@
 
                 <!-- Bottom Copyright -->
                 <div class="text-center mt-4">
-                    <p class="font-Outfit text-[14px] min-[2000px]:text-lg text-[#0D0D0E]">Copyright © Tattsvi 2026. All
+                    <p class="font-Outfit text-[14px] min-[2000px]:text-lg text-[#0D0D0E]">Copyright &copy; Tattsvi 2026. All
                         Right Reserved</p>
                 </div>
             </div>
         </div>
-
+        
         <!-- Watermark -->
         <div class="w-full flex justify-center pointer-events-none mt-10">
             <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
@@ -655,7 +678,8 @@
             </h1>
         </div>
     </footer>
-    <!-- Mobile Menu Overlay -->
+
+<!-- Mobile Menu Sidebar -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0"></div>
     <div id="mobile-menu-sidebar"
         class="fixed top-0 left-0 w-[85%] max-w-[320px] h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
@@ -700,8 +724,38 @@
                         class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
                 </button>
                 <div id="menu-best-seller" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Top Rings</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Trending Necklaces</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Top Rated</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Most Gifted</a>
+                </div>
+            </div>
+
+            <!-- 18KT Jewellery -->
+            <div class="mobile-dropdown">
+                <a href="#"
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50">
+                    18KT Jewellery
+                </a>
+            </div>
+
+            <!-- Tattsvi's Favourite -->
+            <div class="mobile-dropdown">
+                <a href="#"
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50">
+                    Tattsvi's Favourite
+                </a>
+            </div>
+
+            <!-- Exhibition -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50"
+                    onclick="toggleMobileDropdown('menu-exhibition', this)">
+                    Exhibition <i
+                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
+                </button>
+                <div id="menu-exhibition" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Upcoming</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Past Events</a>
                 </div>
             </div>
 
@@ -714,77 +768,39 @@
                         class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
                 </button>
                 <div id="menu-ready-stock" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Available Now</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Fast Shipping</a>
-                </div>
-            </div>
-
-            <!-- Buy It Again -->
-            <div class="mobile-dropdown">
-                <button
-                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
-                    onclick="toggleMobileDropdown('menu-buy-again', this)">
-                    Buy It Again <i
-                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
-                </button>
-                <div id="menu-buy-again" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Your Past Orders</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Reorder Favorites</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Necklaces</a>
+                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Earrings</a>
                 </div>
             </div>
 
             <!-- Contact Us -->
             <div class="mobile-dropdown">
-                <button
-                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
-                    onclick="toggleMobileDropdown('menu-contact-us', this)">
-                    Contact Us <i
-                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
-                </button>
-                <div id="menu-contact-us" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Email Support</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Call Us</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Store Locator</a>
-                </div>
-            </div>
-
-            <!-- Exhibition -->
-            <div class="mobile-dropdown">
-                <button
-                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
-                    onclick="toggleMobileDropdown('menu-exhibition', this)">
-                    Exhibition <i
-                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
-                </button>
-                <div id="menu-exhibition" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Upcoming Events</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Gallery</a>
-                </div>
+                <a href="contact_us.html"
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50">
+                    Contact Us
+                </a>
             </div>
 
             <!-- About Us -->
             <div class="mobile-dropdown">
-                <button
-                    class="flex items-center justify-between w-full text-[15px] font-medium  tracking-wider text-gray-800 pb-2 border-b border-gray-50"
-                    onclick="toggleMobileDropdown('menu-about-us', this)">
-                    About Us <i
-                        class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform duration-300"></i>
-                </button>
-                <div id="menu-about-us" class="hidden pl-4 mt-3 space-y-3 border-l-2 border-[#E9D3D6]">
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Our Story</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Leadership</a>
-                    <a href="#" class="block text-sm text-gray-600 hover:text-[#B39359] py-1">Careers</a>
-                </div>
+                <a href="our_story.html"
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50">
+                    About Us
+                </a>
             </div>
         </div>
-        <!-- Footer Actions -->
-        <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <!-- Footer Info -->
+        <div class="bg-gray-50 p-5 border-t border-gray-100">
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span><i class="fa-solid fa-flag-usa mr-2"></i> USA (USD)</span>
+            </div>
             <a href="#"
-                class="flex items-center justify-center w-full bg-[#B39359] text-white py-3 rounded-full font-medium hover:bg-[#9a7d4a] transition-colors shadow-md">
-                Sign In / Register
-            </a>
+                class="block w-full bg-black text-white text-center py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#5C4522] transition-colors">Sign
+                In / Register</a>
         </div>
     </div>
-</body>
 
+</body>
 </html>
+
+
