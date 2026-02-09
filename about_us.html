@@ -4,18 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tattsvi - Payment Mode</title>
+    <title>About Us - Tattsvi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="js/payment_wallet.js" defer></script>
     <style>
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            width: 100%;
         }
 
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cursive {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Ticker Container */
         .ticker-wrapper {
             width: 100%;
             overflow: hidden;
@@ -23,6 +33,7 @@
             white-space: nowrap;
         }
 
+        /* Moving Text */
         .ticker {
             display: inline-block;
             padding-left: 100%;
@@ -33,12 +44,12 @@
             display: inline-block;
             font-family: outfit;
             padding-right: 50px;
-            font-size: 14px;
             font-weight: 300;
             color: #6b4b4b;
             letter-spacing: 1px;
         }
 
+        /* Animation */
         @keyframes scroll-left {
             0% {
                 transform: translateX(0);
@@ -49,94 +60,145 @@
             }
         }
 
-        /* Custom Checkbox/Radio for Payment Options */
-        .custom-radio {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #D1D5DB;
-            /* Gray-300 */
-            border-radius: 4px;
-            background-color: white;
-            cursor: pointer;
-            position: relative;
-            display: grid;
-            place-content: center;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
         }
 
-        .custom-radio:checked {
-            border-color: #CBA65A;
-            background-color: #CBA65A;
-        }
-
-        .custom-radio:checked::after {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: white;
-            font-size: 12px;
-        }
-
-        .wallet-logo-circle {
-            width: 40px;
-            height: 40px;
-            background-color: #F3F4F6;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
         }
     </style>
-<script src="js/script.js" defer></script>
+    <script src="js/about_us.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
-<body class="bg-[#FDFBF7] text-gray-800">
-
+<body class="bg-[#FDFBF7] text-gray-800 flex flex-col min-h-screen no-scrollbar">
     <!-- Top Promo Bar -->
     <div class="ticker-wrapper">
         <div class="ticker">
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
-            <span>✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
         </div>
     </div>
-
     <!-- Header Section -->
-    <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
-        <div class="max-w-[1920px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-4">
-
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-800 hover:text-[#CBA65A] transition-colors">
+    <header class="bg-white sticky top-0 z-50 shadow-sm ">
+        <div
+            class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+            <div class="flex items-center gap-2 order-1">
+                <button id="mobile-menu-btn" class="lg:hidden mr-1 text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <div class="w-[120px]">
-                    <img src="assets/logo_black.png" alt="Tattsvi" class="w-full h-auto">
+                <div
+                    class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
+                    <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
+                </div>
+
+            </div>
+
+            <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2 relative z-50">
+                <div class="relative group w-full max-w-[500px] mx-auto">
+                    <!-- Search Input Container -->
+                    <div id="search-container" class="relative w-full">
+                        <input type="text" id="search-input"
+                            class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none font-['Outfit'] shadow-sm"
+                            placeholder="Search for products">
+
+                        <!-- Close/Clear Icon (Hidden by default) -->
+                        <button id="search-clear-btn"
+                            class="absolute right-12 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden">
+                            <i class="fa-solid fa-circle-xmark text-lg"></i>
+                        </button>
+
+                        <!-- Search Icon -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                            <img src="assets/ic_search.png" alt="search"
+                                class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                        </div>
+                    </div>
+
+                    <style>
+                        /* Custom Scrollbar for Search Dropdown */
+                        #search-dropdown::-webkit-scrollbar {
+                            width: 4px;
+                        }
+
+                        #search-dropdown::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        #search-dropdown::-webkit-scrollbar-thumb {
+                            background-color: #D7D7DA;
+                            border-radius: 20px;
+                        }
+                    </style>
+                    <!-- Search Dropdown (Hidden by default) -->
+                    <div id="search-dropdown"
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
+
+                        <!-- Suggestions View -->
+                        <div id="suggestions-search-view" class="w-full h-full flex flex-col">
+                            <!-- Suggestions Header -->
+                            <div class="px-5 py-4">
+                                <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Suggestions
+                                </h3>
+                            </div>
+
+                            <!-- Suggestions List -->
+                            <div class="flex-1 flex flex-col">
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Couple
+                                    </span><span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Silver
+                                    </span><span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Men's
+                                    </span><span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Stepper -->
-            <div class="hidden md:flex items-center gap-4 text-sm font-medium tracking-wide">
-                <a href="#" class="text-gray-400 hover:text-[#CBA65A] transition-colors">BAG</a>
-                <div class="text-gray-300">----------</div>
-                <a href="payment_address_2.html"
-                    class="text-gray-400 hover:text-[#CBA65A] transition-colors">ADDRESS</a>
-                <div class="text-gray-300">----------</div>
-                <div class="text-[#CBA65A] border-b-2 border-[#CBA65A] pb-1 font-bold">PAYMENT</div>
-            </div>
-
-            <!-- Secure Badge -->
-            <div class="flex items-center gap-2 text-[#1A1A1A] font-medium text-sm">
-                <img src="assets/L- Brand Logo.png" alt="Secure" class="h-8 w-auto object-contain"> 100% SECURE
+            <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
+                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
+                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
+                <button class="relative hover:text-gold">
+                    <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                </button>
+                <button class="relative hover:text-gold">
+                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                </button>
             </div>
         </div>
 
-        <!-- Navigation Bar -->
-
-<nav
+        <nav
             class="hidden lg:flex items-center justify-center space-x-6 min-[2000px]:space-x-12 text-[15px] min-[2000px]:text-2xl font-['Outfit'] font-medium tracking-wide">
 
             <div class="relative group text-center">
@@ -240,123 +302,184 @@
     </header>
 
     <!-- Main Content -->
-    <main class="w-full max-w-[1920px] mx-auto px-4 py-8 lg:px-20 xl:px-[100px] xl:pt-[40px] xl:pb-[120px]">
+    <main class="w-full flex-grow">
 
-        <div class="flex flex-col xl:flex-row justify-center items-start gap-12 xl:gap-5">
-            <!-- Left Column: Payment Modes -->
-            <div class="w-full flex-1 flex flex-col gap-6">
+        <!-- Our Story Banner -->
+        <section
+            class="flex flex-col justify-center items-center py-[30px] px-[20px] md:px-[290px] gap-[20px] w-full max-w-[1920px] min-h-[200px] bg-[#EFE4CD] flex-none order-2 self-stretch flex-grow-0 mx-auto text-center">
+            <h1 class="font-['Playfair_Display'] text-[#976600] text-4xl md:text-6xl m-0">About Us</h1>
+            <p class="font-['Outfit'] text-[#5C5C5C] md:text-lg w-full leading-relaxed">
+                Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion
+                his extended. Ecstatic followed handsome drawings entirely Mrs one yet outweigh.
+            </p>
+        </section>
 
-                <!-- Header -->
-                <h2 class="font-medium text-[#1A1A1A] text-lg">Choose Payment Mode</h2>
-
-                <!-- Payment Container -->
-                <div
-                    class="bg-white border text-sm border-gray-200 rounded-[8px] flex overflow-hidden min-h-[350px] shadow-sm">
-                    <!-- Sidebar Options -->
-                    <div class="w-[280px] bg-[#F8F8F8] flex flex-col border-r border-gray-200">
-                        <div
-                            class="payment-option p-4 cursor-pointer text-gray-700 hover:bg-[#EBEBEB] flex items-center gap-3 transition-colors border-l-4 border-transparent">
-                            <span
-                                class="text-xs font-bold border border-gray-400 px-1 rounded-[2px] text-gray-500">UPI</span>
-                            <span class="text-sm font-semibold">UPI (Pay via any App)</span>
-                        </div>
-                        <div
-                            class="payment-option p-4 cursor-pointer text-gray-700 hover:bg-[#EBEBEB] flex items-center gap-4 transition-colors border-l-4 border-transparent">
-                            <i class="fa-regular fa-credit-card text-lg w-5 text-center"></i>
-                            <span class="font-medium">Credit/Debit Card</span>
-                        </div>
-                        <div
-                            class="payment-option p-4 cursor-pointer text-gray-700 hover:bg-[#EBEBEB] flex items-center gap-4 transition-colors border-l-4 border-transparent">
-                            <img src="assets/ic_bank.png" alt="Net Banking" class="w-5 h-5 object-contain">
-                            <span class="font-medium">Net Banking</span>
-                        </div>
-                        <div
-                            class="payment-option p-4 cursor-pointer bg-white border-l-4 border-[#CBA65A] text-[#CBA65A] font-medium flex items-center gap-4 transition-colors">
-                            <img src="assets/Ic_Wallet.png" alt="Wallets" class="w-5 h-5 object-contain">
-                            <span class="font-medium">Wallets</span>
-                        </div>
-                        <div
-                            class="payment-option p-4 cursor-pointer text-gray-700 hover:bg-[#EBEBEB] flex items-center gap-4 transition-colors border-l-4 border-transparent">
-                            <img src="assets/ic_emi.png" alt="EMI" class="w-5 h-5 object-contain">
-                            <span class="font-medium">EMI</span>
-                        </div>
-                        <div
-                            class="payment-option p-4 cursor-pointer text-gray-700 hover:bg-[#EBEBEB] flex items-center gap-4 transition-colors border-l-4 border-transparent">
-                            <img src="assets/ic_cash.png" alt="COD" class="w-5 h-5 object-contain">
-                            <span class="font-medium">Cash On Delivery(Cash/UPI)</span>
-                        </div>
-                    </div>
-
-                    <!-- Content Area -->
-                    <div class="flex-1 p-8 bg-white">
-                        <h3 class="font-bold text-[#1A1A1A] text-sm mb-6">Select EMI Option</h3>
-
-                        <div class="flex items-start gap-4">
-                            <input type="checkbox" id="cod_option" class="custom-radio mt-1">
-                            <div>
-                                <label for="cod_option" class="text-gray-900 font-medium text-sm cursor-pointer">Cash on
-                                    Delivery (Cash/UPI)</label>
-                                <p class="text-gray-400 text-xs mt-1 leading-relaxed">For This Option, There Is A Free
-                                    Of 10. You Can Pay <br> Online To Avoid This.</p>
-                            </div>
-                        </div>
+        <!-- Meet our founders Section -->
+        <section class="max-w-[1440px] mx-auto px-6 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="w-full max-w-[400px] aspect-[3/4] rounded-[200px] overflow-hidden relative">
+                        <img src="assets/meet_founder.png" alt="Founder" class="w-full h-full object-cover">
                     </div>
                 </div>
 
-            </div>
-
-            <!-- Right Column: Price Details -->
-            <div class="w-full xl:w-[400px] flex-shrink-0">
-                <div class="sticky top-28 bg-[#FDFBF7]">
-                    <h3 class="font-bold text-gray-900 text-lg mb-6">Price Details (1 Item)</h3>
-
-                    <div class="space-y-4 pb-6 border-b border-gray-200 text-sm font-medium">
-                        <div class="flex justify-between text-gray-900">
-                            <span>Total MRP</span>
-                            <span>₹12,000</span>
-                        </div>
-                        <div class="flex justify-between text-gray-900">
-                            <span>Discount on MRP</span>
-                            <span>₹2,000</span>
-                        </div>
-                        <div class="flex justify-between text-gray-900">
-                            <span>Platform Fee</span>
-                            <span>₹20</span>
+                <!-- Text Content -->
+                <div class="w-full md:w-1/2 text-left">
+                    <h2 class="font-['Playfair_Display'] text-[#CBA65A] text-3xl md:text-5xl mb-6">Meet our founders
+                    </h2>
+                    <div class="font-['Outfit'] text-[#5C5C5C] space-y-5 md:text-[15px] leading-relaxed">
+                        <p>
+                            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+                            pain was born and I will give you a complete account of the system, and expound the actual
+                            teachings of the great explorer of the truth, the master-builder of human happiness. No one
+                            rejects, dislikes, or avoids pleasure itself.
+                        </p>
+                        <p>
+                            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising
+                            pain was born and I will give you a complete account of the system, and expound the actual
+                            teachings of the great explorer of the truth, the master-builder of human happiness. No one
+                            rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who
+                            do not know how to pursue pleasure rationally encounter consequences that are extremely
+                            painful.
+                        </p>
+                        <div class="pl-6 border-l-[3px] border-black">
+                            <p class="text-[#5C5C5C]">
+                                Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+                                because it is pain, but because occasionally circumstances occur in which toil and pain
+                                can procure him some great pleasure. To take a trivial example, which of us ever
+                                undertakes laborious physical exercise.
+                            </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="pt-4 mb-2">
-                        <div class="flex justify-between items-center font-bold text-gray-900 text-lg">
-                            <span>Total Amount</span>
-                            <span>₹10,080</span>
-                        </div>
+        <!-- Features Section -->
+        <section class="max-w-[1440px] mx-auto px-6 pb-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center justify-center p-8 text-center rounded-2xl"
+                    style="background: linear-gradient(180deg, #F9E4E4 0%, #FFFFFF 100%);">
+                    <div class="flex justify-center mb-6">
+                        <img src="assets/color_truck.png" alt="Free Shipping" class="h-[40px] w-auto">
+                    </div>
+                    <h3 class="font-['Outfit'] font-bold text-[#1A1A1A] text-lg mb-3">Free Shipping</h3>
+                    <p class="font-['Outfit'] text-[#6E6E6E] text-[13px] leading-relaxed max-w-[280px]">
+                        Perceived end knowledge certain day sweetness why cordially. Ask a quick six seven offer see
+                        among.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center justify-center p-8 text-center rounded-2xl"
+                    style="background: linear-gradient(180deg, #F9E4E4 0%, #FFFFFF 100%);">
+                    <div class="flex justify-center mb-6">
+                        <img src="assets/color_truck.png" alt="Fast Delivery" class="h-[40px] w-auto">
+                    </div>
+                    <h3 class="font-['Outfit'] font-bold text-[#1A1A1A] text-lg mb-3">Fast Delivery</h3>
+                    <p class="font-['Outfit'] text-[#6E6E6E] text-[13px] leading-relaxed max-w-[280px]">
+                        Parlors waiting so against me no. Wishing calling is warrant settled was lucky.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center justify-center p-8 text-center rounded-2xl"
+                    style="background: linear-gradient(180deg, #F9E4E4 0%, #FFFFFF 100%);">
+                    <div class="flex justify-center mb-6">
+                        <img src="assets/color_truck.png" alt="Quality Guarantee" class="h-[40px] w-auto">
+                    </div>
+                    <h3 class="font-['Outfit'] font-bold text-[#1A1A1A] text-lg mb-3">100% Quality Guarantee</h3>
+                    <p class="font-['Outfit'] text-[#6E6E6E] text-[13px] leading-relaxed max-w-[280px]">
+                        Unaffected at so of compliment alteration to. Place voice no arises along to.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Divider Section -->
+        <div class="w-full bg-[#FCFBF7] py-16">
+            <div
+                class="flex items-center justify-center w-full gap-2 md:gap-4 mb-4 max-w-[90%] md:max-w-[1600px] mx-auto">
+                <img src="assets/Design.png" alt="design left"
+                    class="h-3 md:h-auto w-full flex-1 object-contain object-right max-w-[100px] md:max-w-[400px] opacity-80">
+                <div class="text-center px-4">
+                    <p class="font-['Outfit'] text-[#5C5C5C] text-sm mb-1 uppercase tracking-widest">Visit</p>
+                    <h2
+                        class="font-['Playfair_Display'] text-[#CBA65A] text-3xl md:text-[40px] font-medium tracking-wide whitespace-nowrap">
+                        Our Instagram
+                    </h2>
+                </div>
+                <img src="assets/DesignRight.png" alt="design right"
+                    class="h-3 md:h-auto w-full flex-1 object-contain object-left max-w-[100px] md:max-w-[400px] opacity-80">
+            </div>
+            <!-- Image Gallery -->
+            <div class="w-full overflow-x-auto no-scrollbar pb-4 px-4 mt-8">
+                <div class="flex gap-4 md:gap-6 min-w-max md:justify-center mx-auto">
+                    <!-- Image 1 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_1.png" alt="Instagram Post 1" class="w-full h-full">
+                    </div>
+                    <!-- Image 2 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_2.png" alt="Instagram Post 2" class="w-full h-full">
+                    </div>
+                    <!-- Image 3 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_3.png" alt="Instagram Post 3" class="w-full h-full">
+                    </div>
+                    <!-- Image 4 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_4.png" alt="Instagram Post 4" class="w-full h-full">
+                    </div>
+                    <!-- Image 5 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_5.png" alt="Instagram Post 5" class="w-full h-full">
+                    </div>
+                    <!-- Image 6 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_6.png" alt="Instagram Post 6" class="w-full h-full">
+                    </div>
+                    <!-- Image 7 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_7.png" alt="Instagram Post 7" class="w-full h-full">
+                    </div>
+                    <!-- Image 8 -->
+                    <div
+                        class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
+                        <img src="assets/our_story_8.png" alt="Instagram Post 8" class="w-full h-full">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Action Buttons Bottom Pair -->
-        <div class="flex flex-col md:flex-row gap-4 w-full mt-10">
-            <button
-                class="w-full md:w-[30%] py-4 rounded-[5px] border border-[#CBA65A] text-[#CBA65A] font-medium hover:bg-gray-50 transition-colors uppercase tracking-wide">
-                Cancel
-            </button>
-            <button
-                class="w-full md:flex-1 py-4 rounded-[5px] bg-[linear-gradient(90deg,#D9BE87_0%,#BE933C_100%)] text-white font-medium shadow-md hover:opacity-90 transition-opacity uppercase tracking-wide">
-                Pay Now
-            </button>
+        <!-- Know More Section -->
+        <div class="w-full bg-[#EAD4D4] py-3 mt-4">
+            <p class="text-center font-['Outfit'] text-[#333333] text-xs md:text-sm font-medium tracking-wide">
+                Know More About Tattsvi
+            </p>
         </div>
 
     </main>
 
-    
+    <!-- Footer section-->
 
 
-        <div class="flex flex-row justify-center items-center py-[14px] px-[8px] gap-[10px] w-full h-[56px] bg-[#E9D3D6]">
+
+
+    <div class="flex flex-row justify-center items-center py-[14px] px-[8px] gap-[10px] w-full h-[56px] bg-[#E9D3D6]">
         <span class="font-['Outfit'] text-[16px] text-[#0D0D0E] font-medium">Know More About Tattsvi</span>
     </div>
     <footer class="bg-[#FDFBF7] relative overflow-hidden">
-        <div class="max-w-[1920px] mx-auto px-6 md:px-20 py-12 md:py-16 relative z-10">            <!-- Logo -->
+        <div class="max-w-[1920px] mx-auto px-6 md:px-20 py-12 md:py-16 relative z-10"> <!-- Logo -->
             <div class="flex items-center gap-2 mb-10">
                 <div class="w-8 h-8 flex items-center justify-center">
                     <img src="assets/logo.png" alt="logo" class="w-full h-full object-contain">
@@ -384,8 +507,10 @@
                         <h4 class="font-['Outfit'] font-bold text-[16px] mb-4 text-[#0D0D0E]">Customer Service</h4>
                         <ul class="space-y-3 font-['Outfit'] text-[#6E6E6E] text-[14px]">
                             <li><a href="faq.html" class="hover:text-[#CBA65A] transition-colors">FAQs</a></li>
-                            <li><a href="return_exchange.html" class="hover:text-[#CBA65A] transition-colors">Return & Exchange</a></li>
-                            <li><a href="contact_us.html" class="hover:text-[#CBA65A] transition-colors">Contact Us</a></li>
+                            <li><a href="return_exchange.html" class="hover:text-[#CBA65A] transition-colors">Return &
+                                    Exchange</a></li>
+                            <li><a href="contact_us.html" class="hover:text-[#CBA65A] transition-colors">Contact Us</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -393,7 +518,8 @@
                     <div>
                         <h4 class="font-['Outfit'] font-bold text-[16px] mb-4 text-[#0D0D0E]">About Us</h4>
                         <ul class="space-y-3 font-['Outfit'] text-[#6E6E6E] text-[14px]">
-                            <li><a href="our_story.html" class="hover:text-[#CBA65A] transition-colors">Our Story</a></li>
+                            <li><a href="our_story.html" class="hover:text-[#CBA65A] transition-colors">Our Story</a>
+                            </li>
                             <li><a href="blog.html" class="hover:text-[#CBA65A] transition-colors">Blogs</a></li>
                         </ul>
                     </div>
@@ -474,12 +600,13 @@
 
                 <!-- Bottom Copyright -->
                 <div class="text-center mt-4">
-                    <p class="font-Outfit text-[14px] min-[2000px]:text-lg text-[#0D0D0E]">Copyright &copy; Tattsvi 2026. All
+                    <p class="font-Outfit text-[14px] min-[2000px]:text-lg text-[#0D0D0E]">Copyright &copy; Tattsvi
+                        2026. All
                         Right Reserved</p>
                 </div>
             </div>
         </div>
-        
+
         <!-- Watermark -->
         <div class="w-full flex justify-center pointer-events-none mt-10">
             <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
@@ -489,7 +616,7 @@
         </div>
     </footer>
 
-<!-- Mobile Menu Sidebar -->
+    <!-- Mobile Menu Sidebar -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity opacity-0"></div>
     <div id="mobile-menu-sidebar"
         class="fixed top-0 left-0 w-[85%] max-w-[320px] h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
@@ -611,9 +738,5 @@
     </div>
 
 </body>
+
 </html>
-
-
-
-
-

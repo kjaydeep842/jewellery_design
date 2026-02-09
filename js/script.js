@@ -141,28 +141,76 @@ document.addEventListener("DOMContentLoaded", () => {
   initAutoScroll('productScroll2', 2000);
   initAutoScroll('launchScroll', 2000);
 
+  // Search Logic
+  const searchInput = document.getElementById('search-input');
+  const searchBtn = document.getElementById('search-btn');
+
+  const performSearch = () => {
+    const query = searchInput.value.trim();
+    if (query) {
+      // Redirect to search_view_1.html with the query
+      window.location.href = `search_view_1.html?q=${encodeURIComponent(query)}`;
+    }
+  };
+
+  const searchDropdown = document.getElementById('search-dropdown');
+  const searchContainer = document.getElementById('search-container');
+
+  if (searchInput && searchDropdown) {
+    // Show dropdown on focus
+    searchInput.addEventListener('focus', () => {
+      searchDropdown.classList.remove('hidden');
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (searchContainer && !searchContainer.contains(e.target)) {
+        searchDropdown.classList.add('hidden');
+      } else if (!searchContainer && !searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+        // Fallback if container not found
+        searchDropdown.classList.add('hidden');
+      }
+    });
+
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default if it's in a form
+      performSearch();
+    });
+  }
+
 });
 //Premium Collectin....
 const slider = document.getElementById('jewellerySlider');
 const slideIndexLabel = document.getElementById('slideIndex');
 
-function slide(direction) {
-  // Calculate scroll amount based on card width + gap
-  const cardWidth = slider.querySelector('.group').offsetWidth + 24;
+if (slider && slideIndexLabel) {
+  function slide(direction) {
+    // Calculate scroll amount based on card width + gap
+    const cardWidth = slider.querySelector('.group').offsetWidth + 24;
 
-  if (direction === 'right') {
-    slider.scrollLeft += cardWidth;
-  } else {
-    slider.scrollLeft -= cardWidth;
+    if (direction === 'right') {
+      slider.scrollLeft += cardWidth;
+    } else {
+      slider.scrollLeft -= cardWidth;
+    }
   }
+
+  // Update the "01" counter when scrolling
+  slider.addEventListener('scroll', () => {
+    const cardWidth = slider.querySelector('.group').offsetWidth + 24;
+    const index = Math.round(slider.scrollLeft / cardWidth) + 1;
+    slideIndexLabel.innerText = index.toString().padStart(2, '0');
+  });
 }
 
-// Update the "01" counter when scrolling
-slider.addEventListener('scroll', () => {
-  const cardWidth = slider.querySelector('.group').offsetWidth + 24;
-  const index = Math.round(slider.scrollLeft / cardWidth) + 1;
-  slideIndexLabel.innerText = index.toString().padStart(2, '0');
-});
 // Category Section
 const categoryData = [
   { title: "Rings", url: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600" },
@@ -178,16 +226,19 @@ function changeSlide(dir) {
   const img = document.getElementById('mainCatImg');
   const title = document.getElementById('mainCatTitle');
 
-  img.style.opacity = '0';
-  setTimeout(() => {
-    img.src = categoryData[currentIdx].url;
-    title.innerText = categoryData[currentIdx].title;
-    img.style.opacity = '1';
-  }, 300);
+  if (img && title) {
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = categoryData[currentIdx].url;
+      title.innerText = categoryData[currentIdx].title;
+      img.style.opacity = '1';
+    }, 300);
+  }
 }
 // Customer Review Section
 function scrollSlider(direction) {
   const slider = document.getElementById('testimonialSlider');
+  if (!slider) return;
   // Determine scroll amount based on card width
   const item = slider.firstElementChild;
   const gap = 24; // tailwind gap-6
@@ -378,3 +429,32 @@ function initAutoScroll(containerId, interval = 2000) {
     }
   });
 }
+
+// Inject custom scrollbar styles for search dropdown
+const scrollbarStyle = document.createElement('style');
+scrollbarStyle.textContent = `
+  #search-dropdown::-webkit-scrollbar { width: 4px; }
+  #search-dropdown::-webkit-scrollbar-track { background: transparent; }
+  #search-dropdown::-webkit-scrollbar-thumb { background-color: #D7D7DA; border-radius: 20px; }
+`;
+document.head.appendChild(scrollbarStyle);
+
+// User Profile Dropdown Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const userMenuBtn = document.getElementById('user-menu-btn');
+  const userDropdownMenu = document.getElementById('user-dropdown-menu');
+  const userMenuContainer = document.getElementById('user-menu-container');
+
+  if (userMenuBtn && userDropdownMenu && userMenuContainer) {
+    userMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      userDropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!userMenuContainer.contains(e.target)) {
+        userDropdownMenu.classList.add('hidden');
+      }
+    });
+  }
+});

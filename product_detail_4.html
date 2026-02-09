@@ -123,14 +123,137 @@
       </div>
 
       <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
-        <div class="relative group w-full max-w-[350px] mx-auto">
-          <input type="text"
-            class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
-            placeholder="Search for products">
-          <div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
-            <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-          </div>
-        </div>
+                        <div class="relative group w-full max-w-[350px] mx-auto" id="search-container">
+                    <input type="text" id="search-input"
+                        class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
+                        placeholder="Search for products">
+                    <button id="search-btn"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
+                        <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    </button>
+                    <!-- Search Dropdown (Hidden by default) -->
+                    <div id="search-dropdown"
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex-col">
+
+                        <!-- Trending Searches Header -->
+                        <div
+                            class="flex flex-row items-center p-4 w-[600px] h-[55px] box-border justify-between flex-shrink-0">
+                            <h3
+                                class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide whitespace-nowrap">
+                                Trending Searches</h3>
+                        </div>
+
+                        <!-- Trending Chips -->
+                        <div class="px-4 pb-4 flex flex-wrap gap-4 flex-shrink-0">
+                            <button
+                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] w-[91px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
+                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Gold</span>
+                            </button>
+                            <button
+                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
+                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Rose
+                                    Gold</span>
+                            </button>
+                            <button
+                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
+                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Silver</span>
+                            </button>
+                        </div>
+
+                        <!-- Top Searches Header -->
+                        <div class="flex flex-row items-center px-4 pt-2 w-[600px] box-border flex-shrink-0">
+                            <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Top Searches</h3>
+                        </div>
+
+                        <!-- Top Searches Items Container -->
+                        <div
+                            class="flex flex-row flex-wrap items-center content-start p-[14px_16px] gap-[12px] w-[600px] min-h-[152px] box-border flex-shrink-0">
+                            <!-- Item 1 -->
+                            <button
+                                class="flex items-center gap-2.5  border border-[#E6E6E6]  hover:border-[#D4AF37] rounded-2xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Mangalsutra</span>
+                            </button>
+
+                            <!-- Item 2 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply gap-4 ">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 3 -->
+                            <button
+                                class="flex items-center gap-1.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 4 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 5 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 6 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
       </div>
 
       <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
@@ -220,9 +343,9 @@
             </div>
 
             <div class="relative group">
-                <button class="flex items-center gap-1 hover:text-gold py-4">
+                <a href="ready_to_stock.html" class="flex items-center gap-1 hover:text-gold py-4">
                     Ready To Stock
-                </button>
+                </a>
                 <div
                     class="absolute left-0 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                     <div class="py-2">
@@ -241,7 +364,7 @@
             </div>
 
             <div class="relative group">
-                <a href="our_story.html" class="flex items-center gap-1 hover:text-gold py-4">
+                <a href="about_us.html" class="flex items-center gap-1 hover:text-gold py-4">
                     About Us
                 </a>
             </div>
@@ -1112,8 +1235,7 @@
         <span class="font-['Outfit'] text-[16px] text-[#0D0D0E] font-medium">Know More About Tattsvi</span>
     </div>
     <footer class="bg-[#FDFBF7] relative overflow-hidden">
-        <div class="max-w-[1920px] mx-auto px-6 md:px-20 py-12 md:py-16 relative z-10">
-            <!-- Logo -->
+        <div class="max-w-[1920px] mx-auto px-6 md:px-20 py-12 md:py-16 relative z-10">            <!-- Logo -->
             <div class="flex items-center gap-2 mb-10">
                 <div class="w-8 h-8 flex items-center justify-center">
                     <img src="assets/logo.png" alt="logo" class="w-full h-full object-contain">
@@ -1350,7 +1472,7 @@
 
             <!-- About Us -->
             <div class="mobile-dropdown">
-                <a href="our_story.html"
+                <a href="about_us.html"
                     class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50">
                     About Us
                 </a>
@@ -1369,5 +1491,10 @@
 
 </body>
 </html>
+
+
+
+
+
 
 
