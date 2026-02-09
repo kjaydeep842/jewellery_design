@@ -286,13 +286,13 @@
     <!-- Main Content -->
     <main class="w-full flex-grow pt-8 pb-16 min-[2000px]:pt-20 min-[2000px]:pb-32 bg-[#FDFBF7]">
         <!-- Container matching my_order.html layout -->
-        <div class="flex flex-row items-start p-[40px] gap-[20px] w-[1920px] mx-auto">
+        <div class="flex flex-col lg:flex-row items-start p-5 lg:p-[40px] gap-[20px] w-full max-w-[1920px] mx-auto">
 
             <!-- Sidebar (Same as edit_profile.html) -->
-            <div class="w-full lg:w-[445px] lg:h-[585px] flex-shrink-0 flex flex-col gap-4">
+            <div class="w-full lg:w-[350px] min-[1600px]:w-[445px] flex-shrink-0 flex flex-col gap-4">
                 <!-- User Profile Card -->
                 <div
-                    class="flex flex-row items-center p-4 gap-5 w-full lg:w-[445px] h-[103px] bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] flex-none order-0 self-stretch grow-0">
+                    class="flex flex-row items-center p-4 gap-5 w-full h-[103px] bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] flex-none order-0 self-stretch grow-0">
                     <div
                         class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-[#EADDCC] flex-shrink-0">
                         <img src="assets/ic_User.png" alt="user" class="w-5 h-5">
@@ -320,7 +320,7 @@
                         <ul class="space-y-4">
                             <li>
                                 <a href="my_order.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
                                         <div class="w-5 flex justify-center">
                                             <img src="assets/ic_order.png" alt="order"
@@ -334,7 +334,7 @@
                             </li>
                             <li>
                                 <a href="my_wishlist.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
                                         <div class="w-5 flex justify-center">
                                             <img src="assets/ic_wishlist.png" alt="wishlist"
@@ -348,7 +348,7 @@
                             </li>
                             <li>
                                 <a href="bag.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border">
+                                    class="flex items-center justify-between w-full h-[68px] px-4 bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border">
                                     <div class="flex items-center gap-4">
                                         <div class="w-5 flex justify-center">
                                             <img src="assets/ic_bag_black.png" alt="bag"
@@ -370,7 +370,7 @@
                         <ul class="space-y-4">
                             <li>
                                 <a href="#"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
                                         <div class="w-5 flex justify-center">
                                             <img src="assets/ic_order.png" alt="terms"
@@ -384,7 +384,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
                                         <div class="w-5 flex justify-center">
                                             <img src="assets/ic_wishlist.png" alt="privacy"
@@ -402,9 +402,9 @@
             </div>
 
             <!-- Bag Content (Right Side) -->
-            <div class="flex flex-row items-start p-0 gap-[20px] w-[1375px] flex-none order-1 grow">
+            <div class="flex flex-col xl:flex-row items-start p-0 gap-[20px] w-full lg:flex-1 order-1 grow">
                 <!-- Center Column: Address and Products -->
-                <div class="flex flex-col gap-6 w-[840px] flex-none">
+                <div class="flex flex-col gap-6 w-full xl:flex-1 flex-none">
                     <!-- Address Banner -->
                     <div
                         class="flex flex-row justify-between items-center px-6 py-5 w-full bg-[rgba(219,179,88,0.1)] border border-[#f0e4cc] rounded-[10px]">
@@ -645,7 +645,7 @@
                 </div>
 
                 <!-- Right Column: Price Details -->
-                <div class="w-[515px] flex-none">
+                <div class="w-full xl:w-[400px] min-[1600px]:w-[515px] flex-none">
                     <div class="rounded-lg sticky top-8">
                         <h3 class="font-medium text-[#1A1A1A] text-[16px] font-['Outfit'] mb-4">Price Details (1 Item)
                         </h3>
