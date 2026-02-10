@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
     function openMenu() {
+        if (!mobileMenuSidebar || !mobileMenuOverlay) return;
         mobileMenuOverlay.classList.remove('hidden');
         // small delay to allow display:block to apply before opacity transition
         setTimeout(() => {
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function closeMenu() {
+        if (!mobileMenuSidebar || !mobileMenuOverlay) return;
         mobileMenuSidebar.classList.add('-translate-x-full');
         mobileMenuOverlay.classList.add('opacity-0');
         setTimeout(() => {
@@ -23,11 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', openMenu);
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openMenu();
+        });
     }
 
     if (closeMenuBtn) {
-        closeMenuBtn.addEventListener('click', closeMenu);
+        closeMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeMenu();
+        });
     }
 
     if (mobileMenuOverlay) {
@@ -35,11 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// ... rest of the file ...
 function selectSize(btn) {
     // Remove selected style from all buttons
-    document.querySelectorAll('#size-container button').forEach(b => {
-        b.classList.remove('border-amber-400', 'text-amber-600', 'border-amber-600', 'text-amber-700', 'bg-amber-50', 'font-bold');
-        b.classList.add('border-gray-200', 'text-gray-600', 'font-medium', 'bg-white');
+    document.querySelector('#size-container').querySelectorAll('button').forEach(b => {
+        b.classList.remove('border-amber-400', 'text-amber-600', 'bg-amber-50');
+        b.classList.add('border-gray-200', 'text-gray-600', 'bg-white');
     });
 
     // Add selected style to the clicked button
@@ -53,16 +62,10 @@ function toggleSizes() {
     const isExpanded = viewMoreBtn.innerText.trim() === 'View Less';
 
     if (isExpanded) {
-        // Collapse: Hide extra sizes
-        hiddenSizes.forEach(btn => {
-            btn.classList.add('hidden');
-        });
+        hiddenSizes.forEach(btn => btn.classList.add('hidden'));
         viewMoreBtn.innerText = 'View More';
     } else {
-        // Expand: Show all sizes
-        hiddenSizes.forEach(btn => {
-            btn.classList.remove('hidden');
-        });
+        hiddenSizes.forEach(btn => btn.classList.remove('hidden'));
         viewMoreBtn.innerText = 'View Less';
     }
 }
@@ -70,17 +73,13 @@ function toggleSizes() {
 function toggleAccordion(button) {
     const content = button.nextElementSibling;
     const icon = button.querySelector('.accordion-icon');
-    const container = button.parentElement;
 
     if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-        // Collapse
         content.style.maxHeight = "0px";
         content.classList.add('opacity-0');
         content.classList.remove('mt-4');
         icon.innerHTML = '<i class="fa-solid fa-plus text-[#CBA65A]"></i>';
-        icon.parentElement.classList.remove('bg-[#F9F5EC]'); // Remove active bg from icon container if needed
     } else {
-        // Expand
         content.style.maxHeight = content.scrollHeight + "px";
         content.classList.remove('opacity-0');
         content.classList.add('mt-4');
@@ -89,15 +88,11 @@ function toggleAccordion(button) {
 }
 
 function changeImage(src) {
-    // Try to find the main image. Using a robust selector since ID might be missing.
-    const mainImg = document.querySelector('.space-y-2 .aspect-\\[4\\/5\\] img') || document.getElementById('mainImage');
-    if (mainImg) {
-        mainImg.src = src;
-    }
+    const mainImg = document.querySelector('.space-y-2 .aspect-\\[4\\/5\\] img');
+    if (mainImg) mainImg.src = src;
 }
 
 function switchTab(tabName, btn) {
-    // Update Buttons
     const buttons = btn.parentElement.querySelectorAll('button');
     buttons.forEach(b => {
         b.classList.remove('bg-black', 'text-white', 'border-black', 'shadow-md');
@@ -106,11 +101,8 @@ function switchTab(tabName, btn) {
     btn.classList.remove('bg-transparent', 'text-gray-600', 'border-[#E8E1D5]');
     btn.classList.add('bg-black', 'text-white', 'border-black', 'shadow-md');
 
-    // Hide All Content Sections
-    document.getElementById('content-about').classList.add('hidden');
-    document.getElementById('content-details').classList.add('hidden');
-    document.getElementById('content-price').classList.add('hidden');
-
-    // Show Selected Content
+    ['about', 'details', 'price'].forEach(id => {
+        document.getElementById(`content-${id}`).classList.add('hidden');
+    });
     document.getElementById(`content-${tabName}`).classList.remove('hidden');
 }
