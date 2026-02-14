@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Tattsvi</title>
+    <title>This is why this year will be the year of startups - Tattsvi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        html,
         body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         .serif {
@@ -73,7 +76,7 @@
             /* Firefox */
         }
     </style>
-    <script src="js/contact_us.js" defer></script>
+    <script src="js/read_more_blog.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 
@@ -96,11 +99,9 @@
                 <button id="mobile-menu-btn" class="lg:hidden mr-1 text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <div
-                    class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
+                <div class="w-[140px] sm:w-[212px] min-[2000px]:w-[350px] flex items-center justify-center">
                     <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
                 </div>
-
             </div>
 
             <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2 relative z-50">
@@ -141,7 +142,7 @@
                     </style>
                     <!-- Search Dropdown (Hidden by default) -->
                     <div id="search-dropdown"
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-32px)] md:w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
 
                         <!-- Suggestions View -->
                         <div id="suggestions-search-view" class="w-full h-full flex flex-col">
@@ -186,7 +187,8 @@
                 </div>
             </div>
 
-            <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
+            <div
+                class="flex items-center space-x-3 sm:space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
                 <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
                         class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
                 <button class="relative hover:text-gold">
@@ -229,166 +231,137 @@
     </header>
 
     <!-- Main Content -->
-    <main class="w-full flex-grow relative">
-        <!-- Banner Section (Beige Background) -->
-        <section class="bg-[#EFE4CD] pt-[80px] pb-[190px] md:pb-[230px] text-center px-6">
-            <h1 class="font-['outfit'] text-[#826230] text-4xl md:text-[56px] font-medium leading-tight mb-4">Contact us
+    <main class="w-full flex-grow">
+
+        <!-- Breadcrumbs Section -->
+        <div class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4">
+            <div class="flex items-center gap-2 text-sm text-[#5C5C5C] font-['Outfit']">
+                <a href="index.html" class="hover:text-[#B39359] transition-colors">Home</a>
+                <span>/</span>
+                <a href="blog.html" class="hover:text-[#B39359] transition-colors">Blog</a>
+                <span>/</span>
+                <span class="font-['Outfit'] font-medium truncate">This is why this year will be the year of
+                    startups</span>
+            </div>
+        </div>
+
+        <!-- Title Section (Beige) -->
+        <section class="bg-[#EFE4CD] py-10 md:py-[60px] px-6 text-center w-full overflow-hidden">
+            <h1
+                class="font-['Outfit'] text-[#826230] text-[clamp(28px,4vw,72px)] leading-[1.2] max-w-[1600px] mx-auto tracking-normal">
+                This is why this year will be the year of startupsBlog
             </h1>
+            <p class="font-['Outfit'] text-[#5C5C5C] text-sm md:text-lg font-normal mt-6 tracking-normal">
+                March 23, 2023</p>
         </section>
 
-        <!-- Overlapping Card Section -->
-        <section class="max-w-[1240px] mx-auto px-4 md:px-6 -mt-[140px] md:-mt-[160px] relative z-10 mb-20">
+        <!-- Content Section -->
+        <section class="max-w-[1240px] min-[2000px]:max-w-[1800px] mx-auto px-6 py-12 md:py-24">
+            <!-- Images -->
             <div
-                class="flex flex-col lg:flex-row justify-between pr-0 lg:pr-16 shadow-[0px_8px_30px_rgba(0,0,0,0.05)] rounded-[30px] md:rounded-[60px] overflow-hidden bg-white py-8 md:py-16">
-
-                <!-- Left Form Side (White) -->
-                <div class="p-6 md:px-16 md:py-14 lg:w-[65%] xl:w-[68%]">
-                    <h2 class="font-['Outfit'] text-[28px] md:text-[32px] font-bold text-[#1A1A1A] mb-2 leading-tight">
-                        Send us a message</h2>
-                    <p class="font-['Outfit'] text-[15px] text-[#5C5C5C] mb-10 leading-relaxed max-w-[600px]">Do you
-                        have a question? A complaint? Or need any help to choose the right product from Tattsvi. Feel
-                        free to contact us.</p>
-
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                            <!-- First Name -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">First Name</label>
-                                <input type="text" placeholder="Name*"
-                                    class="border border-[#EBEBEB] rounded-[8px] px-5 py-[16px] text-[15px] focus:outline-none focus:border-[#CBA65A] bg-white placeholder-[#9C9C9C] font-['Outfit']">
-                            </div>
-                            <!-- Last Name -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Last Name</label>
-                                <input type="text" placeholder="Name*"
-                                    class="border border-[#EBEBEB] rounded-[8px] px-5 py-[16px] text-[15px] focus:outline-none focus:border-[#CBA65A] bg-white placeholder-[#9C9C9C] font-['Outfit']">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                            <!-- Email -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Email</label>
-                                <input type="email" placeholder="Enter Your Email"
-                                    class="border border-[#EBEBEB] rounded-[8px] px-5 py-[16px] text-[15px] focus:outline-none focus:border-[#CBA65A] bg-white placeholder-[#9C9C9C] font-['Outfit']">
-                            </div>
-                            <!-- Contact Details -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Contact
-                                    Details</label>
-                                <div
-                                    class="flex items-center border border-[#EBEBEB] rounded-[8px] overflow-hidden bg-white h-[54px]">
-                                    <div
-                                        class="relative border-r border-[#EBEBEB] h-[30px] my-auto flex items-center pr-2">
-                                        <select
-                                            class="bg-transparent pl-4 pr-6 h-full text-[15px] outline-none appearance-none text-[#1A1A1A] font-['Outfit'] cursor-pointer">
-                                            <option>+91</option>
-                                            <option>+1</option>
-                                        </select>
-                                        <i
-                                            class="fa-solid fa-chevron-down absolute right-2 text-[10px] text-[#1A1A1A] pointer-events-none"></i>
-                                    </div>
-                                    <input type="tel" placeholder="Phone Number"
-                                        class="w-full px-4 h-full text-[15px] focus:outline-none placeholder-[#9C9C9C] font-['Outfit'] bg-transparent">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="flex flex-col gap-2">
-                            <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Message</label>
-                            <textarea rows="6" placeholder="Enter Your Message"
-                                class="border border-[#EBEBEB] rounded-[8px] px-5 py-5 text-[15px] focus:outline-none focus:border-[#CBA65A] resize-none bg-white placeholder-[#9C9C9C] font-['Outfit']"></textarea>
-                        </div>
-
-                        <!-- Button -->
-                        <div class="flex justify-end w-full pt-6">
-                            <button type="button"
-                                class="flex flex-row justify-center items-center px-[42px] py-[16px] gap-[10px] w-[266px] h-[62px] bg-gradient-to-r from-[#D9BE87] to-[#BE933C] rounded-[100px] text-white font-['Outfit'] text-[16px] font-semibold hover:shadow-lg transition-shadow">
-                                Send a messages
-                            </button>
-                        </div>
-                    </form>
+                class="flex flex-row flex-wrap justify-center items-stretch px-5 md:px-[40px] gap-5 md:gap-[20px] w-full max-w-[1920px] md:h-[400px] mx-auto mb-12 md:mb-16">
+                <div class="flex-1 min-w-[300px] order-0 self-stretch rounded-2xl overflow-hidden">
+                    <img src="assets/blog_image.png" alt="Jewellery Image 1"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                 </div>
-
-                <!-- Right Info Side (Gold) -->
-                <div
-                    class="flex flex-col justify-center items-start p-6 md:p-[32px] gap-5 md:gap-[30px] w-full lg:w-[425px] h-auto md:h-[640px] bg-gradient-to-r from-[#D9BE87] to-[#BE933C] rounded-[20px] md:rounded-[30px] text-white flex-shrink-0">
-
-                    <div>
-                        <h3 class="font-['Outfit'] text-[24px] md:text-[26px] font-semibold mb-2 leading-snug">Hi! We
-                            are always here <br>to help you.</h3>
-                    </div>
-
-                    <div class="space-y-4 w-full">
-                        <!-- Helpline -->
-                        <div
-                            class="bg-[#D8C696] bg-opacity-40 p-4 md:p-[20px] rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
-                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-regular fa-heart text-[#352516] text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-1">
-                                    Helpline:</p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[16px]">18004190066</p>
-                            </div>
-                        </div>
-                        <!-- SMS/Whatsapp -->
-                        <div
-                            class="bg-[#D8C696] bg-opacity-40 p-4 md:p-[20px] rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
-                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-regular fa-heart text-[#352516] text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-1">SMS/
-                                    WhatsApp</p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[16px]">18004190066</p>
-                            </div>
-                        </div>
-                        <!-- Email -->
-                        <div
-                            class="bg-[#D8C696] bg-opacity-40 p-4 md:p-[20px] rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
-                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-regular fa-heart text-[#352516] text-xl"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-1">Email:
-                                </p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[16px] break-all">
-                                    support@tattsvi.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 pt-4 w-full">
-                        <div class="flex items-center gap-4 mb-6 w-full">
-                            <div class="h-[1px] bg-white opacity-40 flex-grow"></div>
-                            <span class="text-white text-2xl relative top-[-2px]">?</span>
-                            <div class="h-[1px] bg-white opacity-40 flex-grow"></div>
-                        </div>
-                        <p class="text-[16px] font-['Outfit'] mb-5 font-medium">Connect with us</p>
-                        <div class="flex gap-5">
-                            <a href="#"
-                                class="w-[40px] h-[40px] rounded-full  text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#"
-                                class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#"
-                                class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#"
-                                class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-lg">
-                                <i class="fab fa-x-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="flex-1 min-w-[300px] order-0 self-stretch rounded-2xl overflow-hidden">
+                    <img src="assets/blog_image.png" alt="Jewellery Image 2"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                 </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="max-w-none font-['Outfit'] text-[#5C5C5C] text-[16px] leading-[1.8] space-y-6 md:space-y-8">
+                <p>
+                    When it comes to jewellery, the experience of choosing the right piece is just as special as wearing
+                    it. After all, a diamond ring, pendant, or pair of earrings is a beautiful expression of your story.
+                    That's why Svaraa has reimagined how you shop for jewellery, making the process more personal,
+                    flexible, and meaningful. Whether you love the buzz of a store visit or the comfort of trying pieces
+                    at home, we offer experiences that suit every lifestyle.
+                </p>
+                <p>
+                    As one of the most trusted <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">lab-grown
+                        diamond jewellery
+                        stores in India</a>, we believe luxury shopping should never feel rushed or overwhelming.
+                    Instead, it should feel like an indulgent journey, where every step is customised to your needs. To
+                    make this possible, we offer three distinct try-on experiences: Online, In-store, and At-Home,
+                    ensuring that every customer finds their perfect sparkle in a way that feels just right.
+                </p>
+
+                <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] pt-4 font-['Outfit']">Luxury Shopping
+                    Reimagined Online
+                </h2>
+                <p>
+                    Imagine shopping for diamonds without leaving your couch. With Svaraa's virtual jewellery
+                    appointment in India, that's exactly what you get. Our virtual try-on service allows you to connect
+                    with a dedicated jewellery expert over a video call, giving you a highly personalised consultation
+                    without stepping out of your home.
+                </p>
+                <p>
+                    During the session, you can explore <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">our
+                        collections</a>
+                    in real-time, view intricate details of each piece, and ask every question you have, whether it's
+                    about cut, clarity, or styling advice. Think of it as having your own personal stylist who
+                    understands your preferences and helps you find jewellery that feels uniquely yours.
+                </p>
+                <p>
+                    For those who value sustainability, this option is especially meaningful since you can choose from
+                    <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">Svaraa's
+                        exquisite lab-grown diamond jewellery
+                        collections</a>; pieces that carry both luxury and conscience.
+                </p>
+
+                <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] pt-4 font-['Outfit']">Plan Your Visit,
+                    Shop at Ease
+                </h2>
+                <p>
+                    For those who still love the timeless charm of browsing jewellery in person. Svaraa's physical
+                    stores offer the perfect destination. With locations such as <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">Ahmedabad
+                        - Shivranjani</a>, <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">Ahmedabad
+                        Sindhubhavan</a>, <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">Indore</a>,
+                    Surat and <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">Mumbai
+                        - Borivali</a>, stepping into a Svaraa store is like
+                    stepping into a world of sparkle and craftsmanship.
+                </p>
+                <p>
+                    The difference? Unlike traditional jewellery shopping that can often feel overwhelming, Svaraa
+                    ensures your in-store experience is calm, personal, and stress-free. By booking your visit in
+                    advance, you receive one-on-one guidance from our experts, who take the time to understand your
+                    preferences and walk you through designs at your pace.
+                </p>
+                <p>
+                    Here, you can hold, feel, and try on each piece; whether it's an everyday essential or a statement
+                    jewel for a milestone celebration. And if you are dreaming of something that's one-of-a-kind, the
+                    custom design process begins right here, with our experts helping bring your vision to life.
+                </p>
+
+                <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] pt-4 font-['Outfit']">Personalised Try-On
+                    at Your
+                    Doorstep</h2>
+                <p>
+                    Now imagine this: instead of you going to the jewellery store, the jewellery comes to you. That's
+                    exactly what Svaraa's at-home try-on service offers. We bring a carefully curated selection of
+                    jewellery pieces right to your doorstep, letting you try them on in the comfort of your own space.
+                </p>
+                <p>
+                    This experience is perfect for those who prefer privacy or want to see how the jewellery fits into
+                    their lifestyle before buying. Whether duplicate sets or seeing a necklace pairs with your wardrobe,
+                    or how a ring looks on your hand,
+                </p>
+                <p>
+                    Best of all, you will still have the guidance of Svaraa's experts. With only three operators
+                    required to make it happen, this service is as seamless and effortless <a href="#"
+                        class="underline decoration-[#CBA65A] underline-offset-4 text-[#1A1A1A] font-medium hover:text-[#CBA65A] transition-colors">as
+                        the diamonds themselves</a>.
+                </p>
+
             </div>
         </section>
 
@@ -588,8 +561,8 @@
         </div>
 
         <!-- Watermark -->
-        <div class="w-full flex justify-center pointer-events-none mt-10">
-            <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
+        <div class="w-full flex justify-center pointer-events-none mt-10 overflow-hidden">
+            <h1 class="text-[12vw] md:text-[15vw] font-['Outfit'] font-[900] uppercase tracking-[0.1em] md:tracking-[0.2em] leading-none select-none"
                 style="background: linear-gradient(180deg, rgba(151, 102, 0, 0.07) 0%, rgba(219, 179, 88, 0.021) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
                 TATTSVI
             </h1>

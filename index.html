@@ -25,17 +25,17 @@
         }
     </script>
     <style>
+        html,
         body {
-            /* font-family: 'Inter'; */
-            overflow-x: hidden;
+            overflow-x: hidden !important;
             width: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-color: #FDFBF7;
         }
 
-        html {
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100%;
-        }
+
 
         *,
         *::before,
@@ -184,11 +184,11 @@
         </div>
     </div>
     <!-- Header Section -->
-    <header class="bg-white sticky top-0 z-50 shadow-sm ">
-        <div
-            class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-y-4 lg:gap-0">
+    <header id="main-header" class="bg-white sticky top-0 z-50 shadow-sm transition-all duration-300">
+        <div id="top-bar-content"
+            class="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-6 transition-all duration-500 overflow-hidden origin-top">
             <div class="flex items-center gap-2 order-1">
-                <button id="mobile-menu-btn" class="lg:hidden mr-1  text-gray-800 hover:text-[#B39359]">
+                <button id="mobile-menu-btn" class="lg:hidden mr-1 text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
                 <div
@@ -198,225 +198,170 @@
 
             </div>
 
-            <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2">
-                <div class="relative group w-full max-w-[350px] mx-auto" id="search-container">
-                    <input type="text" id="search-input"
-                        class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none"
-                        placeholder="Search for products">
-                    <button id="search-btn"
-                        class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#B39359]">
-                        <img src="assets/ic_search.png" alt="search" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-                    </button>
+            <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2 relative z-50">
+                <div class="relative group w-full max-w-[500px] mx-auto">
+                    <!-- Search Input Container -->
+                    <div id="search-container" class="relative w-full">
+                        <input type="text" id="search-input"
+                            class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none font-['Outfit'] shadow-sm"
+                            placeholder="Search for products">
+
+                        <!-- Close/Clear Icon (Hidden by default) -->
+                        <button id="search-clear-btn"
+                            class="absolute right-12 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden">
+                            <i class="fa-solid fa-circle-xmark text-lg"></i>
+                        </button>
+
+                        <!-- Search Icon -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                            <img src="assets/ic_search.png" alt="search"
+                                class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                        </div>
+                    </div>
+
+                    <style>
+                        /* Custom Scrollbar for Search Dropdown */
+                        #search-dropdown::-webkit-scrollbar {
+                            width: 4px;
+                        }
+
+                        #search-dropdown::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        #search-dropdown::-webkit-scrollbar-thumb {
+                            background-color: #D7D7DA;
+                            border-radius: 20px;
+                        }
+                    </style>
                     <!-- Search Dropdown (Hidden by default) -->
                     <div id="search-dropdown"
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex-col">
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
 
-                        <!-- Trending Searches Header -->
-                        <div
-                            class="flex flex-row items-center p-4 w-[600px] h-[55px] box-border justify-between flex-shrink-0">
-                            <h3
-                                class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide whitespace-nowrap">
-                                Trending Searches</h3>
-                        </div>
+                        <!-- Suggestions View -->
+                        <div id="suggestions-search-view" class="w-full h-full flex flex-col">
+                            <!-- Suggestions Header -->
+                            <div class="px-5 py-4">
+                                <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Suggestions
+                                </h3>
+                            </div>
 
-                        <!-- Trending Chips -->
-                        <div class="px-4 pb-4 flex flex-wrap gap-4 flex-shrink-0">
-                            <button
-                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] w-[91px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
-                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
-                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Gold</span>
-                            </button>
-                            <button
-                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
-                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
-                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Rose
-                                    Gold</span>
-                            </button>
-                            <button
-                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
-                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
-                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Silver</span>
-                            </button>
-                        </div>
-
-                        <!-- Top Searches Header -->
-                        <div class="flex flex-row items-center px-4 pt-2 w-[600px] box-border flex-shrink-0">
-                            <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Top Searches</h3>
-                        </div>
-
-                        <!-- Top Searches Items Container -->
-                        <div
-                            class="flex flex-row flex-wrap items-center content-start p-[14px_16px] gap-[12px] w-[600px] min-h-[152px] box-border flex-shrink-0">
-                            <!-- Item 1 -->
-                            <button
-                                class="flex items-center gap-2.5  border border-[#E6E6E6]  hover:border-[#D4AF37] rounded-2xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
-                                <div
-                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
-                                    <img src="assets/ring.png" alt="Ring"
-                                        class="w-9 h-9 object-contain mix-blend-multiply">
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Mangalsutra</span>
-                            </button>
-
-                            <!-- Item 2 -->
-                            <button
-                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
-                                <div
-                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
-                                    <img src="assets/ring.png" alt="Ring"
-                                        class="w-9 h-9 object-contain mix-blend-multiply gap-4 ">
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
-                            </button>
-
-                            <!-- Item 3 -->
-                            <button
-                                class="flex items-center gap-1.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
-                                <div
-                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
-                                    <img src="assets/ring.png" alt="Ring"
-                                        class="w-9 h-9 object-contain mix-blend-multiply">
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
-                            </button>
-
-                            <!-- Item 4 -->
-                            <button
-                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
-                                <div
-                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
-                                    <img src="assets/ring.png" alt="Ring"
-                                        class="w-9 h-9 object-contain mix-blend-multiply">
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
-                            </button>
-
-                            <!-- Item 5 -->
-                            <button
-                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
-                                <div
-                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
-                                    <img src="assets/ring.png" alt="Ring"
-                                        class="w-9 h-9 object-contain mix-blend-multiply">
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
-                            </button>
-
-                            <!-- Item 6 -->
-                            <button
-                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
-                                <div
-                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
-                                    <img src="assets/ring.png" alt="Ring"
-                                        class="w-9 h-9 object-contain mix-blend-multiply">
-                                </div>
-                                <span
-                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
-                            </button>
+                            <!-- Suggestions List -->
+                            <div class="flex-1 flex flex-col">
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Couple
+                                    </span><span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Silver
+                                    </span><span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                                <button
+                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
+                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Men's
+                                    </span><span
+                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
+                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
-
-                <div class="relative inline-block text-left" id="user-menu-container">
-                    <button id="user-menu-btn" class="hover:text-gold focus:outline-none flex items-center">
-                        <img src="assets/ic_User.png" alt="user" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-                    </button>
-
-                    <!-- Dropdown menu -->
-                    <div id="user-dropdown-menu"
-                        class="hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden transform transition-all duration-200 origin-top-right">
-                        <div class="py-1">
-                            <a href="edit_profile.html"
-                                class="block px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#F2F2F2] transition-colors font-['Outfit'] font-medium">Edit
-                                Profile</a>
-                            <a href="#"
-                                class="block px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#F2F2F2] transition-colors font-['Outfit'] font-medium">Logout</a>
-                        </div>
-                    </div>
-                </div>
+                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
+                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
                 <button class="relative hover:text-gold">
                     <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-                    <span
-                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">4</span>
                 </button>
-                <a href="bag.html" class="relative hover:text-gold block">
-                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"><span
-                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[9px] min-[2000px]:text-sm min-[2000px]:w-6 min-[2000px]:h-6 rounded-full w-4 h-4 flex items-center justify-center">1</span>
-                </a>
+                <button class="relative hover:text-gold">
+                    <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                </button>
             </div>
         </div>
-        <!-- Navigation Bar -->
 
-        <nav
-            class="hidden lg:flex items-center justify-center space-x-6 min-[2000px]:space-x-12 text-[15px] min-[2000px]:text-2xl font-['Outfit'] font-medium tracking-wide">
-            <div class="relative group">
-                <a href="new_arrival.html" class="flex items-center gap-1 hover:text-gold py-4">New Arrivals</a>
+        <div id="desktop-sticky-nav" class="bg-white w-full transition-all duration-300 relative z-40">
+            <div
+                class="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto px-6 relative flex items-center justify-center py-2">
+
+                <!-- Sticky Logo (Hidden initially, reveals on scroll) -->
+                <a href="index.html" id="sticky-logo"
+                    class="absolute left-6 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none transition-all duration-300 transform -translate-x-4">
+                    <img src="assets/logo_black.png" alt="logo" class="h-8 w-auto">
+                </a>
+
+                <nav
+                    class="flex items-center justify-center space-x-6 min-[2000px]:space-x-12 text-[15px] min-[2000px]:text-2xl font-['Outfit'] font-medium tracking-wide">
+                    <div class="relative group">
+                        <a href="new_arrival.html" class="flex items-center gap-1 hover:text-gold py-4">New Arrivals</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="best_seller.html" class="flex items-center gap-1 hover:text-gold py-4">Best Seller</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="18_KT.html" class="flex items-center gap-1 hover:text-gold py-4">18KT Jewellery</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="tattsvi-fav.html" class="flex items-center gap-1 hover:text-gold py-4">Tattsvi's
+                            Favourite</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="#" class="flex items-center gap-1 hover:text-gold py-4">Exhibition</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="ready_to_stock.html" class="flex items-center gap-1 hover:text-gold py-4">Ready To
+                            Stock</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="contact_us.html" class="flex items-center gap-1 hover:text-gold py-4">Contact Us</a>
+                    </div>
+                    <div class="relative group">
+                        <a href="about_us.html" class="flex items-center gap-1 hover:text-gold py-4">About Us</a>
+                    </div>
+                </nav>
             </div>
-            <div class="relative group">
-                <a href="best_seller.html" class="flex items-center gap-1 hover:text-gold py-4">Best Seller</a>
-            </div>
-            <div class="relative group">
-                <a href="18_KT.html" class="flex items-center gap-1 hover:text-gold py-4">18KT Jewellery</a>
-            </div>
-            <div class="relative group">
-                <a href="tattsvi-fav.html" class="flex items-center gap-1 hover:text-gold py-4">Tattsvi's Favourite</a>
-            </div>
-            <div class="relative group">
-                <a href="#" class="flex items-center gap-1 hover:text-gold py-4">Exhibition</a>
-            </div>
-            <div class="relative group">
-                <a href="ready_to_stock.html" class="flex items-center gap-1 hover:text-gold py-4">Ready To Stock</a>
-            </div>
-            <div class="relative group">
-                <a href="contact_us.html" class="flex items-center gap-1 hover:text-gold py-4">Contact Us</a>
-            </div>
-            <div class="relative group">
-                <a href="about_us.html" class="flex items-center gap-1 hover:text-gold py-4">About Us</a>
-            </div>
-        </nav>
+        </div>
     </header>
-    <!-- Hero Section -->
-    <section>
-        <!-- Product Image -->
-        <div class="relative w-full h-full mx-auto overflow-hidden">
-            <div id="slides" class="grid w-full h-full overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="col-start-1 row-start-1 w-full relative transition-transform duration-[1500ms] ease-out">
+
+    <section
+        class="flex flex-col items-start p-0 gap-[10px] w-full max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto flex-none order-1 self-stretch grow-0 overflow-hidden">
+        <!-- Product Image Slider -->
+        <div class="relative w-full h-auto mx-auto overflow-hidden">
+            <div id="slides" class="grid w-full h-auto overflow-hidden">
+                <!-- Slide 1 (Sets the slider height) -->
+                <div
+                    class="col-start-1 row-start-1 w-full h-auto relative transition-transform duration-[1500ms] ease-out">
                     <img src="assets/Top Banner Section.png" class="w-full h-auto block" alt="Slide 1">
                 </div>
-                <!-- Slide 2 -->
-                <div class="absolute top-0 left-0 w-full h-full transition-transform duration-[1500ms] ease-out">
+                <!-- Slide 2 (Matches slide 1 size) -->
+                <div class="absolute inset-0 w-full h-full transition-transform duration-[1500ms] ease-out">
                     <img src="assets/banner.png" class="w-full h-full object-cover block" alt="Slide 2">
                 </div>
                 <!-- Slide 3 -->
-                <div class="absolute top-0 left-0 w-full h-full transition-transform duration-[1500ms] ease-out">
+                <div class="absolute inset-0 w-full h-full transition-transform duration-[1500ms] ease-out">
                     <img src="assets/Top Banner Section.png" class="w-full h-full object-cover block" alt="Slide 3">
                 </div>
                 <!-- Slide 4 -->
-                <div class="absolute top-0 left-0 w-full h-full transition-transform duration-[1500ms] ease-out">
+                <div class="absolute inset-0 w-full h-full transition-transform duration-[1500ms] ease-out">
                     <img src="assets/banner.png" class="w-full h-full object-cover block" alt="Slide 4">
                 </div>
             </div>
 
             <!-- Dots navigation -->
-            <div id="dots" class="absolute bottom-4 transform -translate-x-1/2 flex gap-2">
+            <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                 <button class="w-8 h-1 rounded-[1px] bg-white hover:bg-white transition-all duration-300"
                     aria-label="Slide 1"></button>
                 <button class="w-8 h-1 rounded-[1px] bg-white/50 hover:bg-white transition-all duration-300"
@@ -428,8 +373,9 @@
     </section>
 
     <!-- Premium Collecions-->
-    <section class="pt-8 pb-2 md:pt-20 md:pb-4 w-full mx-auto px-4 md:px-8">
-        <div class="flex items-center justify-center gap-2 md:gap-6 mb-6 md:mb-10 w-full">
+    <section
+        class="flex flex-col items-center py-[60px] px-0 gap-[70px] w-full max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] md:h-[955px] mx-auto flex-none order-1 self-stretch grow-0 overflow-hidden">
+        <div class="flex items-center justify-center gap-2 md:gap-6 w-full">
             <!-- Left Arrow -->
             <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain">
 

@@ -1,3 +1,91 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('main-header');
+  const desktopNav = document.getElementById('desktop-sticky-nav');
+  const stickyLogo = document.getElementById('sticky-logo');
+  const searchWrapper = document.getElementById('search-bar-wrapper');
+  let lastScrollY = window.scrollY;
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const isDesktop = window.innerWidth >= 1024;
+    const isScrollingDown = scrollY > lastScrollY;
+
+    if (isDesktop) {
+      // Desktop Behavior
+      const topBar = document.getElementById('top-bar-content');
+
+      if (scrollY > 100) {
+        if (isScrollingDown) {
+          // Identify if scrolling down -> Collapse Top Bar, Show Sticky Logo
+          if (topBar) {
+            topBar.classList.add('h-0', 'py-0', 'opacity-0', 'pointer-events-none', 'overflow-hidden');
+          }
+          if (desktopNav) {
+            desktopNav.classList.add('shadow-md', 'py-3');
+            desktopNav.classList.remove('py-2');
+          }
+          if (stickyLogo) {
+            stickyLogo.classList.remove('opacity-0', 'pointer-events-none', '-translate-x-4');
+            stickyLogo.classList.add('translate-x-0');
+          }
+        } else {
+          // Scrolling Up -> Expand Top Bar, Hide Sticky Logo
+          if (topBar) {
+            topBar.classList.remove('h-0', 'py-0', 'opacity-0', 'pointer-events-none', 'overflow-hidden');
+          }
+          if (desktopNav) {
+            desktopNav.classList.remove('shadow-md', 'py-3');
+            desktopNav.classList.add('py-2');
+          }
+          if (stickyLogo) {
+            stickyLogo.classList.add('opacity-0', 'pointer-events-none', '-translate-x-4');
+            stickyLogo.classList.remove('translate-x-0');
+          }
+        }
+      } else {
+        // At Top -> Always Show Full Header
+        if (topBar) {
+          topBar.classList.remove('h-0', 'py-0', 'opacity-0', 'pointer-events-none', 'overflow-hidden');
+        }
+        if (desktopNav) {
+          desktopNav.classList.remove('shadow-md', 'py-3');
+          desktopNav.classList.add('py-2');
+        }
+        if (stickyLogo) {
+          stickyLogo.classList.add('opacity-0', 'pointer-events-none', '-translate-x-4');
+          stickyLogo.classList.remove('translate-x-0');
+        }
+      }
+
+      // Ensure search is visible if present and not hidden by top bar logic (wrapper logic handling)
+      if (searchWrapper) {
+        // No specific forced visibility needed as top-bar handles layout
+        // But ensure no conflicts
+      }
+
+    } else {
+      // Mobile Behavior
+      // Hide Search bar on scroll
+      if (scrollY > 50) {
+        if (header) header.classList.add('shadow-md');
+        if (searchWrapper) {
+          searchWrapper.classList.add('hidden'); // Explicit hide
+        }
+      } else {
+        if (header) header.classList.remove('shadow-md');
+        if (searchWrapper) {
+          searchWrapper.classList.remove('hidden');
+        }
+      }
+    }
+    lastScrollY = scrollY;
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll);
+  // handleScroll(); // Init - Avoid immediate collapse on reload if scrolled?
+});
+
 // Image Slider Logic (Shutter Wipe Effect)
 const initShutterSlider = (sliderId, dotsId, interval = 5000) => {
   const wrapper = document.getElementById(sliderId);
