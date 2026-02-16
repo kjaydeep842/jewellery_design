@@ -232,6 +232,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Search Logic
   const searchInput = document.getElementById('search-input');
   const searchBtn = document.getElementById('search-btn');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+  const searchDropdown = document.getElementById('search-dropdown');
+  const searchContainer = document.getElementById('search-container');
 
   const performSearch = () => {
     const query = searchInput.value.trim();
@@ -240,9 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `search_view_1.html?q=${encodeURIComponent(query)}`;
     }
   };
-
-  const searchDropdown = document.getElementById('search-dropdown');
-  const searchContainer = document.getElementById('search-container');
 
   if (searchInput && searchDropdown) {
     // Show dropdown on focus
@@ -265,6 +265,23 @@ document.addEventListener("DOMContentLoaded", () => {
         performSearch();
       }
     });
+
+    // Clear button logic
+    if (searchClearBtn) {
+      searchInput.addEventListener('input', () => {
+        if (searchInput.value.length > 0) {
+          searchClearBtn.classList.remove('hidden');
+        } else {
+          searchClearBtn.classList.add('hidden');
+        }
+      });
+
+      searchClearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchClearBtn.classList.add('hidden');
+        searchInput.focus();
+      });
+    }
   }
 
   if (searchBtn) {
@@ -543,6 +560,47 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!userMenuContainer.contains(e.target)) {
         userDropdownMenu.classList.add('hidden');
       }
+    });
+  }
+
+  // Mobile Menu Logic
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const mobileMenuSidebar = document.getElementById('mobile-menu-sidebar');
+
+  if (mobileMenuBtn && mobileMenuSidebar && closeMenuBtn) {
+    // Create overlay if not exists
+    let overlay = document.getElementById('mobile-menu-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'mobile-menu-overlay';
+      overlay.className = 'fixed inset-0 bg-black/50 z-[65] hidden transition-opacity duration-300 opacity-0';
+      document.body.appendChild(overlay);
+    }
+
+    const openMenu = () => {
+      mobileMenuSidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+      setTimeout(() => overlay.classList.add('opacity-100'), 10);
+      document.body.classList.add('overflow-hidden');
+    };
+
+    const closeMenu = () => {
+      mobileMenuSidebar.classList.add('-translate-x-full');
+      overlay.classList.remove('opacity-100');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }, 300);
+    };
+
+    mobileMenuBtn.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
     });
   }
 });

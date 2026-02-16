@@ -175,32 +175,52 @@
     <!-- Top Promo Bar -->
     <div class="ticker-wrapper ">
         <div class="ticker">
-            <span class="text-sm min-[2000px]:text-2xl">? Find a new reason to shine with our Solitaires ?</span>
-            <span class="text-sm min-[2000px]:text-2xl">? Find a new reason to shine with our Solitaires ?</span>
-            <span class="text-sm min-[2000px]:text-2xl">? Find a new reason to shine with our Solitaires ?</span>
-            <span class="text-sm min-[2000px]:text-2xl">? Find a new reason to shine with our Solitaires ?</span>
-            <span class="text-sm min-[2000px]:text-2xl">? Find a new reason to shine with our Solitaires ?</span>
-            <span class="text-sm min-[2000px]:text-2xl">? Find a new reason to shine with our Solitaires ?</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
+            <span class="text-sm min-[2000px]:text-2xl">✦ Find a new reason to shine with our Solitaires ✦</span>
         </div>
     </div>
     <!-- Header Section -->
     <header id="main-header" class="bg-white sticky top-0 z-50 shadow-sm transition-all duration-300">
         <div id="top-bar-content"
-            class="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto px-6 py-4 flex flex-wrap lg:flex-nowrap justify-between items-center gap-6 transition-all duration-500 overflow-hidden origin-top">
-            <div class="flex items-center gap-2 order-1">
-                <button id="mobile-menu-btn" class="lg:hidden mr-1 text-gray-800 hover:text-[#B39359]">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
-                <div
-                    class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
-                    <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
+            class="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto px-4 lg:px-6 py-3 lg:py-4 flex flex-col lg:flex-row justify-between lg:items-center gap-3 lg:gap-6 transition-all duration-500 origin-top">
+
+            <!-- Mobile: Menu, Logo, Icons Row -->
+            <div class="flex items-center justify-between lg:contents w-full lg:w-auto">
+                <div class="flex items-center lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-800 hover:text-[#B39359]">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
                 </div>
 
+                <div class="flex-shrink-0 lg:order-1 lg:mr-4">
+                    <div class="w-[140px] lg:w-[212px] h-auto min-[2000px]:w-[350px] flex items-center justify-center">
+                        <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <!-- Icons on Mobile (Right Side) -->
+                <div class="flex items-center space-x-4 lg:hidden">
+                    <a href="my_wishlist.html" class="relative">
+                        <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5">
+                        <span
+                            class="absolute -top-1.5 -right-1.5 bg-[#D12727] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">4</span>
+                    </a>
+                    <a href="bag.html" class="relative">
+                        <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5">
+                        <span
+                            class="absolute -top-1.5 -right-1.5 bg-[#D12727] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span>
+                    </a>
+                </div>
             </div>
 
             <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2 relative z-50">
                 <div class="relative group w-full max-w-[500px] mx-auto">
                     <!-- Search Input Container -->
+                    <!-- Added border focused state color and transition -->
                     <div id="search-container" class="relative w-full">
                         <input type="text" id="search-input"
                             class="w-full h-[50px] min-[2000px]:h-[70px] bg-gray-100 border border-transparent focus:border-[#B39359]/30 focus:bg-white rounded-full py-2 pl-5 pr-12 text-sm min-[2000px]:text-2xl transition-all outline-none font-['Outfit'] shadow-sm"
@@ -236,75 +256,174 @@
                     </style>
                     <!-- Search Dropdown (Hidden by default) -->
                     <div id="search-dropdown"
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-32px)] lg:w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
 
-                        <!-- Suggestions View -->
-                        <div id="suggestions-search-view" class="w-full h-full flex flex-col">
-                            <!-- Suggestions Header -->
-                            <div class="px-5 py-4">
-                                <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Suggestions
-                                </h3>
-                            </div>
+                        <!-- Trending Searches Header -->
+                        <div
+                            class="flex flex-row items-center p-4 w-full h-[55px] box-border justify-between flex-shrink-0">
+                            <h3
+                                class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide whitespace-nowrap">
+                                Trending Searches</h3>
+                        </div>
 
-                            <!-- Suggestions List -->
-                            <div class="flex-1 flex flex-col">
-                                <button
-                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
-                                    <span
-                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal">Ring</span><span
-                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
-                                </button>
-                                <button
-                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
-                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Couple
-                                    </span><span
-                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
-                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
-                                </button>
-                                <button
-                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
-                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Silver
-                                    </span><span
-                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
-                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
-                                </button>
-                                <button
-                                    class="px-5 py-2 text-left hover:bg-gray-50 transition-colors group flex items-center">
-                                    <span class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">Men's
-                                    </span><span
-                                        class="text-[#B39359] font-['Outfit'] text-[15px] font-normal ml-1">Ring</span><span
-                                        class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-normal">s</span>
-                                </button>
-                            </div>
+                        <!-- Trending Chips -->
+                        <div class="px-4 pb-4 flex flex-wrap gap-4 flex-shrink-0">
+                            <button
+                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] w-[91px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
+                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Gold</span>
+                            </button>
+                            <button
+                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
+                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Rose
+                                    Gold</span>
+                            </button>
+                            <button
+                                class="flex flex-row justify-center items-center p-[12px_20px_12px_12px] gap-[4px] h-[44px] bg-[#F2F2F3] rounded-[12px] hover:bg-[#E5E5E5] transition-colors group">
+                                <div class="w-[11.25px] h-[6.25px] flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-trend-up text-[10px] text-[#B39359]"></i>
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium whitespace-nowrap">Silver</span>
+                            </button>
+                        </div>
+
+                        <!-- Top Searches Header -->
+                        <div class="flex flex-row items-center px-4 pt-2 w-full box-border flex-shrink-0">
+                            <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Top Searches</h3>
+                        </div>
+
+                        <!-- Top Searches Items Container -->
+                        <div
+                            class="flex flex-row flex-wrap items-center content-start p-[14px_16px] gap-[12px] w-full min-h-[152px] box-border flex-shrink-0">
+                            <!-- Item 1 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[calc(50%-6px)] lg:w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Mangalsutra</span>
+                            </button>
+
+                            <!-- Item 2 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[calc(50%-6px)] lg:w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply gap-4 ">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 3 -->
+                            <button
+                                class="flex items-center gap-1.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[calc(50%-6px)] lg:w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 4 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[calc(50%-6px)] lg:w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 5 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[calc(50%-6px)] lg:w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
+
+                            <!-- Item 6 -->
+                            <button
+                                class="flex items-center gap-2.5 border border-[#E6E6E6] hover:border-[#D4AF37] rounded-xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[calc(50%-6px)] lg:w-[133px] flex-none">
+                                <div
+                                    class="w-[36px] h-[36px] rounded bg-[#FAF7F2] flex flex-shrink-0 items-center justify-center group-hover:bg-white transition-colors">
+                                    <img src="assets/ring.png" alt="Ring"
+                                        class="w-9 h-9 object-contain mix-blend-multiply">
+                                </div>
+                                <span
+                                    class="text-[#1A1A1A] font-['Outfit'] text-[13px] font-medium group-hover:text-[#5C4522] whitespace-nowrap tracking-tight">Rings</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
-                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
-                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
-                <button class="relative hover:text-gold">
+            <div
+                class="hidden lg:flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3 relative z-[60]">
+                <div class="relative inline-block text-left" id="user-menu-container">
+                    <button id="user-menu-btn" class="hover:text-gold focus:outline-none flex items-center">
+                        <img src="assets/ic_User.png" alt="user" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div id="user-dropdown-menu"
+                        class="hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden transform transition-all duration-200 origin-top-right">
+                        <div class="py-1">
+                            <a href="edit_profile.html"
+                                class="block px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#F2F2F2] transition-colors font-['Outfit'] font-medium">Edit
+                                Profile</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#F2F2F2] transition-colors font-['Outfit'] font-medium">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="my_wishlist.html" class="relative hover:text-gold block">
                     <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-                </button>
-                <button class="relative hover:text-gold">
+                    <span
+                        class="absolute -top-1.5 -right-1.5 bg-[#D12727] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">4</span>
+                </a>
+                <a href="bag.html" class="relative hover:text-gold block">
                     <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-                </button>
+                    <span
+                        class="absolute -top-1.5 -right-1.5 bg-[#D12727] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span>
+                </a>
             </div>
         </div>
 
-        <div id="desktop-sticky-nav" class="bg-white w-full transition-all duration-300 relative z-40">
+        <div id="desktop-sticky-nav"
+            class="hidden lg:block bg-white w-full border-t lg:border-t-0 border-[#F5F5F5] transition-all duration-300 relative z-40">
             <div
-                class="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto px-6 relative flex items-center justify-center py-2">
+                class="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto px-4 lg:px-6 relative flex items-center lg:justify-center py-2 overflow-x-auto no-scrollbar">
 
                 <!-- Sticky Logo (Hidden initially, reveals on scroll) -->
                 <a href="index.html" id="sticky-logo"
-                    class="absolute left-6 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none transition-all duration-300 transform -translate-x-4">
+                    class="absolute left-6 top-1/2 -translate-y-1/2 opacity-0 pointer-events-none transition-all duration-300 transform -translate-x-4 hidden lg:block">
                     <img src="assets/logo_black.png" alt="logo" class="h-8 w-auto">
                 </a>
 
                 <nav
-                    class="flex items-center justify-center space-x-6 min-[2000px]:space-x-12 text-[15px] min-[2000px]:text-2xl font-['Outfit'] font-medium tracking-wide">
+                    class="flex items-center lg:justify-center whitespace-nowrap space-x-6 min-[2000px]:space-x-12 text-[14px] lg:text-[15px] min-[2000px]:text-2xl font-['Outfit'] font-normal tracking-tight">
                     <div class="relative group">
                         <a href="new_arrival.html" class="flex items-center gap-1 hover:text-gold py-4">New Arrivals</a>
                     </div>
@@ -374,7 +493,7 @@
 
     <!-- Premium Collecions-->
     <section
-        class="flex flex-col items-center py-[60px] px-0 gap-[70px] w-full max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] md:h-[955px] mx-auto flex-none order-1 self-stretch grow-0 overflow-hidden">
+        class="flex flex-col items-center py-8 px-0 gap-8 w-full max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2000px]:max-w-[2200px] mx-auto flex-none order-1 self-stretch grow-0 overflow-hidden">
         <div class="flex items-center justify-center gap-2 md:gap-6 w-full">
             <!-- Left Arrow -->
             <img src="assets/Design.png" alt="Decoration" class="h-5 md:h-8 object-contain">
@@ -407,7 +526,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -448,7 +567,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -486,7 +605,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -527,7 +646,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl min-[2000px]:text-3xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -568,7 +687,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -605,7 +724,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -646,7 +765,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -686,7 +805,7 @@
                         <!-- Star Icon -->
                         <div
                             class="absolute top-[9.5%] right-[14.5%] translate-x-1/2 -translate-y-1/2 text-[#C19757] text-[18px] md:text-xl z-20">
-                            ?
+                            ✦
                         </div>
 
                         <div class="w-full h-full rounded-[999px] overflow-hidden relative">
@@ -740,7 +859,7 @@
     </section>
     <!-- Perfect shape -->
 
-    <section class="bg-white pt-4 pb-8 md:pt-4 md:pb-16 px-14">
+    <section class="bg-white py-4 md:py-8 px-4 lg:px-14">
         <div class="max-w-7xl min-[2000px]:max-w-full mx-auto">
 
             <div class="flex items-center justify-center mb-6 md:mb-10 gap-2 md:gap-6">
@@ -864,7 +983,7 @@
     </section>
     <!-- Explore By Category -->
 
-    <section class="bg-[#FAF9F6] pt-12 pb-8 md:pt-28 md:pb-16 px-4 md:px-20">
+    <section class="bg-[#FAF9F6] py-8 md:py-16 px-4 md:px-20">
         <div class="max-w-[1800px] min-[2000px]:max-w-full mx-auto">
 
             <div class="flex items-center justify-center mb-6 md:mb-8 gap-2 md:gap-6">
@@ -925,8 +1044,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -953,8 +1072,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -981,8 +1100,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -1009,8 +1128,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -1037,8 +1156,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -1065,8 +1184,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -1093,8 +1212,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -1121,8 +1240,8 @@
                         <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                             Ring</h3>
                         <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                            <span class="text-[#999999] line-through">? 949.00</span>
+                            <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                            <span class="text-[#999999] line-through">₹ 949.00</span>
                         </div>
                     </div>
                 </div>
@@ -1181,12 +1300,12 @@
     <!-- heading section-->
     <div class="ticker-wrapper">
         <div class="ticker">
-            <span>? Where Luxury Meets Legacy ?</span>
-            <span>? Where Luxury Meets Legacy ?</span>
-            <span>? Where Luxury Meets Legacy ?</span>
-            <span>? Where Luxury Meets Legacy ?</span>
-            <span>? Where Luxury Meets Legacy ?</span>
-            <span>? Where Luxury Meets Legacy ?</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
+            <span>✦ Where Luxury Meets Legacy ✦</span>
         </div>
     </div>
     <!--Category Section-->
@@ -1292,8 +1411,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1319,8 +1438,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1346,8 +1465,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1373,8 +1492,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1400,8 +1519,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1427,8 +1546,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1454,8 +1573,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1482,8 +1601,8 @@
                 <h3 class="text-sm min-[2000px]:text-2xl font-['outfit'] text-[#1A1A1A] mb-1">Twist Cross Cage
                     Ring</h3>
                 <div class="flex items-center justify-center gap-2 text-xs min-[2000px]:text-xl">
-                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">? 949.00</span>
-                    <span class="text-[#999999] line-through">? 949.00</span>
+                    <span class="font-bold font-['outfit'] text-[#1A1A1A]">₹ 949.00</span>
+                    <span class="text-[#999999] line-through">₹ 949.00</span>
                 </div>
             </div>
         </div>
@@ -1549,11 +1668,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#C19757] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#C19757] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#C19757] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#C19757] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#C19757] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#C19757] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <!-- Bottom Content Wrapper -->
@@ -1634,11 +1753,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#CBA65A] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#CBA65A] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#CBA65A] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#CBA65A] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#CBA65A] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#CBA65A] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <div class="absolute bottom-0 left-0 w-full z-10">
@@ -1712,11 +1831,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#D6C3A5] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#D6C3A5] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#D6C3A5] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#D6C3A5] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#D6C3A5] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#D6C3A5] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <div class="absolute bottom-0 left-0 w-full z-10">
@@ -1790,11 +1909,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#F3C6A8] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#F3C6A8] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#F3C6A8] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#F3C6A8] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#F3C6A8] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#F3C6A8] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <div class="absolute bottom-0 left-0 w-full z-10">
@@ -1868,11 +1987,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#C19757] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#C19757] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#C19757] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#C19757] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#C19757] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#C19757] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <!-- Bottom Content Wrapper -->
@@ -1953,11 +2072,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#CBA65A] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#CBA65A] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#CBA65A] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#CBA65A] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#CBA65A] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#CBA65A] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <div class="absolute bottom-0 left-0 w-full z-10">
@@ -2031,11 +2150,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#D6C3A5] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#D6C3A5] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#D6C3A5] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#D6C3A5] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#D6C3A5] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#D6C3A5] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <div class="absolute bottom-0 left-0 w-full z-10">
@@ -2109,11 +2228,11 @@
                         <div
                             class="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                             <span
-                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#F3C6A8] text-2xl animate-pulse">?</span>
+                                class="absolute top-[12%] left-1/2 -translate-x-1/2 text-[#F3C6A8] text-2xl animate-pulse">✦</span>
                             <span
-                                class="absolute top-[35%] left-[10%] text-[#F3C6A8] text-3xl animate-pulse delay-75">?</span>
+                                class="absolute top-[35%] left-[10%] text-[#F3C6A8] text-3xl animate-pulse delay-75">✦</span>
                             <span
-                                class="absolute bottom-[25%] right-[12%] text-[#F3C6A8] text-2xl animate-pulse delay-150">?</span>
+                                class="absolute bottom-[25%] right-[12%] text-[#F3C6A8] text-2xl animate-pulse delay-150">✦</span>
                         </div>
 
                         <div class="absolute bottom-0 left-0 w-full z-10">

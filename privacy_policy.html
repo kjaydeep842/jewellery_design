@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Tattsvi</title>
+    <title>Privacy Policy - Tattsvi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        html,
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
             width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         .serif {
@@ -73,7 +76,7 @@
             /* Firefox */
         }
     </style>
-    <script src="js/contact_us.js" defer></script>
+    <script src="js/privacy_policy.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 
@@ -81,11 +84,11 @@
     <!-- Top Promo Bar -->
     <div class="ticker-wrapper">
         <div class="ticker">
-            <span class="text-sm min-[2000px]:text-2xl"> Find a new reason to shine with our Solitaires </span>
-            <span class="text-sm min-[2000px]:text-2xl"> Find a new reason to shine with our Solitaires </span>
-            <span class="text-sm min-[2000px]:text-2xl"> Find a new reason to shine with our Solitaires </span>
-            <span class="text-sm min-[2000px]:text-2xl"> Find a new reason to shine with our Solitaires </span>
-            <span class="text-sm min-[2000px]:text-2xl"> Find a new reason to shine with our Solitaires </span>
+            <span class="text-sm min-[2000px]:text-2xl">ðŸ’ Find a new reason to shine with our Solitaires âœ¨</span>
+            <span class="text-sm min-[2000px]:text-2xl">ðŸ’ Find a new reason to shine with our Solitaires âœ¨</span>
+            <span class="text-sm min-[2000px]:text-2xl">ðŸ’ Find a new reason to shine with our Solitaires âœ¨</span>
+            <span class="text-sm min-[2000px]:text-2xl">ðŸ’ Find a new reason to shine with our Solitaires âœ¨</span>
+            <span class="text-sm min-[2000px]:text-2xl">ðŸ’ Find a new reason to shine with our Solitaires âœ¨</span>
         </div>
     </div>
     <!-- Header Section -->
@@ -96,11 +99,9 @@
                 <button id="mobile-menu-btn" class="lg:hidden mr-1 text-gray-800 hover:text-[#B39359]">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
-                <div
-                    class="w-[212px] h-[46.8px] min-[2000px]:w-[350px] min-[2000px]:h-auto flex items-center justify-center">
+                <div class="w-[140px] sm:w-[212px] min-[2000px]:w-[350px] flex items-center justify-center">
                     <img src="assets/logo_black.png" alt="logo" class="w-full h-auto">
                 </div>
-
             </div>
 
             <div class="flex-grow max-w-xl w-full lg:w-1/2 order-3 lg:order-2 relative z-50">
@@ -141,7 +142,7 @@
                     </style>
                     <!-- Search Dropdown (Hidden by default) -->
                     <div id="search-dropdown"
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[calc(100vw-32px)] md:w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex flex-col">
 
                         <!-- Suggestions View -->
                         <div id="suggestions-search-view" class="w-full h-full flex flex-col">
@@ -187,14 +188,33 @@
             </div>
 
             <div class="flex items-center space-x-5 min-[2000px]:space-x-8 text-gray-600 order-2 lg:order-3">
-                <button class="hover:text-gold"><img src="assets/ic_User.png" alt="user"
-                        class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8"></button>
+                <div class="relative inline-block text-left" id="user-menu-container">
+                    <button id="user-menu-btn" class="hover:text-gold focus:outline-none flex items-center">
+                        <img src="assets/ic_User.png" alt="user" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div id="user-dropdown-menu"
+                        class="hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-[0px_4px_20px_0px,rgba(0,0,0,0.1)] ring-1 ring-black ring-opacity-5 focus:outline-none z-50 overflow-hidden transform transition-all duration-200 origin-top-right">
+                        <div class="py-1">
+                            <a href="edit_profile.html"
+                                class="block px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#F2F2F2] transition-colors font-['Outfit'] font-medium">Edit
+                                Profile</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-[#1A1A1A] hover:bg-[#F2F2F2] transition-colors font-['Outfit'] font-medium">Logout</a>
+                        </div>
+                    </div>
+                </div>
                 <button class="relative hover:text-gold">
                     <img src="assets/ic_wishlist.png" alt="wishlist" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
+                    <span
+                        class="absolute -top-1.5 -right-1.5 bg-[#D12727] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">4</span>
                 </button>
-                <button class="relative hover:text-gold">
+                <a href="bag.html" class="relative hover:text-gold block">
                     <img src="assets/ic_bag_black.png" alt="bag" class="w-5 h-5 min-[2000px]:w-8 min-[2000px]:h-8">
-                </button>
+                    <span
+                        class="absolute -top-1.5 -right-1.5 bg-[#D12727] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span>
+                </a>
             </div>
         </div>
 
@@ -229,236 +249,159 @@
     </header>
 
     <!-- Main Content -->
-    <main class="w-full flex-grow relative">
-        <!-- Banner Section (Beige Background) -->
-        <section class="bg-[#EFE4CD] pt-[80px] pb-[190px] md:pb-[230px] text-center px-6">
-            <h1 class="font-['outfit'] text-[#826230] text-4xl md:text-[56px] font-medium leading-tight mb-4">Contact us
+    <main class="w-full flex-grow">
+
+        <!-- Breadcrumbs Section -->
+        <div class="max-w-[1600px] min-[2000px]:max-w-[2400px] mx-auto px-6 py-4">
+            <div class="flex items-center gap-2 text-sm text-[#5C5C5C] font-['Outfit']">
+                <a href="index.html" class="hover:text-[#B39359] transition-colors">Home</a>
+                <span>/</span>
+                <a href="bag.html" class="hover:text-[#B39359] transition-colors">My Bag</a>
+                <span>/</span>
+                <span class="font-['Outfit'] font-medium truncate">Privacy Policy</span>
+            </div>
+        </div>
+
+        <!-- Title Section (Beige) -->
+        <section
+            class="bg-[#EFE4CD] flex flex-col justify-center items-center p-[40px_20px] md:p-[40px_10%] lg:p-[40px_290px] gap-[20px] w-full min-h-[223px] flex-none order-2 self-stretch grow-0 text-center overflow-hidden">
+            <h1
+                class="font-['Outfit'] text-[#826230] text-[clamp(28px,4vw,72px)] font-medium leading-[1.2] max-w-none mx-auto tracking-tight whitespace-nowrap">
+                Privacy Policy
             </h1>
+            <p class="font-['Outfit'] text-[#5C5C5C] text-sm md:text-lg font-normal tracking-normal max-w-[800px]">
+                We Protect your data and ensure a secure, transparent experience</p>
         </section>
 
-        <!-- Overlapping Card Section -->
-        <section class="max-w-[1240px] mx-auto px-4 md:px-6 -mt-[140px] md:-mt-[160px] relative z-10 mb-20">
-            <div class="flex flex-col lg:flex-row flex-wrap justify-between items-start relative">
+        <!-- Content Section -->
+        <section class="max-w-[1240px] min-[2000px]:max-w-[2000px] mx-auto px-6 py-12 md:py-24 min-[2000px]:py-36">
 
-                <!-- Left Form Side (White) -->
-                <div
-                    class="bg-white shadow-[0px_8px_30px_rgba(0,0,0,0.05)] rounded-[30px] md:rounded-[60px] p-6 md:px-16 md:py-14 w-full lg:w-[65%] xl:w-[68%]">
-                    <h2 class="font-['Outfit'] text-[28px] md:text-[32px] font-bold text-[#1A1A1A] mb-2 leading-tight">
-                        Send us a message</h2>
-                    <p class="font-['Outfit'] text-[15px] text-[#5C5C5C] mb-10 leading-relaxed max-w-[600px]">Do you
-                        have a question? A complaint? Or need any help to choose the right product from Tattsvi. Feel
-                        free to contact us.</p>
+            <!-- Text Content -->
+            <div
+                class="max-w-[1220px] mx-auto flex flex-col items-start p-0 gap-[35px] w-full flex-none order-0 flex-grow font-['Outfit'] text-[#5C5C5C] text-[16px] leading-[1.6] text-left">
 
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                            <!-- First Name -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">First Name</label>
-                                <input type="text" placeholder="Name*"
-                                    class="border border-[#EBEBEB] rounded-[8px] px-5 py-[16px] text-[15px] focus:outline-none focus:border-[#CBA65A] bg-white placeholder-[#9C9C9C] font-['Outfit']">
-                            </div>
-                            <!-- Last Name -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Last Name</label>
-                                <input type="text" placeholder="Name*"
-                                    class="border border-[#EBEBEB] rounded-[8px] px-5 py-[16px] text-[15px] focus:outline-none focus:border-[#CBA65A] bg-white placeholder-[#9C9C9C] font-['Outfit']">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                            <!-- Email -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Email</label>
-                                <input type="email" placeholder="Enter Your Email"
-                                    class="border border-[#EBEBEB] rounded-[8px] px-5 py-[16px] text-[15px] focus:outline-none focus:border-[#CBA65A] bg-white placeholder-[#9C9C9C] font-['Outfit']">
-                            </div>
-                            <!-- Contact Details -->
-                            <div class="flex flex-col gap-2">
-                                <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Contact
-                                    Details</label>
-                                <div
-                                    class="flex items-center border border-[#EBEBEB] rounded-[8px] overflow-hidden bg-white h-[54px]">
-                                    <div
-                                        class="relative border-r border-[#EBEBEB] h-[30px] my-auto flex items-center pr-2">
-                                        <select
-                                            class="bg-transparent pl-4 pr-6 h-full text-[15px] outline-none appearance-none text-[#1A1A1A] font-['Outfit'] cursor-pointer">
-                                            <option>+91</option>
-                                            <option>+1</option>
-                                        </select>
-                                        <i
-                                            class="fa-solid fa-chevron-down absolute right-2 text-[10px] text-[#1A1A1A] pointer-events-none"></i>
-                                    </div>
-                                    <input type="tel" placeholder="Phone Number"
-                                        class="w-full px-4 h-full text-[15px] focus:outline-none placeholder-[#9C9C9C] font-['Outfit'] bg-transparent">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="flex flex-col gap-2">
-                            <label class="font-['Outfit'] text-[16px] font-bold text-[#1A1A1A]">Message</label>
-                            <textarea rows="6" placeholder="Enter Your Message"
-                                class="border border-[#EBEBEB] rounded-[8px] px-5 py-5 text-[15px] focus:outline-none focus:border-[#CBA65A] resize-none bg-white placeholder-[#9C9C9C] font-['Outfit']"></textarea>
-                        </div>
-
-                        <!-- Button -->
-                        <div class="flex justify-end w-full pt-6">
-                            <button type="button"
-                                class="flex flex-row justify-center items-center px-[42px] py-[16px] gap-[10px] w-[266px] h-[62px] bg-gradient-to-r from-[#D9BE87] to-[#BE933C] rounded-[100px] text-white font-['Outfit'] text-[16px] font-semibold hover:shadow-lg transition-shadow">
-                                Send a messages
-                            </button>
-                        </div>
-                    </form>
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Use of the
+                        Website</h2>
+                    <p class="font-normal">
+                        By accessing this website, you represent and warrant that you are legally entitled to do so and
+                        to make use of the information available here.
+                    </p>
                 </div>
 
-                <!-- Right Info Side (Gold) -->
-                <div
-                    class="flex flex-col justify-center items-start p-5 md:p-6 gap-3 w-full lg:w-[425px] h-auto bg-gradient-to-b from-[#CDB072] to-[#C1A261] rounded-[30px] md:rounded-[40px] text-white flex-shrink-0 shadow-lg mt-10 lg:mt-[190px] lg:-ml-24 relative z-20">
-
-                    <div>
-                        <h3 class="font-['Outfit'] text-[22px] md:text-[24px] font-semibold mb-1 leading-snug">Hi! We
-                            are always here <br>to help you.</h3>
-                    </div>
-
-                    <div class="space-y-2 w-full">
-                        <!-- Helpline -->
-                        <div
-                            class="bg-[#D8C696] bg-opacity-40 p-2.5 md:p-3 rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
-                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-headset text-[#352516] text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-0.5">
-                                    Helpline:</p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[15px]">18004190066</p>
-                            </div>
-                        </div>
-                        <!-- SMS/Whatsapp -->
-                        <div
-                            class="bg-[#D8C696] bg-opacity-40 p-2.5 md:p-3 rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
-                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-regular fa-comment-dots text-[#352516] text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-0.5">SMS/
-                                    WhatsApp</p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[15px]">18004190066</p>
-                            </div>
-                        </div>
-                        <!-- Email -->
-                        <div
-                            class="bg-[#D8C696] bg-opacity-40 p-2.5 md:p-3 rounded-[12px] md:rounded-[16px] flex items-center gap-3 md:gap-4 border border-[#ebd6a6] border-opacity-20 backdrop-blur-sm w-full">
-                            <div class="w-6 h-6 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-regular fa-envelope text-[#352516] text-xl"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-[13px] text-[#352516] opacity-90 font-['Outfit'] font-normal mb-0.5">
-                                    Email:
-                                </p>
-                                <p class="font-semibold text-[#352516] font-['Outfit'] text-[15px] break-all">
-                                    support@tattsvi.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-2 pt-2 w-full">
-                        <div class="flex items-center gap-4 mb-3 w-full">
-                            <div class="h-[1px] bg-white opacity-40 flex-grow"></div>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
-                            </svg>
-                            <div class="h-[1px] bg-white opacity-40 flex-grow"></div>
-                        </div>
-                        <p class="text-[15px] font-['Outfit'] mb-3 font-medium">Connect with us</p>
-                        <div class="flex gap-4">
-                            <a href="#"
-                                class="w-[36px] h-[36px] rounded-full  text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-base">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#"
-                                class="w-[36px] h-[36px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-base">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#"
-                                class="w-[36px] h-[36px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-base">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#"
-                                class="w-[36px] h-[36px] rounded-full text-white flex items-center justify-center hover:bg-opacity-90 transition-all text-base">
-                                <i class="fab fa-x-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Trademarks</h2>
+                    <p class="font-normal">
+                        All trademarks, logos, names, and service marks (collectively referred to as "trademarks")
+                        displayed on this website are property of Tattsvi Jewels. No part of this website shall be
+                        construed as granting any license or right to use any trademark without written permission.
+                    </p>
                 </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">External links
+                    </h2>
+                    <p class="font-normal">
+                        External links are provided for your convenience but are beyond our control. We are not
+                        responsible for the content of any linked site and the inclusion of any link does not imply
+                        endorsement.
+                    </p>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Warranties</h2>
+                    <p class="font-normal">
+                        We do not provide any express or implied warranties for the website content. All use is at your
+                        own risk.
+                    </p>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Prices</h2>
+                    <p class="font-normal">
+                        Our prices are calculated using current rates for precious metals and gemstones and are subject
+                        to change due to market fluctuations. You will be charged based on the price on the date of
+                        purchase.
+                    </p>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Disclaimer of
+                        liability</h2>
+                    <p class="font-normal">
+                        Tattsvi Jewels disclaims liability for any loss, damage, or expense arising from the use of this
+                        website, including reliance on the content here or from any delays or interruptions in service.
+                        We are also not liable for any transaction failure due to cardholder limits set by acquiring
+                        banks.
+                    </p>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Conflict of Terms
+                    </h2>
+                    <p class="font-normal">
+                        If there is any conflict between these Terms and any specific product policies, the latter shall
+                        prevail.
+                    </p>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Severability</h2>
+                    <p class="font-normal">
+                        If any term becomes unenforceable, the remainder of these Terms will remain in full force.
+                    </p>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Cancellation &
+                        Returns</h2>
+                    <ul class="space-y-3 list-none font-normal">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>Orders can be cancelled any time before dispatch confirmation is sent.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>Prepaid refunds go back to the original payment method.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>For returns under our 15-day money-back policy, refunds are processed to your Tattsvi
+                                Wallet, or your bank account upon request.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>Orders placed using discounts must be returned in full.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>For more info, refer to our Returns Policy.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full">
+                    <h2 class="text-[24px] md:text-[28px] font-bold text-[#1A1A1A] mb-3 leading-tight">Applicable laws
+                    </h2>
+                    <ul class="space-y-3 list-none font-normal">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>All transactions and usage of the website are governed by Indian laws, with courts in
+                                Gujarat having exclusive jurisdiction.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[#5C5C5C] mt-[10px] text-[6px]">â—</span>
+                            <span>As per Indian government regulations, PAN details are required for purchases over ₹2
+                                lakhs.</span>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- Instagram Divider Section -->
-    <div class="w-full bg-[#FCFBF7] py-16">
-        <div class="flex items-center justify-center w-full gap-2 md:gap-4 mb-4 max-w-[90%] md:max-w-[1600px] mx-auto">
-            <img src="assets/Design.png" alt="design left"
-                class="h-3 md:h-auto w-full flex-1 object-contain object-right max-w-[100px] md:max-w-[400px] opacity-80">
-            <div class="text-center px-4">
-                <p class="font-['Outfit'] text-[#5C5C5C] text-sm mb-1  tracking-widest">Visit</p>
-                <h2
-                    class="font-['Outfit'] text-[#CBA65A] text-3xl md:text-[40px] font-medium tracking-wide whitespace-nowrap">
-                    Our Instagram
-                </h2>
-            </div>
-            <img src="assets/DesignRight.png" alt="design right"
-                class="h-3 md:h-auto w-full flex-1 object-contain object-left max-w-[100px] md:max-w-[400px] opacity-80">
-        </div>
-        <!-- Image Gallery -->
-        <div class="w-full overflow-x-auto no-scrollbar pb-4 px-4 mt-8">
-            <div class="flex gap-4 md:gap-6 md:justify-center">
-                <!-- Image 1 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_1.png" alt="Instagram Post 1" class="w-full h-full">
-                </div>
-                <!-- Image 2 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_2.png" alt="Instagram Post 2" class="w-full h-full">
-                </div>
-                <!-- Image 3 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_3.png" alt="Instagram Post 3" class="w-full h-full">
-                </div>
-                <!-- Image 4 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_4.png" alt="Instagram Post 4" class="w-full h-full">
-                </div>
-                <!-- Image 5 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_5.png" alt="Instagram Post 5" class="w-full h-full">
-                </div>
-                <!-- Image 6 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_6.png" alt="Instagram Post 6" class="w-full h-full">
-                </div>
-                <!-- Image 7 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_7.png" alt="Instagram Post 7" class="w-full h-full">
-                </div>
-                <!-- Image 8 -->
-                <div
-                    class="w-[180px] h-[220px] md:w-[220px] md:h-[280px] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex-shrink-0">
-                    <img src="assets/our_story_8.png" alt="Instagram Post 8" class="w-full h-full">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer section-->
     <div class="flex flex-row justify-center items-center py-[14px] px-[8px] gap-[10px] w-full h-[56px] bg-[#E9D3D6]">
@@ -592,8 +535,8 @@
         </div>
 
         <!-- Watermark -->
-        <div class="w-full flex justify-center pointer-events-none mt-10">
-            <h1 class="text-[15vw] font-Outfit font-[900] uppercase tracking-[0.2em] leading-none select-none"
+        <div class="w-full flex justify-center pointer-events-none mt-10 overflow-hidden">
+            <h1 class="text-[12vw] md:text-[15vw] font-['Outfit'] font-[900] uppercase tracking-[0.1em] md:tracking-[0.2em] leading-none select-none"
                 style="background: linear-gradient(180deg, rgba(151, 102, 0, 0.07) 0%, rgba(219, 179, 88, 0.021) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">
                 TATTSVI
             </h1>
@@ -620,7 +563,7 @@
         <div class="flex-1 overflow-y-auto p-5 space-y-6">
             <div class="mobile-dropdown">
                 <a href="new_arrival.html"
-                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-50">
+                    class="flex items-center justify-between w-full text-[15px] font-medium tracking-wider text-gray-800 pb-2 border-b border-gray-500">
                     <span><i class="fa-solid fa-bolt mr-3 text-[#B39359]"></i> New Arrivals</span>
                     <i class="fa-solid fa-chevron-right text-[10px] text-gray-300"></i>
                 </a>
