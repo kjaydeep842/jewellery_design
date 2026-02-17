@@ -92,16 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!prevBtnSide) {
             prevBtnSide = document.createElement('button');
-            // Styling matching the request: side buttons, vertically centered, ALWAYS visible (removed opacity-0 group-hover:opacity-100)
-            prevBtnSide.className = "absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#FAF8F1] hover:bg-white flex items-center justify-center text-[#CBA65A] shadow-sm z-20 nav-prev-side transition-colors cursor-pointer";
-            prevBtnSide.innerHTML = '<i class="fa-solid fa-chevron-left text-xs"></i>';
+            // User CSS: position: absolute; width: 24px; height: 30px; left: 0px; top: calc(50% - 30px/2 - 23px); background: #D7D7DA; border-radius: 0px 100px 100px 0px;
+            prevBtnSide.className = "absolute z-20 nav-prev-side hover:bg-[#C5C5C8] transition-colors cursor-pointer flex items-center justify-center";
+            prevBtnSide.style.cssText = "width: 24px; height: 30px; left: 0px; top: calc(50% - 38px); background: #D7D7DA; border-radius: 0px 100px 100px 0px;";
+            prevBtnSide.innerHTML = '<i class="fa-solid fa-chevron-left text-[10px] text-black"></i>';
             imageContainer.appendChild(prevBtnSide);
         }
 
         if (!nextBtnSide) {
             nextBtnSide = document.createElement('button');
-            nextBtnSide.className = "absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#FAF8F1] hover:bg-white flex items-center justify-center text-[#CBA65A] shadow-sm z-20 nav-next-side transition-colors cursor-pointer";
-            nextBtnSide.innerHTML = '<i class="fa-solid fa-chevron-right text-xs"></i>';
+            // Mirrored CSS for Right Side
+            nextBtnSide.className = "absolute z-20 nav-next-side hover:bg-[#C5C5C8] transition-colors cursor-pointer flex items-center justify-center";
+            nextBtnSide.style.cssText = "width: 24px; height: 30px; right: 0px; top: calc(50% - 38px); background: #D7D7DA; border-radius: 100px 0px 0px 100px;";
+            nextBtnSide.innerHTML = '<i class="fa-solid fa-chevron-right text-[10px] text-black"></i>';
             imageContainer.appendChild(nextBtnSide);
         }
 
