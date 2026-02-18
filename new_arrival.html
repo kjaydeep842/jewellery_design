@@ -91,11 +91,11 @@
                     </button>
                     <!-- Search Dropdown (Hidden by default) -->
                     <div id="search-dropdown"
-                        class="absolute top-full left-1/2 -translate-x-1/2 w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex-col">
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-[92vw] sm:w-[600px] h-[334px] bg-white rounded-[4px] border-[1.5px] border-[#D7D7DA] mt-4 hidden z-[60] overflow-y-auto overflow-x-hidden shadow-sm flex-col">
 
                         <!-- Trending Searches Header -->
                         <div
-                            class="flex flex-row items-center p-4 w-[600px] h-[55px] box-border justify-between flex-shrink-0">
+                            class="flex flex-row items-center p-4 w-full h-[55px] box-border justify-between flex-shrink-0">
                             <h3
                                 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide whitespace-nowrap">
                                 Trending Searches</h3>
@@ -131,13 +131,13 @@
                         </div>
 
                         <!-- Top Searches Header -->
-                        <div class="flex flex-row items-center px-4 pt-2 w-[600px] box-border flex-shrink-0">
+                        <div class="flex flex-row items-center px-4 pt-2 w-full box-border flex-shrink-0">
                             <h3 class="text-[#8B7E66] text-xs font-['Outfit'] uppercase tracking-wide">Top Searches</h3>
                         </div>
 
                         <!-- Top Searches Items Container -->
                         <div
-                            class="flex flex-row flex-wrap items-center content-start p-[14px_16px] gap-[12px] w-[600px] min-h-[152px] box-border flex-shrink-0">
+                            class="flex flex-row flex-wrap items-center content-start p-[14px_16px] gap-[12px] w-full min-h-[152px] box-border flex-shrink-0">
                             <!-- Item 1 -->
                             <button
                                 class="flex items-center gap-2.5  border border-[#E6E6E6]  hover:border-[#D4AF37] rounded-2xl p-1.5 pr-2 transition-all bg-white hover:shadow-md group h-[60px] w-[133px] flex-none">
@@ -262,7 +262,7 @@
     <section class="w-full bg-[#EFE4D6] py-8 md:py-10">
         <div class="max-w-[1920px] mx-auto px-4 text-center">
             <h1
-                class="w-[456px] h-[88px] mx-auto font-['Outfit'] font-medium text-[70px] leading-[88px] text-[#826230] mb-4 whitespace-nowrap">
+                class="w-full max-w-[456px] h-auto mx-auto font-['Outfit'] font-medium text-4xl md:text-[70px] leading-tight md:leading-[88px] text-[#826230] mb-4 whitespace-normal md:whitespace-nowrap">
                 New Arrivals</h1>
             <p class="max-w-2xl mx-auto text-sm md:text-base  font-['Inter'] leading-relaxed">
                 Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion his
@@ -296,341 +296,366 @@
             </button>
 
             <!-- Filter Overlay -->
-            <div id="filter-overlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+            <div id="filter-overlay" class="fixed inset-0 bg-black/50 z-[65] hidden lg:hidden"></div>
 
             <aside id="filter-sidebar"
-                class="fixed inset-y-0 left-0 z-50 w-[85%] max-w-[300px] bg-white lg:bg-transparent h-full overflow-y-auto transition-transform duration-300 -translate-x-full shadow-2xl p-5 lg:p-0 lg:shadow-none lg:static lg:h-auto lg:translate-x-0 lg:w-[280px] lg:block flex-shrink-0 space-y-6">
+                class="fixed inset-0 z-[100] w-full h-full bg-white transition-transform duration-300 -translate-x-full lg:static lg:w-[280px] lg:h-auto lg:bg-transparent lg:block lg:shadow-none lg:translate-x-0 lg:z-auto flex-shrink-0 flex flex-col">
 
-                <!-- Mobile Filter Header (Close Button) -->
-                <div class="flex items-center justify-between lg:hidden mb-6">
-                    <div class="flex items-center gap-2 font-semibold text-[18px] text-[#878787]">
-                        <img src="assets/ic_setting.png" alt="filter" class="w-5 h-5 object-contain"> Filters
+                <!-- Mobile Header: Back Arrow, Title, Reset -->
+                <div class="flex items-center justify-between p-4 border-b border-gray-200 lg:hidden flex-shrink-0">
+                    <div class="flex items-center gap-3">
+                        <button id="close-filter-btn" class="text-gray-800 hover:text-gray-600 focus:outline-none">
+                            <i class="fa-solid fa-arrow-left text-xl"></i>
+                        </button>
+                        <span class="font-medium text-lg text-gray-800">Filters</span>
                     </div>
-                    <button id="close-filter-btn" class="text-gray-500 hover:text-gray-700">
-                        <i class="fa-solid fa-xmark text-xl"></i>
-                    </button>
+                    <button class="text-sm font-medium text-gray-500 hover:text-gray-800 uppercase"
+                        onclick="window.location.reload()">RESET</button>
                 </div>
 
-                <!-- Desktop Filter Header (Hidden on Mobile to avoid duplicate if we want, but keeping consistent structure is easier. We can hide this one on mobile if we use the one above) -->
-                <div class="hidden lg:flex items-center gap-2 mb-6 font-semibold text-[18px] text-[#878787]">
-                    <img src="assets/ic_setting.png" alt="filter" class="w-5 h-5 text-[#878787] object-contain ">
-                    Filters
-                </div>
+                <!-- Scrollable Content Area -->
+                <div class="flex-grow overflow-y-auto p-5 lg:p-0 space-y-6 pb-24 lg:pb-0">
 
-                <!-- Filter Item: Category -->
-                <div class="pb-4">
+                    <!-- Desktop Filter Header (Hidden on Mobile to avoid duplicate if we want, but keeping consistent structure is easier. We can hide this one on mobile if we use the one above) -->
+                    <div class="hidden lg:flex items-center gap-2 mb-6 font-semibold text-[18px] text-[#878787]">
+                        <img src="assets/ic_setting.png" alt="filter" class="w-5 h-5 text-[#878787] object-contain ">
+                        Filters
+                    </div>
+
+                    <!-- Filter Item: Category -->
+                    <div class="pb-4">
+                        <div
+                            class="flex justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Category</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Rings</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Necklaces</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Earrings</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Bracelets</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Gender -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Gender</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Women</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Men</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Metal Color -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Metal Color</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox" checked
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Rose</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Rose/white</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Yellow</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Metal Purity -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Metal Purity</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">14KT</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">22KT</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Size -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Diamond Shape</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Round</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Princess</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Cushion</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Pear</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Oval</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Product Type -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Product Type</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Ring</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Earring</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Necklace</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span
+                                    class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Bracelet</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Size -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Size</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">10
+                                    (2)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">11
+                                    (2)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">12
+                                    (5)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">13
+                                    (5)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">14
+                                    (2)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">15
+                                    (1)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Weight Ranges -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Weight Ranges</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">0-2 g
+                                    (1)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">2-5 g
+                                    (41)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">5-10 g
+                                    (13)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">10-20 g
+                                    (5)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">20-30 g
+                                    (1)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group text-[#CBA65A]">
+                                <span class="text-sm">+ 2114 More</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter Item: Price -->
+                    <div class="pb-4">
+                        <div
+                            class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
+                            <span class="font-semibold text-[#1A1A1A] text-[16px]">Price</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        </div>
+                        <div class="mt-3 space-y-2 hidden">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹10,000
+                                    -
+                                    ₹20,000</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹20,000
+                                    -
+                                    ₹40,000</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹40,000
+                                    -
+                                    ₹60,000</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input type="checkbox"
+                                    class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
+                                <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹60,000
+                                    -
+                                    ₹80,000</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Footer: Apply Button -->
                     <div
-                        class="flex justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Category</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
+                        class="lg:hidden fixed bottom-0 left-0 w-full p-4 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-10">
+                        <button id="apply-filter-btn"
+                            class="w-full bg-[#E35442] hover:bg-[#d04532] text-white font-medium py-3 rounded uppercase tracking-wide transition-colors"
+                            onclick="document.getElementById('mobile-filter-btn').click()">
+                            APPLY
+                        </button>
                     </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Rings</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Necklaces</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Earrings</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Bracelets</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Gender -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Gender</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Women</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Men</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Metal Color -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Metal Color</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox" checked
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Rose</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Rose/white</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Yellow</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Metal Purity -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Metal Purity</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">14KT</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">22KT</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Size -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Diamond Shape</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Round</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Princess</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Cushion</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Pear</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Oval</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Product Type -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Product Type</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Ring</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Earring</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Necklace</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span
-                                class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">Bracelet</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Size -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Size</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">10
-                                (2)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">11
-                                (2)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">12
-                                (5)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">13
-                                (5)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">14
-                                (2)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">15
-                                (1)</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Weight Ranges -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Weight Ranges</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">0-2 g
-                                (1)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">2-5 g
-                                (41)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">5-10 g
-                                (13)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">10-20 g
-                                (5)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">20-30 g
-                                (1)</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group text-[#CBA65A]">
-                            <span class="text-sm">+ 2114 More</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Filter Item: Price -->
-                <div class="pb-4">
-                    <div
-                        class="flex font-['Alexandria'] justify-between items-center cursor-pointer group filter-accordion-header select-none">
-                        <span class="font-semibold text-[#1A1A1A] text-[16px]">Price</span>
-                        <i
-                            class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-amber-600 transition-transform duration-200 accordion-icon"></i>
-                    </div>
-                    <div class="mt-3 space-y-2 hidden">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹10,000 -
-                                ₹20,000</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹20,000 -
-                                ₹40,000</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹40,000 -
-                                ₹60,000</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input type="checkbox"
-                                class="w-5 h-5 border-gray-300 rounded text-[#CBA65A] focus:ring-[#CBA65A] cursor-pointer accent-[#CBA65A]">
-                            <span class="text-sm text-gray-600 group-hover:text-[#CBA65A] transition-colors">₹60,000 -
-                                ₹80,000</span>
-                        </label>
-                    </div>
-                </div>
-
             </aside>
 
             <!-- Products Grid -->
