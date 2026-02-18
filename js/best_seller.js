@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     // Select all elements that act as headers for the accordion
     const headers = document.querySelectorAll('.filter-accordion-header');
@@ -183,28 +182,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
-    // --- Mobile Filter Sidebar Logic (Added) ---
-    const mobileFilterBtn = document.getElementById('mobile-filter-btn');
-    const filterSidebar = document.getElementById('filter-sidebar');
-    const filterOverlay = document.getElementById('filter-overlay');
-    const closeFilterBtn = document.getElementById('close-filter-btn');
-
-    const toggleFilterSidebar = () => {
-        if (filterSidebar.classList.contains('-translate-x-full')) {
-            // Open
-            filterSidebar.classList.remove('-translate-x-full');
-            filterOverlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        } else {
-            // Close
-            filterSidebar.classList.add('-translate-x-full');
-            filterOverlay.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-    };
-
-    if (mobileFilterBtn) mobileFilterBtn.addEventListener('click', toggleFilterSidebar);
-    if (closeFilterBtn) closeFilterBtn.addEventListener('click', toggleFilterSidebar);
-    if (filterOverlay) filterOverlay.addEventListener('click', toggleFilterSidebar);
-
 });
