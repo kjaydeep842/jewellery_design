@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Order - Tattsvi</title>
+    <title>Cancel Order - Tattsvi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap"
@@ -216,28 +216,28 @@
     <!-- Main Content -->
     <main class="w-full flex-grow pt-8 pb-16 min-[2000px]:pt-20 min-[2000px]:pb-32 bg-[#FDFBF7] flex justify-center">
         <div
-            class="flex flex-row justify-center items-start p-[40px] gap-[20px] max-w-[1920px] w-full self-stretch order-2 flex-none grow-0">
+            class="flex flex-col lg:flex-row justify-center items-start p-4 md:p-10 lg:p-[40px] gap-6 lg:gap-[20px] max-w-[1920px] w-full self-stretch order-2 flex-none grow-0">
 
             <!-- Sidebar -->
-            <div class="w-full lg:w-[445px] lg:h-[585px] flex-shrink-0 flex flex-col gap-4">
+            <div class="w-full lg:w-[445px] lg:h-[585px] flex-shrink-0 flex flex-col gap-6">
                 <!-- User Profile Card -->
                 <div
-                    class="flex flex-row items-center p-4 gap-5 w-full lg:w-[445px] h-[103px] bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] flex-none order-0 self-stretch grow-0">
+                    class="flex flex-row items-center p-4 gap-5 w-full lg:w-[445px] h-[103px] bg-[#FDFBF7] border border-[#EFE4CD] rounded-[10px] flex-none order-0 self-stretch grow-0 bg-[rgba(219,179,88,0.1)]">
                     <div
-                        class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-[#EADDCC] flex-shrink-0">
-                        <img src="assets/ic_User.png" alt="user" class="w-5 h-5">
+                        class="w-[52px] h-[52px] rounded-full bg-white flex items-center justify-center border border-[#EADDCC] flex-shrink-0">
+                        <img src="assets/ic_User.png" alt="user" class="w-6 h-6">
                     </div>
-                    <div class="flex flex-col gap-1.5 flex-grow">
-                        <h3 class="font-['Outfit'] font-bold text-[#1A1A1A] text-[16px] leading-tight">
-                            Hello User</h3>
-                        <div class="h-1.5 w-[140px] bg-[#EADDCC] rounded-full overflow-hidden">
+                    <div class="flex flex-col gap-[6px] flex-grow">
+                        <h3 class="font-['Outfit'] font-bold text-[#1A1A1A] text-[18px] leading-tight">
+                            Hello Jek</h3>
+                        <div class="h-[6px] w-[140px] bg-[#EADDCC] rounded-full overflow-hidden">
                             <div class="h-full bg-[#CBA65A] rounded-full" style="width: 25%"></div>
                         </div>
-                        <p class="text-[12px] text-[#7D7D7D] font-['Outfit'] font-normal leading-tight">25% Complete</p>
+                        <p class="text-[13px] text-[#7D7D7D] font-['Outfit'] font-normal leading-tight">25% Complete</p>
                     </div>
                     <button
-                        class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-gray-800 hover:text-[#CBA65A] shadow-sm ml-auto flex-shrink-0">
-                        <i class="fa-solid fa-chevron-right text-[12px]"></i>
+                        class="w-[34px] h-[34px] bg-white rounded-full flex items-center justify-center text-[#1A1A1A] shadow-sm ml-auto flex-shrink-0">
+                        <i class="fa-solid fa-chevron-right text-[14px]"></i>
                     </button>
                 </div>
 
@@ -245,49 +245,43 @@
                 <div class="flex flex-col gap-8 h-full">
                     <!-- Overview -->
                     <div>
-                        <h4 class="text-[#989898] text-[13px] font-['Outfit'] uppercase mb-4 tracking-wide font-normal">
+                        <h4 class="text-[#989898] text-[15px] font-['Outfit'] mb-4 tracking-[0.5px] font-normal">
                             Overview</h4>
-                        <ul class="space-y-4">
+                        <ul class="space-y-2">
                             <li>
                                 <a href="my_order.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border">
+                                    class="flex items-center justify-between w-full lg:w-[445px] h-[64px] px-5 bg-[rgba(219,179,88,0.1)] border border-[#EFE4CD] rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[16px] font-medium group transition-colors box-border">
                                     <div class="flex items-center gap-4">
-                                        <div class="w-5 flex justify-center">
-                                            <img src="assets/ic_order.png" alt="order"
-                                                class="w-[18px] h-auto group-hover:opacity-80">
+                                        <div class="w-6 flex justify-center">
+                                            <img src="assets/ic_order.png" alt="order" class="w-[20px] h-auto">
                                         </div>
                                         <span>My Orders</span>
                                     </div>
-                                    <i
-                                        class="fa-solid fa-chevron-right text-[12px] text-gray-400 group-hover:text-[#CBA65A]"></i>
+                                    <i class="fa-solid fa-chevron-right text-[14px] text-[#1A1A1A]"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="my_wishlist.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full lg:w-[445px] h-[64px] px-5 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[16px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
-                                        <div class="w-5 flex justify-center">
-                                            <img src="assets/ic_wishlist.png" alt="wishlist"
-                                                class="w-[18px] h-auto group-hover:opacity-80">
+                                        <div class="w-6 flex justify-center">
+                                            <img src="assets/ic_wishlist.png" alt="wishlist" class="w-[20px] h-auto">
                                         </div>
                                         <span>My Wishlist</span>
                                     </div>
-                                    <i
-                                        class="fa-solid fa-chevron-right text-[12px] text-gray-400 group-hover:text-[#CBA65A]"></i>
+                                    <i class="fa-solid fa-chevron-right text-[14px] text-[#1A1A1A]"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="bag.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-4 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full lg:w-[445px] h-[64px] px-5 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[16px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
-                                        <div class="w-5 flex justify-center">
-                                            <img src="assets/ic_bag_black.png" alt="bag"
-                                                class="w-[18px] h-auto group-hover:opacity-80">
+                                        <div class="w-6 flex justify-center">
+                                            <img src="assets/ic_bag_black.png" alt="bag" class="w-[20px] h-auto">
                                         </div>
                                         <span>My Bag</span>
                                     </div>
-                                    <i
-                                        class="fa-solid fa-chevron-right text-[12px] text-gray-400 group-hover:text-[#CBA65A]"></i>
+                                    <i class="fa-solid fa-chevron-right text-[14px] text-[#1A1A1A]"></i>
                                 </a>
                             </li>
                         </ul>
@@ -295,35 +289,32 @@
 
                     <!-- Legal -->
                     <div>
-                        <h4 class="text-[#989898] text-[13px] font-['Outfit'] uppercase mb-4 tracking-wide font-normal">
+                        <h4 class="text-[#989898] text-[15px] font-['Outfit'] mb-4 tracking-[0.5px] font-normal">
                             Legal</h4>
-                        <ul class="space-y-4">
+                        <ul class="space-y-2">
                             <li>
                                 <a href="tearms_and_condition.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-5 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full lg:w-[445px] h-[64px] px-5 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[16px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
-                                        <div class="w-5 flex justify-center">
-                                            <img src="assets/ic_order.png" alt="terms"
-                                                class="w-[18px] h-auto group-hover:opacity-80">
+                                        <div class="w-6 flex justify-center">
+                                            <img src="assets/ic_order.png" alt="terms" class="w-[20px] h-auto">
                                         </div>
-                                        <span>Terms of Use</span>
+                                        <span>Terms & Condition</span>
                                     </div>
-                                    <i
-                                        class="fa-solid fa-chevron-right text-[12px] text-gray-400 group-hover:text-[#CBA65A]"></i>
+                                    <i class="fa-solid fa-chevron-right text-[14px] text-[#1A1A1A]"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="privacy_policy.html"
-                                    class="flex items-center justify-between w-full lg:w-[445px] h-[68px] px-5 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[15px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
+                                    class="flex items-center justify-between w-full lg:w-[445px] h-[64px] px-5 rounded-[10px] text-[#1A1A1A] font-['Outfit'] text-[16px] font-medium group transition-colors box-border border border-transparent hover:bg-[rgba(219,179,88,0.1)] hover:border-[#EFE4CD]">
                                     <div class="flex items-center gap-4">
-                                        <div class="w-5 flex justify-center">
-                                            <img src="assets/ic_wishlist.png" alt="privacy"
-                                                class="w-[18px] h-auto group-hover:opacity-80">
+                                        <div class="w-6 flex justify-center">
+                                            <!-- using settings proxy icon since original was wishlist -->
+                                            <img src="assets/ic_setting.png" alt="privacy" class="w-[20px] h-auto">
                                         </div>
-                                        <span>Privacy Center</span>
+                                        <span>Privacy Policy</span>
                                     </div>
-                                    <i
-                                        class="fa-solid fa-chevron-right text-[12px] text-gray-400 group-hover:text-[#CBA65A]"></i>
+                                    <i class="fa-solid fa-chevron-right text-[14px] text-[#1A1A1A]"></i>
                                 </a>
                             </li>
                         </ul>
@@ -331,13 +322,235 @@
                 </div>
             </div>
 
-            <!-- Main Content: Empty State -->
-            <div class="flex-grow flex flex-col justify-center items-center p-[12px] gap-[12px] w-full lg:w-[1375px] h-[600px] rounded-[4px]"
-                style="background: linear-gradient(90deg, rgba(219, 179, 88, 0.042) 0%, rgba(151, 102, 0, 0.14) 100%);">
-                <div class="relative">
-                    <img src="assets/IC -pagenot found.png" alt="No Order Found" class="w-16 h-16 opacity-80">
+            <!-- Main Content: Cancel Order -->
+            <div class="flex-grow flex flex-col w-full lg:w-[1375px] rounded-[4px] gap-8">
+
+                <!-- Initial View Container -->
+                <div id="cancel-content-view" class="flex flex-col gap-8 w-full">
+                    <!-- Item Card -->
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center p-4 md:p-5 bg-white rounded-[10px] border border-[#EADDCC]">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-[24px]">
+                            <div
+                                class="w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] bg-[#F8F8F8] rounded-[8px] overflow-hidden flex-shrink-0">
+                                <img src="assets/ring_1.png" alt="Ring" class="w-full h-full object-cover"
+                                    onerror="this.src='assets/ring.png'">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="font-['Outfit'] font-medium text-[#1A1A1A] text-[16px] leading-tight">Eterna
+                                    Glow
+                                    Lab-Grown<br>Diamond Solitaire Engagement Ring</h3>
+                                <p class="font-['Outfit'] font-bold text-[#1A1A1A] text-[18px]">₹12,000.00</p>
+                                <div class="flex gap-3 mt-1">
+                                    <div
+                                        class="bg-[#EDEDED] px-3 py-1.5 rounded-[4px] text-[13px] text-[#1A1A1A] font-medium flex items-center gap-2 font-['Outfit']">
+                                        Size: 10(2)</div>
+                                    <div
+                                        class="bg-[#EDEDED] px-3 py-1.5 rounded-[4px] text-[13px] text-[#1A1A1A] font-medium flex items-center gap-2 font-['Outfit'] cursor-pointer">
+                                        Qty: 1 <i class="fa-solid fa-chevron-down text-[10px] ml-1 text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cancel Form -->
+                    <div class="flex flex-col gap-5 pt-2">
+                        <div class="border-b border-[#EADDCC] pb-4">
+                            <h2 class="font-['Outfit'] font-bold text-[20px] text-[#1A1A1A]">Reason for cancellation
+                            </h2>
+                            <p class="font-['Outfit'] text-[14px] text-[#6E6E6E] mt-1.5 tracking-wide">Please tell us
+                                correct reason for cancellation. This information is only used to improve our service
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="font-['Outfit'] font-bold text-[15px] text-[#1A1A1A]">Select Reason*</h3>
+
+                            <div class="flex flex-col gap-3.5 pl-1">
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Incorrect
+                                        size ordered</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Product
+                                        not required anymore</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Cash
+                                        issue</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Ordered
+                                        By Mistake</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Wants
+                                        to change style/color</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Delayed
+                                        Delivery Cancellation</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group w-fit">
+                                    <div class="relative flex items-center">
+                                        <input type="radio" name="cancel_reason"
+                                            class="peer w-5 h-5 appearance-none border border-[#CBD5E1] rounded-full checked:border-[#CBA65A] checked:border-[5px] bg-white transition-all cursor-pointer">
+                                    </div>
+                                    <span
+                                        class="font-['Outfit'] text-[15px] text-[#6E6E6E] group-hover:text-[#1A1A1A] transition-colors">Duplicate
+                                        Order</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <textarea placeholder="Additional Comments"
+                                class="w-full h-[120px] rounded-[10px] border border-[#EADDCC] p-4 text-[#1A1A1A] font-['Outfit'] text-[15px] focus:outline-none focus:border-[#CBA65A] focus:ring-1 focus:ring-[#CBA65A] resize-none"></textarea>
+                        </div>
+
+                        <div class="mt-2">
+                            <p id="cancel-error" class="hidden text-red-500 font-['Outfit'] text-[14px] mb-2 px-1">
+                                Please select a reason for cancellation.</p>
+                            <script>
+                                function submitCancelOrder() {
+                                    const reasons = document.querySelectorAll('input[name="cancel_reason"]');
+                                    let checked = false;
+                                    for (let r of reasons) {
+                                        if (r.checked) { checked = true; break; }
+                                    }
+                                    if (checked) {
+                                        document.getElementById('cancel-error').classList.add('hidden');
+                                        document.getElementById('cancel-content-view').classList.add('hidden');
+                                        document.getElementById('cancel-success-view').classList.remove('hidden');
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    } else {
+                                        document.getElementById('cancel-error').classList.remove('hidden');
+                                    }
+                                }
+
+                                // Hide error when any option is selected
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const reasons = document.querySelectorAll('input[name="cancel_reason"]');
+                                    reasons.forEach(radio => {
+                                        radio.addEventListener('change', function () {
+                                            if (this.checked) {
+                                                document.getElementById('cancel-error').classList.add('hidden');
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
+                            <button onclick="submitCancelOrder()"
+                                class="w-full bg-[#CBA65A] hover:bg-[#B39359] text-white font-['Outfit'] font-semibold text-[18px] py-4 rounded-[10px] transition-colors shadow-sm">
+                                Cancel Order
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <p class="font-['Outfit'] font-bold text-[#1A1A1A] text-xl">No Order Found</p>
+
+                <div id="cancel-success-view" class="hidden flex-col gap-[16px] w-full">
+                    <div
+                        class="w-full bg-white rounded-[10px] border border-[#EADDCC] px-4 md:px-[32px] py-6 md:py-[40px] flex flex-col gap-6 md:gap-8">
+                        <!-- Header -->
+                        <div class="flex flex-col items-center justify-center pt-2">
+                            <div class="w-[60px] h-[60px] flex items-center justify-center mb-4">
+                                <!-- Using true_sign.png as requested -->
+                                <img src="assets/true_sign.png" alt="Success" class="w-full h-full object-contain">
+                            </div>
+                            <h2 class="font-['Outfit'] font-bold text-[#1A1A1A] text-[24px]">Order Cancelled</h2>
+                        </div>
+
+                        <!-- Nested Cancelled Item Card -->
+                        <div class="w-full bg-white rounded-[10px] border border-[#EADDCC] p-4 md:p-[24px]">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-[24px]">
+                                <div
+                                    class="w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] bg-[#F8F8F8] rounded-[8px] overflow-hidden flex-shrink-0">
+                                    <img src="assets/ring_1.png" alt="Ring" class="w-full h-full object-cover"
+                                        onerror="this.src='assets/ring.png'">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="font-['Outfit'] font-medium text-[#1A1A1A] text-[16px] leading-tight">
+                                        Eterna Glow
+                                        Lab-Grown<br>Diamond Solitaire Engagement Ring</h3>
+                                    <p class="font-['Outfit'] font-bold text-[#1A1A1A] text-[18px]">₹12,000.00</p>
+                                    <div class="flex gap-3 mt-1">
+                                        <div
+                                            class="bg-[#EDEDED] px-3 py-1.5 rounded-[4px] text-[13px] text-[#1A1A1A] font-medium flex items-center gap-2 font-['Outfit']">
+                                            Size: 10(2)</div>
+                                        <div
+                                            class="bg-[#EDEDED] px-3 py-1.5 rounded-[4px] text-[13px] text-[#1A1A1A] font-medium flex items-center gap-2 font-['Outfit']">
+                                            Qty: 1 <i
+                                                class="fa-solid fa-chevron-down text-[10px] ml-1 text-gray-500"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info Messages -->
+                        <div class="flex flex-col gap-5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-[22px] h-[22px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <img src="assets/true_sign.png" alt="Check" class="w-full h-full object-contain">
+                                </div>
+                                <div class="flex flex-col gap-0.5">
+                                    <span class="font-['Outfit'] font-normal text-[#A3A3A3] text-[15px]">Refund
+                                        Details</span>
+                                    <span class="font-['Outfit'] font-medium text-[#525E71] text-[13.5px]">A refund is
+                                        not applicable on this order as it is a Pay on delivery order</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-[22px] h-[22px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <img src="assets/true_sign.png" alt="Check" class="w-full h-full object-contain">
+                                </div>
+                                <div class="flex flex-col gap-0.5">
+                                    <span class="font-['Outfit'] font-normal text-[#A3A3A3] text-[15px]">Please
+                                        Note</span>
+                                    <span class="font-['Outfit'] font-medium text-[#525E71] text-[13.5px]">You will
+                                        receive an email/sms confirming the cancellation of order shortly.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Button (Outside the white box) -->
+                    <button onclick="window.location.href='my_order.html';"
+                        class="w-full bg-[#CBA65A] hover:bg-[#B39359] text-white font-['Outfit'] font-semibold text-[18px] py-4 rounded-[10px] transition-colors shadow-sm">
+                        Done
+                    </button>
+                </div>
             </div>
         </div>
     </main>
@@ -401,11 +614,11 @@
                         class="font-['Outfit'] text-base min-[2000px]:text-xl text-[#6E6E6E] leading-relaxed max-w-[350px]">
                         Be the first to know about new collections, exclusive deals & more!
                     </p>
-                    <div class="flex flex-row gap-3 mt-4 w-full">
+                    <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full">
                         <input type="email" placeholder="Email Address"
                             class="border border-[#E5E5E5] rounded-full px-6 py-3 text-base min-[2000px]:text-xl w-full outline-none focus:border-[#CBA65A] font-Outfit bg-white placeholder-gray-400 h-[54px] min-[2000px]:h-[70px] flex-grow">
                         <button
-                            class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base min-[2000px]:text-xl font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] min-[2000px]:h-[70px] shadow-sm">
+                            class="bg-[#F9F4E8] text-[#5C4522] px-10 py-3 rounded-full text-base min-[2000px]:text-xl font-medium border border-[#EADDCC] hover:bg-[#F0E6D6] transition-colors font-Outfit whitespace-nowrap h-[54px] min-[2000px]:h-[70px] shadow-sm w-full sm:w-auto">
                             Submit
                         </button>
                     </div>
